@@ -20,8 +20,9 @@
 # Implement law_document_element.rb for parsing actual passed laws, currently law_proposal_document_element.rb only covers law proposals not the final 
 # version of the document that is in a completly different html format.
 
+
 require 'rubygems'
-require 'nokogiri'
+gem 'nokogiri', '=1.3.3'; require 'nokogiri'
 require 'open-uri'
 require 'timeout'
 

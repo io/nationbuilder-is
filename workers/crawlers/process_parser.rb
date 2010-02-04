@@ -49,10 +49,14 @@ class ProcessParser
       end
       unless oldpd = ProcessDocument.find_by_external_link(process_document.external_link)
         puts "EXTERNAL_TYPE: #{process_document.external_type} STAT3: #{process_document.external_type[0..3]}"
-        if process_document.external_type.index("frumvarp") or process_document.external_type.index("lög")
+        if process_document.external_type.index("lög")
+          document = LawDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
+        elsif process_document.external_type.index("frumvarp") or 
+              process_document.external_type.downcase.index("þingsályktun") or 
+              process_document.external_type.downcase.index("stjórnartillaga")
           document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
-        elsif process_document.external_type.downcase.index("þingsályktun") or process_document.external_type.downcase.index("stjórnartillaga")
-          document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
+        elsif process_document.external_type.index("breytingartillaga")
+          document = ChangeDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
         end         
         if document
           unless old_process = PriorityProcess.find(:first, :conditions=>["priority_id = ? AND stage_sequence_number = ?",
