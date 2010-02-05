@@ -12,6 +12,9 @@ solr/index
 .tmp*
 *.sql
 public/production/*
+public/development/*
+public/development
+public/production
 workers/video/config/worker.yml
 private/*
 *.log

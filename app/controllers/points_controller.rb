@@ -1,6 +1,6 @@
 class PointsController < ApplicationController
  
-  before_filter :login_required, :only => [:new, :create, :quality, :unquality, :your_priorities, :index, :destroy]
+  before_filter :login_required, :only => [:new, :create, :quality, :unquality, :your_priorities, :index, :destroy, :update_importance]
   before_filter :admin_required, :only => [:edit, :update]
  
   def index
@@ -26,7 +26,48 @@ class PointsController < ApplicationController
       format.json { render :json => @points.to_json(:include => [:priority, :other_priority], :except => NB_CONFIG['api_exclude_fields']) }
     end
   end  
- 
+  
+  def for_and_against
+  	@page_title = t('points.for_and_against.title', :government_name => current_government.name)
+    @priority=Priority.find(params[:id])
+  	@points_new_up = @priority.points.published.by_recently_created.up_value.five
+  	@points_new_down = @priority.points.published.by_recently_created.down_value.five
+  	@points_top_up = @priority.points.published.by_helpfulness.up_value.five
+  	@points_top_down = @priority.points.published.by_helpfulness.down_value.five
+  	# @rss_url = url_for :only_path => false, :format => "rss"
+  	respond_to do |format|
+  		format.html { render :action => "for_and_against" }
+  		#format.rss { render :template => "rss/points" }
+  		#format.xml { render :xml => @points.to_xml(:include => [:priority, :other_priority], :except => NB_CONFIG['api_exclude_fields']) }
+  		#format.json { render :json => @points.to_json(:include => [:priority, :other_priority], :except => NB_CONFIG['api_exclude_fields']) }
+  		format.js do
+  			render :update do |page|
+  				page.replace_html 'pro_top', :partial => "brbox", :locals => {:id => "pro_top", :points => @points_top_up}
+  				page.replace_html 'con_top', :partial => "brbox", :locals => {:id => "con_top", :points => @points_top_down}
+  				page.replace_html 'pro_new', :partial => "brbox", :locals => {:id => "pro_new", :points => @points_new_up}
+  				page.replace_html 'con_new', :partial => "brbox", :locals => {:id => "con_new", :points => @points_new_down}
+  			end
+  		end
+  	end
+  end  	
+
+  def all_points
+  	if params[:foragainst] == "yes"
+  		@points_new = Point.published.up.by_recently_created :include => :priority
+  		@points_top = Point.published.up.top :include => :priority
+  		@yesno = "J&aacute;"
+  	elsif params[:foragainst] == "no"
+  		@points_new = Point.published.down.by_recently_created :include => :priority
+  		@points_top = Point.published.down.top :include => :priority	
+  		@yesno = "Nei"
+  	end
+  	
+  	@page_title = t('points.for_and_against.title', :government_name => current_government.name)
+  	respond_to do |format|
+  		format.html { render :action => "all_points" }
+  	end
+  end
+  
   def your_priorities
     @page_title = t('points.your_priorities.title', :government_name => current_government.name)
     if current_user.endorsements_count > 0    
@@ -125,7 +166,7 @@ class PointsController < ApplicationController
             flash[:user_action_to_publish] = UserPublisher.create_point(facebook_session, @point, @priority)
           end          
           @quality = @point.point_qualities.find_or_create_by_user_id_and_value(current_user.id,true)
-          format.html { redirect_to(@point) }
+          format.html { redirect_to(top_points_priority_url(@priority)) }
         end
       else
         format.html { render :action => "new" }
@@ -195,6 +236,7 @@ class PointsController < ApplicationController
             page.replace_html 'point_' + @point.id.to_s + '_helpful_button', render(:partial => "points/button", :locals => {:point => @point, :quality => @quality })
             page.replace_html 'point_' + @point.id.to_s + '_helpful_chart', render(:partial => "documents/helpful_chart", :locals => {:document => @point })            
           elsif params[:region] = "point_inline"
+#            page.select("point_" + @point.id.to_s + "_quality").each { |item| item.replace_html(render(:partial => "points/button_small", :locals => {:point => @point, :quality => @quality, :priority => @point.priority}) ) }                       
             page.replace_html 'point_' + @point.id.to_s + '_quality', render(:partial => "points/button_small", :locals => {:point => @point, :quality => @quality, :priority => @point.priority}) 
           end
         end        
@@ -217,6 +259,7 @@ class PointsController < ApplicationController
             page.replace_html 'point_' + @point.id.to_s + '_helpful_button', render(:partial => "points/button", :locals => {:point => @point, :quality => @quality })
             page.replace_html 'point_' + @point.id.to_s + '_helpful_chart', render(:partial => "documents/helpful_chart", :locals => {:document => @point })            
           elsif params[:region] = "point_inline"
+#            page.select("point_" + @point.id.to_s + "_quality").each { |item| item.replace_html(render(:partial => "points/button_small", :locals => {:point => @point, :quality => @quality, :priority => @point.priority}) ) }
             page.replace_html 'point_' + @point.id.to_s + '_quality', render(:partial => "points/button_small", :locals => {:point => @point, :quality => @quality, :priority => @point.priority}) 
           end          
         end       
@@ -264,6 +307,7 @@ class PointsController < ApplicationController
         @endorsement = @priority.endorsements.active.find_by_user_id(current_user.id)
       end    
     end  
+    
     def get_qualities
       @qualities = nil
       if logged_in? and @points.any? # pull all their qualities on the points shown

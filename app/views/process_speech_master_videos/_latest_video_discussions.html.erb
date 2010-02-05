@@ -1,5 +1,4 @@
 <% if @latest_speech_discussions.length > 0 %>
-<%= javascript_include_tag 'jquery-1.3.1.min' %>
 <%= javascript_include_tag 'jquery.mousewheel' %>
 <%= javascript_include_tag 'jquery.scrollable-1.0.1.min' %>
 <%= stylesheet_link_tag 'vertical_video_speeches_scroller' %>
@@ -9,9 +8,8 @@
 <!-- root element -->
 <a class="prev"></a>
 <div class="scrollable">
-    <!-- for a change we have different kind of container for items -->
     <div id="latest_video_discussion_thumbs">
-        <!-- one item. in the example we have many of these --><% @latest_speech_discussions.each do |process_discussion| %>
+		<% @latest_speech_discussions.each do |process_discussion| %>
         <div onclick="window.location = 'http://<%=request.host.downcase%>/process_speech_videos/<%=process_discussion.process_speech_videos.get_first_published.id%>'">
             <img src="<%=process_discussion.process_speech_videos.get_random_published.get_playlist_image_url("small")%>" /><h3><%=latest_video_speech_title(process_discussion.process_speech_videos.get_random_published) %></h3>
             <p>
@@ -33,9 +31,7 @@
 <a class="next"></a>
 <script type="text/javascript">
     jQuery.noConflict();
-    // execute your scripts when DOM is ready. this is a good habit 
     jQuery(function(){
-        // initialize scrollable  
         jQuery("div.scrollable").scrollable({
             size: 4,
             items: '#latest_video_discussion_thumbs',
@@ -43,8 +39,6 @@
         });
     });
 </script>
-<br>
-<br>
 <table width="100%">
     <tr align="left">
         <td align="left" style="padding-left:195px;padding-top:10px;">

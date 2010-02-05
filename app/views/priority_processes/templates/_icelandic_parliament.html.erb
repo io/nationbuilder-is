@@ -1,107 +1,111 @@
 <% current_process = @priority_process %>
 <% while current_process %>
-    <% puts current_process %>
-    <% process_documents = current_process.process_documents %>
-    <% discussions = current_process.process_discussions %>
-    <h2><%="#{current_process.stage_sequence_number}. "+t(:stage_sequence_discussion) %></h2>
-    <% unless process_documents.empty? %>
-      <table>
-        <tr>
-            <td colspan=4>
-                <h3><%=t :althingi_process_documents %></h3>
-            </td>
-        </tr>
-        <th>
-            <%=t :althingi_release_date %>
-        </th>
-        <th>
-            <%=t :althingi_law_document %>
-        </th>
-        <th>
-            <%=t :althingi_process_document_type %>
-        </th>
-        <th>
-            <%=t :althingi_presenter %>
-        </th>
-        <th>
-            <span style="color: #348017;"><b><%=t :public_versions %></b></span>
-        </th>
-        <% process_documents.each do |document| %>
-        <tr>
-            <td>
-                <%=document.external_date.strftime("%d.%m.%Y") %>
-            </td>
-            <td>
-        		<%= link_to document.external_id, document.external_link,{:target=>"_blank"}%>
-            </td>
-            <td>
-                <%=document.external_type %>
-            </td>
-            <td>
-                <%=document.external_author %>
-            </td>
-            <td width="230px" align="center">
-                <%=document.get_process_document_link%>
-            </td>
-        </tr>
-        <% end %>
-	  </table>
-    <% end %>
-    <br>
-    <% unless discussions.empty? %>
-      <table>
-        <tr>
-            <td colspan=4>
-                <h3><%=t :althingi_discussion %></h3>
-            </td>
-        </tr>
-        <th>
-            <%=t :althingi_time_of_discussion %>
-        </th>
-        <th>
-            <%=t :althingi_date_of_discussion %>
-        </th>
-        <th>
-            <%=t :althingi_type_of_discussion %>
-        </th>
-        <th>
-            <%=t :althingi_meeting %>
-        </th>
-        <% discussions.each do |discussion| %>
-        <tr>
-            <td>
-            	<%=link_to "#{discussion.from_time.strftime('%H:%M')}-#{discussion.to_time.strftime('%H:%M')}", discussion.transcript_url,{:target => "_blank"}%>
-                <br>
-            	<%=link_to t(:listen), discussion.listen_url, {:target => "_blank"} %>
-            </td>
-            <td>
-                <%=discussion.meeting_date.strftime("%d.%m.%Y") %>
-            </td>
-            <td>
-                <%=discussion.meeting_type %>
-            </td>
-            <td>
-            	<%=link_to discussion.meeting_info, discussion.meeting_url,{:target => "_blank"}%>
-            </td>
-        </tr>
-		<% if discussion.process_speech_videos.has_any? %>
-			<tr>
-				<td colspan=2>
-					<%= render :partial => "priority_processes/process_discussion_videos", :locals => {:discussion=> discussion} %>
-				</td>
-			</tr>
-        <% end %>
-       <% end %>
-	  </table>
-    <% end %>
-    <br>
-	<br>
-    <b><%=t :external_link %></b>
-    <%=link_to h(current_process.external_link), current_process.external_link, {:target => "_blank"}%>
-    <br><br>
-	
+	<% puts current_process %>
+	<% process_documents = current_process.process_documents %>
+	<% discussions = current_process.process_discussions %>
+	<h2><%="#{current_process.stage_sequence_number}. "+t(:stage_sequence_discussion) %></h2>
+	<p id="althingi_external_link">
+		<em><%=t :external_link %></em>
+		<%=link_to h(current_process.external_link), current_process.external_link, {:target => "_blank"}%>
+	</p>
+	<% unless process_documents.empty? %>
+	<div id="althingi_process_documents">
+		<h3><%=t :althingi_process_documents %></h3>
+		<table>
+			<thead>
+				<tr>
+					<th class="release_date">
+						<%=t :althingi_release_date %>
+					</th>
+					<th class="law_document">
+						<%=t :althingi_law_document %>
+					</th>
+					<th class="document_type">
+						<%=t :althingi_process_document_type %>
+					</th>
+					<th>
+						<%=t :althingi_presenter %>
+					</th>
+					<th>
+						<%=t :public_versions %>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% process_documents.each do |document| %>
+				<tr>
+					<td>
+						<%=document.external_date.strftime("%d.%m.%Y") %>
+					</td>
+					<td>
+						<%= link_to document.external_id, document.external_link,{:target=>"_blank"}%>
+					</td>
+					<td>
+						<%=document.external_type %>
+					</td>
+					<td>
+						<%=document.external_author %>
+					</td>
+					<td width="230px" align="center">
+						<%=document.get_process_document_link%>
+					</td>
+				</tr>
+			</tbody>
+		<% end %>
+		</table>
+	</div>
+	<div id="althingi_discussion">
+		<% end %>
+		<% unless discussions.empty? %>
+		<h3><%=t :althingi_discussion %></h3>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						<%=t :althingi_time_of_discussion %>
+					</th>
+					<th>
+						<%=t :althingi_date_of_discussion %>
+					</th>
+					<th>
+						<%=t :althingi_type_of_discussion %>
+					</th>
+					<th>
+						<%=t :althingi_meeting %>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% discussions.each do |discussion| %>
+				<tr>
+					<td>
+						<%=link_to "#{discussion.from_time.strftime('%H:%M')}-#{discussion.to_time.strftime('%H:%M')}", discussion.transcript_url,{:target => "_blank"}%> - <%=link_to t(:listen), discussion.listen_url, {:target => "_blank"} %>
+					</td>
+					<td>
+						<%=discussion.meeting_date.strftime("%d.%m.%Y") %>
+					</td>
+					<td>
+						<%=discussion.meeting_type %>
+					</td>
+					<td>
+						<%=link_to discussion.meeting_info, discussion.meeting_url,{:target => "_blank"}%>
+					</td>
+				</tr>
+				<% if discussion.process_speech_videos.has_any? %>
+				<tr>
+					<td colspan=2>
+						<%= render :partial => "priority_processes/process_discussion_videos", :locals => {:discussion=> discussion} %>
+					</td>
+				</tr>
+				<% end #videos %>
+				<% end #discussions %>
+			</tbody>
+		</table>
+	</div>
+	<% end %>
+		
 	<% unless current_process.children.empty? %>
-	  <% current_process = current_process.children.first %>
+		<% current_process = current_process.children.first %>
 	<% else %>
 	<% current_process = nil %>
 	<% end %>

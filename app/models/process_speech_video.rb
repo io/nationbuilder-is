@@ -109,7 +109,7 @@ class ProcessSpeechVideo < ActiveRecord::Base
   end
 
   def get_process
-    self.process_discussion.process
+    self.process_discussion.priority_process
   end
   
   private

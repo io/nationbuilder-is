@@ -1026,7 +1026,7 @@ is:
             website:
                 label: "Bættu inn vefslóð"
             position:
-                label: "Er {{support_radio}} þessi rök til stuðnings {{neutral_radio}} hlutlaust eða {{oppose_radio}} á móti {{priority_name}}?"    
+                label: "Eru {{support_radio}} þessi rök til stuðnings eða {{oppose_radio}} á móti {{priority_name}}?"
             name:
                 label: "Taktu saman yfirlit yfir þín rök<span class='small'>60 characters</span>"
             other_priority_name:
@@ -1052,6 +1052,19 @@ is:
                 title: "Farðu yfir {{point_name}}"
                 success: "Fór yfir {{point_name}}"
             destroy: "Eyddi yfirferð á {{point_name}}"
+        top_points:
+            best_points_for_endorse: "Bestu rök með Já"
+            best_points_for_oppose: "Bestu rök með Nei"
+            newest_points_for_endorse: "Ný rök með Já"
+            newest_points_for_oppose: "Ný rök með Nei"
+            all_best_points_for_endorse: "Öll rök með Já"
+            all_best_points_for_oppose: "Öll rök með Nei"
+            all_newest_points_for_endorse: "Öll ný rök með Já"
+            all_newest_points_for_oppose: "Öll ný rök með Nei"
+            add_point_for_endorse: "Setja inn rök með Já"
+            add_point_for_oppose: "Setja inn rök með Nei"
+            new_point_short: "Ný rök"
+            all_best_points: "Öll bestu rök"
     priorities:
         name: "forgangsmál"
         deleted: "Þessu forgangsmáli var eytt"
@@ -1244,6 +1257,8 @@ is:
             no_change:
                 7days:
                     short: "engin breyting í þessari viku"
+        top_points:
+            title: "Bestu rök"
     prioritizer:
         index:
             title: "{{government_name}} röðun forgangsmála"

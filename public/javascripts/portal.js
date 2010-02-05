@@ -72,6 +72,7 @@ function setup_portal_dialogues(delPortletLabel, cancelLabel){
 			}),
 			dataType: "script"
 		});
+		jQuery(this).dialog('close');
 	};
 	buttons[cancelLabel] = function(){
 		jQuery(this).dialog('close');

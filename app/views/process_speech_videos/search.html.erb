@@ -2,7 +2,7 @@
 <br>
 <% if  @process_speech_videos.length > 0%>
 	<% @process_speech_videos.group_by(&:get_process).sort {|a,b| a[0].process_discussions.find(:last).meeting_date <=> b[0].process_discussions.find(:last).meeting_date}.each do |my_process,videos| %>
-		<h2><%=my_process.external_info_1 %></h2>
+		<h2><%=my_process.priority.external_info_1 %></h2>
 		<table>
 		    <tr>
 		        <% videos.each do |video| %>

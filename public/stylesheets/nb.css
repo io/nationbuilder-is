@@ -50,12 +50,33 @@ h4 {
 	padding: 0px 3px 0px 3px;
 }
 
+#sidebar {
+	width: 240px;
+	float: right;
+	overflow: hidden;
+}
+
+#contentwrap {
+	width: 960px;
+	float: left;
+}
+
+#branding {
+	font-size: 2em;
+	background-color: #F0F0F0;
+}
+
+#branding a {
+	padding: 10px 15px;
+	display: block;
+	font-weight: bold;
+}
+
 #content_text {
 	padding: 15px 20px 15px 20px;
 	letter-spacing: 0;
 	line-height: 1.4em;
 	font-size: 1.2em;
-	margin: 10px 0px 0px 0px;
 }
 
 #facebox {
@@ -155,10 +176,6 @@ h4 {
 }
 #your_priorities_container {
 	font-size: 1.2em;
-}
-#contentwrap {
-	text-align: left;
-	padding: 0px 20px 0px 20px;
 }
 
 #notifications {
@@ -391,12 +408,16 @@ del {
 /* footer stuff */
 #backgroundwrap {
 	padding-bottom: 15px;
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
 }
 #footer {
 	font-size: 1.1em;
 	text-align: left;
 	padding: 5px 30px 10px 30px;
 	line-height: 1.4em;
+	clear: both;
 }
 #footer_container {
 	margin-top: 10px;
@@ -1315,3 +1336,8 @@ ul#priority_menu li.tab9 div.tab_body {
 	position: absolute;
 }
 /* end color picker */
+
+
+.brbox {
+	border: 1px solid #000000;
+}

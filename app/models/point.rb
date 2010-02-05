@@ -8,9 +8,14 @@ class Point < ActiveRecord::Base
   named_scope :up, :conditions => "points.endorser_score > 0"
   named_scope :neutral, :conditions => "points.neutral_score > 0"
   named_scope :down, :conditions => "points.opposer_score > 0"    
+  named_scope :up_value, :conditions => "points.value > 0"
+  named_scope :neutral_value, :conditions => "points.value = 0"
+  named_scope :down_value, :conditions => "points.value < 0"    
   named_scope :by_recently_created, :order => "points.created_at desc"
   named_scope :by_recently_updated, :order => "points.updated_at desc"  
   named_scope :revised, :conditions => "revisions_count > 1"
+  named_scope :top, :order => "points.score desc"
+  named_scope :five, :limit => 5
 
   belongs_to :user
   belongs_to :priority
@@ -309,4 +314,11 @@ class Point < ActiveRecord::Base
     link(:rel => "nofollow")
   end  
   
+  def calculate_importance
+  	PointImportanceScore.calculate_score(self.id)
+  end
+
+  def set_importance(user_id, score)
+  	PointImportanceScore.update_or_create(self.id, user_id, score)
+  end
 end

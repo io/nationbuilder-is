@@ -4,8 +4,12 @@
 div.scrollable {  
 	position:relative;
 	overflow:hidden;
-	width: 800px;	 
+	width: 600px;	 
 	height:220px;	
+}
+
+#latest_video_discussion_thumbs h3 {
+	color: #999;
 }
 
 /* 

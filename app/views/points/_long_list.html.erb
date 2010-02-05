@@ -1,0 +1,24 @@
+<% quality = nil %>
+<% if @qualities %>
+	<% quality = @qualities.detect {|e| e.point_id == point.id } %>
+<% end %>				
+<div class="point_item">
+	<p><%= link_to_unless_current h(point.name), point %></p>
+	<div class="point_byline">
+		<%= t('revisions.byline', :author_sentence => point.author_sentence) %> &middot; <%= t('revisions.added', :time_ago => time_ago(point.created_at)) %>
+		<span class="point_edit">
+			<% if point.discussions_count > 0 %>
+				<%= link_to t('comments.discussions.name', :count => point.discussions_count), discussions_point_url(point) %>
+			<% else %>
+				<%= link_to t('comments.discuss.name'), discussions_point_url(point) %>
+			<% end %>
+			or 
+			<%= link_to t('points.edit.name'), new_point_revision_url(point), :title => t('points.edit.title') %>
+		</span>
+	</div>
+	<p><%=point.content_html%></p>
+	<p><div class="point_qualities">
+		<%= render :partial => "points/button_small", :locals => {:point => point, :quality => quality} %>
+	</div>
+	</p>
+</div>
