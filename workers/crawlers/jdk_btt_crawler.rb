@@ -68,6 +68,10 @@ def break_apart(filename)
     else
       partial += line if first_found
     end
+
+    # Search for ordered list index
+    # line.gsub!(/(<!-- Para Num )(.*?)( \[)(.*?)(\] -->)(.*?)(<!-- Para Num End -->)/) { |match| puts(match.inspect) }
+    # split_line(line)
   end
 
   # Find the last element in the document
