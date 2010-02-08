@@ -57,14 +57,19 @@ class SpeechVideoProcessing < VideoProcessing
                   
       if video.modified_duration_s
         duration_ms = video.modified_duration_s*1000
+        duration_s = video.modified_duration_s
       else
         duration_ms = video.duration_s*1000
+        duration_s = video.duration_s
       end
       outpoint_ms = inpoint_ms + duration_ms
       cut_points << [inpoint_ms,outpoint_ms,speech_video_first_tmp_filename]
+      inpoint_s = inpoint_ms/1000
+      @@shell.execute("ffmpeg -ss #{[inpoint_s/3600, inpoint_s/60 % 60, inpoint_s % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')} \
+                       -t #{[duration_s/3600, duration_s/60 % 60, duration_s % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')} \
+                       -i #{master_video_filename} -acodec copy -vcodec copy #{speech_video_first_tmp_filename}")
     end
-
-    @@shell.execute("flvtool2 -M -c -a -k -m #{cut_points.inspect.gsub(" ","").gsub("\"","\\\"")} #{master_video_filename}")
+#    @@shell.execute("flvtool2 -M -c -a -k -m #{cut_points.inspect.gsub(" ","").gsub("\"","\\\"")} #{master_video_filename}")
 
     master_video.process_speech_videos.each do |video|
       video.in_processing = true
@@ -101,8 +106,8 @@ class SpeechVideoProcessing < VideoProcessing
             croptop = 120
             cropbottom = 100
           end
-          @@shell.execute("ffmpeg -i #{speech_video_filename} -an -croptop #{croptop} -cropbottom #{cropbottom} -cropright 150 -cropleft 238\
-             -ss #{[time/3600, time/60 % 60, time % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')} -an -r 1 -vframes 1 -y #{speech_video_path}#{filename}")
+          @@shell.execute("ffmpeg -ss #{[time/3600, time/60 % 60, time % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')} -i #{speech_video_filename} \
+          -an -croptop #{croptop} -cropbottom #{cropbottom} -cropright 150 -cropleft 238 -an -r 1 -vframes 1 -y #{speech_video_path}#{filename}")
           @@shell.execute("convert #{speech_video_path}#{filename} -resize 160x99 #{speech_video_path}small_#{filename}")
           @@shell.execute("convert #{speech_video_path}#{filename} -resize 80x50 #{speech_video_path}smaller_#{filename}")
           @@shell.execute("convert #{speech_video_path}#{filename} -resize 45x28 #{speech_video_path}tiny_#{filename}")
