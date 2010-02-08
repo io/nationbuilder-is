@@ -26,7 +26,7 @@ jQuery(function() {
         prev:'a.up'
     }); 
     // setup player  
-    $f("player", {src: "/swf/flowplayer-3.0.3.swf", wmode: 'opaque'}, {
+    $f("player", {src: "/swf/flowplayer-3.0.3.swf", height:253+20, width:402, wmode: 'opaque'}, {
 	wmode: 'transparent',
 	clip: {
         onBegin: function(clip) {
@@ -54,7 +54,7 @@ jQuery('div.clips a:first')<%=Array.new(my_pos,".next()").join%>.click();
 
 <table>
 	<tr>
-		<td>
+		<td valign="top">
 		<a class="go up"></a>
 		<div class="playlist">
 			<div class="clips">
@@ -67,13 +67,13 @@ jQuery('div.clips a:first')<%=Array.new(my_pos,".next()").join%>.click();
 		</div>
 		<a class="go down"></a>
 		</td>
-		<td width=640px height=400px>
+		<td valign="top" style="padding-top: 29px;">
 			<a class="player plain" id="player" style=""></a>
+			<div id="process_speech_detail">
+			  <%= render :partial => "video_detail", :locals => {:process_speech_video=> @process_speech_video } %>
+			</div>
 		</td>
  	  </tr>
 </table>
-<div id="process_speech_detail">
-  <%= render :partial => "video_detail", :locals => {:process_speech_video=> @process_speech_video } %>
-</div>
 
 

@@ -24,13 +24,13 @@ is:
                     new:
                         name: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í tillögu um að {{new_priority_name}} taki yfir {{priority_name}}"
                         nouser: "Eyddi {{capital}}{{currency_short_name}} í að <a href='{{proposal_url}}'>tillaga</a> for {{new_priority_name}} taki yfir {{priority_name}}"
-                        noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} fyrir <a href='{{proposal_url}}'>tillöguna</a> að þetta forgangsmál verði tekið yfir af {{new_priority_name}}"                        
+                        noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} fyrir <a href='{{proposal_url}}'>tillöguna</a> að þetta mál verði tekið yfir af {{new_priority_name}}"                        
                         link: "{{user_name}} eyddi {{capital}}{{currency_short_name}} fyrir <a href='{{proposal_url}}'>tillöguna</a> að {{new_priority_name}} taki yfir {{priority_name}}"
             ad:
                 new:
                     name: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í auglýsingu fyrir {{priority_name}}"
                     link: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir {{priority_name}}"
-                    noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir þetta forgangsmál"                    
+                    noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir þetta mál"                    
                     nouser: "Eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir {{priority_name}}"
             point:
                 helpful:

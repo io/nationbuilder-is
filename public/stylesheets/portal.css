@@ -3,10 +3,11 @@
 /* */
 
 .column {
-	width: 500px;
+	width: 355px;
 	float: left;
 	background-color: #fff;
 	height: 100%;
+    padding-bottom: 200px;
 }
 
 .portlet {
@@ -14,14 +15,14 @@
 }
             
 .portlet-header {
-	margin: 0;
+    margin: 0.3em;
+    padding-bottom: 4px;
+    padding-left: 0.2em;
 	padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
 }
             
 .portlet-header .ui-icon {
-    float: left;
+    float: right;
 }
 
 .portlet-footer {
@@ -40,12 +41,11 @@
 }
             
 .portlet-content {
-    padding: 0em;
-	margin: 0em;
+    padding: 0.4em;
 }
 
 .ui-sortable-placeholder {
-    border: 2px dashed #cccccc;
+    border: 1px dotted black;
     visibility: visible !important;
     height: 100px !important;
 }
@@ -91,3 +91,181 @@ div {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
+
+/* */
+
+    .demoHeaders {
+        margin-top: 2em;
+    }
+    
+    #dialog_link {
+        padding: .4em 1em .4em 20px;
+        text-decoration: none;
+        position: relative;
+    }
+    
+    #dialog_link span.ui-icon {
+        margin: 0 5px 0 0;
+        position: absolute;
+        left: .2em;
+        top: 50%;
+        margin-top: -8px;
+    }
+    
+    ul#icons {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul#icons li {
+        margin: 2px;
+        position: relative;
+        padding: 4px 0;
+        cursor: pointer;
+        float: left;
+        list-style: none;
+    }
+    
+    ul#icons span.ui-icon {
+        float: left;
+        margin: 0 4px;
+    }
+    
+    #menuLog {
+        font-size: 1.4em;
+        margin: 20px;
+    }
+    .hidden {
+        position: absolute;
+        top: 0;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    
+    .fg-button {
+        background: #fff;
+        clear: left;
+        margin: 0px 2px 2px 0px;
+        padding: .4em 1em;
+        text-decoration: none !important;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        zoom: 1;
+    }
+    
+    .fg-button .ui-icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        left: 50%;
+        margin-left: -8px;
+    }
+    
+    a.fg-button {
+        float: left;
+    }
+    
+    .fg-searchportlet {
+        background: #ffffff;
+        text-background: #fff;
+        font-color: #000;
+        clear: left;
+        margin: 0px 2px 2px 0px;
+        padding: .4em 1em;
+        text-decoration: none !important;
+        cursor: pointer;
+        position: relative;
+        text-align: left;
+        zoom: 1;
+    }
+    
+    a.fg-searchportlet {
+        float: left;
+    }
+    
+    button.fg-searchportlet {
+        width: auto;
+        overflow: visible;
+    }
+    
+    /* removes extra button width in IE */
+    .fg-button-icon-left {
+        padding-left: 2.1em;
+    }
+    
+    .fg-button-icon-right {
+        padding-right: 2.1em;
+    }
+    
+    .fg-button-icon-left .ui-icon {
+        right: auto;
+        left: .2em;
+        margin-left: 0;
+    }
+    
+    .fg-button-icon-right .ui-icon {
+        left: auto;
+        right: .2em;
+        margin-left: 0;
+    }
+    
+    .fg-button-icon-solo {
+        display: block;
+        width: 8px;
+        text-indent: -9999px;
+    };
+    label, input {
+        display: block;
+    }
+    
+    input.text {
+        margin-bottom: 12px;
+        width: 95%;
+        padding: .4em;
+    }
+    
+    fieldset {
+        padding: 0;
+        border: 0;
+        margin-top: 25px;
+    }
+    
+    h1 {
+        font-size: 1.2em;
+        margin: .6em 0;
+    }
+    
+    div#dialogu-contain {
+        width: 350px;
+        margin: 20px 0;
+    }
+    
+    div#dialogu-contain table {
+        margin: 1em 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    div#dialogu-contain table td, div#dialogu-contain table th {
+        border: 1px solid #eee;
+        padding: .6em 10px;
+        text-align: left;
+    }
+    
+    .ui-button {
+        outline: 0;
+        margin: 0;
+        padding: .4em 1em .5em;
+        text-decoration: none;
+        !important;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+    }
+    
+    .ui-dialog .ui-state-highlight, .ui-dialog .ui-state-error {
+        padding: .3em;
+    }

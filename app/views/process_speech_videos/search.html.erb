@@ -1,14 +1,19 @@
-<h1><%=t :search_results_for%>: <%=params[:search_query] %></h1>
-<br>
+<h1><%=t :search_results_for%>: <%=params[:search_query] %> <%= params[:priority_id] ? "- #{Priority.find(params[:priority_id]).name}" : ""%></h1>
 <% if  @process_speech_videos.length > 0%>
 	<% @process_speech_videos.group_by(&:get_process).sort {|a,b| a[0].process_discussions.find(:last).meeting_date <=> b[0].process_discussions.find(:last).meeting_date}.each do |my_process,videos| %>
-		<h2><%=my_process.external_info_1 %></h2>
+		<h2><%=my_process.priority.external_info_1 unless params[:priority_id]-%></h2>
 		<table>
 		    <tr>
+		    	<% counter = 0 %>
 		        <% videos.each do |video| %>
 		          <td>
-		            <%=video.get_image_tag %>
+		            <%=video.get_image_tag("small") %>
 		          </td>
+				  <% counter += 1 %>
+				  <% if counter>10%>
+				    </tr><tr>
+					<% counter = 0 %>
+			 	  <% end %>
 		        <% end %>
 		    </tr>
 		</table>

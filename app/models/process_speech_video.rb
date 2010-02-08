@@ -21,7 +21,7 @@ class ProcessSpeechVideo < ActiveRecord::Base
   
   acts_as_rateable  
 
-  def get_image_tag(padding_direction="top", image_size="tiny")
+  def get_image_tag(padding_direction="top", image_size="smaller")
     speech_video_path = "/"+ENV['RAILS_ENV']+"/process_speech_videos/#{self.id}/"
     tiny_filename = "#{speech_video_path}#{image_size}_thumb_#{rand(5-2)+2}.png"
     ancenstor_number = self.ancestors.length
@@ -109,7 +109,11 @@ class ProcessSpeechVideo < ActiveRecord::Base
   end
 
   def get_process
-    self.process_discussion.process
+    self.process_discussion.priority_process
+  end
+  
+  def self.top_20
+    self.find_by_sql("select process_speech_videos.id, process_speech_videos.title, avg(rating) AS avg_rating, count(rating) AS count_rating from process_speech_videos LEFT JOIN ratings ON ratings.rateable_id = process_speech_videos.id GROUP BY rateable_id ORDER BY avg_rating DESC, count_rating DESC limit 20")
   end
   
   private

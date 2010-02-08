@@ -37,7 +37,7 @@
 		</li>
 		<% end %>
 		<li class="tab2 mega">
-			<span class="tab_header"><%= link_to t('menu.priorities.name'), :controller => "priorities", :action => current_government.homepage %></span>
+			<span class="tab_header"><%= link_to t('menu.priorities.name'), :controller => "priorities", :action => current_government.homepage.index("/") ? "top" : current_government.homepage %></span>
 			<div class="tab_body">
 				<% if logged_in? %>
 					<div class="tab_subhead">

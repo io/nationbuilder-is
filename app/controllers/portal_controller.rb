@@ -76,11 +76,12 @@ class PortalController < ApplicationController
         params.each do |key,value|
           next unless key.index("portlet_id")
           portlet_id = key.split("-")[1].to_i
-          unless Portlet.find(portlet_id, :include=>:portlet_container).portlet_container.default_admin and not current_user.is_admin?
+          portlet = Portlet.find(portlet_id, :include=>:portlet_container)
+          unless portlet.portlet_container.default_admin and not current_user.is_admin?
             dp = PortletPosition.find_by_portlet_id(portlet_id)
             dp.css_column = value.split("|")[0].to_i
             dp.css_position = value.split("|")[1].to_i
-            dp.save
+            dp.save if portlet.portlet_container.user_id == current_user.id
           else
             RAILS_DEFAULT_LOGGER.error("Regular user trying to save admin portlet positions")
           end

@@ -3,12 +3,18 @@
 
 en:
   processes:
+      name: "Processes Name"
+      all_latest_video_discussion: "All latest video discussions"
+      most_popular_videos: "Most popular videos"      
+      latest_processes: "Latest processes"
+      latest_process_documents: "Latest Process Documents"      
       shows_all:
            title: "Process"
       process_documents:
            title: "Process Documents"
       process_discussions:
            title: "Process Discussions"
+      newly_processed_speeches_about_priority: "Newly processed speeches about this priority"
   search_results_for: "Search results for"
   votes_for_this_document: "Votes for this document"
   speeches: "speeches"
@@ -94,7 +100,6 @@ en:
   bias: "Bias"
   post_comment: "Post comment"
   rate_this_comment: "Rate this comment"
-  comments: "Comments"
   stage_sequence_discussion: "Discussion Stage"
   althingi_process_documents: "Althingi process_documents"
   althingi_release_date: "Althingi release date"

@@ -40,7 +40,19 @@ namespace :utils do
       end
   end
 
-  desc "Exlpore broken videos"
+  desc "Delete Not Valid Video Folders"
+  task(:delete_not_valid_video_folders => :environment) do
+      Dir.entries("public/development/process_speech_videos").each do |filename|
+        next if filename=="." or filename==".."
+        unless ProcessSpeechVideo.exists?(filename.to_i)
+          puts "rm -r public/development/process_speech_videos/#{filename}"
+        else
+          puts "Keeping public/development/process_speech_videos/#{filename}"
+        end
+      end
+  end
+
+  desc "Explore broken videos"
   task(:explore_broken_videos => :environment) do
       masters = ProcessSpeechMasterVideo.find(:all)
       masters.each do |master_video|

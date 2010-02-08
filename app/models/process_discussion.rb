@@ -36,7 +36,9 @@ class ProcessDiscussion < ActiveRecord::Base
     end
 
     def get_random_published
-      find :first, :conditions => "process_speech_videos.published = 1 AND process_speech_videos.in_processing = 0", :order=>"rand()"
+      uncached do
+        find :first, :conditions => "process_speech_videos.published = 1 AND process_speech_videos.in_processing = 0", :order=>"rand()"
+      end
     end
     
     def get_first_published

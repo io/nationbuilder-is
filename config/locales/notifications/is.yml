@@ -73,12 +73,12 @@ is:
             flagged:
                 name: "{{sender_name}} merkti við {{priority_name}} fyrir yfirferð"
                 link:
-                    one: "merkt við 1 forgangsmál"
-                    other: "merkt við {{count}} forgangsmál"
+                    one: "merkt við 1 mál"
+                    other: "merkt við {{count}} mál"
             finished:
                 link:
-                    one: "1 forgangsmáli lokið"
-                    other: "{{count}} forgangsmálum lokið"                               
+                    one: "1 máli lokið"
+                    other: "{{count}} málum lokið"                               
         profile:
             bulletin:
                 name: "{{sender_name}} setti upplýsingar á síðuna þína"

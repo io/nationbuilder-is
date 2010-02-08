@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Skuggaþing - IceSave</title>
+	<link href="/stylesheets/utlit.css" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/umbrot.css" rel="stylesheet" type="text/css" />
+	<%= stylesheet_link_tag 'jquery-ui-1.7.2.custom.css' %>
+	<%= stylesheet_link_tag 'ui-lightness/jquery-ui-1.7.2.custom.css' %>
+	<%= javascript_include_tag 'jquery-1.3.2.min.js', 'jquery-ui-1.7.2.custom.min.js' %>
+<% if logged_in? %>
+	<script type="text/javascript">
+		var slidervalues = [];
+		var activepoint = 0;
+		$(function() {
+			$("#slider").slider( { 
+				step: 1,
+				max: 9,
+				min: 0,
+				value: 5,
+				orientation: 'vertical',
+				stop: function(event, ui) {
+					var rank = $('#slider').slider('option', 'value');
+					$.ajax({
+						type: "GET",
+						data: ({ 'id': activepoint, 'value': rank }),
+						url: '/for_and_against',
+						dataType: 'script'
+					});
+					slidervalues[activepoint] = rank;
+					$('#slider').hide();
+				},
+			}).hide();
+		});
+
+		function showSlider(di, id) {
+			var p = findPos(document.getElementById(di));
+			activepoint = id;
+			if (!slidervalues[activepoint]) {
+				slidervalues[activepoint] = 50;
+			}
+			$('#slider').slider('option', 'value',  slidervalues[activepoint]);
+			$("#slider").css("left", p[0]+4);
+			$("#slider").css("top", p[1]-30);
+			$("#slider").show();
+		}
+		
+		function findPos(obj) {
+			var curLeft = curTop = 0;
+			if (obj.offsetParent) {
+				do {
+					curLeft += obj.offsetLeft;
+					curTop += obj.offsetTop;
+				} while (obj = obj.offsetParent);
+			}
+			return [curLeft, curTop];
+		}
+	</script>
+<% end %>
+</head>
+<body>
+<% if logged_in? %>
+<div id="slider" style="position: absolute; z-index: 100;"></div>
+<% end %>
+<div id="Haus" class="container_12">
+	<div class="grid_4 ">
+		<h1><img src="/images/skuggathing.png" width="310" height="79" alt="Skuggaþing" /></h1>
+	</div>
+	<div id="Nafn" class="grid_5">
+		<h2>Sérútgáfa vegna þjóðaratkvæðagreiðslu um IceSave</h2>
+	</div>
+	<div id="VinstriUppi" class="grid_3 ">
+		<p><a href="#">Innskráning</a> <span class="letur">a A</span></p>
+		<p><a href="#">Deila með öðrum</a></p>
+		<p>
+			<input name="Leita" type="text"/>
+			<input type="submit" name="button" id="button" value="Leita" />
+		</p>
+	</div>
+</div>
+
+
+<div id="Nedrihaus" class="container_12">
+
+	<%= yield %>
+
+	<div id="footer" class="container_12">
+		<div class="grid_12 footer">
+			<p><a href="#">Ná í grunnkóða</a> | <a href="#">skuggathing@skuggathing.is</a> | <a href="#">Um Skuggaþing</a> </p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

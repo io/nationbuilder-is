@@ -3,12 +3,18 @@
 
 is:
   processes:
+      name: "Alþingi"
+      all_latest_video_discussions: "Nýustu vídeó ræður í þessu kerfi"
+      most_popular_videos: "Bestu ræðurnar"      
+      latest_processes: "Nýjustu umræður"
+      latest_process_documents: "Nýjustu þingskjöl"      
       show_all:
            title: "Þingferill"
       process_documents:
            title: "Þingskjöl"
       process_discussions:
            title: "Þingumræður"
+      newly_processed_speeches_about_priority: "Nýjustu umræður um þetta mál í þessu kerfi"
   about_us: "Um þessa vefsíðu"
   no_search_results: "Engar ræður fundust"
   search_results_for: "Niðurstöður ræðu leitar fyrir"
@@ -74,7 +80,6 @@ is:
   vote_count_against: "Atkvæðafjöldi á móti lögum"
   people_in_support: "Fólk með"
   people_against: "Fólk á móti"
-  comments: "Athugasemdir"
   rate_this_comment: "Gæði athugasemdar"
   your_opinion: "Þín athugasemd"
   bias: "Með eða á móti"

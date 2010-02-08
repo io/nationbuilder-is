@@ -1,13 +1,32 @@
-<table>
-<tr>
-<% counter = 0%>
-<% discussion.process_speech_videos.get_all_published.each do |video| %>
-  <td><%=video.get_image_tag%></td>
-  <% counter+=1 %>
-  <% if counter>10 %>
-    </tr><tr>
-    <% counter = 0%>
-  <% end %>
+<% @all_speech_videos = discussion.process_speech_videos.get_all_published %>
+<% if @all_speech_videos.length > 0 %>
+	<%= javascript_include_tag 'jquery.mousewheel' %>
+	<%= javascript_include_tag 'jquery.scrollable-1.0.1.min' %>
+	<%= stylesheet_link_tag 'vertical_video_speeches_scroller_small' %>
+	<!-- navigator -->
+	<% if @all_speech_videos.length>5 %>
+		<div class="navi"></div>
+	<% end %>
+	<!-- root element -->
+	<a class="prev"></a>
+	<div class="scrollable_id_<%=@all_speech_videos[0].id%> scrollable_small">
+	    <div id="latest_videos_thumbs">
+			<% @all_speech_videos.each do |process_video| %>
+	        <div onclick="window.location = '/process_speech_videos/<%=process_video.id%>'">
+	            <img src="<%=process_video.get_playlist_image_url("smaller")%>" />
+	        </div>
+	        <% end %>
+	    </div>
+	</div>
+	<a class="next<%=@all_speech_videos.length<5 ? "disabled" : ""%>"></a>
+	<script type="text/javascript">
+	    jQuery.noConflict();
+	    jQuery(function(){
+	        jQuery("div.scrollable_id_<%=@all_speech_videos[0].id%>").scrollable({
+	            size: 6,
+	            items: '#latest_videos_thumbs',
+	            hoverClass: 'hover'
+	        });
+	    });
+	</script>
 <% end %>
-</tr>
-</table>

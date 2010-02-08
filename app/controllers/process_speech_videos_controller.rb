@@ -18,7 +18,13 @@ class ProcessSpeechVideosController < ApplicationController
   before_filter :admin_required, :only => [:edit, :update]
   
   def search
-    @process_speech_videos = ProcessSpeechVideo.find(:all, :conditions=>['published = 1 AND LOWER(title) LIKE ?','%'+params[:search_query].downcase+'%'])
+    if params[:priority_id]
+      #TODO: Do the rejection with mysql
+      @process_speech_videos = ProcessSpeechVideo.find(:all, :conditions=>['published = 1 AND LOWER(title) LIKE ?','%'+params[:search_query].downcase+'%'])
+      @process_speech_videos = @process_speech_videos.reject {|x| x.process_discussion.priority_process.priority.id != params[:priority_id].to_i}
+    else
+      @process_speech_videos = ProcessSpeechVideo.find(:all, :conditions=>['published = 1 AND LOWER(title) LIKE ?','%'+params[:search_query].downcase+'%'])
+    end
 
     respond_to do |format|
       format.html # index.html.erb

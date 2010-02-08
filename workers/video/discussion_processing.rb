@@ -100,8 +100,8 @@ class DiscussionProcessing
           previous_video.save
         end
         if video==process_discussion.process_speech_videos.get_all_for_modified_duration.last and video.modified_duration_s == nil
-           @@logger.info("adding to 1 second to last video id #{video.id} in discussion id #{process_discussion.id}")
-          video.modified_duration_s = video.duration_s+1.second
+           @@logger.info("adding to 2 seconds to last video id #{video.id} in discussion id #{process_discussion.id}")
+          video.modified_duration_s = video.duration_s+2.seconds
         end
         video.has_checked_duration = true
         video.save

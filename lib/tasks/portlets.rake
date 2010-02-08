@@ -21,6 +21,11 @@ namespace :portlets do
     pc4.weight = 4
     pc4.save
     
+    pc5=PortletTemplateCategory.new
+    pc5.name="processes.name"
+    pc5.weight = 4
+    pc5.save
+
     p=PortletTemplate.new
     p.name="priorities.newest.name"
     p.portlet_template_category_id=pc.id
@@ -174,5 +179,45 @@ namespace :portlets do
     p.item_limit = 7
     p.weight = 5
     p.save    
+
+    p=PortletTemplate.new
+    p.name="processes.all_latest_video_discussions"
+    p.portlet_template_category_id=pc5.id
+    p.locals_data_function=nil
+    p.partial_name = "process_latest_video_discussions"
+    p.item_limit = 20
+    p.weight = 1
+    p.save    
+
+    p=PortletTemplate.new
+    p.name="processes.most_popular_videos"
+    p.portlet_template_category_id=pc5.id
+    p.locals_data_function=nil
+    p.partial_name = "process_most_popular_videos"
+    p.item_limit = 10
+    p.weight = 2
+    p.save    
+
+    p=PortletTemplate.new
+    p.name="processes.latest_processes"
+    p.portlet_template_category_id=pc5.id
+    p.locals_data_function=nil
+    p.partial_name = "process_latest_processes"
+    p.item_limit = 3
+    p.weight = 3
+    p.save    
+
+    p=PortletTemplate.new
+    p.name="processes.latest_process_documents"
+    p.portlet_template_category_id=pc5.id
+    p.locals_data_function=nil
+    p.partial_name = "process_latest_documents"
+    p.item_limit = 5
+    p.weight = 4
+    p.save
+  end
+
+  desc "initialize2"
+  task(:initialize2 => :environment) do    
   end
 end

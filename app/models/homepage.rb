@@ -1,5 +1,6 @@
 class Homepage
   NAMES = [
+    [ "/portal", "Portal" ], 
     [ "index", "Overview" ], 
     [ "top", "Top priorities" ], 
     [ "rising", "Rising priorities" ], 

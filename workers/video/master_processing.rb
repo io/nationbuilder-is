@@ -30,7 +30,9 @@ class VideoProcessing
   def self.ensure_mysql_connection
     unless ActiveRecord::Base.connection.active?
       unless ActiveRecord::Base.connection.reconnect!
-        error("Couldn't reestablish connection to MYSQL")
+        unless ActiveRecord::Base.connection.reconnect!
+          @@logger.error("Couldn't reestablish connection to MYSQL")
+        end
       end
     end
   end

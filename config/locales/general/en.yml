@@ -1028,7 +1028,7 @@ en:
             website:
                 label: "Include a website source link"
             position:
-                label: "Is this talking point {{support_radio}} in support {{neutral_radio}} neutral or {{oppose_radio}} in opposition to {{priority_name}}?"    
+                label: "Is this talking point {{support_radio}} in support or {{oppose_radio}} in opposition to {{priority_name}}?"    
             name:
                 label: "Summarize your talking point in <span class='small'>60 characters</span>"
             other_priority_name:
@@ -1054,6 +1054,19 @@ en:
                 title: "Revise {{point_name}}"
                 success: "Revised {{point_name}}"
             destroy: "Deleted revision of {{point_name}}"
+        top_points:
+            best_points_for_endorse: "Best points for endorse"
+            best_points_for_oppose: "Best points for oppose"
+            newest_points_for_endorse: "Newest points for endorse"
+            newest_points_for_oppose: "Newest points for oppose"
+            all_best_points_for_endorse: "All points for endorse"
+            all_best_points_for_oppose: "All points for oppose"
+            all_newest_points_for_endorse: "All points for endorse"
+            all_newest_points_for_oppose: "All points for oppose"
+            add_point_for_endorse: "Add your point for endorse"
+            add_point_for_oppose: "Add your point for oppose"
+            new_point_short: "New point"
+            all_best_points: "All best points"
     priorities:
         name: "priorities"
         deleted: "That priority was deleted"

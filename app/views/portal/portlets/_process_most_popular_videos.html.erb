@@ -1,0 +1,49 @@
+<% @top_videos = ProcessSpeechVideo.top_20 %>
+<% if @top_videos.length > 0 %>
+<%= javascript_include_tag 'jquery.mousewheel' %>
+<%= javascript_include_tag 'jquery.scrollable-1.0.1.min' %>
+<%= stylesheet_link_tag 'vertical_video_speeches_scroller_top' %>
+<%= stylesheet_link_tag 'priority_processes' %>
+<!-- navigator -->
+<div class="navi"></div>
+<!-- root element -->
+<a class="prev"></a>
+<div class="scrollable_videos_top vertical">
+    <div id="top_videos_thumbs">
+		<% @top_videos.each do |video| %>
+		<% video.reload %>
+		<div>
+	        <div onclick="window.location = '/process_speech_videos/<%=video.id%>'">
+	            <img src="<%=video.get_playlist_image_url("small")%>" />
+				<h3><%=video.title%> <%=latest_video_speech_title(video) %> <%=video.process_discussion.meeting_date.strftime("%d.%m.%Y") -%></h3>
+				<%= render :partial => "/ratings/rate_smaller_readonly", :locals => { :asset => video, :postfix=>"all" } -%>
+	        </div>
+		</div>
+        <% end %>
+    </div>
+</div>
+<a class="next"></a>
+<script type="text/javascript">
+    jQuery.noConflict();
+    jQuery(function(){
+        jQuery("div.scrollable_videos_top").scrollable({
+            size: 3,
+			vertical: true,
+            items: '#top_videos_thumbs',
+            hoverClass: 'hover'
+        });
+    });
+</script>
+<table width="100%">
+    <tr align="left">
+        <td align="left" style="padding-left:45px;padding-top:7px;">
+            <% form_tag('/process_speech_videos/search') do -%>
+            <b><%=label_tag t(:search_by_person) %></b>
+            <%=text_field_tag 'search_query' %><%= submit_tag t(:search) -%>
+            <% end %>
+        </td>
+    </tr>
+</table>
+<% end %>
+<% cache(["portlets_process_most_popular_videos",I18n.locale], :expires_in => 5.minutes) do -%>
+<% end %>

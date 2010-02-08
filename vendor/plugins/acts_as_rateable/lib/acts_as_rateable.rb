@@ -65,7 +65,7 @@ module Juixe
         
         # Helper method that returns the average rating
         # 
-        def rating
+        def rating_old
           average = 0.0
           ratings.each { |r|
             average = average + r.rating
@@ -74,6 +74,12 @@ module Juixe
             average = average / ratings.size 
           end
           average
+        end
+        
+        def rating
+          Rating.average( :rating, :conditions => {
+                          :rateable_id => self.id,
+                          :rateable_type => self.class.name})
         end
         
         # Check to see if a user already rated this rateable
