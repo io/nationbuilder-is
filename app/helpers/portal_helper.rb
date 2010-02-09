@@ -20,34 +20,39 @@ module PortalHelper
   end
 
   def setup_priorities_newest(limit)
-    @priorities=Priority.published.newest.item_limit(limit)
+    get_cached_priorities("Priority.published.newest.item_limit(#{limit})")
     {:priorities=>@priorities, :endorsements=>get_endorsements, :more=>newest_priorities_url}
   end
 
   def setup_priorities_top(limit)
-    @priorities=Priority.published.top_rank.item_limit(limit)
+    get_cached_priorities("Priority.published.top_rank.item_limit(#{limit})")
     {:priorities=>@priorities, :endorsements=>get_endorsements, :more=>top_priorities_url}
   end
 
   def setup_priorities_rising(limit)
-    @priorities= Priority.published.rising.item_limit(limit)
+    get_cached_priorities("Priority.published.rising.item_limit(#{limit})")
     {:priorities=>@priorities, :endorsements=>get_endorsements, :more=>rising_priorities_url}
   end
 
 
   def setup_priorities_falling(limit)
-    @priorities= Priority.published.falling.item_limit(limit)
+    get_cached_priorities("Priority.published.falling.item_limit(#{limit})")
     {:priorities=>@priorities, :endorsements=>get_endorsements, :more=>falling_priorities_url}
   end
 
   def setup_priorities_controversial(limit)
-    @priorities= Priority.published.controversial.item_limit(limit)
+    get_cached_priorities("Priority.published.controversial.item_limit(#{limit})")
     {:priorities=>@priorities, :endorsements=>get_endorsements, :more=>controversial_priorities_url}
   end
 
   def setup_priorities_finished(limit)
-    @priorities= Priority.published.finished.by_most_recent_status_change.item_limit(limit)
+    get_cached_priorities("Priority.published.finished.by_most_recent_status_change.item_limit(#{limit})")
     {:priorities=>@priorities, :endorsements=>get_endorsements, :more=>finished_priorities_url}
+  end
+
+  def setup_priorities_latest_processes(limit)
+    get_cached_priorities("PriorityProcess.latest_updated_priorities(#{limit})")
+    {:priorities=>@priorities, :endorsements=>get_endorsements, :more=>nil}
   end
 
   def setup_priorities_random(limit)
@@ -57,6 +62,17 @@ module PortalHelper
       @priorities = Priority.published.paginate :order => "rand()", :page => 1, :per_page => limit
     end
     {:more=>random_priorities_url, :priorities=>@priorities, :endorsements=>get_endorsements}
+  end
+  
+  private
+  
+  def get_cached_priorities(code_function)
+    key = code_function.gsub("(","").gsub(")","")
+    @priorities = Rails.cache.read(key)
+    if not @priorities
+      eval("@priorities = #{code_function}")
+      Rails.cache.write(key, @priorities, :expires_in => 5.minutes) if @priorities
+    end
   end
 
   def get_endorsements

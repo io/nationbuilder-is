@@ -14,6 +14,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class ProcessDocument < ActiveRecord::Base
+  named_scope :by_latest, :order => "process_documents.created_at desc"  
+  named_scope :item_limit, lambda{|limit| {:limit=>limit}}  
+
   belongs_to :user
   belongs_to :priority_process
   belongs_to :process_document_type

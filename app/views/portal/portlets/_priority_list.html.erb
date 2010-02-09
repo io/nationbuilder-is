@@ -22,4 +22,6 @@
 	<% end %>
 	</table>
 <% end %>
+<% if portlet_locals[:more] %>
 <%= link_to "#{t('more')}...", portlet_locals[:more] %>
+<% end %>

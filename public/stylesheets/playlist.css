@@ -161,4 +161,32 @@ a.go.disabled {
 
 /*}}}*/
 
+/* position and dimensions of the navigator */
+div.navi {
+	margin-left:30px;
+	width:200px;
+	height:20px;
+}
+
+
+/* items inside navigator */
+div.navi a {
+	width:8px;
+	height:8px;
+	float:left;
+	margin:3px;
+	background:url(/images/scroller/navigator.png) 0 0 no-repeat;
+	cursor:pointer;	
+}
+
+/* mouseover state */
+div.navi a:hover {
+	background-position:0 -8px;      
+}
+
+/* active state (current page state) */
+div.navi a.active {
+	background-position:0 -16px;     
+} 	
+
 

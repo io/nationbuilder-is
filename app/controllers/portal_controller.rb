@@ -77,13 +77,13 @@ class PortalController < ApplicationController
           next unless key.index("portlet_id")
           portlet_id = key.split("-")[1].to_i
           portlet = Portlet.find(portlet_id, :include=>:portlet_container)
-          unless portlet.portlet_container.default_admin and not current_user.is_admin?
-            dp = PortletPosition.find_by_portlet_id(portlet_id)
-            dp.css_column = value.split("|")[0].to_i
-            dp.css_position = value.split("|")[1].to_i
-            dp.save if portlet.portlet_container.user_id == current_user.id
+          dp = PortletPosition.find_by_portlet_id(portlet_id)
+          dp.css_column = value.split("|")[0].to_i
+          dp.css_position = value.split("|")[1].to_i
+          if portlet.portlet_container.user_id == current_user.id 
+            dp.save
           else
-            RAILS_DEFAULT_LOGGER.error("Regular user trying to save admin portlet positions")
+            RAILS_DEFAULT_LOGGER.error("Wrong user trying to save the wrong thing")
           end
         end
       end
@@ -98,6 +98,7 @@ class PortalController < ApplicationController
     unless  portlet_container
       portlet_container = PortletContainer.new
       portlet_container.default_admin = true
+      portlet_container.user_id = current_user.id
       portlet_container.save
     end
     portlet_container

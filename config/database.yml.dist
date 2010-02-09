@@ -4,7 +4,8 @@ development:
   adapter: mysql
   database: nb
   username: 
-  password: 
+  password:
+  reconnect: true
   host: localhost
   timeout: 5000
   session_key: nb
@@ -33,7 +34,8 @@ production:
   adapter: mysql
   database: nb_production
   username: 
-  password: 
+  password:
+  reconnect: true
   host: localhost
   timeout: 5000
   session_key: nb

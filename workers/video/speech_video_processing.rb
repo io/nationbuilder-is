@@ -64,7 +64,7 @@ class SpeechVideoProcessing < VideoProcessing
       end
       outpoint_ms = inpoint_ms + duration_ms
       cut_points << [inpoint_ms,outpoint_ms,speech_video_first_tmp_filename]
-      inpoint_s = inpoint_ms/1000
+      inpoint_s = [inpoint_ms/1000,0].max
       @@shell.execute("ffmpeg -ss #{[inpoint_s/3600, inpoint_s/60 % 60, inpoint_s % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')} \
                        -t #{[duration_s/3600, duration_s/60 % 60, duration_s % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')} \
                        -i #{master_video_filename} -acodec copy -vcodec copy #{speech_video_first_tmp_filename}")
@@ -103,8 +103,8 @@ class SpeechVideoProcessing < VideoProcessing
             croptop = 30
             cropbottom = 190
           else
-            croptop = 120
-            cropbottom = 100
+            croptop = 110
+            cropbottom = 110
           end
           @@shell.execute("ffmpeg -ss #{[time/3600, time/60 % 60, time % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')} -i #{speech_video_filename} \
           -an -croptop #{croptop} -cropbottom #{cropbottom} -cropright 150 -cropleft 238 -an -r 1 -vframes 1 -y #{speech_video_path}#{filename}")

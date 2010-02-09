@@ -1,4 +1,5 @@
-<% @latest_speech_discussions = ProcessSpeechMasterVideo.get_latest_twenty(@priority) %>
+<% cache(["latest_video_discussion_medium",I18n.locale], :expires_in => 5.minutes) do %>
+<% @latest_speech_discussions = ProcessSpeechMasterVideo.get_all(@priority) %>
 <% if @latest_speech_discussions.length > 0 %>
 <%= javascript_include_tag 'jquery.mousewheel' %>
 <%= javascript_include_tag 'jquery.scrollable-1.0.1.min' %>
@@ -50,4 +51,5 @@
         });
     });
 </script>
+<% end %>
 <% end %>

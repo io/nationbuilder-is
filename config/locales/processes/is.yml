@@ -4,10 +4,10 @@
 is:
   processes:
       name: "Alþingi"
-      all_latest_video_discussions: "Nýustu vídeó ræður í þessu kerfi"
+      all_latest_video_discussions: "Nýustu ræður í þessu kerfi"
       most_popular_videos: "Bestu ræðurnar"      
-      latest_processes: "Nýjustu umræður"
-      latest_process_documents: "Nýjustu þingskjöl"      
+      latest_processes: "Nýlega breytt þingmál"
+      latest_process_documents: "Nýjustu þingskjöl"
       show_all:
            title: "Þingferill"
       process_documents:

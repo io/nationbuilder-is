@@ -77,9 +77,14 @@ module Juixe
         end
         
         def rating
-          Rating.average( :rating, :conditions => {
-                          :rateable_id => self.id,
-                          :rateable_type => self.class.name})
+          r = Rating.average( :rating, :conditions => {
+                              :rateable_id => self.id,
+                              :rateable_type => self.class.name})
+          if r
+            r
+          else
+            0.0
+          end
         end
         
         # Check to see if a user already rated this rateable

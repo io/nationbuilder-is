@@ -1,3 +1,4 @@
+<% cache(["portlets_process_most_popular_videos",I18n.locale], :expires_in => 5.minutes) do -%>
 <% @top_videos = ProcessSpeechVideo.top_20 %>
 <% if @top_videos.length > 0 %>
 <%= javascript_include_tag 'jquery.mousewheel' %>
@@ -45,5 +46,4 @@
     </tr>
 </table>
 <% end %>
-<% cache(["portlets_process_most_popular_videos",I18n.locale], :expires_in => 5.minutes) do -%>
 <% end %>

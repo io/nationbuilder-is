@@ -140,7 +140,7 @@ namespace :portlets do
     p.portlet_template_category_id=pc4.id
     p.locals_data_function=nil
     p.partial_name = "news_discussions"
-    p.item_limit = 7
+    p.item_limit = 3
     p.weight = 1
     p.save
     
@@ -201,8 +201,8 @@ namespace :portlets do
     p=PortletTemplate.new
     p.name="processes.latest_processes"
     p.portlet_template_category_id=pc5.id
-    p.locals_data_function=nil
-    p.partial_name = "process_latest_processes"
+    p.locals_data_function = "setup_priorities_latest_processes"
+    p.partial_name = "priority_list"
     p.item_limit = 3
     p.weight = 3
     p.save    
