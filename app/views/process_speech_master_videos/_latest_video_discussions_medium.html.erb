@@ -1,4 +1,4 @@
-<% cache(["latest_video_discussion_medium",I18n.locale], :expires_in => 5.minutes) do %>
+<% cache(["latest_video_discussion_medium",I18n.locale,@priority.id], :expires_in => 15.minutes) do %>
 <% @latest_speech_discussions = ProcessSpeechMasterVideo.get_all(@priority) %>
 <% if @latest_speech_discussions.length > 0 %>
 <%= javascript_include_tag 'jquery.mousewheel' %>

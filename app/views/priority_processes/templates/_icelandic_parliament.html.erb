@@ -1,3 +1,4 @@
+<% cache(["icelandic_parliment_priority_processes_main",I18n.locale,@priority_process.priority.id], :expires_in => 15.minutes) do %>
 <% current_process = @priority_process %>
 <% while current_process %>
 <div class="althingi_process_container">
@@ -112,4 +113,5 @@
 	<% current_process = nil %>
 	<% end %>
 </div>
+<% end %>
 <% end %>

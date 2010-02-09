@@ -1,3 +1,4 @@
+<% cache(["latest_video_discussion_large",I18n.locale], :expires_in => 15.minutes) do %>
 <% @latest_speech_discussions = ProcessSpeechMasterVideo.get_latest_twenty %>
 <% if @latest_speech_discussions.length > 0 %>
 <%= javascript_include_tag 'jquery.mousewheel' %>
@@ -51,4 +52,5 @@
         </td>
     </tr>
 </table>
+<% end %>
 <% end %>
