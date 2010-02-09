@@ -88,7 +88,16 @@ class LawDocumentElement < ProcessDocumentElement
     
     div_skip_count = 0
 
-    #TBD    
+    if law_number = html_source_doc.xpath('//font//a').scan(/nr. (\d{1,3})\/(\d{4})/).first
+      law_id = law_number[0]
+      law_year = law_number[1]
+      law_id = "0" + law_id if law_id.size < 3
+      law_now = law_year + law_id
+    end
+
+    html_source_doc.xpath('//div').each do |paragraph|
+      #TBD
+    end
 
     for element in elements
       puts "Element sequence number: #{element.sequence_number}"
@@ -103,6 +112,7 @@ class LawDocumentElement < ProcessDocumentElement
     for element in elements
       puts "#{element.content}"
     end
+    exit
     return doc
   end  
 end
