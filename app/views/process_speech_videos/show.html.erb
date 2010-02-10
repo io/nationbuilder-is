@@ -49,10 +49,24 @@ jQuery('div.clips a:first')<%=Array.new(my_pos,".next()").join%>.click();
 }); 
 </script>
 
+<% discussion = @process_speech_video.process_discussion %>
+
 <%= render :partial => "priorities/header" %>
 <%= render :partial => "priorities/nav" %>
 
 <table>
+	<tr>
+		<td colspan="2" align="center">
+			<br>
+			<b>
+				<%=discussion.meeting_type%> |
+		        <%=discussion.meeting_date.strftime("%d.%m.%Y") %> | 
+				<%=link_to "#{discussion.from_time.strftime('%H:%M')}-#{discussion.to_time.strftime('%H:%M')}", discussion.transcript_url,{:target => "_blank"}%> | 
+				<%=link_to t(:listen), discussion.listen_url, {:target => "_blank"} %> |
+			    <%=link_to discussion.meeting_info, discussion.meeting_url,{:target => "_blank"}%>
+			</b>
+		</td>
+	</tr>
 	<tr>
 		<td valign="top">
 		<a class="go up"></a>

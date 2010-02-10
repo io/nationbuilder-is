@@ -19,8 +19,8 @@
 <div id="backgroundwrap">
 	<div id="header">
 		<div id="branding">
-			<%= link_to current_government.name, "/", :id=>"site_title" %>
-		</div>
+		<%= link_to image_tag("skuggathing_logo.png"), :controller=>"portal" %>
+	</div>
 		<%= flash_div :warning, :notice, :error %>
 
 		<%= render :partial => "ads/pick" %>

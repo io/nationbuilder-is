@@ -21,11 +21,15 @@ class ProcessSpeechVideo < ActiveRecord::Base
   
   acts_as_rateable  
 
-  def get_image_tag(padding_direction="top", image_size="smaller")
+  def get_image_tag(padding_direction="top", image_size="smaller", class_id=nil, title=false, pos=nil)
     speech_video_path = "/"+ENV['RAILS_ENV']+"/process_speech_videos/#{self.id}/"
     tiny_filename = "#{speech_video_path}#{image_size}_thumb_#{rand(5-2)+2}.png"
     ancenstor_number = self.ancestors.length
-    "<a href=\"/process_speech_videos/show/#{self.id}\"><img src=\"#{tiny_filename}\" border=0 style=\"padding-#{padding_direction}:#{ancenstor_number*7}px\"></a>"
+    class_id = " class=\"#{class_id}\"" if class_id
+    title_txt = "title=\"#{pos ? pos.to_s+'.' : ""}#{self.title}|#{self.process_discussion.meeting_date.strftime("%d/%m/%y")}<br><br>\
+                #{self.process_discussion.priority_process.priority.name}<br><br>\
+                #{self.rating}/5.0 - #{self.ratings.size} #{I18n.translate :votes}\"" if title
+    "<a href=\"/process_speech_videos/show/#{self.id}\"#{class_id}#{title_txt}><img src=\"#{tiny_filename}\" border=0 style=\"padding-#{padding_direction}:#{ancenstor_number*7}px\"></a>"
   end
 
   def get_video_link_tag
@@ -112,8 +116,8 @@ class ProcessSpeechVideo < ActiveRecord::Base
     self.process_discussion.priority_process
   end
   
-  def self.top_20
-    self.find_by_sql("select process_speech_videos.id, process_speech_videos.title, avg(rating) AS avg_rating, count(rating) AS count_rating from process_speech_videos LEFT JOIN ratings ON ratings.rateable_id = process_speech_videos.id GROUP BY rateable_id ORDER BY avg_rating DESC, count_rating DESC limit 20")
+  def self.top(limit)
+    self.find_by_sql("select process_speech_videos.id, process_speech_videos.title, avg(rating) AS avg_rating, count(rating) AS count_rating from process_speech_videos LEFT JOIN ratings ON ratings.rateable_id = process_speech_videos.id GROUP BY rateable_id ORDER BY avg_rating DESC, count_rating DESC limit #{limit}")
   end
   
   private

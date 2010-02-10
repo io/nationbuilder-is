@@ -5,7 +5,7 @@ div.scrollable_videos_large {
 	position:relative;
 	overflow:hidden;
 	width: 240px;	 
-	height:555px;
+	height:370px;
 	padding-left: 10px;
 }
 
@@ -108,7 +108,7 @@ a.next, a.nextPage {
 
 /* position and dimensions of the navigator */
 div.navi {
-	margin-left:172px;
+	margin-left:142px;
 	width:200px;
 	height:20px;
 }

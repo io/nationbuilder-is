@@ -1,0 +1,404 @@
+*
+{
+padding: 0;
+margin: 0;
+}
+ 
+div.facebook
+{
+float: left;
+padding-left: 3px;
+padding-top: 8px;
+padding-right: 6px;
+}
+
+div h3, div h2, div p
+{
+color: #333;
+}
+
+ div h3, div h2, div p
+{
+	color: #333;
+}
+
+p
+{
+	padding-bottom: 2px;
+	padding-top: 4px;
+	line-height: 130%;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	color: #333333;
+}
+#sub_header, #Ja, #Nei, #SkilaAudu
+{
+	background-color: #FFF;
+}
+
+
+
+h2
+{
+font-size: 1.3em;
+border-bottom:1px solid #CCCCCC;
+font-weight:bold;
+padding-top: 15px;
+padding-bottom: 5px;
+margin-right: 23px;
+}
+ 
+h3
+{
+font-size: 0.8em;
+height: 1.5em;
+border-bottom:1px solid #CCCCCC;
+font-weight:bold;
+padding-top: 15px;
+display:block;
+margin:0;
+}
+ 
+h4
+{
+font-size: 0.8em;
+height: 1.5em;
+border-bottom:1px solid #CCCCCC;
+font-weight:bold;
+padding-top: 15px;
+display:block;
+margin:0;
+}
+ 
+ 
+.Atkvaedi img
+{
+margin-top: 16px;
+margin-left: 7px;
+padding-bottom: 7px;
+}
+ 
+.Atkvaedi
+{
+background-color: #FFF !important;
+}
+ 
+ 
+.point_item {
+clear:both;
+}
+ 
+.container_12 {
+clear:both;
+}
+
+#point_right
+{
+margin-left: 12px;
+}
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_12 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+
+}
+
+.container_13 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_41,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+
+	
+}
+
+.grid_12{
+text-align: center;
+height: 1.7em;
+	
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+    .container_12 .grid_1 {
+	width:70px;
+}
+    .container_12 .grid_2 {
+	width:150px;
+}
+    .container_12 .grid_3 {
+	width:230px;
+}
+    .container_12 .grid_4 {
+	width:310px;
+}
+    .container_13 .grid_41 {
+	width:360px;
+}
+    .container_12 .grid_5 {
+	width:380px;
+}
+    .container_12 .grid_6 {
+	width:457px;
+}
+    .container_12 .grid_7 {
+	width:550px;
+}
+    .container_12 .grid_8 {
+	width:630px;
+}
+    .container_12 .grid_9 {
+	width:710px;
+}
+    .container_12 .grid_10 {
+	width:790px;
+}
+    .container_12 .grid_11 {
+	width:870px;
+}
+    .container_12 .grid_12 {
+	width:928px;
+}
+
+
+
+
+/* Prefix Extra Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+    .container_12 .prefix_1 {
+	padding-left:80px;
+}
+    .container_12 .prefix_2 {
+	padding-left:160px;
+}
+    .container_12 .prefix_3 {
+	padding-left:240px;
+}
+    .container_12 .prefix_4 {
+	padding-left:320px;
+}
+    .container_12 .prefix_5 {
+	padding-left:400px;
+}
+    .container_12 .prefix_6 {
+	padding-left:480px;
+}
+    .container_12 .prefix_7 {
+	padding-left:560px;
+}
+    .container_12 .prefix_8 {
+	padding-left:640px;
+}
+    .container_12 .prefix_9 {
+	padding-left:720px;
+}
+    .container_12 .prefix_10 {
+	padding-left:800px;
+}
+    .container_12 .prefix_11 {
+	padding-left:880px;
+}
+
+
+/* Suffix Extra Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+    .container_12 .suffix_1 {
+	padding-right:80px;
+}
+    .container_12 .suffix_2 {
+	padding-right:160px;
+}
+    .container_12 .suffix_3 {
+	padding-right:240px;
+}
+    .container_12 .suffix_4 {
+	padding-right:320px;
+}
+    .container_12 .suffix_5 {
+	padding-right:400px;
+}
+    .container_12 .suffix_6 {
+	padding-right:480px;
+}
+    .container_12 .suffix_7 {
+	padding-right:560px;
+}
+    .container_12 .suffix_8 {
+	padding-right:640px;
+}
+    .container_12 .suffix_9 {
+	padding-right:720px;
+}
+    .container_12 .suffix_10 {
+	padding-right:800px;
+}
+    .container_12 .suffix_11 {
+	padding-right:880px;
+}
+
+
+/* Push Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+    .container_12 .push_1 {
+	left:80px;
+}
+    .container_12 .push_2 {
+	left:160px;
+}
+    .container_12 .push_3 {
+	left:240px;
+}
+    .container_12 .push_4 {
+	left:320px;
+}
+    .container_12 .push_5 {
+	left:400px;
+}
+    .container_12 .push_6 {
+	left:480px;
+}
+    .container_12 .push_7 {
+	left:560px;
+}
+    .container_12 .push_8 {
+	left:640px;
+}
+    .container_12 .push_9 {
+	left:720px;
+}
+    .container_12 .push_10 {
+	left:800px;
+}
+    .container_12 .push_11 {
+	left:880px;
+}
+
+
+
+
+/* Pull Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+    .container_12 .pull_1 {
+	right:80px;
+}
+    .container_12 .pull_2 {
+	right:160px;
+}
+    .container_12 .pull_3 {
+	right:240px;
+}
+    .container_12 .pull_4 {
+	right:320px;
+}
+    .container_12 .pull_5 {
+	right:400px;
+}
+    .container_12 .pull_6 {
+	right:480px;
+}
+    .container_12 .pull_7 {
+	right:560px;
+}
+    .container_12 .pull_8 {
+	right:640px;
+}
+    .container_12 .pull_9 {
+	right:720px;
+}
+    .container_12 .pull_10 {
+	right:800px;
+}
+    .container_12 .pull_11 {
+	right:880px;
+}
+
+.sub_header .below_line
+{
+	color: gray;
+	margin: 3px 0 3px 5px;
+	font-size:10px;
+	font-weight:normal;
+	padding:0;
+	text-align: right;
+}
+
+div.facebook 
+{
+	float: left;
+	padding-left: 3px;
+	padding-top: 8px;
+	padding-right: 6px;
+}
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
