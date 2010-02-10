@@ -47,6 +47,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_government
+    Government #FIXME: FFJ: ArgumentError (undefined class/module Government): app/controllers/application_controller.rb:51:in `current_government' AND app/controllers/application_controller.rb:159:in `check_subdomain'
     return @current_government if @current_government
     @current_government = Rails.cache.read('government')
     if not @current_government
