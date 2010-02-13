@@ -43,8 +43,8 @@ is:
         follower:
             name: "{{sender_name}} fylgist nú með uppfærslum þínum"
             link:
-                one: "1 nýr fylgjandi"
-                other: "{{count}} nýjir fylgjendur"            
+                one: "1 nýjan fylgjanda"
+                other: "{{count}} nýja fylgjendur"            
         invitation:
             accepted:
                 name: "{{sender_name}} samþykkti boð þitt um að gerast meðlimur í {{government_name}}"

@@ -66,8 +66,8 @@ class ProcessParser
               process_document.external_type.downcase.index("þingsályktun") or 
               process_document.external_type.downcase.index("stjórnartillaga")
           document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
-        elsif process_document.external_type.index("breytingartillaga")
-          #TBD document = ChangeDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
+        else #TODO: Hack to get things saved
+          document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
         end         
         if document
           unless old_process = PriorityProcess.find(:first, :conditions=>["priority_id = ? AND stage_sequence_number = ?",

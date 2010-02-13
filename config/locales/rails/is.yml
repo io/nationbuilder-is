@@ -48,31 +48,31 @@ is:
   # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
   datetime:
     distance_in_words:
-      half_a_minute: "hálf mínúta" 
+      half_a_minute: "hálf mín" 
       less_than_x_seconds:
-        one:  "undir 1 sekúndu" 
-        many: "minna en {{count}} sekúndur" 
+        one:  "undir 1 sek." 
+        many: "minna en {{count}} sek." 
       x_seconds:
-        one:  "1 sekúnda" 
-        many: "{{count}} sekúndur" 
+        one:  "1 sek." 
+        many: "{{count}} sek." 
       less_than_x_minutes:
-        one:  "undir einni mínútu" 
-        many: "minna en {{count}} mínútur" 
+        one:  "undir einni mín" 
+        many: "minna en {{count}} mín" 
       x_minutes:
-        one:  "1 mínúta" 
-        many: "{{count}} mínútur" 
+        one:  "1 mín" 
+        many: "{{count}} mín" 
       about_x_hours:
         one:  "um klukkustund" 
-        many: "um {{count}} klukkustundir" 
+        many: "um {{count}} klst." 
       x_days:
         one:  "1 dagur" 
         many: "{{count}} dagar" 
       about_x_months:
         one:  "um mánuði" 
-        many: "um {{count}} mánuðir" 
+        many: "um {{count}} mán." 
       x_months:
         one:  "1 mánuður" 
-        many: "{{count}} mánuðir" 
+        many: "{{count}} mán." 
       about_x_years:
         one:  "um ári" 
         many: "um {{count}} árum" 

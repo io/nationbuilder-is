@@ -110,7 +110,7 @@
 			<div class="tab_body">
 				<%= link_to t('menu.briefing.add_point.name'), new_priority_point_path(@priority), :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %><br/>
 				<%= link_to t('menu.briefing.add_document.name'), new_priority_document_path(@priority), :title => t('menu.briefing.add_document.title'), :class => "qtip_left" %><br/>
-				<% if (@priority.position < 26 and @priority.position > 0) or @priority.is_buried? %>
+				<% if 1==2 and (@priority.position < 26 and @priority.position > 0) or @priority.is_buried? %>
 					<span class="greyed_out"><%= t('menu.priorities.add_ad.name') %></span><br/>
 				<% else %>
 					<%= link_to t('menu.priorities.add_ad.name'), new_priority_ad_url(@priority), :title => t('menu.priorities.add_ad.title', :currency_name => current_government.currency_name.downcase), :class => "qtip_left" %><br/>

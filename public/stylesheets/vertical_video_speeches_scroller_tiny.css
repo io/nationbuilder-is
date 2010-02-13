@@ -1,15 +1,14 @@
 /* single item */ 
 
 /* root element for the whole scrollable setup */
-div.scrollable_videos_large {  
+div.scrollable_small {  
 	position:relative;
 	overflow:hidden;
-	width: 240px;	 
-	height:370px;
-	padding-left: 10px;
+	width: 450px; 
+	height:30px;
 }
 
-#latest_video_discussion_thumbs h3 {
+#latest_videos_thumbs h3 {
 	color: #999;
 }
 
@@ -17,61 +16,60 @@ div.scrollable_videos_large {
 	root element for scrollable items. It is 
 	absolutely positioned with large width. 
 */
-#latest_video_discussion_thumbs {	
+#latest_videos_thumbs {	
 	position:absolute;
-	height:20000em;	
-	width:240px;
+	width:20000em;	
 	clear:both;
-	border:1px solid #222;
 }
 
 /* custom positioning for navigational links */
 a.prev, a.next {
-	margin-top:118px;	
+	margin-top:30px;	
 }
 
 
-#latest_video_discussion_thumbs div { 
+#latest_videos_thumbs div { 
     float:left; 
-    width:240px; 
-    height:185px; 
-    background:#333 url(/images/h150.png) repeat-x 0 110px; 
+    width:45px; 
+    height:28px; 
+    background:#333 url(/images/h140.png) repeat-x 0 100px; 
     color:#fff; 
     border-left:1px solid #333; 
     cursor:pointer;
 	font-size: 10px;
 } 
 
-#latest_video_discussion_thumbs h3 { 
+#latest_videos_thumbs h3 { 
 	font-size: 10px;
 	font-weight: bold;
 } 
 
-#latest_video_discussion_thumbs img { 
-	padding-left:40px;
-	padding-top:5px;
-	padding-bottom: 10px;
+#latest_videos_thumbs span {
+	text-align: center;
+	}
+
+#latest_videos_thumbs img { 
 } 
 
-#latest_video_discussion_thumbs p { 
+#latest_videos_thumbs p { 
 	font-size: 10px;
 } 
 
 
  
 /* style when mouse is over the item */ 
-#latest_video_discussion_thumbs div.hover { 
+#latest_videos_thumbs div.hover { 
     background-color:#444;     
 } 
  
 /* style when element is active (clicked) */ 
-#latest_video_discussion_thumbs div.active { 
+#latest_videos_thumbs div.active { 
     background-color:#066; 
     cursor:default; 
 }
 
 /* this makes it possible to add next button beside scrollable */
-div.scrollable_videos_large {
+div.scrollable_small {
 	float:left;		
 }
 
@@ -82,7 +80,7 @@ a.prev, a.next, a.prevPage, a.nextPage {
 	height:18px;
 	background:url(/images/scroller/left.png) no-repeat;
 	float:left;
-	margin:93px 10px;
+	margin:5px 5px;
 	cursor:pointer;
 }
 
@@ -109,8 +107,8 @@ a.next, a.nextPage {
 
 /* position and dimensions of the navigator */
 div.navi {
-	margin-left:96px;
-	width:200px;
+	margin-left:30px;
+	width:420px;
 	height:20px;
 }
 

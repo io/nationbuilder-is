@@ -22,7 +22,7 @@ class ProcessSpeechVideosController < ApplicationController
     @search_query = params[:search_query].titleize_is
     RAILS_DEFAULT_LOGGER.info(@search_query)
       #TODO: Do the rejection with mysql
-    unless fragment_exist?(["process_video_search", @priority_filter, @search_query.gsub(".",""), I18n.locale])
+    unless fragment_exist?(["process_video_search", @priority_filter, @search_query.gsub(".","").parameterize_full, I18n.locale])
       if params[:priority_id]
           @priority = Priority.find(params[:priority_id])
           @process_speech_videos = ProcessSpeechVideo.find(:all, :conditions=>['published = 1 AND title LIKE ?','%'+@search_query+'%'])

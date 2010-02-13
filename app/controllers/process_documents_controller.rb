@@ -31,6 +31,11 @@ class ProcessDocumentsController < ApplicationController
   # GET /process_documents/1
   # GET /process_documents/1.xml
   def show
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+    elsif logged_in?
+      @user = current_user
+    end
     @document = ProcessDocument.find(params[:id])
     @priority = @document.priority_process.priority
     unless fragment_exist?(@document)

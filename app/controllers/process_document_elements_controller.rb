@@ -18,6 +18,8 @@ class ProcessDocumentElementsController < ApplicationController
                                            :create_change_proposal, :cancel_new_change_proposal]
   before_filter :admin_required, :only => [:edit, :update]
 
+  before_filter :setup_user_hack
+
   # GET /process_document_elements
   # GET /process_document_elements.xml
   def index
@@ -109,6 +111,21 @@ class ProcessDocumentElementsController < ApplicationController
       page.replace_html replace_div, :partial => "process_document_elements/templates/#{@source_element.process_document.template_name}_new_change_proposal", :locals => {:document=> @source_element.process_document, :element => @source_element, :open_panel => true }
     end
   end
+  
+  def delete_change_proposal
+    source_element = ProcessDocumentElement.find(params[:source_id])
+    source_document = source_element.process_document
+    sequence_number = source_element.sequence_number
+    if (source_element.user and @user and source_element.user.id == @user.id) or (@user and @user.is_admin_subscribed)
+      source_element.destroy
+    end
+    source_element = source_document.has_change_proposal_for_sequence_number?(sequence_number,true)
+    replace_div = "process_document_element_number_#{source_element.sequence_number}"
+    render :update do |page|  
+      page.replace_html replace_div, :partial => "process_document_elements/templates/#{source_element.process_document.template_name}_element", :locals => {:document=> source_element.process_document, :element => source_element, :open_panel => true }
+      page.visual_effect :highlight, replace_div,  {:restorecolor=>"#ffffff", :startcolor=>"#bbffbc", :endcolor=>"#ffffff"} 
+    end    
+  end
 
   def create_change_proposal
     source_element = ProcessDocumentElement.find(params[:source_id])
@@ -117,6 +134,8 @@ class ProcessDocumentElementsController < ApplicationController
     change_proposal.content = params[:source_element][:content]
     change_proposal.content_text_only = ""
     change_proposal.original_version=false
+    change_proposal.created_at = Time.now
+    change_proposal.updated_at = Time.now
     change_proposal.save
     replace_div = "process_document_element_number_#{change_proposal.sequence_number}"
     render :update do |page|  
@@ -140,6 +159,14 @@ class ProcessDocumentElementsController < ApplicationController
     render :update do |page|  
       page.replace_html replace_div, :partial => "process_document_elements/templates/#{source_element.process_document.template_name}_element", :locals => {:document=> source_element.process_document, :element => source_element, :open_panel => true }
       page.visual_effect :highlight, replace_div,  {:restorecolor=>"#ffffff", :startcolor=>"#bbffbc", :endcolor=>"#ffffff"}  
+    end
+  end
+  
+  def setup_user_hack
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+    elsif logged_in?
+      @user = current_user
     end
   end
 end

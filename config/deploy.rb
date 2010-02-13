@@ -16,6 +16,7 @@ role :db,  domain, :primary => true
 task :after_update_code do
   run "ln -s #{deploy_to}/#{shared_dir}/config/database.yml #{current_release}/config/database.yml"
   run "ln -s #{deploy_to}/#{shared_dir}/config/facebooker.yml #{current_release}/config/facebooker.yml"
+  run "ln -s #{deploy_to}/#{shared_dir}/config/newrelic.yml #{current_release}/config/newrelic.yml"
   run "ln -s #{deploy_to}/#{shared_dir}/production #{current_release}/public/production"
   run "ln -s #{deploy_to}/#{shared_dir}/private #{current_release}/private"
   #run "rm -f #{current_path}"

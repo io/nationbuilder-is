@@ -14,20 +14,26 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
  
 class RatingsController < ApplicationController
+  before_filter :login_required
   before_filter :get_class_by_name
 
-  def rate 
-    if session[:user_id]
+  def rate
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+    elsif logged_in?
+      @user = current_user
+    end
+    if @user
       rateable = @rateable_class.find(params[:id])
-      Rating.delete_all(["rateable_type = ? AND rateable_id = ? AND user_id = ?", @rateable_class.base_class.to_s, params[:id], session[:user_id]])  
-      rateable.add_rating Rating.new(:rating => params[:rating], :user_id => session[:user_id])      
+      Rating.delete_all(["rateable_type = ? AND rateable_id = ? AND user_id = ?", @rateable_class.base_class.to_s, params[:id], @user.id]) 
+      rateable.add_rating Rating.new(:rating => params[:rating], :user_id => @user.id)      
       rateable.process_document.touch  if params[:rateable_type]=="ProcessDocumentElement"
     else
-      info("user is not logged in")
+      RAILS_DEFAULT_LOGGER.info("user is not logged in")
     end
            
     render :update do |page|  
-      if session[:user_id]
+      if @user
         if params[:smaller_comments]!=nil
           page.replace_html "star-ratings-block-#{rateable.id}_#{rateable.class.name}", :partial => "rate_smaller_comments", :locals => { :asset => rateable }        
           page.visual_effect :highlight, "star-ratings-block-#{rateable.id}_#{rateable.class.name}", {:restorecolor=>"#ffffff", :startcolor=>"#bbffbc", :endcolor=>"#ffffff"}

@@ -31,8 +31,7 @@
 	</div>
 	<div class="field">
 		<div class="field_label">
-<!--			<%= t('points.new.position.label', :priority_name => link_to(@priority.name, @priority), :support_radio => f.radio_button(:value, 1), :oppose_radio => f.radio_button(:value, -1), :neutral_radio => f.radio_button(:value, 0))%>-->
-			<%= t('points.new.position.label', :priority_name => link_to(@priority.name, @priority), :support_radio => f.radio_button(:value, 1, :checked=>params[:support] ? "checked" : "nil"), :oppose_radio => f.radio_button(:value, -1, :checked=>(params[:support] ?  "nil" : "checked")))%>-->
+			<%= t('points.new.position.label', :priority_name => link_to(@priority.name, @priority), :support_radio => f.radio_button(:value, 1, :checked=>params[:support] ? "checked" : "nil"), :oppose_radio => f.radio_button(:value, -1, :checked=>(params[:support] ?  "nil" : "checked")))%>
 		</div>
 	</div>
 	

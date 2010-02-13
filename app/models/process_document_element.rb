@@ -18,6 +18,7 @@ class ProcessDocumentElement < ActiveRecord::Base
   belongs_to :process_document
   
   after_save :touch_document
+  before_destroy :touch_document
   
   acts_as_rateable
   

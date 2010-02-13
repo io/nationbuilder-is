@@ -1,5 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
-	font-size: 62.5%;	
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size:11px;
+  color: #333333;
 }
 
 body {
@@ -173,13 +180,14 @@ h4 {
 }
 
 #priority_column {
-	margin-top: 10px;
+	margin-top: 7px;
 }
 #right_column_priorities {
 	padding: 0px 0px 0px 10px;
 }
 #your_priorities_container {
-	font-size: 1.2em;
+	font-size: 11px;
+	line-height: 140%;
 }
 
 #notifications {
@@ -258,7 +266,8 @@ h4 {
 }
 
 .pc_under {
-	font-size: 9px;
+	font-size: 10px;
+	padding-left: 3px;
 	margin-top: 2px;
 }
 

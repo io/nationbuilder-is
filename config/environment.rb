@@ -22,9 +22,9 @@ Rails::Initializer.run do |config|
   config.gem 'hpricot', :version => '>= 0.6'
   config.gem 'liquid'
   config.gem 'dweinand-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com/'
-  # config.gem 'nokogiri', :version => '1.3.3'  
   config.gem 'facebooker', :version => '1.0.62'
   config.gem 'hoptoad_notifier'
+  config.gem "newrelic_rpm"
   #config.gem 'curb', :version => '0.1.4'
   
   # Settings in config/environments/* take precedence over those specified here.
@@ -65,7 +65,8 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
 
   config.i18n.load_path += Dir[File.join(RAILS_ROOT, 'config', 'locales', '**', '*.{rb,yml}')] 
-  config.i18n.default_locale = "is"
+  config.i18n.default_locale = :is
+  config.i18n.locale = :is
   
   NB_CONFIG = { 'api_exclude_fields' => [:ip_address, :user_agent, :referrer, :google_token, :google_crawled_at, :activation_code, :salt, :email, :first_name, :last_name, :crypted_password, :is_tagger, :partner_id, :ip_address, :user_agent, :remember_token, :remember_token_expires_at, :referrer, :zip, :birth_date, :city, :state, :is_comments_subscribed, :is_finished_subscribed, :is_followers_subscribed, :is_mergeable, :is_messages_subscribed, :is_newsletter_subscribed, :is_point_changes_subscribed, :is_votes_subscribed, :is_subscribed, :contacts_count, :contacts_invited_count, :contacts_members_count, :contacts_not_invited_count, :code, :rss_code, :address] }
 
