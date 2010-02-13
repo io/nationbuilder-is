@@ -33,6 +33,7 @@ require '../../config/boot'
 require "#{RAILS_ROOT}/config/environment"
 
 require 'law_document_element'
+require 'law_original_document_element'
 require 'law_proposal_document_element'
 require 'process_parser'
 require 'tags_parser'

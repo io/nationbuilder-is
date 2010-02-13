@@ -2,6 +2,26 @@ class ProcessParser
 
   @@stage_sequence_number = @@discussion_sequence_number = @@process_document_sequence_number = 0
 
+  def get_original_law_id(process_document)
+    # Get elements with TYPE_HEADER_MAIN and TYPE_HEADER_MAIN_CONTENT
+    elements = process_document.process_document_elements.all(:conditions => "content_type IN (1,18)")
+
+    # Combine the two types into one string
+    header = ""; elements.each {|element| header += element.content_text_only.strip}
+
+    # Find the current/original law number
+    # nr. 116/2006 => 2006116
+    # nr. 96/2009 => 2009096
+    # nr. 19 12. febrúar 1940 => 1940019
+    if law_number = header.scan(/nr. (\d{1,3})(.*)(\d{4})/o).first
+      law_id = law_number[0]
+      law_year = law_number[2]
+      law_id = law_id.rjust(3,"0") # Law numbers should always be three letters
+      law_now = law_year + law_id
+    end
+    law_now
+  end
+
   def self.get_stage_sequence_number(txt, process_type)
     if process_type == PROCESS_TYPE_LOG
       re1='(\\d+)'  # Integer Number 1
@@ -62,9 +82,9 @@ class ProcessParser
         puts "EXTERNAL_TYPE: #{process_document.external_type} STAT3: #{process_document.external_type[0..3]}"
         if process_document.external_type.index("lög") # New changed law
           #TBD document = LawDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
-        elsif process_document.external_type.index("frumvarp") or 
-              process_document.external_type.downcase.index("þingsályktun") or 
-              process_document.external_type.downcase.index("stjórnartillaga")
+        elsif process_document.external_type.index("frumvarp") or # frumvarp or stjórnarfrumvarp, ie. http://www.althingi.is/dba-bin/ferill.pl?ltg=138&mnr=359 & http://www.althingi.is/dba-bin/ferill.pl?ltg=138&mnr=46
+              process_document.external_type.downcase.index("þingsályktun") or # þingsályktunartillaga, ie. http://www.althingi.is/dba-bin/ferill.pl?ltg=138&mnr=20
+              process_document.external_type.downcase.index("stjórnartillaga") # stjórnartillaga, ie. http://www.althingi.is/dba-bin/ferill.pl?ltg=138&mnr=200
           document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
         else #TODO: Hack to get things saved
           document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
@@ -80,6 +100,21 @@ class ProcessParser
           process_document.priority_process_id = current_process.id
           process_document.process_document_type_id = process_document_type.id
           process_document.save
+          
+          #
+          # Create new process document for the original law
+          #
+          # puts "STARTING TO CRAWL ORIGINAL LAW FOR PROCESS DOCUMENT WITH PROCESS_ID = #{current_process.id}"
+          # process_law_document = ProcessDocument.new
+          # process_law_document.sequence_number = @@process_document_sequence_number+=1
+          # process_law_document.priority_process = current_process.id
+          # process_law_document.stage_sequence_number = @@stage_sequence_number
+          # process_law_document.external_id = law_now = get_original_law_id(process_document)
+          # process_law_document.external_link = "http://www.althingi.is/lagas/nuna/#{law_now}.html"
+          # process_law_document.external_type = "upprunaleg lög"
+          # process_law_document.external_author = ""
+          # # process_law_document.external_date = ""
+          # # FFJ:working on: original_law_document = LawOriginalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link, process_type)          
         end
         puts process_document.inspect
       else

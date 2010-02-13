@@ -35,6 +35,46 @@ Eftirfarandi breytingar verða á 6. gr. laganna:
 6. gr - 4. mgr. - 2. löluliður sérð þú frá G6M4L2 - 3. málsl. er síðan 3. settningin í þessum tölulið þar sem þú getur notað punkt til að telja þig niður.  <a href> brýtur þetta fyrsta <a name> í sundur þannig að ég mundi nota næsta <a name..> til að ákveða endapunktinn.
 
 Og laga safnið er alltaf í sama formatti:
-http://www.althingi.is/lagas/nuna/<4ár><lög>.html - t.d. 96/2009 -> 2009096.html
+http://www.althingi.is/lagas/nuna/<4ár><lög>.html - t.d. 96/2009 -> 2009096.html - Alltaf 3 tölustafir í lögum þannig að 0 bætist fyrir framan.
 
-Og það eru alltaf 3 tölustafir í lögum þannig að 0 bætist fyrir framan.
+###############################
+ProcessDocument
+###############################
+id
+process_document_state_id
+process_document_type_id
+voting_close_time
+published
+external_name
+external_author
+external_state
+external_creation_date
+external_link
+external_date
+external_id
+created_at
+updated_at
+process_document_frozen
+user_id
+priority_process_id
+process_document_id
+original_version
+stage_sequence_number
+sequence_number
+external_type
+
+###############################
+ProcessDocumentElement
+###############################
+id
+sequence_number
+process_document_id
+parent_id
+content
+content_text_only
+content_number
+created_at
+updated_at
+user_id
+content_type
+original_version
