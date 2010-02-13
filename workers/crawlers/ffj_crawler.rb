@@ -2,6 +2,12 @@ require 'rubygems'
 gem 'nokogiri', '=1.3.3'; require 'nokogiri'
 require 'open-uri'
 
+RAILS_ENV='development'
+
+require '../../config/boot'
+require "#{RAILS_ROOT}/config/environment"
+
+
 DEBUG=1
 
 # Titill (Haus+texti)
@@ -100,7 +106,7 @@ doc.to_s.scan(/me="(.*?)">(.*?)(<a na|<\/html>)/m) do |match|
   body = match[1]
 
   # body "<!-- #{id} --> #{body}"
-
+  
   puts "=====================================================================\n"
   puts id + "\n"
   puts "=====================================================================\n"
