@@ -1,10 +1,10 @@
-<% if params[:q] %>
-	<p><%= t('priorities.new.suggest') %></p>
-<% end %>
 <% form_for(Priority.new) do |f| %>
 <% if @tag_names %>
 	<%= hidden_field_tag :tag_names, @tag_names %>
 <% end %>
 	<%= f.text_field :name, :size => 40, :maxlength => 60, :autocomplete =>"off" %>	
 	<%= f.submit t('priorities.new.submit'), :class => "suggest_button" %>
+<% end %>
+<% if params[:q] %>
+	<p><%= t('priorities.new.suggest') %></p>
 <% end %>

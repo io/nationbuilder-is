@@ -3,6 +3,8 @@
 
 is:
   processes:
+      only_last_process: "Nýjasta umræða frá Alþingi"
+      show_all_processes: "Smeltu til að sjá allar umræður"
       name: "Alþingi"
       all_latest_video_discussions: "Nýustu ræður í þessu kerfi"
       most_popular_videos: "Bestu ræðurnar"      

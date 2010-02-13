@@ -22,8 +22,9 @@ Rails::Initializer.run do |config|
   config.gem 'hpricot', :version => '>= 0.6'
   config.gem 'liquid'
   config.gem 'dweinand-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com/'
-  config.gem 'facebooker', :version => '1.0.53'
-  config.gem 'nokogiri', :version => '1.3.3'  
+  # config.gem 'nokogiri', :version => '1.3.3'  
+  config.gem 'facebooker', :version => '1.0.62'
+  config.gem 'hoptoad_notifier'
   #config.gem 'curb', :version => '0.1.4'
   
   # Settings in config/environments/* take precedence over those specified here.
@@ -87,37 +88,6 @@ AutoHtml.add_filter(:redcloth) do |text|
     RedCloth.new(text).to_html
   rescue
     text
-  end
-end
-
-class String
- def parameterize_full
-    str=self.to_s.gsub("Ð","D").gsub("Þ","Th").gsub("Æ","Ae").gsub("ð","d").gsub("þ","th").gsub("æ","ae")
-    accents = {
-      ['á','à','â','ä','ã'] => 'a',
-      ['Ã','Ä','Â','À','Á'] => 'A',
-      ['é','è','ê','ë'] => 'e',
-      ['Ë','É','È','Ê'] => 'E',
-      ['í','ì','î','ï'] => 'i',
-      ['Í','Î','Ì','Ï'] => 'I',
-      ['ó','ò','ô','ö','õ'] => 'o',
-      ['Õ','Ö','Ô','Ò','Ó'] => 'O',
-      ['ú','ù','û','ü'] => 'u',
-      ['Ú','Û','Ù','Ü'] => 'U',
-      ['Ý'] => 'Y',
-      ['ý'] => 'y',
-      ['ç'] => 'c', ['Ç'] => 'C',
-      ['ñ'] => 'n', ['Ñ'] => 'N'
-    }
-    accents.each do |ac,rep|
-      ac.each do |s|
-        str = str.gsub(s, rep)
-      end
-    end
-    str = str.gsub(/[^a-zA-Z0-9 ]/,"")
-    str = str.gsub(/[ ]+/," ")
-    str = str.gsub(/ /,"-")
-    str = str.downcase
   end
 end
 

@@ -1,5 +1,4 @@
 html, body {
-	font-size: 9px;
 	font-family: Helvetica,Arial,sans-serif;
 }
 
@@ -27,7 +26,8 @@ hr { border-top: 3px solid #e5e5e5; }
 }
 
 #contentwrap {
-	width: 710px;
+	width: 720px;
+	margin-left: 7px;
 	float: left;
 	position: relative;
 	padding: 0px 00px 0px 0px !important;
@@ -39,12 +39,21 @@ hr { border-top: 3px solid #e5e5e5; }
 }
 
 #branding a {
-	padding: 10px 15px;
+	background-color: #e5e5e5;
+	color: #e5e5e5;
+/*	padding: 10px 15px;
 	display: block;
 	font-weight: bold;
 	color: #fff;
 	text-decoration: none;
+*/}
+
+#branding a  img
+{
+padding: 0 !important;
+margin: 0 !important;
 }
+
 
 #content_text {
 	padding: 15px 0px 15px 0px;
@@ -65,14 +74,15 @@ hr { border-top: 3px solid #e5e5e5; }
 
 #toolbar {
 	padding: 0px 0px 3px 0px;
+	background-color: #fff !important;
 }
 #nav a {
 	text-decoration: none;
 }
 #nav {
-	background-color: #f0f0f0;
+	background-color: #fff;
 	margin-top: 0.5em;
-	font-size: 1.5em;
+	font-size: 14px;
 	z-index: -1;
 }
 
@@ -82,11 +92,19 @@ ul#menu, ul#priority_menu {
 	text-align: left; 
 	margin: 0px; 
 	list-style-type: none;
+	height: 30px;
 }
 ul#priority_menu {
 	background-color: #f0f0f0;
-	text-align: center;
+	text-align: left;
 }
+
+
+#priority_nav1 ul#priority_menu{
+	height: 20px !important; 
+}
+
+
 ul#menu li, ul#menu_sub li, ul#menu_third li, ul#priority_menu li { 
 	position: relative;
 	top: 0px;
@@ -109,6 +127,7 @@ ul#menu li, ul#menu_sub li, ul#menu_third li, ul#priority_menu li {
 
 ul#menu li .tab_header {
   font-weight: bold;
+  margin-right: 3px;
 }
 
 ul#menu li {
@@ -201,12 +220,12 @@ ul#menu li .tab_body {
 	font-size: 1.2em;	
 }
 ul#menu_sub { 
-	background-color: #f0f0f0;
+	background-color: #fff;
 	text-align: left;
 	margin: 0px;
-	margin-top: 0.5em; 
+	margin-top: 0px; 
 	list-style-type: none;
-	padding: 0px 10px 0px 0px;
+	padding: 0px 10px 2px 0px;
 }
 
 ul#menu_sub li .tab_header a {
@@ -214,6 +233,11 @@ ul#menu_sub li .tab_header a {
 	margin: 0px;
 	text-decoration: none;
 }
+
+ul#menu_sub li {
+	margin-right: 3px !important;
+}
+
 ul#menu_sub li.mega .tab_header a {
 	padding: 3px 13px 3px 7px; 
 	margin-right: 0px; 
@@ -224,8 +248,8 @@ ul#menu_sub li.mega .tab_header a {
 
 /* third nav */
 #nav_third {
-	background-color: #f0f0f0;
-	margin-top: 0.5em;
+	background-color: #fff;
+	margin-top: 7px;
 	z-index: -1;	
 	font-size: 1.1em;
 }
@@ -234,6 +258,7 @@ ul#menu_third {
 	margin: 0px; 
 	list-style-type: none;
 	padding: 0px 10px 0px 0px; 
+	background-color: #fff !important;
 }
 
 ul#menu_third li .tab_header a { 
@@ -241,6 +266,13 @@ ul#menu_third li .tab_header a {
 	margin-right: 0px; 
 	text-decoration: none;
 }
+
+ul#menu_third li{ 
+	padding: 0 !important; 
+	margin-right: 3px;
+}
+
+
 ul#menu_third li.mega .tab_header a {
 	padding: 3px 13px 3px 7px; 
 	margin-right: 0px; 
@@ -323,3 +355,108 @@ div.meta { width: 120px !important; }
 .container_12 td.against, .container_13 td.against { padding-left: 1em; }
 .container_12.newpoints { margin-top: 1em; }
 .point_item h3 { margin: 1em 0px 0px 0px !important; }
+
+/* cell width in rok plus oppose/endorse */
+.container_13 .grid_41 {
+width:260px !important;
+}
+
+ /* Below line for Rok */
+ 
+ h2
+{
+font-size: 1em;
+height: 1.5em;
+border-bottom:1px solid #CCCCCC;
+font-weight:bold;
+padding-top: 15px;
+display:block;
+margin:0;	
+}
+
+.below_line
+ {
+color: gray;
+margin: 3px 0 3px 5px;
+font-size:10px;
+font-weight:normal;
+padding:0;
+text-align: right;
+ }
+ 
+ /* Mal header */
+#hp_intro a, h1 #hp_intro {
+  color:#333;
+  font-size: 15px;
+  line-height: 120% !important;
+}
+
+.intro
+{
+  color:#333;
+  font-size: 14px;
+  line-height: 120% !important;
+}
+
+
+/* More stuff */
+
+.point_content_detail p
+{
+font-size: 0.8em;
+line-height: 100% !important;
+}
+
+.point_item p a
+{
+font-size: 12px !Important;	
+font-weight: bold !important;
+}
+
+/* Login box items */
+
+.email input, .password input, .submit input
+{
+margin-top: 3px;
+width: 80px; 
+}
+
+.submit input
+{
+margin-top: 3px;
+width: 120px; 
+}
+
+/* Selected item in navigation, I think */
+#nav1 li.tab1 .tab_header a, #nav2 li.tab2 .tab_header a, #nav3 li.tab3 .tab_header a, #nav4 li.tab4 .tab_header a, #nav5 li.tab5 .tab_header a, #nav6 li.tab6 .tab_header a, #nav7 li.tab7 .tab_header a, #nav8 li.tab8 .tab_header a, #nav_sub_1 li.tab1 .tab_header a, #nav_sub_2 li.tab2 .tab_header a, #nav_sub_3 li.tab3 .tab_header a, #nav_sub_4 li.tab4 .tab_header a, #nav_sub_5 li.tab5 .tab_header a, #nav_sub_6 li.tab6 .tab_header a, #nav_sub_7 li.tab7 .tab_header a, #nav_sub_8 li.tab8 .tab_header a, #nav_sub_9 li.tab9 .tab_header a, #nav_sub_10 li.tab10 .tab_header a, #nav_third_1 li.tab1 .tab_header a, #nav_third_2 li.tab2 .tab_header a, #nav_third_3 li.tab3 .tab_header a, #nav_third_4 li.tab4 .tab_header a, #nav_third_5 li.tab5 .tab_header a, #nav_third_6 li.tab6 .tab_header a, #nav_third_7 li.tab7 .tab_header a, #nav_third_8 li.tab8 .tab_header a, #nav_third_9 li.tab9 .tab_header a, #nav_third_10 li.tab10 .tab_header a {
+background-color:#fff !important;
+color:#000000;
+font-weight:bold;
+padding-top:3px;
+border: 1px solid #f5f5f5;
+margin: 0 !important;
+}
+
+#portlets-menu
+{
+margin-left: -3px;
+margin-top: 3px;
+margin-bottom: 3px;
+}
+
+#main-dialogues-div p
+{
+margin-bottom: 2px;
+}
+
+
+/* 4 col fix for Mal - Rok */
+
+
+/*
+#yfirsyn
+{
+background: red;
+}
+*/
+

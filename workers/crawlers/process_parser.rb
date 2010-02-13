@@ -47,6 +47,17 @@ class ProcessParser
       else
         puts "ProcessDocument Author: unkown"
       end
+      
+      if not ARGV.empty? and ARGV[0] == "force_refresh_on_document_parsing"
+        oldpd = ProcessDocument.find_by_external_link(process_document.external_link)
+        if oldpd
+          oldpd.process_document_elements.each do |e|
+            e.destroy
+          end
+          oldpd.destroy
+        end
+      end
+
       unless oldpd = ProcessDocument.find_by_external_link(process_document.external_link)
         puts "EXTERNAL_TYPE: #{process_document.external_type} STAT3: #{process_document.external_type[0..3]}"
         if process_document.external_type.index("lög") # New changed law
@@ -65,6 +76,7 @@ class ProcessParser
           else
             current_process = old_process
           end
+          puts "SAVING PROCESS DOCUMENT WITH PROCESS_ID = #{current_process.id}"
           process_document.priority_process_id = current_process.id
           process_document.process_document_type_id = process_document_type.id
           process_document.save

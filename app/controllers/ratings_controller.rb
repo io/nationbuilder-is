@@ -18,9 +18,10 @@ class RatingsController < ApplicationController
 
   def rate 
     if session[:user_id]
-      rateable = @rateable_class.find(params[:id])         
+      rateable = @rateable_class.find(params[:id])
       Rating.delete_all(["rateable_type = ? AND rateable_id = ? AND user_id = ?", @rateable_class.base_class.to_s, params[:id], session[:user_id]])  
-      rateable.add_rating Rating.new(:rating => params[:rating], :user_id => session[:user_id])
+      rateable.add_rating Rating.new(:rating => params[:rating], :user_id => session[:user_id])      
+      rateable.process_document.touch  if params[:rateable_type]=="ProcessDocumentElement"
     else
       info("user is not logged in")
     end
@@ -61,7 +62,7 @@ class RatingsController < ApplicationController
       
     # This means the user is doing something funky...naughty naughty...  
     if bad_class  
-      redirect_to home_url  
+      redirect_to :controller=>"portal"  
       return false  
     end
     true  

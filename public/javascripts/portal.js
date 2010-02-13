@@ -1,4 +1,4 @@
-function setup_portal_menu(container_id,crumDefaultTxt)
+function setup_portal_menu(container_id,crumDefaultTxt,topLinkText)
 {
 	if (container_id!=-1)
 	{
@@ -11,6 +11,7 @@ function setup_portal_menu(container_id,crumDefaultTxt)
         backLink: false,
         dispatchType: 1,
         flyOut: false,
+		topLinkText: topLinkText,
 		crumbDefaultText: crumDefaultTxt,
         chooseItem: function(item){
             // edit this for your own custom function/callback:

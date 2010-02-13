@@ -1197,8 +1197,8 @@ is:
             need_account: "First þarftu að fylla út þetta stutta form og samþykkja reglurnar, síðan geturðu byrjað að bæta þínum málum við {{target}}."
             blank: "Vinsamlegast skráðu málið þitt eða smelltu á stuðningshnappinn undir hverju forgansmáli til að bæta þínu við."
             success: "Takk fyrir að bæta {{priority_name}} við"
-            submit: "Búa til mál"
-            suggest: "Smelltu núna á 'Leggja til'"
+            submit: "Búa til nýtt mál"
+            suggest: "Brennur eitthvað mál á þér? Smelltu því inn hér fyrir ofan. Skýr framsetning eykur undirtektir."
             click:
                 one: "Smelltu á <span class='priority_add'>STYÐJA</span> ef þetta mál hér neðar styður enn ásetning þinn."
                 other: "Smelltu á <span class='priority_add'>ENDORSE</span> ef eitthvert þessara mála styður ásetning þinn."

@@ -1,4 +1,6 @@
 <%= render :partial => "priorities/header" %>
 <%= render :partial => "priorities/nav" %>
 
-<%= render :partial => "process_documents/templates/#{@document.process_document_type.template_name}" %>
+<% cache(@document) do -%>
+  <%= render :partial => "process_documents/templates/#{@document.process_document_type.template_name}" %>
+<% end %>

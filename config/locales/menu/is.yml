@@ -250,6 +250,7 @@ is:
         points:
             name: "Rök"
         portal:
+            all: "Allt"
             add_portlet: "Bæta við boxi á þessa síðu"
             choose: "Veldu"
             delete_portlet: "Eyða boxi"

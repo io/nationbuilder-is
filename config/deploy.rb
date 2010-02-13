@@ -1,7 +1,7 @@
-set :application, "open-direct-democracy"
-set :domain, "beint.lydraedi.is"
-set :selected_branch, "master"
-set :repository, "git@github.com:rbjarnason/open-direct-democracy.git"
+set :application, "open-active-democracy"
+set :domain, "skuggathing.is"
+set :selected_branch, "odd-merge"
+set :repository, "git://github.com/rbjarnason/open-active-democracy.git"
 set :use_sudo, false
 set :deploy_to, "/home/robert/sites/#{application}/#{selected_branch}"
 set :branch, "#{selected_branch}"
@@ -15,9 +15,10 @@ role :db,  domain, :primary => true
 
 task :after_update_code do
   run "ln -s #{deploy_to}/#{shared_dir}/config/database.yml #{current_release}/config/database.yml"
+  run "ln -s #{deploy_to}/#{shared_dir}/config/facebooker.yml #{current_release}/config/facebooker.yml"
   run "ln -s #{deploy_to}/#{shared_dir}/production #{current_release}/public/production"
   run "ln -s #{deploy_to}/#{shared_dir}/private #{current_release}/private"
-  run "rm -f #{current_path}"
+  #run "rm -f #{current_path}"
 end
 
 namespace :deploy do
@@ -29,5 +30,11 @@ end
 
 deploy.task :start do
 # nothing
-end 
+end
 
+
+Dir[File.join(File.dirname(__FILE__), '..', 'vendor', 'gems', 'hoptoad_notifier-*')].each do |vendored_notifier|
+  $: << File.join(vendored_notifier, 'lib')
+end
+
+require 'hoptoad_notifier/capistrano'

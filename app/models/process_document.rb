@@ -22,7 +22,7 @@ class ProcessDocument < ActiveRecord::Base
   belongs_to :process_document_type
 
   has_many :process_document_elements
-    
+
   def to_param
     "#{id}-#{self.priority_process.priority.name.parameterize_full}-#{external_type.parameterize_full}"
   end 
@@ -30,7 +30,7 @@ class ProcessDocument < ActiveRecord::Base
   def has_change_proposal_for_sequence_number?(sequence_number)
     ProcessDocumentElement.find(:first, :conditions => ["process_document_id = ? AND sequence_number = ? AND original_version = 0",self.id,sequence_number])
   end
-  
+
   def get_all_change_proposals_for_sequence_number(sequence_number)
     proposals = []
     # First get the original
@@ -41,13 +41,20 @@ class ProcessDocument < ActiveRecord::Base
     end
     proposals
   end
-  
+
   def template_name
     self.process_document_type.template_name
   end
-  
+
   def get_process_document_link
-    #TODO: Remove this hack and use more Rails for this link generation
-    "<a href=\"/process_documents/show/#{to_param}\">#{external_type}</a>"
+    if (self.external_type.downcase_is.index("frumvarp") or 
+        self.external_type.downcase_is.index("þingsályktun") or
+        self.external_type.downcase_is.index("stjórnartillaga")) and 
+       (not self.priority_process.priority.name.downcase_is.index("fjárlög") and
+        not self.priority_process.priority.name.downcase_is.index("fjáraukalög"))
+      "<a href=\"/process_documents/show/#{to_param}\">#{external_type}</a>"
+    else
+      "<a href=\"#{self.external_link}\">#{external_type}</a>"
+    end
   end
 end

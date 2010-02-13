@@ -46,10 +46,7 @@ class User < ActiveRecord::Base
   named_scope :item_limit, lambda{|limit| {:limit=>limit}}
 
   belongs_to :picture
-  has_attached_file :buddy_icon, :styles => { :icon_24 => "24x24#", :icon_48 => "48x48#", :icon_96 => "96x96#" }, 
-    :storage => defined?(S3_CONFIG)=='constant' ? :s3 : :filesystem, :s3_credentials => defined?(S3_CONFIG)=='constant' ? S3_CONFIG : nil, 
-    :default_url => "/images/buddy_:style.png",
-    :path => ":class/:attachment/:id/:style.:extension"
+  has_attached_file :buddy_icon, :styles => { :icon_24 => "24x24#", :icon_48 => "48x48#", :icon_96 => "96x96#" }
   
   validates_attachment_size :buddy_icon, :less_than => 5.megabytes
   validates_attachment_content_type :buddy_icon, :content_type => ['image/jpeg', 'image/png', 'image/gif']
@@ -959,9 +956,9 @@ class User < ActiveRecord::Base
     return if fb_session.expired?
     name = fb_session.user.name
     # check for existing account with this name
-    if User.find_by_login(name)
-     name = name + " FB"
-    end
+#    if User.find_by_login(name)
+#     name = name + " FB"
+#    end
     u = User.new(
      :login => name,
      :first_name => fb_session.user.first_name,

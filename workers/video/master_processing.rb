@@ -21,8 +21,8 @@ class VideoProcessing
   def self.check_load_and_wait
     loop do
       break if load_avg[0] < @@worker_config["max_load_average"]
-      info("Load Average #{load_avg[0]}, #{load_avg[1]}, #{load_avg[2]}")      
-      info("Load average too high pausing for #{SLEEP_WAITING_FOR_LOAD_TO_GO_DOWN}")
+      @@logger.info("Load Average #{load_avg[0]}, #{load_avg[1]}, #{load_avg[2]}")      
+      @@logger.info("Load average too high pausing for #{SLEEP_WAITING_FOR_LOAD_TO_GO_DOWN}")
       sleep(SLEEP_WAITING_FOR_LOAD_TO_GO_DOWN)
     end
   end
