@@ -1,8 +1,13 @@
 jQuery(document).ready(function() {
 	jQuery(".althingi_process_container h2, .althingi_process_container p").css("cursor","pointer");
-	jQuery(".althingi_process_documents, .althingi_discussion").hide();
-	jQuery(".althingi_process_documents, .althingi_discussion").parent().addClass("hidden")
-	
+	if (location.pathname.substring(1,19) != 'priority_processes') {
+		jQuery(".althingi_process_documents, .althingi_discussion").hide();
+		jQuery(".althingi_process_documents, .althingi_discussion").parent().addClass("hidden")
+	}
+	else {
+		jQuery(".althingi_process_documents, .althingi_discussion").parent().addClass("shown")
+	}
+ 
 	jQuery(".althingi_process_container h2, .althingi_process_container p").click(function() {
 		if (jQuery(this).parent().hasClass("hidden")) {
 			jQuery(this).siblings("div").slideDown();

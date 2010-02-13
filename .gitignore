@@ -20,3 +20,6 @@ private/*
 *.log
 *.output
 *.pid
+config/solr.yml
+solr
+vendor/plugins/acts_as_solr/solr/

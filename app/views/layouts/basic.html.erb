@@ -10,7 +10,8 @@
 <%= render :partial => "color_schemes/css", :locals => {:id => current_government.color_scheme_id } %>
 <%= render :partial => "shared/priority_processes_head" if controller_name.index("process") %>
 <%= stylesheet_link_tag "newstuff" %>
-<%= javascript_include_tag "skuggathing" %>
+<%= stylesheet_link_tag "gnew" %>
+<%= javascript_include_tag "skuggathing" unless controller_name=="priority_processes" %>
 </head>
 <body>
 
@@ -20,6 +21,7 @@
 	<div id="header">
 		<div id="branding">
 		<%= link_to image_tag("skuggathing_logo.png"), :controller=>"portal" %>
+		<p>Pólitískur rökræðuvettvangur</p>
 	</div>
 		<%= flash_div :warning, :notice, :error %>
 

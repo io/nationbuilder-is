@@ -5,6 +5,6 @@
 <% else %>
 <meta name="description" content="<%= current_government.name_with_tagline %>">
 <% end %>
-<% if current_government.has_logo? %>
+<% if current_government.has_logo? and not controller_name=="process_speech_videos" and not controller_name=="process_documents" %>
 <link rel="image_src" href="<%= current_government.logo.url %>" />
 <% end %>

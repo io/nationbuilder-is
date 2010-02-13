@@ -62,7 +62,7 @@ jQuery('div.clips a:first')<%=Array.new(my_pos,".next()").join%>.click();
 				<%=discussion.meeting_type%> |
 		        <%=discussion.meeting_date.strftime("%d.%m.%Y") %> | 
 				<%=link_to "#{discussion.from_time.strftime('%H:%M')}-#{discussion.to_time.strftime('%H:%M')}", discussion.transcript_url,{:target => "_blank"}%> | 
-				<%=link_to t(:listen), discussion.listen_url, {:target => "_blank"} %> |
+				<%=link_to t(:listen), "http://www.althingi.is"+discussion.listen_url, {:target => "_blank"} %> |
 			    <%=link_to discussion.meeting_info, discussion.meeting_url,{:target => "_blank"}%>
 			</b>
 		</td>

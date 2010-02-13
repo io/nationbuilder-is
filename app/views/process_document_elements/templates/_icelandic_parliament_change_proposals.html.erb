@@ -18,12 +18,12 @@
                 <%=get_short_star_rating(change_proposal) %>
             </td>
             <td>
-                <%=change_proposal.updated_at.strftime("%d. %b %Y %H:%M") %>
+                <%=change_proposal.created_at.strftime("%d. %b %Y %H:%M") %>
             </td>
             <% if change_proposal.id == change_target.id %>
 	            <% if change_proposal.user %>
 	            <td>
-	                <%=change_proposal.user.first_name %><%= change_proposal.user.last_name %>
+	                <%=change_proposal.user.first_name %> <%= change_proposal.user.last_name %>
 	            </td>
 	            <% else %>
 	            <td>
@@ -62,19 +62,31 @@
 	            <td>
 	            </td>
             <% end %>
+            <% if @user and (((change_proposal.user and change_proposal.user.id == @user.id) or @user.is_admin_subscribed) and not change_proposal.original_version) %>
+	            <td>
+	                <%= link_to_remote( "x",
+	                { :url => { :controller => "process_document_elements", :action => "delete_change_proposal",
+	                :source_id => change_proposal.id, :sequence_number => change_target.sequence_number } },
+	                { :class => "participateLink", :name => "",
+	                :title => change_proposal_title } ) %>
+	            </td> 
+            <% else %>
+	            <td>
+	            </td>
+            <% end %>
         </tr>
         <% end %>
     </table>
 	<table width="100%">
 		<tr>
 			<td align="left">
-		      <% if session[:user_id] %>
+		      <% if @user %>
 			      <%= link_to_remote( t(:new_change_proposal),
 	                        { :url => { :controller => "process_document_elements", :action => "new_change_proposal",
 	                          :source_id => change_target.id, :sequence_number => change_target.sequence_number } },
 	                        { :class => "participateLink", :name => "", :title => t(:new_change_proposal) } ) %>
 			 <% else %>
-			   <%=link_to t(:login_to_submit_change_proposal), :controller=>"users", :action=>"login" %>
+			   <%=link_to t(:login_to_submit_change_proposal), :controller=>"login" %>
 			 <% end %>	
 			</td>
 		</tr>

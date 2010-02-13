@@ -49,6 +49,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_government
+    Government # FIXME: FFJ: Hack for memcached
     return @current_government if @current_government
     @current_government = Rails.cache.read('government')
     if not @current_government
@@ -100,6 +101,7 @@ class ApplicationController < ActionController::Base
   end
   
   def current_tags
+    Tag # FIXME: FFJ: Hack for memcached
     return [] unless current_government.is_tags?
     @current_tags ||= Rails.cache.fetch('Tag.by_endorsers_count.all') { Tag.by_endorsers_count.all }
   end

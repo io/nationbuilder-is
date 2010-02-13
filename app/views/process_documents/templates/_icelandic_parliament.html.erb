@@ -1,7 +1,8 @@
 <p>
 	<%=h @document.priority_process.priority.external_info_2 %> <%=h @document.priority_process.priority.external_info_3 %>
-<% if @document.priority_process.stage_sequence_number > 0 %>
-   <%=@document.priority_process.stage_sequence_number%>. <%=t(:stage_sequence_discussion)%>
+<% if @document.priority_process.stage_sequence_number > 0 %> | 
+   <%=@document.priority_process.stage_sequence_number%> <%=t(:stage_sequence_discussion)%> | 
+   <%=@document.external_type %>
 <% end %>
 
 </p>
@@ -10,10 +11,37 @@
 <br><br>
 <p>
     <b><%=t :process_document_elements %>:</b>
+	<% cut_off_top = true %>
+    <% wait_for_frumvarp = false %>
+	<% wait_for_frumvarp_disabled = false %>
+    <% render_it = false %>
     <% @document.process_document_elements.each do |element| %>
-    <div id="process_document_element_number_<%=element.sequence_number%>">
-        <%= render :partial => "process_document_elements/templates/#{@document.process_document_type.template_name}_element", :locals => {:document=> @document, :element => element} %>
-    </div>
+      <% if cut_off_top and not [1,3].include?(element.content_type) %>
+	    <% render_it = false %>
+	  <% else %>
+		  <% cut_off_top = false %>
+  	      <% render_it = true %>
+      <% end %>
+
+	  <% if not wait_for_frumvarp_disabled and element.content_type==1 and not element.content.downcase_is.index("frumvarp til")%>
+	    <% wait_for_frumvarp = true %>
+	    <% render_it = false %>
+      <% end %>
+
+	  <% if wait_for_frumvarp and element.content_type==nil and element.content.downcase_is.index("frumvarp til") and element.content.length < 1000%>
+	    <% wait_for_frumvarp = false %>
+	    <% render_it = true %>
+		<% wait_for_frumvarp_disabled = true%>
+		<% cut_off_top = false %>
+	  <% elsif wait_for_frumvarp  %>
+	    <% render_it = false %>
+	  <% end %>
+
+	  <% if render_it %>
+	      <div id="process_document_element_number_<%=element.sequence_number%>">
+	         <%= render :partial => "process_document_elements/templates/#{@document.process_document_type.template_name}_element", :locals => {:document=> @document, :element => element} %>
+	      </div>
+     <% end %>
     <% end %>
 </p>
 <br>

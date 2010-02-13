@@ -5,13 +5,17 @@
 <% end %>
 
 <% if priority.points_count > 0 %>
-	&middot; <%= link_to t('menu.briefing.points', :count => priority.points_count).downcase, top_points_priority_url(priority) %>
+	&middot; <%= link_to t('menu.briefing.points', :count => priority.points_count).downcase, top_points_priority_url(priority) -%>
 <% else %>
-	&middot; <%= link_to t('points.top_points.new_point_short').downcase, new_priority_point_path(priority)+"?support=1" , :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %><br/>
+	&middot; <%= link_to t('points.top_points.new_point_short').downcase, new_priority_point_path(priority)+"?support=1" , :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %>
 <% end %>
 
 <% if priority.discussions_count > 0 %> 
 	&middot; <%= link_to t('comments.discussions.name', :count => priority.discussions_count), discussions_priority_url(priority) %>
+<% end %>
+
+<% if priority.priority_processes.count > 0 %> 
+	&middot; <%= priority.latest_priority_process_at %>
 <% end %>
 
 <% if priority.is_obama_endorsed? %> 

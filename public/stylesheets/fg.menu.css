@@ -24,7 +24,7 @@ Date:		September 2008
 .fg-menu ul.fg-menu-scroll { overflow: scroll;  overflow-x: hidden; }
 
 .fg-menu li { clear:both; float:left; width:100%; margin: 0; padding:0; border: 0; }	
-.fg-menu li li { font-size:1em; } /* inner li font size must be reset so that they don't blow up */
+.fg-menu li li { font-size:1.1em; } /* inner li font size must be reset so that they don't blow up */
 
 .fg-menu-flyout ul ul { padding: .4em; }
 .fg-menu-flyout li { position:relative; }

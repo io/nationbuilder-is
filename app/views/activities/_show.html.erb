@@ -23,7 +23,7 @@
 	<div class="activity" id="activity_<%= activity.id %>">
 		<div class="activity_x">
 		<% if logged_in? and (current_user.is_admin? or current_user.id == activity.user_id) %>
-		<%= link_to_remote 'x', { :url => activity_url(activity.id),:method => :delete, :confirm => 'Remove this from the page?'}%><% end %>
+		<%= link_to_remote 'x', { :url => activity_url(activity.id),:method => :delete, :confirm => 'Eyða frá þessari síðu?'}%><% end %>
 		</div>
 		<% cache("#{activity[:type].downcase}#{suffix}-#{activity.id}") do %> 
 			<%= render :partial => "activities/#{activity[:type].downcase}#{suffix}", :locals => {:activity => activity} %>
@@ -32,12 +32,12 @@
 
 		<% if activity.class != ActivityCommentParticipant %>
 			<% if activity.comments_count > 0 %>
-				<span class="comment_link" title="Post a comment">
-				<%= link_to_unless_current pluralize(activity.comments_count, "comment"), activity_comments_url(activity) %>
+				<span class="comment_link" title="Settu inn athugasemd">
+				<%= link_to_unless_current pluralize(activity.comments_count, "athugasemd"), activity_comments_url(activity) %>
 				</span>
 			<% else %>
-				<span class="comment_link" id="comment_link_<%= activity.id.to_s %>" title="Post a comment">	
-				<%= link_to_remote "Comment", { :url => new_activity_comment_url(activity), :method => :get } %>
+				<span class="comment_link" id="comment_link_<%= activity.id.to_s %>" title="Settu inn athugasemd">	
+				<%= link_to_remote "Athugasemd", { :url => new_activity_comment_url(activity), :method => :get } %>
 				</span>
 			<% end %>
 		<% end %>

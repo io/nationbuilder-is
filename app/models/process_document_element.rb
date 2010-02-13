@@ -17,5 +17,12 @@ class ProcessDocumentElement < ActiveRecord::Base
   belongs_to :user
   belongs_to :process_document
   
+  after_save :touch_document
+  before_destroy :touch_document
+  
   acts_as_rateable
+  
+  def touch_document
+    self.process_document.touch
+  end
 end

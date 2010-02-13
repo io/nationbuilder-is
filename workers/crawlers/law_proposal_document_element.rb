@@ -305,7 +305,7 @@ class LawProposalDocumentElement < ProcessDocumentElement
     div_skip_count = 0
     
     html_source_doc.xpath('//div').each do |paragraph|
-      if div_skip_count != 0 and process_type == PROCESS_TYPE_THINGSALYKTUNARTILLAGA
+      if div_skip_count != 0 # and process_type == PROCESS_TYPE_THINGSALYKTUNARTILLAGA
         div_skip_count-=1
         puts "DIV SKIP"
         next
@@ -340,8 +340,18 @@ class LawProposalDocumentElement < ProcessDocumentElement
           next_sibling = next_sibling.next_sibling
         end
       else # not process_type == PROCESS_TYPE_THINGSALYKTUNARTILLAGA
-        while next_sibling and next_sibling.inspect[0..3]!="<div" and next_sibling.inspect[0..7]!="<b> <div"
-          puts "SIBLING " + next_sibling.inspect
+        while true
+          puts "NEXT SIBLING " + next_sibling.inspect
+          puts "NEXT NEXT SIBLING " + next_sibling.next_sibling.inspect if next_sibling and next_sibling.next_sibling
+          if next_sibling.inspect.index("<div") and next_sibling.inspect.index("center") and next_sibling.inspect.index("<i>")
+            div_skip_count += 1
+            puts "ADDING TO DIV COUNT"
+          elsif next_sibling and (next_sibling.inspect[0..3]=="<div" or next_sibling.inspect[0..7]=="<b> <div")
+            break
+          elsif not next_sibling
+            break
+          end
+          first = false
           unless skip_tokens(next_sibling)
             all_content_until_next_header+= next_sibling.inspect
             all_content_until_next_header_text_only+= next_sibling.text

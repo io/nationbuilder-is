@@ -37,7 +37,9 @@
  	  <% @top_videos.each do |video| %>
         jQuery("a.top_video_<%=video.id%>").cluetip({
 			splitTitle: "|",
-			clickThrough: true
+			clickThrough: true,
+			arrows: true,
+			positionBy: 'mouse'
 		});
 	  <% end %>
     });

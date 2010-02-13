@@ -1,4 +1,4 @@
-<% cache(["portlets_process_latest_video_discussions",I18n.locale], :expires_in => 5.minutes) do %>
+<% cache(["portlets_process_latest_video_discussions",I18n.locale], :expires_in => 15.minutes) do %>
 <% @latest_speech_discussions = ProcessSpeechMasterVideo.get_latest_twenty %>
 <% if @latest_speech_discussions.length > 0 %>
 <%= javascript_include_tag 'jquery.mousewheel' %>

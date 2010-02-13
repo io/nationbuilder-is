@@ -200,8 +200,8 @@ is:
                 confirm: "Þú ert um það bil að merkja þetta mál til endurskoðunar hjá umsjónarmanni síðunnar. Ef það er ekki ljóst afhverju þú ert að merkja það, vinsamlegast setjið á fréttaveituna til að það sé hægt að gera viðeigandi ráðstafanir."
             endorsers:
                 name: "Meðmælendur"
-                one: "1 meðmælandi"
-                other: "{{count}} meðmælendur"
+                one: "1 með"
+                other: "{{count}} með"
             opposers:
                 name: "Á móti"
                 one: "1 á móti"
@@ -229,11 +229,11 @@ is:
                 name: "Þín mál"
                 short: "Þín"
                 active: "Virk"
-                top: "Hæst í einkunnagjöf"
-                lowest: "Lægst í einkunnagjöf"
-                ads: "Auglýsingar sem þú hefur keypt"
+                top: "Hæst einkun"
+                lowest: "Lægst einkun"
+                ads: "Auglýsingar sem þú keyptir"
                 finished: "Lokið"
-                created: "Mál sem þú hefur búið til"
+                created: "Mál sem þú bjóst til"
             official:
                 name: "{{official_user_name}} mál"
                 agenda_endorsed: "Mælt með"
@@ -250,6 +250,7 @@ is:
         points:
             name: "Rök"
         portal:
+            all: "Allt"
             add_portlet: "Bæta við boxi á þessa síðu"
             choose: "Veldu"
             delete_portlet: "Eyða boxi"

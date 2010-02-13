@@ -1,11 +1,15 @@
 html, body {
-	font-size: 9px;
 	font-family: Helvetica,Arial,sans-serif;
 }
 
 a {
 	color: #000;
 }
+a:hover { text-decoration: none; }
+
+#footer a, #contentwrap a { text-decoration: underline; }
+#footer a:hover, #contentwrap a:hover { color: #333; }
+#toolbar a, #priority_menu a { border-bottom: none; }
 
 h1 { font-size: 1.7em; line-height: 2em; }
 h2 { font-size: 1.5em; font-weight: bold; }
@@ -27,7 +31,8 @@ hr { border-top: 3px solid #e5e5e5; }
 }
 
 #contentwrap {
-	width: 710px;
+	width: 720px;
+	margin-left: 7px;
 	float: left;
 	position: relative;
 	padding: 0px 00px 0px 0px !important;
@@ -35,16 +40,27 @@ hr { border-top: 3px solid #e5e5e5; }
 
 #branding {
 	font-size: 2em;
-	background-color: #e5e5e5;
+	background-color: #fff;
+	background-color: #e5e5e5 !important;
 }
 
 #branding a {
-	padding: 10px 15px;
+	background-color: #e5e5e5 !important;
+	color: #e5e5e5 !important;
+/*	padding: 10px 15px;
 	display: block;
 	font-weight: bold;
 	color: #fff;
 	text-decoration: none;
+*/}
+
+#branding a  img
+{
+padding: 0 !important;
+margin: 0 !important;
+border: none 0px #fff !important;
 }
+
 
 #content_text {
 	padding: 15px 0px 15px 0px;
@@ -65,28 +81,40 @@ hr { border-top: 3px solid #e5e5e5; }
 
 #toolbar {
 	padding: 0px 0px 3px 0px;
+	background-color: #fff !important;
 }
 #nav a {
 	text-decoration: none;
 }
 #nav {
-	background-color: #f0f0f0;
-	margin-top: 0.5em;
-	font-size: 1.5em;
+	background-color: #fff;
+	margin-top: 7px !important;
+	font-size: 14px;
 	z-index: -1;
 }
 
-#footer { clear: both; }
+#footer { clear: both; width: 960px; }
 
 ul#menu, ul#priority_menu {
 	text-align: left; 
 	margin: 0px; 
 	list-style-type: none;
+	height: 20px;
 }
 ul#priority_menu {
 	background-color: #f0f0f0;
-	text-align: center;
+	text-align: left;
 }
+
+
+#priority_nav1 ul#priority_menu{
+	height: 24px !important; 
+}
+
+#priority_nav1 ul#priority_menu li{
+padding-top: 4px;
+}
+
 ul#menu li, ul#menu_sub li, ul#menu_third li, ul#priority_menu li { 
 	position: relative;
 	top: 0px;
@@ -109,6 +137,7 @@ ul#menu li, ul#menu_sub li, ul#menu_third li, ul#priority_menu li {
 
 ul#menu li .tab_header {
   font-weight: bold;
+  margin-right: 3px;
 }
 
 ul#menu li {
@@ -125,13 +154,15 @@ ul#menu_third li {
 }
 ul#priority_menu li {
 	z-index: 14;
-	padding: 3px 0px 3px 0px;	
+/*	padding: 3px 0px 3px 0px;*/	
 }
 
 ul#menu li .tab_header a { 
 	padding: 3px 13px 3px 10px; 
 	margin-right: 0px; 
 	text-decoration: none;
+	letter-spacing: normal !important;
+	font-weight: normal !important;
 }
 
 ul#menu li.hovering div.tab_body, ul#menu_sub li.hovering div.tab_body, ul#menu_third li.hovering div.tab_body { 
@@ -201,19 +232,26 @@ ul#menu li .tab_body {
 	font-size: 1.2em;	
 }
 ul#menu_sub { 
-	background-color: #f0f0f0;
+	background-color: #fff;
 	text-align: left;
 	margin: 0px;
-	margin-top: 0.5em; 
+	margin-top: 10px; 
 	list-style-type: none;
-	padding: 0px 10px 0px 0px;
+	padding: 0px 10px 2px 0px;
 }
 
 ul#menu_sub li .tab_header a {
 	padding: 3px 10px; 
 	margin: 0px;
 	text-decoration: none;
+	letter-spacing: normal !important;
+	font-weight: normal !important;
 }
+
+ul#menu_sub li {
+	margin-right: 3px !important;
+}
+
 ul#menu_sub li.mega .tab_header a {
 	padding: 3px 13px 3px 7px; 
 	margin-right: 0px; 
@@ -224,8 +262,8 @@ ul#menu_sub li.mega .tab_header a {
 
 /* third nav */
 #nav_third {
-	background-color: #f0f0f0;
-	margin-top: 0.5em;
+	background-color: #fff;
+	margin-top: 7px;
 	z-index: -1;	
 	font-size: 1.1em;
 }
@@ -234,13 +272,23 @@ ul#menu_third {
 	margin: 0px; 
 	list-style-type: none;
 	padding: 0px 10px 0px 0px; 
+	background-color: #fff !important;
 }
 
 ul#menu_third li .tab_header a { 
 	padding: 3px 8px; 
 	margin-right: 0px; 
 	text-decoration: none;
+	letter-spacing: normal !important;
+	font-weight: normal !important;
 }
+
+ul#menu_third li{ 
+	padding: 0 !important; 
+	margin-right: 3px;
+}
+
+
 ul#menu_third li.mega .tab_header a {
 	padding: 3px 13px 3px 7px; 
 	margin-right: 0px; 
@@ -302,11 +350,12 @@ ul#priority_menu li.tab9 div.tab_body {
 .althingi_process_container h3 { background: #f5f5f5 !important; margin: 0px; margin-top: 1em; }
 .althingi_process_container h2 { display: inline !important; width: 200px !important; clear: left !important; padding: 0.5em; padding-top: 0em; margin: 0px; }
 .althingi_process_container p { display: inline; }
-.althingi_process_container a.extlink { display: inline-block; float: right; padding: 0.5em; }
+.althingi_process_container a.extlink { display: inline-block; float: right; padding: 0.5em; padding-bottom: 0px; margin-bottom: 0px; }
 .althingi_process_container table { width: 550px !important; border: 1px solid #f5f5f5; border-collapse: separate !important; border-spacing: 0 !important; }
 .althingi_process_container table tr.even td { background: #f5f5f5; }
 
 /* Hliðarstikan */
+#top_right_column { margin-top: 6px; }
 #search_priorities form input { width: 170px; font-size: 10px; }
 #your_priorities table { width: 200px;}
 
@@ -314,8 +363,9 @@ ul#priority_menu li.tab9 div.tab_body {
 div.meta { width: 120px !important; }
 
 /* Rök og drasl */
-.comment_link_add, .small { font-size: 1em !important; }
-.point_byline { font-size: 1em !important; }
+.comment_link_add, .small { font-size: 11px !important; }
+/*.point_byline { font-size: 1em !important; }*/
+#point_1_quality{font-size: 11px !important;}
 .tag_button { font-size: 1em !important; }
 .container_12, .container_13 { position: relative; padding-bottom: 1em; border-bottom: 3px solid #ccc; }
 .container_12 td { width: 340px; vertical-align: top; }
@@ -323,3 +373,246 @@ div.meta { width: 120px !important; }
 .container_12 td.against, .container_13 td.against { padding-left: 1em; }
 .container_12.newpoints { margin-top: 1em; }
 .point_item h3 { margin: 1em 0px 0px 0px !important; }
+
+/* Stjörnugjöf */
+.star-rating_smaller li.current-rating, .star-rating_smaller li a:hover, .star-rating_smaller{ background-image: url(/images/star_rating_smaller.png) !important; background-color: #333 !important; }
+
+#process_speech_detail .star-rating_smaller li.current-rating, #process_speech_detail .star-rating_smaller li a:hover, #process_speech_detail .star-rating_smaller { background-image: url(/images/star_rating_smaller_w.png) !important; background-color: #fff !important; }
+
+/* Menjú */
+.tab_body { text-align: left; padding: 0.5em; padding-bottom: 0em; }
+.tab_body a { text-align: left; }
+
+/* cell width in rok plus oppose/endorse */
+.container_13 .grid_41 {
+width:260px !important;
+}
+
+ /* Below line for Rok */
+ 
+ h2
+{
+font-size: 1em;
+height: 1.5em;
+border-bottom:1px solid #CCCCCC;
+font-weight:bold;
+padding-top: 15px;
+display:block;
+margin:0;	
+}
+
+.below_line
+ {
+color: gray;
+margin: 3px 0 3px 5px;
+font-size:10px;
+font-weight:normal;
+padding:0;
+text-align: right;
+ }
+ 
+ /* Mal header */
+#hp_intro a, h1 #hp_intro {
+  color:#333;
+  font-size: 15px;
+  line-height: 120% !important;
+}
+
+.intro
+{
+  color:#333;
+  font-size: 14px;
+  line-height: 120% !important;
+}
+
+
+/* More stuff */
+
+.point_content_detail p
+{
+font-size: 0.8em;
+line-height: 100% !important;
+}
+
+.point_item p a
+{
+font-size: 12px !Important;	
+font-weight: bold !important;
+}
+
+/* Login box items */
+
+.email input, .password input, .submit input
+{
+margin-top: 3px;
+width: 80px; 
+}
+
+.submit input
+{
+margin-top: 3px;
+width: 120px; 
+}
+
+/* Selected item in navigation, I think */
+#nav1 li.tab1 .tab_header a, #nav2 li.tab2 .tab_header a, #nav3 li.tab3 .tab_header a, #nav4 li.tab4 .tab_header a, #nav5 li.tab5 .tab_header a, #nav6 li.tab6 .tab_header a, #nav7 li.tab7 .tab_header a, #nav8 li.tab8 .tab_header a, #nav_sub_1 li.tab1 .tab_header a, #nav_sub_2 li.tab2 .tab_header a, #nav_sub_3 li.tab3 .tab_header a, #nav_sub_4 li.tab4 .tab_header a, #nav_sub_5 li.tab5 .tab_header a, #nav_sub_6 li.tab6 .tab_header a, #nav_sub_7 li.tab7 .tab_header a, #nav_sub_8 li.tab8 .tab_header a, #nav_sub_9 li.tab9 .tab_header a, #nav_sub_10 li.tab10 .tab_header a, #nav_third_1 li.tab1 .tab_header a, #nav_third_2 li.tab2 .tab_header a, #nav_third_3 li.tab3 .tab_header a, #nav_third_4 li.tab4 .tab_header a, #nav_third_5 li.tab5 .tab_header a, #nav_third_6 li.tab6 .tab_header a, #nav_third_7 li.tab7 .tab_header a, #nav_third_8 li.tab8 .tab_header a, #nav_third_9 li.tab9 .tab_header a, #nav_third_10 li.tab10 .tab_header a {
+background-color:#fff !important;
+color:#000000;
+font-weight:bold;
+padding-top:2px !important;
+padding-bottom:2px !important;
+border: 1px solid #f5f5f5;
+margin: 0 !important;
+}
+
+#portlets-menu
+{
+margin-left: -3px;
+margin-top: 3px;
+margin-bottom: 3px;
+}
+
+#main-dialogues-div p
+{
+margin-bottom: 2px;
+}
+
+
+/* 4 col fix for Mal - Rok */
+
+
+/*
+#yfirsyn
+{
+background: red;
+}
+*/
+
+
+
+.tab_body a
+{
+letter-spacing: normal !important;
+}
+
+
+.tab_body 
+{
+border: 1px solid #7a7878 !important;
+margin-top: 2px !important;
+}
+
+
+ul#menu li.mega .tab_header a:hover, ul#menu li.mega.hovering .tab_header a, ul#menu_sub li.mega .tab_header a:hover, ul#menu_sub li.mega.hovering .tab_header a, ul#menu_third li.mega .tab_header a:hover, ul#menu_third li.mega.hovering .tab_header a, ul#priority_menu li.mega .tab_header a:hover, ul#priority_menu li.hovering .tab_header a {
+-moz-background-clip:border !important;
+-moz-background-inline-policy:continuous !important;
+-moz-background-origin:padding !important;
+background: #7a7878 none repeat scroll 0 0 !important;
+color:#FFFFFF;
+}
+
+ul#menu_sub .tab_header a:hover, ul#menu_third .tab_header a:hover, .ac_over, ul#menu .tab_header a:hover, ul#menu li .tab_header a:hover, ul#priority_menu li .tab_header a:hover, ul#priority_menu li .tab_header a:hover {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#7a7878 none repeat scroll 0 0 !important;
+color:#FFFFFF;
+}
+
+
+#priority_nav1 li.tab1 .tab_header a, #priority_nav1 li.tab1.mega .tab_header a, #priority_nav2 li.tab2 .tab_header a, #priority_nav2 li.tab2.mega .tab_header a, #priority_nav3 li.tab3 .tab_header a, #priority_nav3 li.tab3.mega .tab_header a, #priority_nav4 li.tab4 .tab_header a, #priority_nav4 li.tab4.mega .tab_header a, #priority_nav5 li.tab5 .tab_header a, #priority_nav5 li.tab5.mega .tab_header a, #priority_nav6 li.tab6 .tab_header a, #priority_nav6 li.tab6.mega .tab_header a, #priority_nav7 li.tab7 .tab_header a, #priority_nav7 li.tab7.mega .tab_header a, #priority_nav8 li.tab8 .tab_header a, #priority_nav8 li.tab8.mega .tab_header a, #priority_nav9 li.tab9 .tab_header a, #priority_nav9 li.tab9.mega .tab_header a, #priority_nav10 li.tab10 .tab_header a, #priority_nav10 li.tab10.mega .tab_header a {
+	padding-top:3px;
+	padding-bottom: 3px;
+}
+
+
+.comment_content p {
+font-size: 12px !important;
+}
+
+.activity {
+font-size:11px !important;
+}
+
+
+#priority_submit
+{
+
+}
+
+
+#intro, #buzz_box, #not_activated, #notification_show, #errorExplanation, .bulletin_form, .change_vote_now, #contacts, #contacts_small, .invite_text, .notice {
+background-color:#fff;
+border: 2px solid #eee !important;
+color:#444444;
+}
+
+#login, #intro, #buzz_box {
+margin-top: 5px !Important;
+background-color:#fff !important;
+border: 2px solid #eee !important;
+font-size:11px;
+line-height:1.4em;
+padding:10px 10px 5px 15px;
+}
+
+
+#priority_column{
+background-color:#fff !important;
+border: 2px solid #eee !important;
+font-size:11px;
+color:#444444;
+}
+
+input, textarea, #contacts, #contacts_small, .invite_text, .ac_results, .magnifier_wrap, .change_vote_now, .idleField {
+background-color:#fff;
+border:2px solid #DDDDDD;
+}
+
+
+.flash_error, #not_activated_header, #warning, .fieldWithErrors input, #errorExplanation h2 {
+background-color:#ccc;
+color:#333;
+font-weight:bold;
+border-left: 1px solid #eee;
+border-top: 1px solid #eee;
+border-right: 1px solid #eee;
+}
+
+#user_name {
+font-size:12px;
+padding:8px 0 8px 8px;
+background-color:#ccc;
+border-bottom:1px solid #EEEEEE !important;
+}
+
+.email input, .password input, .submit input {
+width:130px;
+}
+
+
+#right_column_priorities {
+padding:0 !important;
+}
+
+
+#notification_box, #next_steps_box {
+font-size:12px;
+font-weight: bold;
+line-height:1.4em;
+padding:2px 5px 3px 8px;
+border:1px solid #EEEEEE !important;
+background-color:#fff;
+}
+
+#notification_box ol , #next_steps_box  ol{
+font-size:11px;
+font-weight: normal;
+padding-left:18px;
+}
+
+#not_activated {
+font-size:11px;
+line-height:1.4em;
+padding:7px 5px 3px 8px;
+}

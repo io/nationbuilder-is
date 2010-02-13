@@ -250,6 +250,7 @@ en:
         points:
             name: "Talking points"
         portal:
+            all: "All"
             add_portlet: "Add portlet"
             choose: "Choose an option"
             delete_portlet: "Delete portlet"

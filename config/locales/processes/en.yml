@@ -2,6 +2,8 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  time_in: "in"
+  time_ago: "ago"
   processes:
       name: "Processes Name"
       all_latest_video_discussion: "All latest video discussions"

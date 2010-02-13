@@ -15,7 +15,7 @@ class UserMailer < ActionMailer::Base
   
   def welcome(user)
     @recipients  = "#{user.real_name.titleize} <#{user.email}>"
-    @from        = "#{Government.current.admin_name} <#{Government.current.admin_email}>"
+    @from        = "#{Government.current.name} <#{Government.current.admin_email}>"
     headers        "Reply-to" => Government.current.admin_email
     @sent_on     = Time.now
     @content_type = "text/plain"      

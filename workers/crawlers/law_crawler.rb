@@ -86,6 +86,12 @@ class AlthingiCrawler < ProcessCrawler
     ProcessParser.get_process("http://www.althingi.is/dba-bin/ferill.pl?ltg=138&mnr=76", "fjármálaráðherra", "stjórnarfrumvarp", 
                 "Ríkisábyrgð á lántöku Tryggingarsjóðs innstæðueigenda og fjárfesta (Icesave-reikningar)", PROCESS_TYPE_LOG)
   end  
+
+  def update_icesave1
+    ProcessParser.get_process("http://www.althingi.is/dba-bin/ferill.pl?ltg=137&mnr=136", "fjármálaráðherra", "stjórnarfrumvarp", 
+                "Ríkisábyrgð á lántöku Tryggingarsjóðs innstæðueigenda og fjárfesta (Icesave-samningar)", PROCESS_TYPE_LOG)
+  end  
+
 end
 
 @current_government = Government.last
@@ -95,6 +101,7 @@ if @current_government
 end
 
 acrawler = AlthingiCrawler.new
+acrawler.update_icesave1
 acrawler.update_icesave
 acrawler.update_all_processes(PROCESS_TYPE_LOG)
 acrawler.update_all_processes(PROCESS_TYPE_THINGSALYKTUNARTILLAGA)

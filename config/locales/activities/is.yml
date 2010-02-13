@@ -24,13 +24,13 @@ is:
                     new:
                         name: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í tillögu um að {{new_priority_name}} taki yfir {{priority_name}}"
                         nouser: "Eyddi {{capital}}{{currency_short_name}} í að <a href='{{proposal_url}}'>tillaga</a> for {{new_priority_name}} taki yfir {{priority_name}}"
-                        noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} fyrir <a href='{{proposal_url}}'>tillöguna</a> að þetta mál verði tekið yfir af {{new_priority_name}}"                        
+                        noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} fyrir <a href='{{proposal_url}}'>tillöguna</a> að þetta forgangsmál verði tekið yfir af {{new_priority_name}}"                        
                         link: "{{user_name}} eyddi {{capital}}{{currency_short_name}} fyrir <a href='{{proposal_url}}'>tillöguna</a> að {{new_priority_name}} taki yfir {{priority_name}}"
             ad:
                 new:
                     name: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í auglýsingu fyrir {{priority_name}}"
                     link: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir {{priority_name}}"
-                    noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir þetta mál"                    
+                    noself: "{{user_name}} eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir þetta forgangsmál"                    
                     nouser: "Eyddi {{capital}}{{currency_short_name}} í <a href='{{ad_url}}'>auglýsingu</a> fyrir {{priority_name}}"
             point:
                 helpful:
@@ -131,291 +131,291 @@ is:
             partner:
                 user:
                     recruited:
-                        name: "{{user_name}} earned {{capital}}{{currency_short_name}} for recruiting {{other_user_name}} to {{government_name}} through {{partner_url}}"
-                        nouser: "Earned {{capital}}{{currency_short_name}} for recruiting {{other_user_name}} to {{government_name}} through {{partner_url}}"           
+                        name: "{{user_name}} vann sér inn {{capital}}{{currency_short_name}} með því að fá  {{other_user_name}} til liðs við {{government_name}} í gegnum {{partner_url}}"
+                        nouser: "Vann sér inn {{capital}}{{currency_short_name}} með því að fá {{other_user_name}} til liðs við {{government_name}} í gegnum {{partner_url}}"           
             legislators:
                 added:
-                    name: "{{user_name}} earned {{capital}}{{currency_short_name}} for adding legislators to their account"
-                    nouser: "Earned {{capital}}{{currency_short_name}} for adding legislators to their account"              
+                    name: "{{user_name}} vann sér inn {{capital}}{{currency_short_name}} með því að fá kosinn fulltrúa með sér í lið"
+                    nouser: "Vann {{capital}}{{currency_short_name}} með því að fá kosinn fulltrúa með sér í lið"              
             warning:
-                name: "{{user_name}} lost {{capital}}{{currency_short_name}} for violating the site rules"
-                link: "{{user_name}} lost {{capital}}{{currency_short_name}} for violating the <a href='/about/rules'>site rules</a>"
-                nouser: "Lost {{capital}}{{currency_short_name}} for violating the site rules"
+                name: "{{user_name}} missti {{capital}}{{currency_short_name}} fyrir brot á reglum okkar"
+                link: "{{user_name}} missti {{capital}}{{currency_short_name}} fyrir brot á <a href='/about/rules'>reglum okkar</a>"
+                nouser: "Missti {{capital}}{{currency_short_name}} fyrir brot á reglum okkar"
         comment:
             participant:
                 name: 
-                    one: "{{user_name}} commented on {{discussion_name}}"
-                    other: "{{user_name}} left {{count}} comments on {{discussion_name}}"
+                    one: "{{user_name}} tjáði sig um {{discussion_name}}"
+                    other: "{{user_name}} tjáði {{count}} sig um {{discussion_name}}"
                 nouser: 
-                    one: "Commented on {{discussion_name}}"
-                    other: "Left {{count}} comments on {{discussion_name}}"        
+                    one: "Tjáði sig um {{discussion_name}}"
+                    other: "Tjáði {{count}} sig um {{discussion_name}}"        
         discussion:
             following:
                 new:
-                    name: "{{user_name}} is following the discussion on {{discussion_name}}"
-                    nouser: "Following the discussion on {{discussion_name}}"
+                    name: "{{user_name}} fylgist með umræðum um {{discussion_name}}"
+                    nouser: "Fylgist með umræðum um {{discussion_name}}"
                 delete:
-                    name: "{{user_name}} stopped following the discussion on {{discussion_name}}"
-                    nouser: "Stopped following the discussion on {{discussion_name}}"
+                    name: "{{user_name}} hætti að fylgjast með umræðum um {{discussion_name}}"
+                    nouser: "Hætti að fylgjast með umræðum um {{discussion_name}}"
         endorsement:
             new:
                 name: 
-                    known: "{{user_name}} endorsed {{priority_name}} at priority #{{position}}"
-                    unknown: "{{user_name}} endorsed {{priority_name}}"
+                    known: "{{user_name}} styður {{priority_name}} og er það í forgangi #{{position}}"
+                    unknown: "{{user_name}} styður {{priority_name}}"
                 noself:
-                    known: "{{user_name}} endorsed at priority #{{position}}"
-                    unknown: "{{user_name}} endorsed"                
+                    known: "{{user_name}} styður í forgangi #{{position}}"
+                    unknown: "{{user_name}} styður"                
                 nouser: 
-                    known: "Endorsed {{priority_name}} at priority #{{position}}"
-                    unknown: "Endorsed {{priority_name}}"
+                    known: "Styður {{priority_name}} í forgangi #{{position}}"
+                    unknown: "Styður {{priority_name}}"
                 ad:
                     name: 
-                        known: "{{user_name}} endorsed {{priority_name}} at priority #{{position}} due to {{ad_user}} ad"
-                        unknown: "{{user_name}} endorsed {{priority_name}} due to {{ad_user}} ad"
+                        known: "{{user_name}} styður {{priority_name}} í forgangi #{{position}} fyrir tilstuðlan {{ad_user}} auglýsingar"
+                        unknown: "{{user_name}} styður {{priority_name}} fyrir tilstuðlan {{ad_user}} auglýsingar"
                     link: 
-                        known: "{{user_name}} endorsed {{priority_name}} at priority #{{position}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"
-                        unknown: "{{user_name}} endorsed {{priority_name}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"                         
+                        known: "{{user_name}} styður {{priority_name}} í forgangi #{{position}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"
+                        unknown: "{{user_name}} styður {{priority_name}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"                         
                     noself:
-                        known: "{{user_name}} endorsed at priority #{{position}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"
-                        unknown: "{{user_name}} endorsed due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"                
+                        known: "{{user_name}} styðjur í forgangi #{{position}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"
+                        unknown: "{{user_name}} styður fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"                
                     nouser: 
-                        known: "Endorsed {{priority_name}} at priority #{{position}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"
-                        unknown: "Endorsed {{priority_name}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"          
+                        known: "Styður {{priority_name}} í forgangi #{{position}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"
+                        unknown: "Styður {{priority_name}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"          
             delete:
-                name: "{{user_name}} no longer endorses {{priority_name}}"
-                noself: "{{user_name}} no longer endorses"
-                nouser: "Stopped endorsing {{priority_name}}"
+                name: "{{user_name}} styður ekki lengur {{priority_name}}"
+                noself: "{{user_name}} styður ekki lengur"
+                nouser: "Styður ekki lengur {{priority_name}}"
             replaced:
-                name: "{{user_name}} endorsed {{new_priority_name}} instead of {{priority_name}}"
-                noself: "{{user_name}} endorsed {{new_priority_name}} instead"
-                nouser: "Endorsed {{new_priority_name}} instead of {{priority_name}}"
+                name: "{{user_name}} styður {{new_priority_name}} í stað {{priority_name}}"
+                noself: "{{user_name}} styður {{new_priority_name}} í stað"
+                nouser: "Styður {{new_priority_name}} í stað {{priority_name}}"
                 implicit:
-                    name: "{{user_name}} is now endorsing {{new_priority_name}} because {{priority_name}} was acquired"
-                    nouser: "Now endorsing {{new_priority_name}} because {{priority_name}} was acquired"
+                    name: "{{user_name}} styður nú {{new_priority_name}} vegna þess að {{priority_name}} var yfirtekið"
+                    nouser: "Styður nú {{new_priority_name}} vegna þess að {{priority_name}} var yfirtekið"
             flipped:
-                name: "{{user_name}} endorsed {{new_priority_name}} instead of opposing {{priority_name}}"
-                nouser: "Endorsed {{new_priority_name}} instead of opposing {{priority_name}}"
+                name: "{{user_name}} styður {{new_priority_name}} í stað þess að vera á móti {{priority_name}}"
+                nouser: "Styður {{new_priority_name}} í stað þess að vera á móti {{priority_name}}"
                 implicit:
-                    name: "{{user_name}} is now endorsing {{new_priority_name}} because it acquired the opposers of {{priority_name}}"
-                    nouser: "Now endorsing {{new_priority_name}} because it acquired the opposers of {{priority_name}}"
+                    name: "{{user_name}} styður nú {{new_priority_name}} vegna þess að það er nú stutt af þeim sem voru á móti {{priority_name}}"
+                    nouser: "Styður nú {{new_priority_name}} vegna þess að það er nú stutt af þeim sem voru á móti {{priority_name}}"
         following:
             new:
-                name: "{{user_name}} is now following {{other_user_name}}"
-                nouser: "Following {{other_user_name}}"
+                name: "{{user_name}} fylgist nú með {{other_user_name}}"
+                nouser: "Fylgist með {{other_user_name}}"
             delete:
-                name: "{{user_name}} stopped following {{other_user_name}}"
-                nouser: "Stopped following {{other_user_name}}"
+                name: "{{user_name}} hætti að fylgjast með {{other_user_name}}"
+                nouser: "Hætti að fylgjast með {{other_user_name}}"
         ignoring:
             new:
-                name: "{{user_name}} is ignoring someone"
+                name: "{{user_name}} er að hunsa notanda"
             delete:
-                name: "{{user_name}} stopped ignoring someone"                
+                name: "{{user_name}} hætti að hunsa notanda"                
         opposition:
             new:
                 name: 
-                    known: "{{user_name}} opposed {{priority_name}} at priority #{{position}}"
-                    unknown: "{{user_name}} opposed {{priority_name}}"
+                    known: "{{user_name}} er á móti {{priority_name}} í forgangi #{{position}}"
+                    unknown: "{{user_name}} á móti {{priority_name}}"
                 noself:
-                    known: "{{user_name}} opposed at priority #{{position}}"
-                    unknown: "{{user_name}} opposed"                
+                    known: "{{user_name}} er á móti í forgangi #{{position}}"
+                    unknown: "{{user_name}} á móti"                
                 nouser: 
-                    known: "Opposed {{priority_name}} at priority #{{position}}"
-                    unknown: "Opposed {{priority_name}}"
+                    known: "Er á móti {{priority_name}} í forgangi #{{position}}"
+                    unknown: "Á móti {{priority_name}}"
                 ad:
                     name: 
-                        known: "{{user_name}} opposed {{priority_name}} at priority #{{position}} due to {{ad_user}} ad"
-                        unknown: "{{user_name}} opposed {{priority_name}} due to {{ad_user}} ad"
+                        known: "{{user_name}} er á móti {{priority_name}} í forgangi #{{position}} fyrir tilstuðlan {{ad_user}} auglýsingar"
+                        unknown: "{{user_name}} er á móti {{priority_name}} fyrir tilstuðlan {{ad_user}} auglýsingar"
                     link: 
-                        known: "{{user_name}} opposed {{priority_name}} at priority #{{position}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"
-                        unknown: "{{user_name}} opposed {{priority_name}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"                         
+                        known: "{{user_name}} er á móti {{priority_name}} í forgangi #{{position}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"
+                        unknown: "{{user_name}} er á móti {{priority_name}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"                         
                     noself:
-                        known: "{{user_name}} opposed at priority #{{position}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"
-                        unknown: "{{user_name}} opposed due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"                
+                        known: "{{user_name}} er á móti í forgangi #{{position}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"
+                        unknown: "{{user_name}} er á móti fyir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"                
                     nouser: 
-                        known: "Opposed {{priority_name}} at priority #{{position}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"
-                        unknown: "Opposed {{priority_name}} due to <a href='{{ad_url}}'>{{ad_user}} ad</a>"          
+                        known: "Á móti {{priority_name}} í forgangi #{{position}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"
+                        unknown: "Á móti {{priority_name}} fyrir tilstuðlan <a href='{{ad_url}}'>{{ad_user}} auglýsingar</a>"          
             delete:
-                name: "{{user_name}} no longer opposes {{priority_name}}"
-                noself: "{{user_name}} no longer opposes"
-                nouser: "Stopped opposing {{priority_name}}"
+                name: "{{user_name}} er ekki lengur á móti {{priority_name}}"
+                noself: "{{user_name}} er ekki lengur á móti"
+                nouser: "Er ekki lengur á móti {{priority_name}}"
             replaced:
-                name: "{{user_name}} opposed {{new_priority_name}} instead of {{priority_name}}"
-                noself: "{{user_name}} opposed {{new_priority_name}} instead"
-                nouser: "Opposed {{new_priority_name}} instead of {{priority_name}}"
+                name: "{{user_name}} er nú á móti {{new_priority_name}} í stað {{priority_name}}"
+                noself: "{{user_name}} er á móti {{new_priority_name}} þess í stað"
+                nouser: "Á móti {{new_priority_name}} í stað {{priority_name}}"
                 implicit:
-                    name: "{{user_name}} is now opposing {{new_priority_name}} because {{priority_name}} was acquired"
-                    nouser: "Now opposing {{new_priority_name}} because {{priority_name}} was acquired"
+                    name: "{{user_name}} er nú á móti {{new_priority_name}} vegna þess að {{priority_name}} var yfirtekið"
+                    nouser: "Er nú á móti {{new_priority_name}} vegna þess að {{priority_name}} var yfirtekið"
             flipped:
-                name: "{{user_name}} opposed {{new_priority_name}} instead of opposing {{priority_name}}"
-                nouser: "Opposed {{new_priority_name}} instead of opposing {{priority_name}}"
+                name: "{{user_name}} er á móti {{new_priority_name}} í stað {{priority_name}}"
+                nouser: "Á móti {{new_priority_name}} í stað {{priority_name}}"
                 implicit:
-                    name: "{{user_name}} is now opposing {{new_priority_name}} because it acquired the opposers of {{priority_name}}"
-                    nouser: "Now opposing {{new_priority_name}} because it acquired the opposers of {{priority_name}}"                  
+                    name: "{{user_name}} er nú á móti {{new_priority_name}} vegna þess að það yfirtók þá sem voru á móti  {{priority_name}}"
+                    nouser: "Er nú á móti {{new_priority_name}} vegna þess að það yfirtók þá sem voru á móti {{priority_name}}"                  
         invitation:
             new:
                 name: 
-                    known: "{{user_name}} invited someone to join"
-                    unknown: "Someone sent an invitation"
-                nouser: "Invited someone to join"
+                    known: "{{user_name}} bauð einhverjum að taka þátt"
+                    unknown: "Einhver sendi boð um að taka þátt"
+                nouser: "Bauð einhverjum að taka þátt"
             accepted:
                 name:
-                    known: "{{user_name}} accepted an invitation from {{other_user_name}} to join {{government_name}}"
-                    unknown: "{{user_name}} accepted an invitation to join {{government_name}}"
+                    known: "{{user_name}} þáði boð frá {{other_user_name}} um að taka þátt í {{government_name}}"
+                    unknown: "{{user_name}} þáði boð um að taka þátt í {{government_name}}"
                 nouser:
-                    known: "Accepted an invitation from {{other_user_name}} to join {{government_name}}"
-                    unknown: "Accepted an invitation to join {{government_name}}"
+                    known: "Þáði boð frá {{other_user_name}} um að taka þátt í {{government_name}}"
+                    unknown: "Þáði boð um að taka þátt í {{government_name}}"
         partner:
             new:
                 name: "{{partner_name}} er nýr samstarfsaðili"
             picture:
                 new:
-                    name: "{{partner_name}} has a new logo"
+                    name: "{{partner_name}} er með nýtt merki"
         point:
             new:
-                name: "{{user_name}} added {{point_name}} to {{priority_name}}"
-                noself: "Added {{point_name}} to this priority"                
-                nouser: "Added {{point_name}} to {{priority_name}}"
+                name: "{{user_name}} bætti við {{point_name}} við {{priority_name}}"
+                noself: "Bætti við {{point_name}} við þetta forgangsmál"                
+                nouser: "Bætti við {{point_name}} við {{priority_name}}"
             deleted:
-                name: "{{user_name}} deleted {{point_name}}"
-                nouser: "Deleted {{point_name}}"
+                name: "{{user_name}} eyddi {{point_name}}"
+                nouser: "Eyddi {{point_name}}"
             revision:
-                name: "{{user_name}} changed the talking point's title to {{point_name}}"
-                nouser: "Changed the talking point's title to {{point_name}}"
+                name: "{{user_name}} breytti nafni forgangsmáls í {{point_name}}"
+                nouser: "Breytti nafni forgangsmáls í {{point_name}}"
                 content:
-                    name: "{{user_name}} revised {{point_name}}"
-                    nouser: "Revised {{point_name}}"
+                    name: "{{user_name}} uppfærði {{point_name}}"
+                    nouser: "Uppfærði {{point_name}}"
                 link:
                     new:
-                        name: "{{user_name}} linked {{point_name}} to {{priority_name}}"
-                        nouser: "Linked {{point_name}} to {{priority_name}}"
+                        name: "{{user_name}} tengdi {{point_name}} við {{priority_name}}"
+                        nouser: "Tengdi {{point_name}} við {{priority_name}}"
                     deleted:
-                        name: "{{user_name}} removed the priority link from {{point_name}}"
-                        nouser: "Removed the priority link from {{point_name}}"
+                        name: "{{user_name}} eyddi tengli við {{point_name}}"
+                        nouser: "Eyddi tengli við {{point_name}}"
                 website:
                     new:
-                        name: "{{user_name}} revised the source link for {{point_name}}"
-                        nouser: "Revised the source link for {{point_name}}"
+                        name: "{{user_name}} uppfærði tengla í {{point_name}}"
+                        nouser: "Uppfærði tengli í {{point_name}}"
                     deleted:
-                        name: "{{user_name}} removed the source link from {{point_name}}"
-                        nouser: "Removed the source link from {{point_name}}"
+                        name: "{{user_name}} eyddi tengli frá {{point_name}}"
+                        nouser: "Eyddi tengli frá {{point_name}}"
                 supportive:
-                    name: "{{user_name}} revised {{point_name}} to indicate it's supportive of {{priority_name}}"
-                    nouser: "Revised {{point_name}} to indicate it's supportive of {{priority_name}}"
+                    name: "{{user_name}} uppæfærði {{point_name}} til að sýna stuðning við {{priority_name}}"
+                    nouser: "Uppfærði {{point_name}} til að sýna stuðning við {{priority_name}}"
                 neutral:
-                    name: "{{user_name}} revised {{point_name}} to indicate it's neutral on {{priority_name}}"
-                    nouser: "Revised {{point_name}} to indicate it's neutral on {{priority_name}}"
+                    name: "{{user_name}} uppfærði {{point_name}} til að sýna að það tekur ekki afstöðu til {{priority_name}}"
+                    nouser: "Uppfærði {{point_name}} til að sýna að það tekur ekki afstöðu til {{priority_name}}"
                 opposition:
-                    name: "{{user_name}} revised {{point_name}} to indicate it's opposed to {{priority_name}}"
-                    nouser: "Revised {{point_name}} to indicate it's opposed to {{priority_name}}"
+                    name: "{{user_name}} uppfærði {{point_name}} til að sýna að það er á móti {{priority_name}}"
+                    nouser: "Uppfærði {{point_name}} til að sýna að það er á móti {{priority_name}}"
             helpful:
-                name: "{{user_name}} marked {{point_name}} helpful"
-                nouser: "Marked {{point_name}} helpful"
+                name: "{{user_name}} telur {{point_name}} gagnlegt"
+                nouser: "Telur {{point_name}} gagnlegt"
                 delete:
-                    name: "{{user_name}} no longer finds {{point_name}} helpful"
-                    nouser: "No longer finds {{point_name}} helpful"
+                    name: "{{user_name}} telur ekki lengur {{point_name}} gagnlegt"
+                    nouser: "Telur ekki lengur {{point_name}} gagnlegt"
             unhelpful:
-                name: "{{user_name}} marked {{point_name}} unhelpful"
-                nouser: "Marked {{point_name}} unhelpful"
+                name: "{{user_name}} telur {{point_name}} ógagnlegt"
+                nouser: "Telur {{point_name}} ógagnlegt"
                 delete:
-                    name: "{{user_name}} no longer finds {{point_name}} unhelpful"
-                    nouser: "No longer finds {{point_name}} unhelpful"
+                    name: "{{user_name}} telur ekki lengur {{point_name}} ógagnlegt"
+                    nouser: "Tel ekki lengur að {{point_name}} sé ógagnlegt"
         priority:
             new:
-                name: "{{user_name}} first suggested {{priority_name}}"
-                noself: "{{user_name}} first suggested this priority"
-                nouser: "Suggested {{priority_name}} as a new priority"
+                name: "{{user_name}} er höfundur {{priority_name}}"
+                noself: "{{user_name}} er höfundur þessa forgangsmáls"
+                nouser: "Lagði fram {{priority_name}} sem nýtt forgangsmál"
             debut:
                 name: 
-                    known: "{{priority_name}} debuted on the charts at #{{position}}"
-                    unknown: "{{priority_name}} debuted on the charts"
+                    known: "{{priority_name}} er nýtt á lista í #{{position}}"
+                    unknown: "{{priority_name}} er nýtt á lista"
                 noself: 
-                    known: "Debuted on the charts at #{{position}}"
-                    unknown: "Debuted on the charts"
+                    known: "Er nýtt á lista í #{{position}}"
+                    unknown: "Er nýtt á lista"
             flagged:
-                name: "{{user_name}} flagged {{priority_name}} for review"
-                noself: "{{user_name}} flagged this priority for review"
-                nouser: "Flagged {{priority_name}} for review"
+                name: "{{user_name}} er merkt {{priority_name}} til yfirlestrar"
+                noself: "{{user_name}} merkti forgangsmál til yfirlestrar"
+                nouser: "Merkti {{priority_name}} til yfirlestrar"
             buried:
-                name: "{{user_name}} buried {{priority_name}}.  It's probably obvious why."
-                noself: "{{user_name}} buried this priority.  It will no longer show up in the rankings.  It's probably obvious why."
-                nouser: "Buried {{priority_name}}.  It's probably obvious why."
+                name: "{{user_name}} jarðaði {{priority_name}}.  Ástæðan er líklega augljós."
+                noself: "{{user_name}} jarðaði þetta forgangsmál. Það mun ekki lengur birtast í listum. Ástæðan er líklega augljós."
+                nouser: "Jarðaði {{priority_name}}.  Ástæðan er líklega augljós."
             renamed:
-                name: "{{user_name}} renamed {{priority_name}}"
-                noself: "{{user_name}} renamed this priority {{priority_name}}"
-                nouser: "Renamed {{priority_name}}"
+                name: "{{user_name}} endurnefndi {{priority_name}}"
+                noself: "{{user_name}} endurnefndi þetta forgangsmál {{priority_name}}"
+                nouser: "Endurnefndi {{priority_name}}"
             acquisition:
                 proposal:
-                    name: "{{user_name}} proposed {{new_priority_name}} acquire {{priority_name}}"
-                    link: "{{user_name}} proposed {{new_priority_name}} <a href='{{proposal_url}}'>acquire</a> {{priority_name}}"
-                    nouser: "Proposed {{new_priority_name}} <a href='{{proposal_url}}'>acquire</a> {{priority_name}}"
+                    name: "{{user_name}} lagði til að {{new_priority_name}} yfirtæki {{priority_name}}"
+                    link: "{{user_name}} lagði til að {{new_priority_name}} <a href='{{proposal_url}}'>yfirtæki</a> {{priority_name}}"
+                    nouser: "Lagt er til að {{new_priority_name}} <a href='{{proposal_url}}'>yfirtaki</a> {{priority_name}}"
                     novote:
-                        name: "{{user_name}} voted against {{new_priority_name}} acquiring {{priority_name}}"
-                        nouser: "Voted against {{new_priority_name}} acquiring {{priority_name}}"
+                        name: "{{user_name}} er á móti því að {{new_priority_name}} yfirtaki {{priority_name}}"
+                        nouser: "Er á móti því að {{new_priority_name}} yfirtaki {{priority_name}}"
                     approved:
-                        name: "{{new_priority_name}} acquired {{priority_name}}"
+                        name: "{{new_priority_name}} yfirtók {{priority_name}}"
                     declined:
-                        name: "{{new_priority_name}} failed to acquire {{priority_name}}"
+                        name: "{{new_priority_name}} tókst ekki að yfirtaka {{priority_name}}"
                     deleted:
-                        name: "{{user_name}} decided not to hold a vote on {{new_priority_name}} acquiring {{priority_name}}"
-                        nouser: "Decided not to hold a vote on {{new_priority_name}} acquiring {{priority_name}}"
+                        name: "{{user_name}} ákvaða að halda ekki kosningu um hvort {{new_priority_name}} yfirtæki {{priority_name}}"
+                        nouser: "Ákvað að halda ekki kosningu um hvort {{new_priority_name}} yfirtæki {{priority_name}}"
             comment:
                 new:
-                    name: "{{user_name}} left a comment on {{priority_name}}"
-                    noself: "{{user_name}} posted a comment"
-                    nouser: "Left a comment on {{priority_name}}"
+                    name: "{{user_name}} tók þátt í umræðum um {{priority_name}}"
+                    noself: "{{user_name}} tók þátt í umræðum"
+                    nouser: "Tók þátt í umræðum um {{priority_name}}"
             first:
                 endorsed:
-                    name: "{{priority_name}} is {{user_name}} new #1 priority"
-                    noself: "This is {{user_name}} new #1 priority"
-                    nouser: "New #1 priority: {{priority_name}}"
+                    name: "{{priority_name}} er {{user_name}} nýtt #1 forgangsmál"
+                    noself: "Þetta er nú {{user_name}} nýtt #1 forgangsmál"
+                    nouser: "Nýtt #1 forgangsmál: {{priority_name}}"
                 opposed:
-                    name: "Opposing {{priority_name}} is {{user_name}} new #1 priority"
-                    noself: "Opposing this is {{user_name}} new #1 priority"
-                    nouser: "New #1 priority: Opposing {{priority_name}}"                    
+                    name: "Andstaða við {{priority_name}} er {{user_name}} nýtt #1 forgangsmál"
+                    noself: "Andstaða við þetta er nú {{user_name}} nýtt #1 forgangsmál"
+                    nouser: "Nýtt #1 forgangsmál: Á móti {{priority_name}}"                    
             rising:
-                name: "{{priority_name}} is the fastest rising priority"
-                noself: "This is the fastest rising priority"
+                name: "{{priority_name}} hækkar nú hraðast allra forgangsmála"
+                noself: "Þetta hækkar nú hraðast allra forgangsmála"
             obama_status:
                 successful:
-                    name: "{{priority_name}} was completed successfully"
-                    noself: "Completed successfully"
+                    name: "{{priority_name}} tókst að fullu"
+                    noself: "Tókst fullkomlega"
                 compromised:
-                    name: "{{priority_name}} was completed with a compromise"
-                    noself: "Completed with a compromise"
+                    name: "{{priority_name}} tókst en þó með breytingum"
+                    noself: "Tókst með breytingum"
                 failed:
-                    name: "{{priority_name}} failed"
-                    noself: "This priority failed"
+                    name: "{{priority_name}} mistókst"
+                    noself: "Þetta forgangsmál mistókst"
                 intheworks:
-                    name: "{{priority_name}} is in the works"
-                    noself: "This priority is in the works"
+                    name: "{{priority_name}} er í vinnslu"
+                    noself: "Þetta forgangsmál er í vinnslu"
             tag:
                 first:
-                    name: "{{priority_name}} is the new #1 priority in {{tag_name}}"
-                    noself: "This is the new #1 priority in {{tag_name}}"
+                    name: "{{priority_name}} er nýtt forgangsmál #1 í {{tag_name}}"
+                    noself: "Þetta er nýtt forgangsmál #1 í {{tag_name}}"
                 controversial:
-                    name: "{{priority_name}} is the most controversial priority in {{tag_name}}"
-                    noself: "This is the most controversial priority in {{tag_name}}"                    
+                    name: "{{priority_name}} er umdeildasta forgangsmálið í {{tag_name}}"
+                    noself: "Þetta er umdeildasta forgangsmálið í {{tag_name}}"                    
                 rising:
-                    name: "{{priority_name}} is the fastest rising priority in {{tag_name}}"
-                    noself: "This is the fastest rising priority in {{tag_name}}"                    
+                    name: "{{priority_name}} er það forgangsmál sem hækkar hraðast í {{tag_name}}"
+                    noself: "Þetta er það forgangsmál sem hækkar hraðast í {{tag_name}}"                    
                 obama:
                     first:
-                        name: "{{priority_name}} is the new #1 priority on {{official_user_name}} {{tag_name}} agenda"
-                        noself: "This is the new #1 priority on {{official_user_name}} {{tag_name}} agenda"
+                        name: "{{priority_name}} er nýtt #1 forgangsmál í {{official_user_name}} {{tag_name}} málaflokki"
+                        noself: "Þetta er nýtt #1 forgangsmál í {{official_user_name}} {{tag_name}} málaflokki"
         user:
             new:
-                name: "{{user_name}} joined {{government_name}}"
-                nouser: "Joined {{government_name}}"
+                name: "{{user_name}} er skráð(ur) í {{government_name}}"
+                nouser: "Skráður í {{government_name}}"
             recruited:
-                name: "{{user_name}} recruited {{other_user_name}} to {{government_name}}" 
-                nouser: "{{user_name}} recruited {{other_user_name}} to {{government_name}}" 
+                name: "{{user_name}} fékk {{other_user_name}} með í {{government_name}}" 
+                nouser: "{{user_name}} fékk {{other_user_name}} með í {{government_name}}" 
                 partner:
-                    name: "{{user_name}} recruited {{other_user_name}} to {{government_name}} through {{partner_url}}" 
-                    nouser: "Recruited {{other_user_name}} to {{government_name}} through {{partner_url}}" 
+                    name: "{{user_name}} fékk {{other_user_name}} með í {{government_name}} í gegnum {{partner_url}}" 
+                    nouser: "Fékk {{other_user_name}} með í {{government_name}} gegnum {{partner_url}}" 
             debut:
                 name:
-                    known: "{{user_name}} debuted on the most influential chart at #{{position}}"
-                    unknown: "{{user_name}} debuted on the most influential chart"
+                    known: "{{user_name}} birtist í fyrst skipti á lista yfir áhrifamestu í #{{position}}"
+                    unknown: "{{user_name}} birtist í fyrsta skipti á lista yfir áhrifamestu"
                 nouser:
                     known: "Frumsýning á staðsetningu á áhrifamestu töflunni, #{{position}}"
                     unknown: "Frumsýning á áhrifamestu töflunni"
