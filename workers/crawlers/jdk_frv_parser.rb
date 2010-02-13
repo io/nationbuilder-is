@@ -53,11 +53,8 @@ elements = [
                                 Tefjist skip frá veiðum í fimm mánuði samfellt vegna tjóns eða meiri háttar bilana hefur afli þess fiskveiðiárs ekki áhrif til niðurfellingar aflahlutdeildar samkvæmt þessari grein. 
                  d.      7. mgr. orðast svo: 
                                 Á hverju fiskveiðiári er heimilt að flytja af fiskiskipi 50% þess aflamarks sem skipi var úthlutað í þorskígildum talið á grundvelli verðmætahlutfalla einstakra tegunda, sbr. 19. gr. Auk þess er heimilt að flytja frá skipi það aflamark í einstökum tegundum sem flutt hefur verið til skips. Heimilt er Fiskistofu að víkja frá þessari takmörkun á heimild til flutnings á aflamarki vegna varanlegra breytinga á skipakosti útgerða eða þegar skip hverfur úr rekstri um lengri tíma vegna alvarlegra bilana eða sjótjóns, samkvæmt nánari reglum sem ráðherra setur.",
-  "   Lög þessi taka gildi 1. janúar 2010 að undanskildum ákvæðum c-liðar 2. gr. um línuívilnun sem taka gildi 1. mars 2010, ákvæðum 3. gr. sem taka gildi 1. september 2010 og ákvæði til bráðabirgða I sem tekur gildi 15. febrúar 2010."
+  # "   Lög þessi taka gildi 1. janúar 2010 að undanskildum ákvæðum c-liðar 2. gr. um línuívilnun sem taka gildi 1. mars 2010, ákvæðum 3. gr. sem taka gildi 1. september 2010 og ákvæði til bráðabirgða I sem tekur gildi 15. febrúar 2010."
 ]
-
-# def parse_part(match, part)
-# end
 
 # Replace those weird little Icelandic characters with ASCII ones
 
@@ -72,16 +69,19 @@ end
 
 # Search for "x. gr.", "x. og x. gr.", "x. málsl.", "x. tölul.", "x. mgr."
 
-def find_parts(parts, text)
+def find_parts(action, parts, text)
   # Reset everything but "gr."
   parts.each { |key, value| parts.delete(key) if key != :gr }
 
+  # Set the action
+  parts[:action] = action
+
   # Search for parts:
-  # - 1-3 digits (1)
-  # - dot (.)
-  # - multiple occurrences of whitespace, dot, comma, 1-3 digits, "og" (2., 3. og 4.)
-  # - space
-  # - one of the follow: "gr.", "málsl.", "tölul.", "mgr."
+  #   (\d{1,3}) = 1-3 digits (1)
+  #   dot
+  #   ((\s|\.|\,|\d{1,3}|og)*) = multiple occurrences of whitespace, dot, comma, 1-3 digits, "og" (2., 3. og 4.)
+  #   space
+  #   (gr\.|málsl\.|tölul\.|mgr\.) = one of the following: "gr.", "málsl.", "tölul.", "mgr."
   text.scan(/(\d{1,3}).((\s|\.|\,|\d{1,3}|og)*) (gr\.|málsl\.|tölul\.|mgr\.)/) { |match|
     values = []
     values << match[0]
@@ -89,48 +89,61 @@ def find_parts(parts, text)
     parts[replace_weird_characters(match[3]).gsub!(".","").to_sym] = values
   }
 
-  # re_digit = "(\\d{1,3})." # 1-3 digit integer
-  # re_single_character = "(.?)" # Single character, optional
-  # re_parts = "(gr.|málsl.|tölul.|mgr.)" # Parts
-  # re_part_separator_dual = "(.?)og(.?)" # Dual parts
-  # re_part_separator_multiple = "" # Multiple parts
-
-  # # Search for a single reference
-  # matches = Regexp.new("#{re_digit}#{re_single_character}#{re_parts}", Regexp::IGNORECASE).match(text)
-  # if matches
-  #   key = matches[3]
-  #   value = matches[1]
-  #   parts[replace_weird_characters(key).gsub!(".","").to_sym] = value
-  # end
-  # 
-  # # Search for a dual reference
-  # matches = Regexp.new("#{re_digit}#{re_part_separator_dual}#{re_digit}#{re_single_character}#{re_parts}", Regexp::IGNORECASE).match(text)
-  # if matches
-  #   key = matches[6]
-  #   value1 = matches[1]
-  #   value2 = matches[4]
-  #   parts[replace_weird_characters(key).gsub!(".","").to_sym] = [value1, value2]
-  # end
-
-# re_digit.re_part_separator_dual(\d{1,3}).(.?)(gr.|málsl.|tölul.|mgr.)
-
-  # Search for a single reference
-  # text.scan(/(\d{1,3}).(.?)(gr.|málsl.|tölul.|mgr.)/) { |match| parts[replace_weird_characters(match[2]).gsub!(".","").to_sym] = match[0] }
-
-  # # Search for a dual reference
-  # text.scan(/(\d{1,3}).(.?)(gr.|málsl.|tölul.|mgr.)/) { |match| parts[replace_weird_characters(match[2]).gsub!(".","").to_sym] = match[0] }
-
+  # Add the results to the main actions array
+  @@actions << parts.clone
 end
+
+def find_text(match = nil, element = nil)
+  action_index = 2
+
+  if match
+    @@next_character_index = element.index(match) + match.length
+    text = element[@@last_character_index..@@next_character_index - match.length]
+    text = @@last_element[@@last_character_index..@@last_element.length] if ((text and text.strip.empty?) or !text) and @@last_element
+    @@last_character_index = @@next_character_index
+  else
+    text = @@last_element[@@last_character_index..@@last_element.length]
+    action_index = 1
+  end
+
+  @@actions[@@actions.length-action_index][:new_text] = text unless [:change, :remove].include?(@@actions[@@actions.length-action_index][:action])
+  @@last_element = element
+end
+
+
+def find_text_2(match = nil, element = nil)
+  # li = @@last_character_index
+  if match
+    @@next_character_index = element.index(match) + match.length
+    text = element[@@last_character_index..@@next_character_index - match.length]
+
+    if ((text and text.strip.empty?) or !text) and @@last_element
+      # @@next_character_index = 0
+      text = @@last_element[@@last_character_index..@@last_element.length]
+    end
+
+    @@last_character_index = @@next_character_index
+    @@actions[@@actions.length-2][:new_text] = text # "#{li}|#{@@next_character_index}|#{text}"
+  else
+    text = element[@@last_character_index..element.length]
+    @@actions[@@actions.length-1][:new_text] = text
+  end
+
+  @@last_element = element
+end
+
 
 def parse_add_new(match, element, parts)
   # MUNA AÐ LEITA EFTIR "ásamt fyrirsögn"
-  puts "====================================================================\n"
-  puts "ADD NEW\n"
-  puts "====================================================================\n"
-  puts match.inspect
-  find_parts(parts, match)#.inspect
-  puts parts.inspect
-  puts "\n\n"
+  # puts "====================================================================\n"
+  # puts "ADD NEW\n"
+  # puts "====================================================================\n"
+  # puts match.inspect
+  find_parts(:add_new, parts, match)#.inspect
+  find_text(match, element)
+  # puts parts.inspect
+  # puts "\n\n"
+  ""
 end
 
 # def parse_append(match, element, parts)
@@ -140,73 +153,85 @@ end
 #   puts "====================================================================\n"
 #   puts match.inspect
 #   puts find_parts(parts, match).inspect
+#   puts find_text(match, element)
 #   puts "\n\n"
 # end
 
 def parse_change(match, element, parts)
-  puts "====================================================================\n"
-  puts "CHANGE\n"
-  puts "====================================================================\n"
-  puts match.inspect
-  find_parts(parts, match)#.inspect
-  puts parts.inspect
-  puts "\n\n"
+  # puts "====================================================================\n"
+  # puts "CHANGE\n"
+  # puts "====================================================================\n"
+  # puts match.inspect
+  find_parts(:change, parts, match)#.inspect
+  find_text(match, element)
+  # puts parts.inspect
+  # puts "\n\n"
+  ""
 end
 
 def parse_remove(match, element, parts)
-  puts "====================================================================\n"
-  puts "REMOVE\n"
-  puts "====================================================================\n"
-  puts match.inspect
-  find_parts(parts, match)#.inspect
-  puts parts.inspect
-  puts "\n\n"
+  # puts "====================================================================\n"
+  # puts "REMOVE\n"
+  # puts "====================================================================\n"
+  # puts match.inspect
+  find_parts(:remove, parts, match)#.inspect
+  find_text(match, element)
+  # puts parts.inspect
+  # puts "\n\n"
+  ""
 end
 
 def parse_replace_all(match, element, parts)
-  # MUNA AÐ LEITA EFTIR "ásamt fyrirsögn"
-  puts "====================================================================\n"
-  puts "REPLACE ALL\n"
-  puts "====================================================================\n"
-  puts match.inspect
-  find_parts(parts, match)#.inspect
-  puts parts.inspect
-  puts "\n\n"
+  # # MUNA AÐ LEITA EFTIR "ásamt fyrirsögn"
+  # puts "====================================================================\n"
+  # puts "REPLACE ALL\n"
+  # puts "====================================================================\n"
+  # puts match.inspect
+  find_parts(:replace_all, parts, match)#.inspect
+  find_text(match, element)
+  # puts parts.inspect
+  # puts "\n\n"
+  ""
 end
 
-# def parse_replace_all_with_new_headline(match, element)
-#   puts "[ REPLACE W/HL ] #{match.inspect}"
-# end
 
+@@actions = []
+@@last_element = nil
+@@last_character_index = 0
+@@next_character_index = 0
 
 parts = {}
 
 for element in elements
-  # Við 3. mgr. bætist nýr málsliður sem orðast svo:
-  element.gsub!(/(.*?)(bætist)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_add_new(match, element, parts) }
+  lines = element.split("\n")
+  for line in lines
+    # Við 3. mgr. bætist nýr málsliður sem orðast svo:
+    line.gsub!(/(.*?)(bætist)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_add_new(match, element, parts) }
 
-  # # Við 3. mgr. bætist nýr málsliður sem orðast svo:
-  # element.gsub!(/(.*?)(bætist)(.*?)(við)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_append(match, element) }
+    # 1. gr. laganna orðast svo:
+    line.gsub!(/(.)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_replace_all(match, element, parts) }
 
-  # 1. gr. laganna orðast svo:
-  element.gsub!(/(.)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_replace_all(match, element, parts) }
+    # 3. og 4 gr. laganna falla brott
+    line.gsub!(/(.)(.*?)(fellur brott)(.*?)/) { |match| parse_remove(match, element, parts) }
+    line.gsub!(/(.)(.*?)(falla brott)(.*?)/) { |match| parse_remove(match, element, parts) }
 
-  # 2. gr. laganna orðast svo ásamt fyrirsögn:
-  # element.gsub!(/(.)(.*?)(!bætist)(.*?)(orðast svo)(.*?)(ásamt fyrirsögn)(.?)(:)/) { |match| parse_replace_all_with_new_headline(match, element) }
+    # Eftirfarandi breytingar verða á 6. gr. laganna:
+    line.gsub!(/(.*?)(breytingar)(.*?)(gr\.)(.*?)(:)/) { |match| parse_change(match, element, parts) }
 
-  # # Við 3. mgr. bætist nýr málsliður sem orðast svo ásamt fyrirsögn:
-  # element.gsub!(/(.)(.*?)(bætist)(.*?)(orðast svo)(.?)(:)/) { |match| parse_append_with_new_headline(match, element) }
-
-  # 3. og 4 gr. laganna falla brott
-  element.gsub!(/(.)(.*?)(fellur brott)(.*?)/) { |match| parse_remove(match, element, parts) }
-  element.gsub!(/(.)(.*?)(falla brott)(.*?)/) { |match| parse_remove(match, element, parts) }
-
-  # Eftirfarandi breytingar verða á 6. gr. laganna:
-  element.gsub!(/(.*?)(breytingar)(.*?)(gr\.)(.*?)(:)/) { |match| parse_change(match, element, parts) }
-
-  # puts element
-  # puts "----------------------------------\n\n"
+    # puts line
+    # puts "----------------------------------\n\n"
+  end
 end
 
+# We need to process the last text element outside the loop
+find_text
 
 
+# puts "\n\n"
+# puts "*******************************************************"
+# puts "\n\n"
+
+for action in @@actions
+  puts action.inspect
+  puts "\n\n"
+end
