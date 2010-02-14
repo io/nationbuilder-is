@@ -57,4 +57,8 @@ class ProcessDocument < ActiveRecord::Base
       "<a href=\"#{self.external_link}\">#{external_type}</a>"
     end
   end
+
+  def title
+    process_document_elements.first(:conditions => "content_type = 1").content
+  end
 end

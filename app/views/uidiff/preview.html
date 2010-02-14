@@ -1,11 +1,12 @@
-<h1><%= @original_law.name %></h1>
+<h1><%= @priority.name %></h1>
 
 <% for action in @actions %>
   <h2><%= action[:action] %></h2>
   <div style="font-size:8pt;text-transform:uppercase;padding: 5px 0;">
     <%= "Grein: #{action[:gr].inspect} &bull;" if action[:gr] %>
     <%= "Málsgrein: #{action[:mgr].inspect} &bull;" if action[:mgr] %>
-    <%= "Liður: #{action[:tolul].inspect} &bull;" if action[:tolul] %>
+    <%= "Málsliður: #{action[:malsl].inspect} &bull;" if action[:malsl] %>
+    <%= "Töluliður: #{action[:tolul].inspect} &bull;" if action[:tolul] %>
   </div>
   <p><%= action[:new_text] %></p>
 <% end %>

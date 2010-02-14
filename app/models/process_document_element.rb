@@ -19,10 +19,17 @@ class ProcessDocumentElement < ActiveRecord::Base
   
   after_save :touch_document
   before_destroy :touch_document
-  
+
+  named_scope :articles, :conditions => "content_type = 3"
+
   acts_as_rateable
   
   def touch_document
     self.process_document.touch
   end
+
+  def children
+    ProcessDocumentElement.all(:conditions => "parent_id = #{id}")
+  end
+
 end
