@@ -14,7 +14,44 @@ class UidiffController < ApplicationController
     @law = ProcessDocument.find(155)
     @proposal = ProcessDocument.find(84)
 
-    # Split the proposal document elements into an array
+    # Put the original law document elements into an array
+    @law_elements = []
+
+    @law.process_document_elements.articles.each { |article|
+      paragraph_index = 0
+
+      # Paragraphs
+      article.children.each { |element|
+        sub_paragraph_index = 0
+        paragraph_index += 1
+        article_id = article.content_text_only.to_i
+        @law_elements[article_id] = [] unless @law_elements[article_id]
+        @law_elements[article_id][paragraph_index] = [] unless @law_elements[article_id][paragraph_index]
+        @law_elements[article_id][paragraph_index][0] = {
+        # @law_elements << {
+          # :gr => article.content_text_only.to_i,
+          # :mgr => paragraph_index,
+          # :tolul => 0,
+          :text => element.content_text_only,
+          :sentences => text_to_sentence(element.content_text_only)
+        }
+        # Töluliðir
+        element.children.each { |sub_element|
+          sub_paragraph_index += 1
+          article_id = article.content_text_only.to_i
+          @law_elements[article_id][paragraph_index][sub_paragraph_index] = {
+          # @law_elements << {
+          #   :gr => article.content_text_only.to_i,
+          #   :mgr => paragraph_index,
+          #   :tolul => sub_paragraph_index,
+            :text => sub_element.content_text_only,
+            :sentences => text_to_sentence(element.content_text_only)
+          }
+        }
+      }
+    }
+
+    # Put the proposal document elements into an array
     elements = []
 
     @proposal.process_document_elements.articles.each { |article|
@@ -70,6 +107,36 @@ class UidiffController < ApplicationController
     pattern1.each_with_index { |char,index| text.gsub!(char, pattern2[index]) }
 
     text
+  end
+
+  # Split text into sentences
+
+  def text_to_sentence(text)
+    text.split(".")
+
+    # sentences = text.to_iso.split(".")
+    # sentences.each_with_index { |sentence,key|
+    #   sentences[key] += "."
+    #   sentence.strip!
+    #   sentences[key] += "||#{sentence[0].chr}||" if sentence[0]
+    #   if sentence[0] and sentence[0].chr.downcase == sentence[0].chr
+    #     sentences[key-1] += sentence
+    #     sentences.delete_at(key)
+    #   end
+    # }
+    # 
+    # sentences.each_with_index { |sentence,key| sentences[key] = sentences[key].to_utf8 }
+    # 
+    # sentences
+    # # sentences1 = text.split(".")
+    # # sentences2 = []
+    # # # text.scan(/[A-Z](.*)(\. )[A-Z]/) { |match| sentences << match }
+    # # 
+    # # sentences1.each { |sentence|
+    # #   sentences2 
+    # # }
+    # # 
+    # # sentences2
   end
 
   # Search for "x. gr.", "x. og x. gr.", "x. málsl.", "x. tölul.", "x. mgr."

@@ -1,5 +1,20 @@
 <h1><%= @priority.name %></h1>
 
+<% @law_elements.each_with_index do |element,index| %>
+  <!-- Grein -->
+  <%= index %> gr.<br />
+  <!-- Málsgreinar -->
+  <% for paragraph in element %>
+    <%# if paragraph[1] %>
+      <%# for item in paragraph[0] %>
+    <p><%= paragraph.inspect %></p>
+  <% end %>
+<% end %>
+
+<%#= @law_elements.inspect %>
+
+<hr />
+
 <% for action in @actions %>
   <h2><%= action[:action] %></h2>
   <div style="font-size:8pt;text-transform:uppercase;padding: 5px 0;">
@@ -8,7 +23,32 @@
     <%= "Málsliður: #{action[:malsl].inspect} &bull;" if action[:malsl] %>
     <%= "Töluliður: #{action[:tolul].inspect} &bull;" if action[:tolul] %>
   </div>
-  <p><%= action[:new_text] %></p>
+  <%
+    text = ""
+    if action[:gr]
+      action[:gr].each { |article|
+        if action[:mgr]
+          action[:mgr].each { |paragraph|
+            if action[:tolul]
+              action[:tolul].each { |item|
+                # text = "#{article.to_i}|#{paragraph.to_i}|#{item.to_i}<br />"
+                text = "#{text}#{@law_elements[article.to_i][paragraph.to_i][item.to_i][:text]}" if @law_elements[article.to_i][paragraph.to_i][item.to_i]
+              }
+            else
+              # text = "#{article.to_i}|#{paragraph.to_i}<br />"
+              text = "#{text}#{@law_elements[article.to_i][paragraph.to_i][0][:text]}" if @law_elements[article.to_i][paragraph.to_i][0]
+            end
+          }
+        else
+          # text = "#{article.to_i}<br />"
+          # text = "#{text}#{@law_elements[article.to_i][0][0][:text]}" if @law_elements[article.to_i][0][0]
+        end
+      }
+    end
+  %>
+  <p><strong>GAMALT:</strong> <%= text %></p>
+  <br />
+  <p><strong>NÝTT:</strong> <%= action[:new_text] %></p>
 <% end %>
 
 <ul>
