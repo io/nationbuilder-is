@@ -1,13 +1,17 @@
 <h1><%= @priority.name %></h1>
 
 <% @law_elements.each_with_index do |element,index| %>
-  <!-- Grein -->
-  <%= index %> gr.<br />
-  <!-- Málsgreinar -->
-  <% for paragraph in element %>
-    <%# if paragraph[1] %>
-      <%# for item in paragraph[0] %>
-    <p><%= paragraph.inspect %></p>
+  <% if index > 0 %>
+    <p><strong><%= index %> gr.</strong></p><br />
+    <% if element %>
+      <% element.each_with_index do |paragraph,pindex| %>
+        <% if paragraph %>
+          <% paragraph.each_with_index do |item,iindex| %>
+            <p <%= "style='padding-left:10px'" if iindex > 0 %>><%= item[:text] %></p><br />
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>
 
