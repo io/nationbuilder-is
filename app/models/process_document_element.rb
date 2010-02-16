@@ -16,6 +16,7 @@
 class ProcessDocumentElement < ActiveRecord::Base
   belongs_to :user
   belongs_to :process_document
+  has_many :sentences
   
   after_save :touch_document
   before_destroy :touch_document

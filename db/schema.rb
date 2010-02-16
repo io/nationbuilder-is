@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100201164521) do
+ActiveRecord::Schema.define(:version => 20100216124047) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -1069,6 +1069,13 @@ ActiveRecord::Schema.define(:version => 20100201164521) do
   add_index "revisions", ["point_id"], :name => "index_revisions_on_point_id"
   add_index "revisions", ["status"], :name => "index_revisions_on_status"
   add_index "revisions", ["user_id"], :name => "index_revisions_on_user_id"
+
+  create_table "sentences", :force => true do |t|
+    t.integer  "process_document_element_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "shown_ads", :force => true do |t|
     t.integer  "ad_id"
