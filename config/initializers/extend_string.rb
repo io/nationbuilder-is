@@ -1,7 +1,7 @@
 class String
-  def to_class
-    Kernel.const_get(self)
-  end
+  # def to_class
+  #   Kernel.const_get(self)
+  # end
 
   def to_iso
     Iconv.conv('ISO-8859-1', 'utf-8', self)

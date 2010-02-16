@@ -5,6 +5,7 @@ class UidiffController < ApplicationController
 
   def preview
     @actions = []
+    @law_elements = []
     @@last_element = nil
     @@last_character_index = 0
     @@next_character_index = 0
@@ -13,43 +14,41 @@ class UidiffController < ApplicationController
     @priority = Priority.find(45)
     @law = ProcessDocument.find(155)
     @proposal = ProcessDocument.find(84)
-
-    # Put the original law document elements into an array
-    @law_elements = []
-
-    @law.process_document_elements.articles.each { |article|
-      paragraph_index = 0
-
-      # Paragraphs
-      article.children.each { |element|
-        sub_paragraph_index = 0
-        paragraph_index += 1
-        article_id = article.content_text_only.to_i
-        @law_elements[article_id] = [] unless @law_elements[article_id]
-        @law_elements[article_id][paragraph_index] = [] unless @law_elements[article_id][paragraph_index]
-        @law_elements[article_id][paragraph_index][0] = {
-        # @law_elements << {
-          # :gr => article.content_text_only.to_i,
-          # :mgr => paragraph_index,
-          # :tolul => 0,
-          :text => element.content_text_only,
-          :sentences => text_to_sentence(element.content_text_only)
-        }
-        # Töluliðir
-        element.children.each { |sub_element|
-          sub_paragraph_index += 1
-          article_id = article.content_text_only.to_i
-          @law_elements[article_id][paragraph_index][sub_paragraph_index] = {
-          # @law_elements << {
-          #   :gr => article.content_text_only.to_i,
-          #   :mgr => paragraph_index,
-          #   :tolul => sub_paragraph_index,
-            :text => sub_element.content_text_only,
-            :sentences => text_to_sentence(element.content_text_only)
-          }
-        }
-      }
-    }
+    
+    # # Put the original law document elements into an array
+    # @law.process_document_elements.articles.each { |article|
+    #   paragraph_index = 0
+    # 
+    #   # Paragraphs
+    #   article.children.each { |element|
+    #     sub_paragraph_index = 0
+    #     paragraph_index += 1
+    #     article_id = article.content_text_only.to_i
+    #     @law_elements[article_id] = [] unless @law_elements[article_id]
+    #     @law_elements[article_id][paragraph_index] = [] unless @law_elements[article_id][paragraph_index]
+    #     @law_elements[article_id][paragraph_index][0] = {
+    #     # @law_elements << {
+    #       # :gr => article.content_text_only.to_i,
+    #       # :mgr => paragraph_index,
+    #       # :tolul => 0,
+    #       :text => element.content_text_only,
+    #       :sentences => text_to_sentence(element.content_text_only)
+    #     }
+    #     # Töluliðir
+    #     element.children.each { |sub_element|
+    #       sub_paragraph_index += 1
+    #       article_id = article.content_text_only.to_i
+    #       @law_elements[article_id][paragraph_index][sub_paragraph_index] = {
+    #       # @law_elements << {
+    #       #   :gr => article.content_text_only.to_i,
+    #       #   :mgr => paragraph_index,
+    #       #   :tolul => sub_paragraph_index,
+    #         :text => sub_element.content_text_only,
+    #         :sentences => text_to_sentence(element.content_text_only)
+    #       }
+    #     }
+    #   }
+    # }
 
     # Put the proposal document elements into an array
     elements = []
@@ -78,6 +77,9 @@ class UidiffController < ApplicationController
 
         # Eftirfarandi breytingar verða á 6. gr. laganna:
         line.gsub!(/(.*?)(breytingar)(.*?)(gr\.)(.*?)(:)/) { |match| parse_element(:change, match, element, parts) }
+
+        # Í stað hlutfallstölunnar „33%“ í 3. mgr. kemur: 15%.
+        line.gsub!(/Í stað(.*?)„(.*?)“(.*?)(:)/) { |match| parse_element_replace_inline(match, element, parts) }
       end
     end
 
@@ -99,7 +101,6 @@ class UidiffController < ApplicationController
   private
 
   # Replace those weird little Icelandic characters with standard ones
-
   def replace_weird_characters(text)
     pattern1 = ["Á", "á", "Ð", "ð", "É", "é", "Í", "í", "Ó", "ó", "Ú", "ú", "Ý", "ý", "Þ", "þ", "Æ", "æ", "Ö", "ö"]
     pattern2 = ["a", "a", "d", "d", "e", "e", "i", "i", "o", "o", "u", "u", "y", "y", "th", "th", "ae", "ae", "o", "o"]
@@ -110,37 +111,11 @@ class UidiffController < ApplicationController
   end
 
   # Split text into sentences
-
   def text_to_sentence(text)
     text.split(".")
-
-    # sentences = text.to_iso.split(".")
-    # sentences.each_with_index { |sentence,key|
-    #   sentences[key] += "."
-    #   sentence.strip!
-    #   sentences[key] += "||#{sentence[0].chr}||" if sentence[0]
-    #   if sentence[0] and sentence[0].chr.downcase == sentence[0].chr
-    #     sentences[key-1] += sentence
-    #     sentences.delete_at(key)
-    #   end
-    # }
-    # 
-    # sentences.each_with_index { |sentence,key| sentences[key] = sentences[key].to_utf8 }
-    # 
-    # sentences
-    # # sentences1 = text.split(".")
-    # # sentences2 = []
-    # # # text.scan(/[A-Z](.*)(\. )[A-Z]/) { |match| sentences << match }
-    # # 
-    # # sentences1.each { |sentence|
-    # #   sentences2 
-    # # }
-    # # 
-    # # sentences2
   end
 
   # Search for "x. gr.", "x. og x. gr.", "x. málsl.", "x. tölul.", "x. mgr."
-
   def find_parts(action, parts, text)
     # Reset everything but "gr."
     parts.each { |key, value| parts.delete(key) if key != :gr }
@@ -165,6 +140,7 @@ class UidiffController < ApplicationController
     @actions << parts.clone
   end
 
+  # Find the text that follows each action part
   def find_text(match = nil, element = nil)
     action_index = 2
 
@@ -178,6 +154,11 @@ class UidiffController < ApplicationController
       action_index = 1
     end
 
+    # Remove unwanted stuff from the text
+    text = text.gsub(" ", " ") # FIXME: DO NOT EDIT THIS LINE, find a better way to replace that strange character (ascii 194 = Â)
+    text = text.gsub(/(\W)([a-z]\.)(.*)/m, "")
+
+    # Update the actions array
     @actions[@actions.length-action_index][:new_text] = text unless [:change, :remove].include?(@actions[@actions.length-action_index][:action])
     @@last_element = element
   end
@@ -189,30 +170,11 @@ class UidiffController < ApplicationController
     ""
   end
 
-  # def parse_add_new(match, element, parts)
-  #   # MUNA AÐ LEITA EFTIR "ásamt fyrirsögn"
-  #   find_parts(:add_new, parts, match)
-  #   find_text(match, element)
-  #   ""
-  # end
-  # 
-  # def parse_change(match, element, parts)
-  #   find_parts(:change, parts, match)
-  #   find_text(match, element)
-  #   ""
-  # end
-  # 
-  # def parse_remove(match, element, parts)
-  #   find_parts(:remove, parts, match)
-  #   find_text(match, element)
-  #   ""
-  # end
-  # 
-  # def parse_replace_all(match, element, parts)
-  #   # MUNA AÐ LEITA EFTIR "ásamt fyrirsögn"
-  #   find_parts(:replace_all, parts, match)
-  #   find_text(match, element)
-  #   ""
-  # end
+  def parse_element_replace_inline(match, element, parts)
+    find_parts(:replace_inline, parts, match)
+    find_text(match, element)
+    match.scan(/„(.*?)“/) { |m| @actions[@actions.length-1][:inline_text] = m }
+    ""
+  end
 
 end

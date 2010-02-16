@@ -3,19 +3,13 @@
 <% @law_elements.each_with_index do |element,index| %>
   <% if index > 0 %>
     <p><strong><%= index %> gr.</strong></p><br />
-    <% if element %>
-      <% element.each_with_index do |paragraph,pindex| %>
-        <% if paragraph %>
-          <% paragraph.each_with_index do |item,iindex| %>
-            <p <%= "style='padding-left:10px'" if iindex > 0 %>><%= item[:text] %></p><br />
-          <% end %>
-        <% end %>
-      <% end %>
-    <% end %>
+    <% element.each_with_index do |paragraph,pindex| %>
+      <% paragraph.each_with_index do |item,iindex| %>
+        <p <%= "style='padding-left:10px'" if iindex > 0 %>><%= item[:text] %></p><br />
+      <% end if paragraph %>
+    <% end if element %>
   <% end %>
 <% end %>
-
-<%#= @law_elements.inspect %>
 
 <hr />
 
@@ -35,24 +29,26 @@
           action[:mgr].each { |paragraph|
             if action[:tolul]
               action[:tolul].each { |item|
-                # text = "#{article.to_i}|#{paragraph.to_i}|#{item.to_i}<br />"
-                text = "#{text}#{@law_elements[article.to_i][paragraph.to_i][item.to_i][:text]}" if @law_elements[article.to_i][paragraph.to_i][item.to_i]
+                # text = "#{text}#{@law_elements[article.to_i][paragraph.to_i][item.to_i][:text]}" if @law_elements[article.to_i][paragraph.to_i][item.to_i]
               }
             else
-              # text = "#{article.to_i}|#{paragraph.to_i}<br />"
-              text = "#{text}#{@law_elements[article.to_i][paragraph.to_i][0][:text]}" if @law_elements[article.to_i][paragraph.to_i][0]
+              # text = "#{text}#{@law_elements[article.to_i][paragraph.to_i][0][:text]}" if @law_elements[article.to_i][paragraph.to_i][0]
             end
           }
         else
-          # text = "#{article.to_i}<br />"
-          # text = "#{text}#{@law_elements[article.to_i][0][0][:text]}" if @law_elements[article.to_i][0][0]
+          # # text = "#{text}#{@law_elements[article.to_i][0][0][:text]}" if @law_elements[article.to_i][0][0]
         end
       }
     end
   %>
-  <p><strong>GAMALT:</strong> <%= text %></p>
+  <p><strong>GAMALT:</strong><br />
+  <%= text %></p>
   <br />
-  <p><strong>NÝTT:</strong> <%= action[:new_text] %></p>
+  <p><strong>GAMALT inline:</strong><br />
+  <%= action[:inline_text] %></p>
+  <br />
+  <p><strong>NÝTT:</strong><br />
+  <%= action[:new_text] %></p>
 <% end %>
 
 <ul>
