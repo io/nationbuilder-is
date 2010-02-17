@@ -16,6 +16,8 @@ class Change < ActiveRecord::Base
   named_scope :by_recently_started, :order => "changes.sent_at desc"  
   named_scope :by_recently_updated, :order => "changes.updated_at desc"  
 
+  named_scope :item_limit, lambda{|limit| {:limit=>limit}}
+
   belongs_to :priority
   belongs_to :new_priority, :class_name => "Priority", :foreign_key => "new_priority_id"
   belongs_to :user

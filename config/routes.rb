@@ -70,7 +70,8 @@ ActionController::Routing::Routes.draw do |map|
       :tag => :post, 
       :tag_save => :put, 
       :points => :get, 
-      :opposer_points => :get, :endorser_points => :get, :neutral_points => :get, :everyone_points => :get, 
+      :opposer_points => :get, :endorser_points => :get, :neutral_points => :get, :everyone_points => :get,
+      :top_points => :get, :endorsed_points => :get, :opposed_top_points=> :get, :endorsed_top_points => :get,
       :opposer_documents => :get, :endorser_documents => :get, :neutral_documents => :get, :everyone_documents => :get,      
       :comments => :get, 
       :documents => :get },
@@ -167,6 +168,17 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
+  map.resources :priority_processes
+  map.resources :process_speech_master_videos
+  map.resources :process_speech_videos
+  map.resources :process_discussions
+  map.resources :process_documents
+  map.resources :process_types
+  map.resources :process_document_elements
+  map.resources :process_documents
+  map.resources :process_document_types
+  map.resources :process_document_states
+
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "priorities"
 
@@ -192,6 +204,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/issues/:slug.:format', :controller => "issues", :action => "show"  
   map.connect '/issues/:slug/:action', :controller => "issues"
   map.connect '/issues/:slug/:action.:format', :controller => "issues"  
+
+  map.connect '/portal', :controller => 'portal', :action => 'index'
 
   # See how all your routes lay out with "rake routes"
 

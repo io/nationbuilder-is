@@ -2,8 +2,8 @@
 module ApplicationHelper
 
   def time_ago(time, options = {})
-    if request.xhr?
-      distance_of_time_in_words_to_now(time) + ' ago'
+    if true or request.xhr?
+      distance_of_time_in_words_to_now(time) + ' '+I18n.translate(:time_ago)
     else
       options[:class] ||= "timeago"
       content_tag(:abbr, time.to_s, options.merge(:title => time.getutc.iso8601)) if time
@@ -161,10 +161,13 @@ module ApplicationHelper
   def time_in_words(time)
     return "" unless time
     s = ""
-    s += "in " if time > Time.now
+    s += ' '+I18n.translate(:time_in) if time > Time.now
     s += distance_of_time_in_words_to_now(time).gsub("about","")
-    s += " ago" if time < Time.now
+    s += ' '+I18n.translate(:time_ago) if time < Time.now
     return s
   end
 
+  def get_short_star_rating(asset,br=false)
+    "#{sprintf("%.1f",asset.rating)}/5.0 #{br ? "<br>" : ""} <small>(#{asset.ratings.size} #{t(:votes)})</small>"
+  end
 end

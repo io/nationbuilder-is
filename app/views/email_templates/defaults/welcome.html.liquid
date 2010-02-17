@@ -1,20 +1,21 @@
-Hello {{ user.first_name }},
+Hæ {{ user.first_name }},
 
-Please verify your account so we can clear you for full participation on the site.  I hate having to ask, but it's one way we can cut down on spammers.
+Vinsamlega staðfestu aðganginn þinn svo þú getir tekið fullan þátt í Skuggaþingi. Þetta er nauðsynlegt til að draga úr ruslapósti.
 
-Verify your account: {{ user.root_url }}activate/{{ user.activation_code }}?utm_source=activation&utm_medium=email
+Staðfestu aðganginn þinn: {{ user.root_url }}activate/{{ user.activation_code }}?utm_source=activation&utm_medium=email
 
-Please help us grow!  You can import your Google, Yahoo, Windows Live or Facebook contacts and find people you already know on the site, and invite people who aren't.  
+Hjálpaðu okkur að stækka! Þú getur flutt inn Google og Facebook tengiliði, fundið fólk sem þú þekkir á vefnum og boðið fólki sem er ekki búið að skrá sig. 
 
-Find people you know: {{ user.root_url }}network/find?utm_source=signup&utm_medium=email
+Finndu fólk sem þú þekkir: {{ user.root_url }}network/find?utm_source=signup&utm_medium=email
 
-You'll earn 5{{ government.currency_short_name }} for each person you refer.  What the heck is {{ government.currency_short_name }}?  It stands for "{{ government.currency_name | downcase  }}", and it's a way to track your influence at {{ government.name }}.  The more people who find your updates and talking points useful, the more {{ government.currency_short_name }} you earn, which you can use to buy "ads" for priorities you care about, amongst other things.  
+Þú vinnur þér inn 5{{ government.currency_short_name }} fyrir hvern sem skráir sig eftir hvatningu frá þér.  Hvað eru  {{ government.currency_short_name }}?  Það stendur fyrir "{{ government.currency_name | downcase  }}" 
+og er leið til að sjá hversu áhrifamikil(l) þú ert á  {{ government.name }}.  Því fleiri sem finnast þínar uppfærslur og rök gagnleg, því fleiri {{ government.currency_short_name }} vinnurðu þér inn sem þú getur m.a. notað til að kaupa auglýsingar fyrir þau mál sem þú vilt koma á framfæri.  
 
-More details on {{ government.currency_name | downcase }} here: {{ user.root_url }}about/faq#pc
+Meira um þetta {{ government.currency_name | downcase }} hér: {{ user.root_url }}about/faq#pc
 
 {{ government.admin_name }}
 {{ government.admin_email }}
 http://{{ government.base_url }}
 
 ---
-This is an automated notification from {{ government.name }} sent to {{ user.email }}.  If you do not wish to receive emails from {{ government.name }}, you can change your email settings here: {{ user.unsubscribe_url }}
+Þetta er sjálfvirk tilkynning {{ government.name }} send á {{ recipient.email }}.  Ef þú vilt ekki fá svona bréf, breyttu þá póststillingunum þínum hér: {{ recipient.unsubscribe_url }}

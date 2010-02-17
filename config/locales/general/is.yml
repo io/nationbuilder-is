@@ -1,4 +1,19 @@
 is:
+    issues:
+        name: "Þema"
+        list:
+            name: "Listi" 
+        cloud:
+            name: "Ský"
+    comments:
+        add: "Bæta við"
+        new: "Bæta við"
+        permalink: "Tengill"
+        full:
+            show: "Sýna"
+        full:
+            hide: "Fela"
+    more: "Meira"
     unch: "Óbreytt"
     nochange: "engin breyting"
     buried: "tekið af lista"
@@ -35,7 +50,7 @@ is:
             heading: "Fréttir frá öðrum miðlum"
     status:
         failed: "mistókst"
-        successful: "tókst"
+        successful: "afgreitt"
         intheworks: "í vinnslu"
         compromised: "milli tveggja elda"
         unknown: "óþekkt"
@@ -167,7 +182,7 @@ is:
             priorities: "{{prompt}} {{priority_name}}.  Frekari upplýsingar á {{government_name}}"
             users: "{{user_name}} efsti forgangur fyrir {{target}}: {{priority_name}}"
         rss:
-            priorities: "Topp 25 forgangsmál á {{government_name}}"
+            priorities: "Topp 25 mál á {{government_name}}"
     application:
         bad_token: "Afsakið, síðasta síða er útrunnin. Vinsamlegast reyndu aftur."
         fb_session_expired: "Facebook innskráningin þín er útrunnin."
@@ -203,12 +218,12 @@ is:
                 other: "{{count}} án svars"
         new:
             title: "Kaupa auglýsingu fyrir {{priority_name}}"
-            top25error: "Þú getur ekki keypt auglýsingu fyrir forgangsmál sem er þegar í topp 25."
+            top25error: "Þú getur ekki keypt auglýsingu fyrir mál sem er þegar í topp 25."
             errors:
                 header_message: "Upp kom villa við gerð auglýsingarinnar"
             success: "Keypt var auglýsing fyrir {{priority_name}}"
             content:
-                label: "Skilaboð frá þér sem eiga að fara undir tengilinn á forgangsmálið:"
+                label: "Skilaboð frá þér sem eiga að fara undir tengilinn á málið:"
             showto: "Sýna"
             members: "meðlimum og verja"
             price: "Á þessu verði verður auglýsingin þín"
@@ -221,7 +236,7 @@ is:
         current: "Er að sýna auglýsingar"
         past: "Eldri auglýsingar"
         yours:
-            intro: "Þetta eru þínar auglýsingar og súlurnar sýna hversu margir meðlimir hafa <span class='endorsed'>&nbsp; &nbsp;</span> &nbsp;stutt, <span class='opposed'>&nbsp; &nbsp;</span> &nbsp;verið á móti eða <span class='compromised'>&nbsp; &nbsp;</span> &nbsp;ekki brugðist við enn. <br/>Til að setja inn auglýsingu, smelltu á eitthvað af forgangsmálum þínum og svo á Virkni > Kaupa auglýsingu."
+            intro: "Þetta eru þínar auglýsingar og súlurnar sýna hversu margir meðlimir hafa <span class='endorsed'>&nbsp; &nbsp;</span> &nbsp;stutt, <span class='opposed'>&nbsp; &nbsp;</span> &nbsp;verið á móti eða <span class='compromised'>&nbsp; &nbsp;</span> &nbsp;ekki brugðist við enn. <br/>Til að setja inn auglýsingu, smelltu á eitthvað af málunum þínum og svo á Virkni > Kaupa auglýsingu."
     blurbs:
         index: "Alla útskýringar fyrir {{government_name}}"
         new:
@@ -248,26 +263,26 @@ is:
         default:
             label: "Þetta er sjálfvalin grein fyrir þá notendur sem ekki hafa valið sér"
             new: "Gera þessa grein sjálfvalda fyrir notendur sem ekki hafa valið sér"
-            success: "Meðlimir sem ekki hafa valið sér grein verða núna settir undir {{branch_name}}.  Stigagjöf forgangsmála verður ekki uppfærð alveg strax, það gæti tekið um klukkustund eða svo."
+            success: "Meðlimir sem ekki hafa valið sér grein verða núna settir undir {{branch_name}}.  Stigagjöf mála verður ekki uppfærð alveg strax, það gæti tekið um klukkustund eða svo."
             priorities:
-                name: "forgangsmál"
-                deleted: "Þessu forgangsmáli var eytt"
-                replaced: "Þessu forgangsmáli var skipt út fyrir {{priority_name}}"
+                name: "mál"
+                deleted: "Þessu máli var eytt"
+                replaced: "Þessu máli var skipt út fyrir {{priority_name}}"
     branch_endorsements:
         top:
-            title: "{{branch_name}} er aðal forgangsmálið"
+            title: "{{branch_name}} er aðal málið"
         rising:
-            title: "{{branch_name}} stígandi forgangsmál"
+            title: "{{branch_name}} stígandi mál"
         falling:
-            title: "{{branch_name}} fallandi forgangsmál"
+            title: "{{branch_name}} fallandi mál"
         controversial:
-            title: "{{branch_name}} er umdeilt forgangsmál"
+            title: "{{branch_name}} er umdeilt mál"
         random:
             title: "{{branch_name}} er slembið forgangangsmál"
         newest:
-            title: "{{branch_name}} er nýtt forgangsmál"
+            title: "{{branch_name}} er nýtt mál"
         finished:
-            title: "{{branch_name}} er forgangsmál sem er lokið"
+            title: "{{branch_name}} er mál sem er lokið"
         importance:
             more: "+{{number}} mikilvægara fyrir {{branch_name}}"
             less: "-{{number}} ómikilvægara fyrir {{branch_name}}"
@@ -295,13 +310,13 @@ is:
                 title: "Leita í umræðuefnum hjá {{government_name}}" 
                 results: "Þessi rök fundust tengd leitarorðinu '{{query}}'" 
         points:
-            title: "Forgangsmál þín án umræðuefna" 
+            title: "Mál þín án raka" 
             needed:
-                empty: "All of your priorities have at least one talking point supporting your position." 
+                empty: "Öll þín mál hafa að minnsta kosti ein rök sem styðja þitt mál." 
         documents:
-            title: "Forgangsmál þín án skjala" 
+            title: "Mál þín án skjala" 
             needed:
-                empty: "Að minnsta kosti eitt skjal fylgir öllum þínum forgangsmálum." 
+                empty: "Að minnsta kosti eitt skjal fylgir öllum þínum málum." 
         contributors:
             title: "{{number}} manns hafa lagt eitthvað til {{briefing_name}}"    
     bulletins:
@@ -310,9 +325,9 @@ is:
             point: "Opna umræðu um þessi rök" 
             document: "Opna umræðu um þetta skjal" 
             profile: "Setja skilaboð á korktöflu í notandaupplýsingasvæði {{user_name}}" 
-            priority_discussion: "Opna umræðu um þetta forgangsmál" 
-            priority: "Hvað er að gerast varðandi þetta forgangsmál?" 
-            priority_dropdown: "Senda á forgangsmál: (valkvæmt)" 
+            priority_discussion: "Opna umræðu um þetta mál" 
+            priority: "Hvað er að gerast varðandi þetta mál?" 
+            priority_dropdown: "Senda á mál: (valkvæmt)" 
             discussion: "Opna umræðu" 
             submit: "Setja skilaboð á korktöflu" 
     changes:
@@ -327,9 +342,9 @@ is:
         new:
             already_proposed: "Fyrir er tillaga um yfirtöku frá {{priority_name}}" 
             success: "Yfirtaka á {{priority_name}} skilaði árangri.  {{admin_name}} mun yfirfara og skipuleggja kosningu." 
-            is_flip: "Skoðaðu þetta ef fylgjendur skipta um skoðun og gerast andstæðingar þessa nýja forgangsmáls (eða öfugt)" 
+            is_flip: "Skoðaðu þetta ef fylgjendur skipta um skoðun og gerast andstæðingar þessa nýja máls (eða öfugt)" 
             new_priority:
-                label: "Hvaða forgangsmál ætti að taka yfir {{priority_name}}?" 
+                label: "Hvaða mál ætti að taka yfir {{priority_name}}?" 
             cost:
                 label: "Kostnaðurinn er <span class='pc'>0.01{{currency_short_name}}</span> per atkvæði, þú getur því keypt" 
                 endorsers:
@@ -342,7 +357,7 @@ is:
                         other: "{{count}} andstæðingar með <span class='pc'>{{capital}}{{currency_short_name}}</span>" 
             content:
                 label: "Útskýrður fyrir öðrum af hverju þeir ættu að kjósa með yfirtökunni:" 
-                note: "ATH! Ef 500 stafir duga ekki ættirðu að nota rök hins forgangsmálsins til að lista atriði fyrir atriði af hverju það forgangsmál er gott. Þú ættir einungis að nota þennan reit til að verja yfirtökuna sjálfa." 
+                note: "ATH! Ef 500 stafir duga ekki ættirðu að nota rök hins málsins til að lista atriði fyrir atriði af hverju það mál er gott. Þú ættir einungis að nota þennan reit til að verja yfirtökuna sjálfa." 
             submit: "Leggja þessa yfirtöku til" 
         start: "Kosning er að hefjast, þetta getur tekið smá stund en það veltur á hversu margir stuðningsmenn og andmælendur þurfa atkvæðaseðla." 
         stop: "Eyði þessari tillögu og endurgreiði {{currency_name}} til {{user_name}}" 
@@ -382,28 +397,28 @@ is:
             title: "Virkustu {{tags_name}} hjá {{government_name}}" 
             label: "fallandi/stígandi" 
         gainers_24hr: 
-            title: "Fólk hvurs forgangsmál hafa risið hraðast síðustu 24 tíma" 
-            intro: "Ýmindaðu þér að forgangsmál fólks séu verðbréfasöfn svipað og sameignarsjóður. Imagine each person's priorities are a portfolio of stocks like a mutual fund.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs forgangsmál risu mest í stigagjöfinni á síðustu 24 tímum." 
+            title: "Mál þessara notenda hafa risið hraðast síðustu 24 tíma" 
+            intro: "Ímyndaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður. Imagine each person's priorities are a portfolio of stocks like a mutual fund.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál risu mest í stigagjöfinni á síðustu 24 tímum." 
         gainers_7days: 
-            title: "Fólk hvurs forgangsmál hafa risið hraðast í þessari viku" 
-            intro: "Ýmindaðu þér að forgangsmál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs forgangsmál risu mest í stigagjöfinni í þessari viku." 
+            title: "Mál þessara notenda hafa risið hraðast í þessari viku" 
+            intro: "Ýmindaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál risu mest í stigagjöfinni í þessari viku." 
         gainers_30days: 
-            title: "Fólk hvurs forgangsmál hafa risið hraðast í þessum mánuði" 
-            intro: "Ýmindaðu þér að forgangsmál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs forgangsmál risu mest í stigagjöfinni í þessum mánuði."
+            title: "Mál þessara notenda hafa risið hraðast í þessum mánuði" 
+            intro: "Ýmindaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál risu mest í stigagjöfinni í þessum mánuði."
         losers_24hr: 
-            title: "Fólk hvurs forgangsmál hafa fallið hraðast síðustu 24 tíma"
-            intro: "Ýmindaðu þér að forgangsmál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs forgangsmál féllu mest í stigagjöfinni síðustu 24 tíma."
+            title: "Mál þessara notenda hafa risið hraðast  síðustu 24 tíma"
+            intro: "Ýmindaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál féllu mest í stigagjöfinni síðustu 24 tíma."
         losers_7days: 
-            title: "Fólk hvurs forgangsmál hafa fallið hraðast í þessari viku"
-            intro: "Ýmindaðu þér að forgangsmál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs forgangsmál féllu mest í stigagjöfinni í vikunni."
+            title: "Mál þessara notenda hafa risið hraðast í þessari viku"
+            intro: "Ýmindaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál féllu mest í stigagjöfinni í vikunni."
         losers_30days: 
-            title: "Fólk hvurs forgangsmál hafa fallið hraðast í þessum mánuði"
-            intro: "Ýmindaðu þér að forgangsmál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs forgangsmál féllu mest í stigagjöfinni í mánuðinum."
+            title: "Mál þessara notenda hafa risið hraðast  í þessum mánuði"
+            intro: "Ýmindaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál féllu mest í stigagjöfinni í mánuðinum."
         30day:
             name: "Gengni síðustu 30 daga"
         priority:
-            name: "Graf yfir forgangsmál"
-            title: "Fylgstu með hreyfingum þessa forgangsmáls í einkunnagjöfum. Því lægri sem talan er því betra. Fjöldi einstaklinga og hversu hátt eða lágt þeir telja að eigi að forgangsraða málinu hefur áhrif á einkunina."
+            name: "Graf yfir mál"
+            title: "Fylgstu með hreyfingum þessa máls í einkunnagjöfum. Því lægri sem talan er því betra. Fjöldi einstaklinga og hversu hátt eða lágt þeir telja að eigi að forgangsraða málinu hefur áhrif á einkunina."
             total_volume:
                 title: "Fjöldi stuðnings-/mótatkvæða hvern dag"
             volume:
@@ -411,9 +426,9 @@ is:
                 title: "Grænt sýnir fjölda stuðningsatkvæða hvern dag og rautt fjölda mótatkvæða."
         user:
             name: "{{user_name}} Stefnumál"
-            title: "Fylgist með hreifingum forgangsmála {{user_name}} í einkunnagjöf síðustu 30 daga. Því fleiri einstaklingar sem styðja forgangsmál í stefnuskrá {{user_name}} á háu forgangsstigi, því hærra rís það."
+            title: "Fylgist með hreyfingum mála {{user_name}} í einkunnagjöf síðustu 30 daga. Því fleiri einstaklingar sem styðja mál í stefnuskrá {{user_name}} á háu forgangsstigi, því hærra rís það."
             obama:
-                title: "Ber saman hvernig forgangsmál {{user_name}} (græn) hafa færst til í gröfunum samanborið við {{official_user_name}} (blár) síðustu 30 daga. Því fleiri einstaklingar sem styðja við forgangsmál á málefnaskrá {{user_name}} á háu forgangsstigi, því hærra rís það."
+                title: "Ber saman hvernig mál {{user_name}} (græn) hafa færst til í gröfunum samanborið við {{official_user_name}} (blár) síðustu 30 daga. Því fleiri einstaklingar sem styðja við mál á málefnaskrá {{user_name}} á háu forgangsstigi, því hærra rís það."
     color_schemes:
         theme:
             title: "Veldu litaþema"
@@ -506,7 +521,7 @@ is:
     constituents:
         index: "Kjósendur {{legislator_name}}"
         show: "{{user_name}} er kjósandi hjá {{legislator_name}}"
-        priorities: "Forgangsmál kjósenda {{legislator_name}}"
+        priorities: "Mál kjósenda {{legislator_name}}"
     contacts:
         index:
             title: "Finndu fólk sem þú þekkir hjá {{government_name}}"
@@ -569,7 +584,7 @@ is:
         newest:
             title: "Nýjustu skjölin"
         your_priorities:
-            title: "Nýjustu skjölin í þínum forgangsmálum"
+            title: "Nýjustu skjölin í þínum málum"
         revised:
             title: "Skjöl sem nýlega hafa verið yfirfarin"
         activity:
@@ -620,12 +635,12 @@ is:
             other: "{{count}} meðmæli"
         change: "breyta"
         save: "vista"
-        priority1: "#1 forgangsmál:"
-        empty: "Þú hefur ekki stutt nein forgangsmál. Viltu skoða nokkur <a href='/priorities/random'>slembin forgangsmál</a> til að fá innblástur?"
+        priority1: "#1 mál:"
+        empty: "Þú hefur ekki stutt nein mál. Viltu skoða nokkur <a href='/priorities/random'>mál af handahófi</a> til að fá innblástur?"
         delete:
-            title: "Smelltu á X-ið til að fjarlægja þetta forgangsmál"
+            title: "Smelltu á X-ið til að fjarlægja þetta mál"
         position:
-            yours: "{{position}}. forgangsmál þitt."
+            yours: "{{position}}. mál þitt."
             title: "Smelltu á númerið til að breyta staðsetningu þess á listanum þínum. Þú getur endurraðað með því að draga og sleppa nöfnum."
     facebook:
         synced: "Aðgangurinn þinn er núna samstilltur við Facebook. Til að tengjast héðan í frá dugir einfaldlega að smella á stóra bláa Facebook hnappinn."
@@ -706,7 +721,7 @@ is:
             yahoo_secret_key:
                 label: "Yahoo secret key"
             is_suppress_empty_priorities:
-                label: "Fela forgangsmál með 0 stuðningsmenn/andmælendur"
+                label: "Fela mál með 0 stuðningsmenn/andmælendur"
             is_branches:
                 label: "Virkja stjórnvalds greinar"
             is_legislators:
@@ -732,7 +747,7 @@ is:
             facebook: "Bjóða Facebook vinum"
     install:
         new:
-            heading: "Velkomin/n í Hugmyndaráðuneytið!"
+            heading: "Velkomin á Skuggaþing"
         admin_user:
             heading: "Búðu til stjórnanda aðgang"
             submit: "Vistaðu aðgangsupplýsingarnar þínar"
@@ -762,19 +777,23 @@ is:
         unread: "ólesið"
         previously_read: "Skilaboð sem hafa verið lesin:"
     network:
-        influential: 
+        name: "Tengslanet"
+        influential:
+            name: "Áhrifamesta fólkið"
             title: "Hittu áhrifamesta fólkið hjá {{government_name}}"
             intro: "Einkunnagjöf yfir áhrif er byggð á upphæð {{currency_name}}<span class='pc'>{{currency_short_name}}</span> sem viðkomandi hefur unnið sér inn.<br/>Fáðu að vita meira um <span class='pc'>{{currency_short_name}}</span> í <a href='/about/faq#pc'>FAQ</a>."
         talkative: 
             title: "Talar/skrifar mest hjá {{government_name}}"
-        ambassadors: 
+        ambassadors:
+            name: "Sendiherrar"
             title: "Sendiherrar hjá {{government_name}}"
             intro: "Sendiherrar eru einstaklingar sem safna liði fyrir {{government_name}}"
             loggedin: "Þú getur líka orðið sendiherra og unnið þér inn <span class='pc'>5{{currency_short_name}}</span> fyrir hver einstakling sem þú nælir í. Byrjaðu með því einfaldlega að <a href='{{import_url}}'>flytja inn Google, Yahoo, Windows Live eða Facebook tengiliði þína</a>."
         twitterers: 
             title: "Tístarar (Twitterers) hjá {{government_name}}"
-            intro: "Ef þú vilt láta bæta þér við, smelltu þá á þennan hnapp og fylgdu Twitter upplýsingunum til að samþykkja {{government_name}}/Hugmyndaráðuneytið."
+            intro: "Ef þú vilt láta bæta þér við, smelltu þá á þennan hnapp og fylgdu Twitter upplýsingunum til að samþykkja {{government_name}}/Skuggaþing."
         newest: 
+            name: "Nýjir meðlimir"
             title: "Nýjir meðlimir hjá {{government_name}}"
         partners: 
             title: "Hittu meðeigendur okkar"
@@ -792,20 +811,25 @@ is:
             one: "1 aðili í þínu tengslaneti"
             other: "{{count}} aðilar í þínu tengslaneti"
     news:
+        name: "Fréttir"
         discussions:
             name: "Virkar umræður"
             title: "Það sem allir eru að tala um hjá {{government_name}}"
         comments:
             title: "Síðustu athugasemdir hjá {{government_name}}"
         points:
+            name: "Nýjasta virkni fyrir rök"
             title: "Nýjasta virkni í {{briefing_name}} hjá {{government_name}}"
         activities:
-            title: "Allt sem er að gerast hjá {{government_name}}"
+            name: "Öll virkni"
+            title: "Öll virkni {{government_name}}"
         obama:
-            title: "Hvað {{official_user_name}} er að gera hjá {{government_name}}"
+            title: "Hvað {{official_user_name}} er að gerast hjá {{government_name}}"
         capital:
+            name: "Karma punktar"
             title: "{{currency_name}} hjá {{government_name}}"
         changes:
+            name: "Tillögur um yfirtöku"
             title: "Tillögur um yfirtöku"
             voting:
                 title: "Niðurstöður kosninga um yfirtöku tillögur"
@@ -843,29 +867,29 @@ is:
         your_network_changes:
             title: "S&Y virkni í tengslanetinu þínu"            
         your_priority_activities:
-            title: "Hvað er að gerast í forgangsmálunum þínum?"
+            title: "Hvað er að gerast í málunum þínum?"
         your_priority_discussions:
-            title: "Umræður um þín forgangsmál"
+            title: "Umræður um þín mál"
         your_priority_obama:
-            title: "Hvað {{official_user_name}} er að gera í þínum forgangsmálum"
+            title: "Hvað {{official_user_name}} er að gera í þínum málum"
         your_priority_points:
-            title: "Rök og skjöl í þínum forgangsmálum"
+            title: "Rök og skjöl í þínum málum"
         your_priority_changes:
-            title: "Tillögur um yfirtökur í þínum forgangsmálum"
+            title: "Tillögur um yfirtökur í þínum málum"
         your_priority_changes_voting:
             title: "Yfirtökur til að kjósa um"
         your_priority_changes_activity:
-            title: "S&Y virkni í þínum forgangsmálum"        
+            title: "S&Y virkni í þínum málum"        
         your_priorities_created_activities:
-            title: "Allt sem er að gerast í forgangsmálum sem þú hefur stofnað"            
+            title: "Allt sem er að gerast í málum sem þú hefur stofnað"            
         your_priorities_created_obama:
-            title: "Hvað {{official_user_name}} er að gera í forgangsmálum sem þú hefur stofnað"
+            title: "Hvað {{official_user_name}} er að gera í málum sem þú hefur stofnað"
         your_priorities_created_changes:
-            title: "S&Y virkni í forgansmálum sem þú hefur stofnað"
+            title: "S&Y virkni í forganfsmálum sem þú hefur stofnað"
         your_priorities_created_discussions:
-            title: "Umræður um forgangsmál sem þú hefur stofnað"
+            title: "Umræður um mál sem þú hefur stofnað"
         your_priorities_created_points:
-            title: "{{briefing_name}} virkni í forgangsmálum sem þú hefur stofnað"
+            title: "{{briefing_name}} virkni í málum sem þú hefur stofnað"
     oppositions:
         name:
             one: "1 á móti"
@@ -959,7 +983,7 @@ is:
         source: "Uppruni:"
         supporting: "Styð {{priority_name}}"
         priority:
-            intro: "Vinsamlegast segðu okkur afhverju við ættum að styðja eða vera á móti þessu forgangsmáli með því að <a href='{{new_point_url}}'>bæta við rökum</a>. Þú getur líka lagt til annað forgansmál í stað þessa."
+            intro: "Vinsamlegast segðu okkur afhverju við ættum að styðja eða vera á móti þessu máli með því að <a href='{{new_point_url}}'>bæta við rökum</a>. Þú getur líka lagt til annað forgangsmál í stað þessa."
         intro:
             endorsed:
                 first: "Rök sem styðja {{priority_name}}:"
@@ -975,7 +999,7 @@ is:
         newest:
             title: "Nýjustu rök"
         your_priorities:
-            title: "Rök um forgangsmál"
+            title: "Rök mála"
         revised:
             title: "Nýlega yfirfarin rök"
             empty: "Það hefur ekki verið farið yfir nein rök nýlega"
@@ -1002,12 +1026,12 @@ is:
             website:
                 label: "Bættu inn vefslóð"
             position:
-                label: "Er {{support_radio}} þessi rök til stuðnings {{neutral_radio}} hlutlaust eða {{oppose_radio}} á móti {{priority_name}}?"    
+                label: "Eru {{support_radio}} þessi rök til stuðnings eða {{oppose_radio}} á móti {{priority_name}}?"
             name:
                 label: "Taktu saman yfirlit yfir þín rök<span class='small'>60 characters</span>"
             other_priority_name:
                 label: "Tengdu þetta öðrum rökum <span class='small'>Byrjaðu bara að slá inn nafn</span>"
-                example: "Þú ræður hvort þú tengir við annað forgangsmál. Ef skoðun þín er andstæð, geturðu tengt við betra forgangsmál. EÐA, ef skoðun þín styður eða er hlutlaus, geturðu lagt áherslu á nákvæmara eða tengdara forgangsmál."
+                example: "Þú ræður hvort þú tengir við annað mál. Ef skoðun þín er andstæð, geturðu tengt við betra mál. EÐA, ef skoðun þín styður eða er hlutlaus, geturðu lagt áherslu á nákvæmara eða tengdara mál."
             comment:
                 label: "Af hverju breyttirðu?"
         edit:
@@ -1028,86 +1052,99 @@ is:
                 title: "Farðu yfir {{point_name}}"
                 success: "Fór yfir {{point_name}}"
             destroy: "Eyddi yfirferð á {{point_name}}"
+        top_points:
+            best_points_for_endorse: "Bestu rök með Já"
+            best_points_for_oppose: "Bestu rök með Nei"
+            newest_points_for_endorse: "Ný rök með Já"
+            newest_points_for_oppose: "Ný rök með Nei"
+            all_best_points_for_endorse: "Öll rök með Já"
+            all_best_points_for_oppose: "Öll rök með Nei"
+            all_newest_points_for_endorse: "Öll ný rök með Já"
+            all_newest_points_for_oppose: "Öll ný rök með Nei"
+            add_point_for_endorse: "Setja inn rök með Já"
+            add_point_for_oppose: "Setja inn rök með Nei"
+            new_point_short: "Ný rök"
+            all_best_points: "Öll bestu rök"
     priorities:
-        name: "forgangsmál"
-        deleted: "Þessu forgangsmáli var eytt"
-        replaced: "Þessu forgangsmáli var skippt út fyrir {{priority_name}}"
+        name: "mál"
+        deleted: "Þessu máli var eytt"
+        replaced: "Þessu máli var skippt út fyrir {{priority_name}}"
         short_url:
             name: "Stutt vefslóð:"
             link: "Gera stutta vefslóð fyrir Twitter"
         top:
-            name: "Efstu forgangsmálin"
+            name: "Efstu málin"
             short: "Topp:"
-            title: "Efstu forgangsmálin fyrir {{target}}"
+            title: "Efstu málin fyrir {{target}}"
         rising:
-            name: "Stígandi forgangsmál"
+            name: "Stígandi mál"
             short: "Stígandi:"
-            title: "Forgangsmál sem eru að stíga í einkunnagjöf"
+            title: "Mál sem eru að stíga í einkunnagjöf"
         falling:
-            name: "Fallandi forgangsmál"
-            title: "Forgangsmál sem eru að falla í einkunnagjöf"
+            name: "Fallandi mál"
+            title: "Mál sem eru að falla í einkunnagjöf"
         controversial:
-            name: "Umdeild forgangsmál"
+            name: "Umdeild mál"
             short: "Umdeilt:"
-            title: "Mest umdeild forgangsmál"
+            title: "Umdeildustu málin"
         finished:
-            name: "Forgangsmálum sem er lokið"
-            title: "Forgangsmálum sem er lokið"
+            name: "Málum sem er lokið"
+            title: "Málum sem er lokið"
             heading: "Nýlega lokið"
-            see_all: "Sjá öll <a href='{{url}}'>forgangsmál sem er lokið</a>"
-            empty: "Hérna verða forgangsmál sem hefur verið lokið hvort sem er með eða án árangurs."
+            see_all: "Sjá öll <a href='{{url}}'>mál sem er lokið</a>"
+            empty: "Hérna verða mál sem hefur verið lokið hvort sem er með eða án árangurs."
         random:
-            name: "Slembin forgangsmál"
-            title: "Slembin forgangsmál fyrir {{target}}"
+            name: "Mál af handahófi"
+            title: "Mál af handahófi fyrir {{target}}"
         newest:
-            name: "Ný forgangsmál"
-            title: "Nýjustu forgangsmálin fyrir {{target}}"
+            name: "Ný mál"
+            title: "Nýjustu málin fyrir {{target}}"
             added: "Bætt við"
         untagged:
-            name: "Ómerkt forgangsmál"
-            title: "Ómerkt (eða óflokkuð) forgangsmál"
+            name: "Ómerkt mál"
+            title: "Ómerkt (eða óflokkuð) mál"
         yours:
-            name: "þín forgangsmál"
-            title: "þín forgangsmál hjá {{government_name}}"
-            prompt: "Bæta forgangsmáli á skrána þína"
-            heading: "Forgangsmál {{user_name}}"
-            outro: "Þú getur líka fylgst með <a href='/news/your_priority_activities'>virkni</a> og <a href='/news/your_priority_discussions'>umræðum</a> um þín forgangsmál."            
+            name: "þín mál"
+            title: "þín mál hjá {{government_name}}"
+            prompt: "Bæta máli á skrána þína"
+            heading: "{{user_name}}"
+            outro: "Þú getur líka fylgst með <a href='/news/your_priority_activities'>virkni</a> og <a href='/news/your_priority_discussions'>umræðum</a> um þín mál."            
         yours_finished:
-            name: "Forgangsmál þín sem er lokið"
-            title: "Forgangsmálum þínum sem er lokið hjá {{government_name}}"
-            intro: "Viltu búa til skrá, þegar forgangsmálum sem þú hefur stutt eða andmælt er lokið, falla þau af skránni þinni og verða sett hér."
+            name: "Mál þín sem er lokið"
+            title: "Málum þínum sem er lokið hjá {{government_name}}"
+            intro: "Viltu búa til skrá, þegar málum sem þú hefur stutt eða andmælt er lokið, falla þau af skránni þinni og verða sett hér."
         yours_created:
-            name: "Forgangsmál sem þú hefur stofnað"
-            title: "Forgangsmál sem þú hefur stofnað hjá {{government_name}}"
-            intro: "Hérna eru forgangsmál sem þú stofnað geymd svo þú getur auðveldlega vísað í þau og fylgst með framgangi þeirra."
-            outro: "Þú getur einnig fylgst með allri <a href='/news/your_priorities_created_activities'>virkni</a> og <a href='/news/your_priorities_created_discussions'>umræðum</a> um forgangsmál sem þú hefur stofnað."
+            name: "Mál sem þú hefur stofnað"
+            title: "Mál sem þú hefur stofnað hjá {{government_name}}"
+            intro: "Hérna eru mál sem þú stofnað geymd svo þú getur auðveldlega vísað í þau og fylgst með framgangi þeirra."
+            outro: "Þú getur einnig fylgst með allri <a href='/news/your_priorities_created_activities'>virkni</a> og <a href='/news/your_priorities_created_discussions'>umræðum</a> um mál sem þú hefur stofnað."
         yours_top:
-            title: "Þín forgangsmál sem hæsta einkun hafa hjá meðlimum {{government_name}}"
+            title: "Þín mál sem hæsta einkun hafa hjá meðlimum {{government_name}}"
         yours_lowest:
-            title: "Þín forgangsmál sem lægsta einkun hafa hjá meðlimum {{government_name}}"
+            title: "Þín mál sem lægsta einkun hafa hjá meðlimum {{government_name}}"
         network:
-            name: "Forgangsmál samskiptanetsins þíns"
-            title: "Forgangsmál samskiptanetsins þíns"
+            name: "Mál samskiptanetsins þíns"
+            title: "Mál samskiptanetsins þíns"
             intro: 
                 none: "Það er enginn í samskiptanetinu þínu því þú ert ekki að fylgjast með neinum."
-                one: "Hér eru einungis þín forgangsmál og þess aðila í <a href='{{url}}'>þínu samskiptaneti</a>, ekki allt {{government_name}}."
-                other: "Hér eru einungis þín forgangsmál og þeirra <a href='{{url}}'>{{count}} aðila sem eru í þínu samskiptaneti</a>, ekki allt {{government_name}}."
+                one: "Hér eru einungis þín mál og þess aðila í <a href='{{url}}'>þínu samskiptaneti</a>, ekki allt {{government_name}}."
+                other: "Hér eru einungis þín mál og þeirra <a href='{{url}}'>{{count}} aðila sem eru í þínu samskiptaneti</a>, ekki allt {{government_name}}."
         yours_ads:
             title: "Þínar auglýsingar"
         consider:
-            title: "Forgangsmál sem þú ættir að skoða"
-            need_endorsements: "Þú þarft að styðja nokkur mál áður en við getum mælt með öðrum forgangsmálum fyrir þig að skoða. Hér eru nokkur slembin forgangsmál til að byrja með."
+            title: "Mál sem þú ættir að skoða"
+            need_endorsements: "Þú þarft að styðja nokkur mál áður en við getum mælt með öðrum málum fyrir þig að skoða. Hér eru nokkur mál af handahófi til að byrja með."
         ads:
             title: "Auglýsingar í gangi hjá {{government_name}}"
         official:
-            title: "{{official_user_name}} forgangsmál"
-            intro: "Þetta eru þau forgansmál sem {{official_user_name}} styður. Raðað skv. forgangsröð allra meðlima."
+            title: "{{official_user_name}} mál"
+            intro: "Þetta eru þau mál sem {{official_user_name}} styður. Raðað skv. forgangsröð allra meðlima."
         not_official:
-            title: "Forgangsmál sem eru EKKI á stefnuskrá {{official_user_name}}"
-            intro: "Þessi forgangsmál eru ekki á stefnuskrá {{official_user_name}}. Raðað skv. forgangsröð allra meðlima."            
+            title: "Mál sem eru EKKI á stefnuskrá {{official_user_name}}"
+            intro: "Þessi mál eru ekki á stefnuskrá {{official_user_name}}. Raðað skv. forgangsröð allra meðlima."            
         official_opposed:
             title: "Priorities {{official_user_name}} opposes"
-            intro: "Þetta eru þau forgangsmál sem {{official_user_name}} er á móti. Raðað skv. forgangsröð allra meðlima."            
+            intro: "Þetta eru þau mál sem {{official_user_name}} er á móti. Raðað skv. forgangsröð allra meðlima."            
         everyone_points:
             title: "Bestu rök um {{priority_name}}"
         endorser_points:
@@ -1144,85 +1181,87 @@ is:
                 one: "1 {{branch_name}} er á móti"
                 other: "{{count}} andstæðingur/ar eru {{branch_name}}"            
         change:
-            already_active: "Þú getur ekki breytt nafni forgangsmál eftir að einhver hefur stutt það."
+            already_active: "Þú getur ekki breytt nafni máls eftir að einhver hefur stutt það."
             flagged: "{{priority_name}} var flaggað til endurskoðunar af {{admin_name}}"
         edit:
             title: "Breyta {{priority_name}}"
-            submit: "Vista forgangsmál"
+            submit: "Vista mál"
             success: "Vistaði {{priority_name}}"
             issue_list: 
                 label: "{{tags_name}} (aðskilja með kommum)"
             name:
-                label: "Nafn forgangsmáls"
+                label: "Nafn máls"
         destroy:
             success: "Eyði varanlega {{priority_name}}. Þetta getur tekið nokkrar mínútur en það er háð hversu margir eru með eða á móti og þarf að fjarlægja."
         new:
-            need_account: "First þarftu að fylla út þetta stutta form og samþykkja reglurnar, síðan geturðu byrjað að bæta þínum forgangsmálum við {{target}}."
-            blank: "Vinsamlegast skráðu forgangsmálið þitt eða smelltu á stuðningshnappinn undir hverju forgansmáli til að bæta þínu við."
+            need_account: "First þarftu að fylla út þetta stutta form og samþykkja reglurnar, síðan geturðu byrjað að bæta þínum málum við {{target}}."
+            blank: "Vinsamlegast skráðu málið þitt eða smelltu á stuðningshnappinn undir hverju forgangsmáli til að bæta þínu við."
             success: "Takk fyrir að bæta {{priority_name}} við"
-            submit: "Búa til forgangsmál"
-            suggest: "Smelltu núna á 'Leggja til'"
+            submit: "Búa til nýtt mál"
+            suggest: "Ertu með mál sem Alþingi ætti að taka fyrir? Settu það inn hér."
             click:
-                one: "Smelltu á <span class='priority_add'>STYÐJA</span> ef þetta forgangsmál hér neðar styður enn ásetning þinn."
-                other: "Smelltu á <span class='priority_add'>ENDORSE</span> ef eitthvert þessara forgangsmála styður ásetning þinn."
+                one: "Smelltu á <span class='priority_add'>STYÐJA</span> ef þetta mál hér neðar styður enn ásetning þinn."
+                other: "Smelltu á <span class='priority_add'>ENDORSE</span> ef eitthvert þessara mála styður ásetning þinn."
             check:
-                name: "Forgangsmálið sem þú bættir við:"
-                one: "Áður en við bætum þínu forgangsmál við, vinsamlegast athugaðu hvort <b>{{priority_name}}</b> virki frekar. Stuðningur þin vegur þyngra í samfloti með öðrum."
-                other: "Áður en við bætum þínu forgangsmáli við, vinsamlegast athugaðu hvort eitthvert annað forgansmál virki frekar.  Stuðningur þin vegur þyngra í samfloti með öðrum."
-        recent_activity: "Hvað er að gerast í þessu forgansmáli"
+                name: "Málið sem þú bættir við:"
+                one: "Áður en við bætum þínu mál við, vinsamlegast athugaðu hvort <b>{{priority_name}}</b> virki frekar. Stuðningur þin vegur þyngra í samfloti með öðrum."
+                other: "Áður en við bætum þínu máli við, vinsamlegast athugaðu hvort eitthvert annað forgangsmál virki frekar.  Stuðningur þin vegur þyngra í samfloti með öðrum."
+        recent_activity: "Hvað er að gerast í þessu forgangsmáli"
         buried: "{{priority_name}} hefur grafist undir, Það mun ekki lengur sjást á listum."
         successful: "{{priority_name}} er nú merkt að hafi verið lokið og hafi tekist"
         failed: "{{priority_name}} er nú merkt að hafi verið lokað og hafi mistekist"
         intheworks: "{{priority_name}} er nú merkt 'í vinnslu'"
         compromised: "{{priority_name}} er nú merkt sem lokið en í hættu"
-        other_endorsements: "Hvaða önnur forgangsmál styðja viðkomandi?"
+        other_endorsements: "Hvaða önnur mál styðja viðkomandi?"
         relationship:
             name: "Stutt af {{sentence}}"
-            header: "Önnur forgangsmál til skoðunar"
-            tags_sentence: "Önnur forgangsmál í {{sentence}} til skoðunar"
+            header: "Önnur mál til skoðunar"
+            tags_sentence: "Önnur mál í {{sentence}} til skoðunar"
             undeclared: "{{percentage}} af ókláruðum"
             endorsers: "{{percentage}} af studdum"
             opposers: "{{percentage}} af <span class='opposed'>andstæðingum</span>"
         position:
-            number: "Forgangsmál #{{position}}"
-            title: "Þetta er {{position}}. hæsta forgansmálið hjá öllum meðlimum {{government_name}}."
+            number: "Mál #{{position}}"
+            title: "Þetta er {{position}}. vinsælasta málið hjá öllum meðlimum {{government_name}}."
             nochange:
-                title: "Þetta forgangsmál hefur hvorki færst upp né niður á lista allan þennan mánuð."
+                title: "Þetta mál hefur hvorki færst upp né niður á lista allan þennan mánuð."
             new:
                 7days:
                     short: "nýtt í þessari viku"
             up:
                 24hr:
-                    one: "Þetta forgangsmál hækkaði um eitt sæti á síðustu 24 tímunum"
-                    other: "Þetta forgangsmál hækkaði um {{count}} sæti á síðustu 24 tímunum"
+                    one: "Þetta mál hækkaði um eitt sæti á síðustu 24 tímunum"
+                    other: "Þetta mál hækkaði um {{count}} sæti á síðustu 24 tímunum"
                 7days:
-                    one: "Þetta forgangsmál hækkaði um eitt sæti í þessari viku"
-                    other: "Þetta forgangsmál hækkaði um {{count}} sæti í þessari viku"
+                    one: "Þetta mál hækkaði um eitt sæti í þessari viku"
+                    other: "Þetta mál hækkaði um {{count}} sæti í þessari viku"
                     short:
                         one: "upp um 1 sæti í vikunni"
                         other: "upp um {{count}} sæti í vikunni"
                 30days:
-                    one: "Þetta forgangsmál hækkaði um eitt sæti í mánuðinum"
-                    other: "Þetta forgangsmál hækkaði um {{count}} sæti í mánuðinum"
+                    one: "Þetta mál hækkaði um eitt sæti í mánuðinum"
+                    other: "Þetta mál hækkaði um {{count}} sæti í mánuðinum"
             down:
                 24hr:
-                    one: "Þetta forgangsmál lækkaði um eitt sæti á síðustu 24 tímunum"
-                    other: "Þetta forgangsmál lækkaði um {{count}} sæti á síðustu 24 tímunum"                 
+                    one: "Þetta mál lækkaði um eitt sæti á síðustu 24 tímunum"
+                    other: "Þetta mál lækkaði um {{count}} sæti á síðustu 24 tímunum"                 
                 7days:
-                    one: "Þetta forgangsmál lækkaði um eitt sæti í þessari viku"
-                    other: "Þetta forgangsmál lækkaði um {{count}} sæti í þessari viku"
+                    one: "Þetta mál lækkaði um eitt sæti í þessari viku"
+                    other: "Þetta mál lækkaði um {{count}} sæti í þessari viku"
                     short:
                         one: "niður um 1 sæti í vikunni"
                         other: "niður um {{count}} sæti í vikunni"
                 30days:
-                    one: "Þetta forgangsmál lækkaði um eitt sæti í mánuðinum"
-                    other: "Þetta forgangsmál lækkaði um {{count}} sæti í mánuðinum"     
+                    one: "Þetta mál lækkaði um eitt sæti í mánuðinum"
+                    other: "Þetta mál lækkaði um {{count}} sæti í mánuðinum"     
             no_change:
                 7days:
                     short: "engin breyting í þessari viku"
+        top_points:
+            title: "Bestu rök"
     prioritizer:
         index:
-            title: "{{government_name}} röðun forgangsmála"
+            title: "{{government_name}} röðun mála"
         endorse:
             msg: "Studdi {{priority_name}} í {{position}}. sæti"
             moved:
@@ -1234,12 +1273,12 @@ is:
         same:
             msg: "Fært í {{position}}. sæti og #{{position2}}. sæti"
         duel:
-            question: "Hvort forgangsmálið er mikilvægara?"
+            question: "Hvort málið er mikilvægara?"
             same: "Um það bil eins"
-        explanation: "Þetta er ný virkni sem er í prófun og er hönnuð til að búa til stóra lista og forgangsraða þeim.<p>Viðkomandi aðili verður spurður hvort hann sé fylgjandi eða á móti forgangsmáli en mun einnig virka svipað og <a href='http://www.thetennisladder.com/whatisatennisladder.asp'>tennis dómari</a>, sýnir tvö forgangsmál sem eru frekar nálæg á listanum þínum og spyr hvort er mikilvægara. Ef þú ákveður að forgangsmálið með lægri forgang sé mikilvægara hækkar það á listanum."
+        explanation: "Þetta er ný virkni sem er í prófun og er hönnuð til að búa til stóra lista og forgangsraða þeim.<p>Viðkomandi aðili verður spurður hvort hann sé fylgjandi eða á móti máli en mun einnig virka svipað og <a href='http://www.thetennisladder.com/whatisatennisladder.asp'>tennis dómari</a>, sýnir tvö mál sem eru frekar nálæg á listanum þínum og spyr hvort er mikilvægara. Ef þú ákveður að málið með lægri forgang sé mikilvægara hækkar það á listanum."
     profiles:
         new:
-            intro: "Upplýsingar um þig verða efstar á <a href='{{url}}'>upplýsingasíðunni þinni</a>, fyrir ofan 5 efstu forgangsmálin þín."
+            intro: "Upplýsingar um þig verða efstar á <a href='{{url}}'>upplýsingasíðunni þinni</a>, fyrir ofan 5 efstu málin þín."
             title: "Upplýsingar um þig hjá {{government_name}}"
             success: "Vistaði þínar upplýsingar"
             submit: "Vista þínar upplýsingar"
@@ -1268,8 +1307,8 @@ is:
         your_comments: "Síðustu ummæli á umræðu {{user_name}}"
     searches:
         index: 
-            title: "Leita í forgangsmálum {{government_name}}"
-        results: "Leita í forgangsmálum {{government_name}} að '{{query}}'"
+            title: "Leita í málum {{government_name}}"
+        results: "Leita í málum {{government_name}} að '{{query}}'"
         new:
             submit: "Leita"
         member:
@@ -1309,7 +1348,7 @@ is:
             last_name:
                 label: "Eftirnafn"
             login:
-                label: "Hvernig viltu að aðrir sjái þig á síðunni?"
+                label: "Hvernig viltu þekkjast á vefnum?"
                 example: "(Má vera nafn eða dulnefni)"
             email:
                 label: "Netfang"
@@ -1329,9 +1368,9 @@ is:
             birth_date:
                 label: "Afmælisdagur"
             is_mergeable:
-                label: "Bræða forgangsmál þín öðrum með sömu meiningu"
+                label: "Bræða mál þín öðrum með sömu meiningu"
             is_newsletter_subscribed: 
-                label: "Senda upplýsingar um þín forgansmál vikulega í tölvupósti til þín"
+                label: "Senda upplýsingar um þín forgangsmál vikulega í tölvupósti til þín"
             other_sites:
                 label: "Notendanafn/nöfn þín á vinsælum vefsíðum"
             submit: "Vista breytingarnar þínar"             
@@ -1345,10 +1384,10 @@ is:
             title: "Sjá hvað fólk er að gera hjá {{government_name}}"
         enter: "Fara á síðu"
         endorsements:
-            one: "{{position}}. forgangsmál, stutt af 1 aðila og {{oppose_count}} er/eru á móti."
-            other: "{{position}}. forgangsmál, stutt af {{count}} aðila/aðilum og {{oppose_count}} er/eru á móti."
+            one: "{{position}}. mál, stutt af 1 aðila og {{oppose_count}} er/eru á móti."
+            other: "{{position}}. mál, stutt af {{count}} aðila/aðilum og {{oppose_count}} er/eru á móti."
     tags:
-        title: "Öll {{tags_name}}"
+        title: "Allir flokkar"
         new:
             name: "Ný {{tags_name}}"
             title: "Bæta við {{tags_name}}"
@@ -1368,38 +1407,38 @@ is:
         errors:
             header_message: "Það komu upp vandamál við að vista {{tags_name}}"
         show:
-            title: "{{tag_name}} forgangsmál"
-            empty: "Engin forgangsmál enn fyrir {{tag_name}}"
+            title: "{{tag_name}} mál"
+            empty: "Engin mál til staðar {{tag_name}}"
             gone: "{{tags_name}} er ekki til"
         yours:
-            title: "Þín {{tag_name}} forgangsmál"
+            title: "Þín {{tag_name}} mál"
         network:
-            title: "Forgangsmál {{tag_name}} þíns tengslanets"
+            title: "Mál {{tag_name}} þíns tengslanets"
         obama:
-            title: "forgangsmál {{official_user_name}} {{tag_name}}"
-            intro: "Þetta er málefnaskrá {{official_user_name}} fyrir {{tag_name}} skv. forgansröð meðlima"
+            title: "mál {{official_user_name}} {{tag_name}}"
+            intro: "Þetta er málefnaskrá {{official_user_name}} fyrir {{tag_name}} skv. forgangsröð meðlima"
         not_obama:
-            title: "Forgangsmál {{tag_name}} EKKI á málefnaskrá {{official_user_name}}"
-            intro: "Þetta eru {{tag_name}} forgangsmál meðlima okkar sem eru EKKI á málefnaskrá {{official_user_name}}"
+            title: "Mál {{tag_name}} EKKI á málefnaskrá {{official_user_name}}"
+            intro: "Þetta eru {{tag_name}} mál meðlima okkar sem eru EKKI á málefnaskrá {{official_user_name}}"
         obama_opposed:
-            title: "forgangsmál {{tag_name}} sem {{official_user_name}} er á móti"
-            intro: "Þetta eru forgangsmál meðlima {{tag_name}} sem {{official_user_name}} er á móti"
+            title: "mál {{tag_name}} sem {{official_user_name}} er á móti"
+            intro: "Þetta eru mál meðlima {{tag_name}} sem {{official_user_name}} er á móti"
         rising:
-            title: "Rísandi {{tag_name}} forgangsmál"
+            title: "Rísandi {{tag_name}} mál"
         falling:
-            title: "Fallandi {{tag_name}} forgangsmál"
+            title: "Fallandi {{tag_name}} mál"
         controversial:
-            title: "Umdeild {{tag_name}} forgangsmál"
+            title: "Umdeild {{tag_name}} mál"
         random:
-            title: "Slembin {{tag_name}} forgangsmál"
+            title: "Slembin {{tag_name}} mál"
         finished:
-            title: "Lokuð {{tag_name}} forgangsmál"
+            title: "Lokuð {{tag_name}} mál"
         yours_finished:
-            title: "Þín lokuðu {{tag_name}} forgangsmál"
+            title: "Þín lokuðu {{tag_name}} mál"
         yours_created:
-            title: "{{tag_name}} forgangsmál sem þú stofnaðir"
+            title: "{{tag_name}} Mál sem þú stofnaðir"
         newest: 
-            title: "Ný {{tag_name}} forgangsmál"
+            title: "Ný {{tag_name}} mál"
         discussions:
             title: "Umræður um {{tag_name}}"
         documents:
@@ -1409,11 +1448,11 @@ is:
         twitter:
             title: "Það sem fólk segir núna um {{tag_name}}"
     unsubscribe:
-        weekly: "Vikulegt yfirlit yfir þín forgangsmál"
+        weekly: "Vikulegt yfirlit yfir þín mál"
         comments: "Athugasemdir við þína umræðu"
         points: "Endurskoðun á þínum skjölum og rökum"
         followers: "Þegar einhver fylgist með þér eða einhver af þínum tengiliðum tengist"
-        finished: "Þegar forgangsmálum lýkur"
+        finished: "Þegar málum lýkur"
         messages: "Einkaskilaboð og korkar"
         admin: "Fyrir stjórnendur"
         votes: "Þegar þörf er á þínu atkvæði við yfirtöku"
@@ -1445,11 +1484,11 @@ is:
             saved: "Vistaði stillingar fyrir {{user_name}}"
             submit: "Vista stillingar"
         priorities:
-            title: "{{user_name}} forgangsmál hjá {{government_name}}"
+            title: "{{user_name}} mál hjá {{government_name}}"
             top5:
-                more: "Topp 5 af {{priority_count}} forgangsmálum"
+                more: "Topp 5 af {{priority_count}} málum"
                 one: "Efsti forgangur"
-                other: "Topp {{count}} forgangsmálin"
+                other: "Topp {{count}} málin"
         influential:
             name: "{{position}} áhrifamestu"
         show:
@@ -1483,7 +1522,7 @@ is:
                 other: "{{count}} aðilar hunsa {{user_name}}"
         following:
             empty: "Þú ert fylgist ekki með neinum ennþá."
-            intro: "Þetta er fólkið sem þú fylgist með, raðað eftir áhrifum þess á vefsíðunni. <br/>Þú getur líka <a href='/news/your_network_activities'>fylgst með uppfærslum þeirra á fréttasvæðinu</a> eða <a href='/priorities/network'>séð öll forgangsmál þeirra á einum lista</a>."
+            intro: "Þetta er fólkið sem þú fylgist með, raðað eftir áhrifum þess á vefsíðunni. <br/>Þú getur líka <a href='/news/your_network_activities'>fylgst með uppfærslum þeirra á fréttasvæðinu</a> eða <a href='/priorities/network'>séð öll mál þeirra á einum lista</a>."
             title:
                 one: "{{user_name}} fylgist með 1 aðila"
                 other: "{{user_name}} fylgist með {{count}} aðilum"
@@ -1514,7 +1553,7 @@ is:
         suspended: "{{user_name}} hefur verið frystur"
         reinstated: "{{user_name}} er endurvakinn"
         make_admin: "{{user_name}} er núna stjórnandi"
-        empty: "{{user_name}} hefur enn engin forgangsmál."
+        empty: "{{user_name}} hefur enn engin mál."
         errors:
             need_zip: "Þú verður að gefa upp póstfang"
             need_email: "Þú verður að gefa upp heimilisfang"
@@ -1527,8 +1566,8 @@ is:
                 twitter: "Twitter"
                 facebook: "Facebook"
                 options: "eða <b>skráðu þig strax inn</b> með:"
-            intro: "<b><a href='{{signup_url}}'>Gerstu meðlimur</a></b> eða <a href='#' id='login_link'>skráðu þig inn með {{government_name}}</a>."
-            forgot: "Ég hef gleymt lykilorðinu mínu"
+            intro: "<b><a href='{{signup_url}}'>Nýskráning</a></b> eða <a href='#' id='login_link'>innskráning {{government_name}}</a>."
+            forgot: "Gleymt lykilorð"
             email:
                 label: "Netfang"
             password:
@@ -1548,13 +1587,13 @@ is:
         error: "Fann ekki þetta atkvæði, athugaðu hvort tengillinn sé réttur og hafi ekki slitnað í sundur í tölvupóstforritinu þínu."
         already_voted_yes: "Þú hefur þegar kosið með þessari yfirtöku. Stuðningur/andstaða þín var færð til {{priority_name}}"
         already_voted_now: "Þú hefur þegar kosið á MÓTI þessari yfirtöku. Stuðningi/andstöðu þinni var ekki breytt"
-        implicit_approved: "Kosningu er lokið, tillagan var samþykkt og stuðningur/andstaða þín var færð undir þetta forgangsmál"
-        implicit_declined: "Kosningu er lokið, tillagan var felld og stuðningi/andstöðu þinni verður áfram undir þessu forgangsmáli."
+        implicit_approved: "Kosningu er lokið, tillagan var samþykkt og stuðningur/andstaða þín var færð undir þetta mál"
+        implicit_declined: "Kosningu er lokið, tillagan var felld og stuðningi/andstöðu þinni verður áfram undir þessu máli."
         inactive: "Kosningatímbil útrunnið"
     votes:
         new:
             success: "Kaust"
-            novote: "Einungis fólk sem var með eða á móti þessu forgangsmáli áður en kosning hófst fær að kjósa."
+            novote: "Einungis fólk sem var með eða á móti þessu máli áður en kosning hófst fær að kjósa."
             dontvote: "Ef þú kýst ekki innan {{time_left}} og tillagan fær a.m.k. 70% atkvæða, verður yfirtakan samþykkt og stuðningi þínum verður breytt í {{priority_name}}. Ef það mistekst að ná 70% ofur-meirihluta, verður stuðningur þinn sá sami."
             cantvote: "Ef tillagan fær a.m.k. 70% atkvæða mun hver sá sem ekki kaus verða breytt í {{priority_name}}. Ef það mistekst að ná 70% ofur-meirihluta, mun ekkert gerast."
             approve:
@@ -1576,13 +1615,13 @@ is:
         index:
             title: "Widgets for your blog or website"
         priorities:
-            title: "Setja {{government_name}} forgangsmál á vefsvæðið þitt"
+            title: "Setja {{government_name}} mál á vefsvæðið þitt"
         points:
             title: "Setja {{government_name}} rök á vefsvæðið þitt"
         discussions:
             title: "Setja {{government_name}} umræður á vefsvæðið þitt"
         preview:
-            label: "Það mun lita svona út, nema með letri og litum vefsæðisins þíns:"    
+            label: "Það mun lita svona út, nema með letri og litum vefsvæðisins þíns:"    
         new:
             submit: "Uppfæra kóða"
             code:

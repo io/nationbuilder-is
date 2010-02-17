@@ -1,0 +1,20 @@
+<h1>Listing process_types</h1>
+
+<table>
+  <tr>
+    <th>Process type</th>
+  </tr>
+
+<% for process_type in @process_types %>
+  <tr>
+    <td><%=h process_type.process_type %></td>
+    <td><%= link_to 'Show', process_type %></td>
+    <td><%= link_to 'Edit', edit_process_type_path(process_type) %></td>
+    <td><%= link_to 'Destroy', process_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New process_type', new_process_type_path %>

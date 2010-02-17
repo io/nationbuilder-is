@@ -1,0 +1,55 @@
+<% cache(["latest_video_discussion_medium",I18n.locale,@priority.id], :expires_in => 15.minutes) do %>
+<% @latest_speech_discussions = ProcessSpeechMasterVideo.get_all(@priority) %>
+<% if @latest_speech_discussions.length > 0 %>
+<%= javascript_include_tag 'jquery.mousewheel' %>
+<%= javascript_include_tag 'jquery.scrollable-1.0.1.min' %>
+<%= stylesheet_link_tag 'vertical_video_speeches_scroller_medium' %>
+<h1><%=t 'processes.newly_processed_speeches_about_priority' %></h1>
+<!-- navigator -->
+<% if @latest_speech_discussions.length>5 %>
+<div class="navi"></div>
+<% end %>
+<!-- root element -->
+<a class="prev"></a>
+<div class="scrollable_medium">
+    <div id="latest_video_discussion_thumbs">
+		<% @latest_speech_discussions.each do |process_discussion| %>
+        <div onclick="window.location = '/process_speech_videos/<%=process_discussion.process_speech_videos.get_first_published.id%>'">
+            <img src="<%=process_discussion.process_speech_videos.get_random_published.get_playlist_image_url("small")%>" />
+                <span><em><%=process_discussion.meeting_date.strftime("%d.%m.%Y") %>-<span><%=process_discussion.process_speech_videos.count %>
+                    <% if process_discussion.process_speech_videos.count==1 %>
+                    <%=t :speech %>
+                    <% else %>
+                    <%=t :speeches %>
+                    <% end %>
+                    </em>
+                </span>
+            </p>
+        </div>
+        <% end %>
+    </div>
+</div>
+<a class="next<%=@latest_speech_discussions.length<5 ? "disabled" : ""%>"></a>
+<table width="100%">
+    <tr align="left">
+        <td align="left" style="padding-left:70px">
+            <% form_tag("/process_speech_videos/search?priority_id=#{@priority.id}") do -%>
+            <b><%=label_tag t(:search_by_person) %></b>
+            <%=text_field_tag 'search_query' %>
+            <%= submit_tag t(:search) %>
+            <% end %>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    jQuery.noConflict();
+    jQuery(function(){
+        jQuery("div.scrollable_medium").scrollable({
+            size: 3,
+            items: '#latest_video_discussion_thumbs',
+            hoverClass: 'hover'
+        });
+    });
+</script>
+<% end %>
+<% end %>

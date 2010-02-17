@@ -1,0 +1,24 @@
+<%="#{element.content.gsub("/pdf/thing","http://www.althingi.is/pdf/thing")}" %>
+<% if [12,13,15,16,17,19].include?(element.content_type) %>
+<i><%=t :rate_this_article %>:</i>
+<table width="100%">
+    <tr valign="top">
+        <td valign="top" width="30%">
+            <%= render :partial => "ratings/rate", :locals => { :asset => element } %>
+        </td>
+        <td width="70%">
+            <table width="100%">
+                <tr valign="top">
+                    <td valign="top">
+                        <div id="change_proposals_master_panel_for_<%=element.sequence_number%>">
+                            <%= render :partial => "process_document_elements/templates/#{document.template_name}_change_proposals",
+									   :locals => {:document=> document, :change_target => element, 
+									   :open_panel => document.has_change_proposal_for_sequence_number?(element.sequence_number) } %>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<% end %>

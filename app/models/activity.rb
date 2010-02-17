@@ -18,6 +18,8 @@ class Activity < ActiveRecord::Base
   
   named_scope :by_recently_updated, :order => "activities.changed_at desc"  
   named_scope :by_recently_created, :order => "activities.created_at desc"    
+
+  named_scope :item_limit, lambda{|limit| {:limit=>limit}}
   
   belongs_to :user
   belongs_to :partner

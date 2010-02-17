@@ -1,11 +1,14 @@
-Hello {{ recipient.first_name | capitalize }},
+Hæ {{ recipient.first_name | capitalize }},
 
-Congratulations!  You just earned 1{{ government.currency_short_name }} because {{ sender.name }} is now following your updates at {{ government.name }}. 
+Til hamingju!  Þú vannst þér inn 1{{ government.currency_short_name }} af því  {{ sender.name }} fylgir þínum uppfærslum á {{ government.name }}. 
 
-Learn more about {{ sender.name }} here:
+Lestu meira um {{ sender.name }} á
 {{ sender.profile_url }}
 
-What the heck is {{ government.currency_short_name }}?  It stands for "{{ government.currency_name | downcase  }}", and it's a way to track your influence at {{ government.name }}.  The more people who find your updates and talking points useful, the more {{ government.currency_short_name }} you earn, which you can use to buy "ads" for priorities you care about, amongst other things.   More details here: {{ recipient.root_url }}about/faq#pc
+Hvað er eiginlega {{ government.currency_short_name }}?  Það stendur fyrir "{{ government.currency_name | downcase  }}", 
+og er leið til að fylgjast með hversu mikil áhrif þú hefur á  {{ government.name }}.  
+Því fleiri sem finnast þínar færslur og rök gagnleg, því meiri  {{ government.currency_short_name }} vinnur þú þér inn sem þú getur notað til að kaupa auglýsingar fyrir þín hjartans mál.   Meira á {{ recipient.root_url }}about/faq#pc
 
 ---
-This is an automated notification from {{ government.name }} sent to {{ recipient.email }}.  If you do not wish to be notified of new comments on new people following you, you can change your email settings here: {{ recipient.unsubscribe_url }}
+Þetta er sjálfvirk tilkynning {{ government.name }} send á {{ recipient.email }}.  
+Ef þú vilt ekki fá svona bréf, breyttu þá póststillingunum þínum hér: {{ recipient.unsubscribe_url }}

@@ -27,17 +27,21 @@
 		<% if @priority.points_count > 0 %>
 			<li class="tab5 mega">
 				<span class="tab_header">
-					<%= link_to t('menu.briefing.points', :count => @priority.points_count), everyone_points_priority_url(@priority) %>
+					<%= link_to t('menu.briefing.points', :count => @priority.points_count), top_points_priority_url(@priority) %>
 				</span>
 				<div class="tab_body">
-					<%= t('menu.briefing.helpful_to')%><br/>
-					<%= link_to(t('menu.priorities.endorsers.name'), endorser_points_priority_url(@priority)) %><% if @priority.up_points_count > 0 %> (<%= @priority.up_points_count %>)<% end %><br/>
-					<%= link_to(t('menu.priorities.opposers.name'), opposer_points_priority_url(@priority)) %><% if @priority.down_points_count > 0 %> (<%= @priority.down_points_count %>)<% end %><br/>
-					<%= link_to(t('menu.priorities.undeclareds.name'), neutral_points_priority_url(@priority)) %><% if @priority.neutral_points_count > 0 %> (<%= @priority.neutral_points_count %>)<% end %><br/>
+					<%= link_to(t('priorities.top_points.title'), top_points_priority_url(@priority)) %><br/>
 					<p>
-					<%= link_to t('menu.briefing.add_point.name'), new_priority_point_path(@priority), :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %>
+					<%= link_to t('points.top_points.add_point_for_endorse'), new_priority_point_path(@priority)+"?support=1" , :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %><br/>
+					<%= link_to t('points.top_points.add_point_for_oppose'), new_priority_point_path(@priority), :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %><br/>
 					<p>
 				</div>
+			</li>
+		<% else %>
+			<li class="tab5">
+				<span class="tab_header">
+					<%= link_to t('points.top_points.new_point_short'), new_priority_point_path(@priority)+"?support=1" , :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %><br/>
+				</span>
 			</li>
 		<% end %>
 		<li class="tab6">
@@ -61,14 +65,52 @@
 				<%= link_to t('menu.news.name'), activities_priority_url(@priority) %>
 			</span>
 		</li>
-		<li class="tab9 mega">
+		<% unless @priority.priority_processes.empty? %>
+			<li class="tab9">
+				<span class="tab_header">
+					<%= link_to t('menu.processes.name'), :controller=>"priority_processes", :action=>"show_all_for_priority", :id=>@priority %>
+				</span>
+			</li>
+			<% if has_process_documents? %>
+				<li class="tab10 mega">
+					<span class="tab_header">
+						<%= link_to t('menu.process_documents.name'), "#" %>
+					</span>
+					<div class="tab_body">
+						<% @priority.priority_processes.each do |process| %>
+	 					  <% process.process_documents.each do |document| %>
+						    <%=document.get_process_document_link%><br/>
+ 						  <% end %>
+						<% end %>
+					</div>				
+				</li>
+   	        <% end %>
+			<% if has_process_discussions? %>
+				<li class="tab11 mega">
+					<span class="tab_header">
+						<%= link_to t('menu.process_discussions.name'), "#" %>
+					</span>
+					<div class="tab_body">
+						<% @priority.priority_processes.each do |process| -%>
+	 					  <% process.process_discussions.each do |discussion| -%>
+					  	    <% video = discussion.process_speech_videos.get_first_published -%>
+						    <% if video %>
+		 					  <%=link_to video.get_menu_title, :controller=>"process_speech_videos", :action=>"show", :id=>video.id%> <br/>
+							<% end %>
+ 						  <% end %>
+						<% end %>
+					</div>				
+				</li>
+   	        <% end %>
+		<% end %>
+		<li class="tab12 mega">
 			<span class="tab_header action">
 				<%= link_to t('menu.priorities.action'), new_priority_point_path(@priority) %>
 			</span>
 			<div class="tab_body">
 				<%= link_to t('menu.briefing.add_point.name'), new_priority_point_path(@priority), :title => t('menu.briefing.add_point.title'), :class => "qtip_left" %><br/>
 				<%= link_to t('menu.briefing.add_document.name'), new_priority_document_path(@priority), :title => t('menu.briefing.add_document.title'), :class => "qtip_left" %><br/>
-				<% if (@priority.position < 26 and @priority.position > 0) or @priority.is_buried? %>
+				<% if 1==2 and (@priority.position < 26 and @priority.position > 0) or @priority.is_buried? %>
 					<span class="greyed_out"><%= t('menu.priorities.add_ad.name') %></span><br/>
 				<% else %>
 					<%= link_to t('menu.priorities.add_ad.name'), new_priority_ad_url(@priority), :title => t('menu.priorities.add_ad.title', :currency_name => current_government.currency_name.downcase), :class => "qtip_left" %><br/>

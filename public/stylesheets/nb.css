@@ -1,5 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
-	font-size: 62.5%;	
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size:11px;
+  color: #333333;
 }
 
 body {
@@ -50,12 +57,33 @@ h4 {
 	padding: 0px 3px 0px 3px;
 }
 
+#sidebar {
+	width: 240px;
+	float: right;
+	overflow: hidden;
+}
+
+#contentwrap {
+	width: 960px;
+	float: left;
+}
+
+#branding {
+	font-size: 2em;
+	background-color: #F0F0F0;
+}
+
+#branding a {
+	padding: 10px 15px;
+	display: block;
+	font-weight: bold;
+}
+
 #content_text {
 	padding: 15px 20px 15px 20px;
 	letter-spacing: 0;
 	line-height: 1.4em;
 	font-size: 1.2em;
-	margin: 10px 0px 0px 0px;
 }
 
 #facebox {
@@ -75,7 +103,11 @@ h4 {
 	margin-bottom: 0px;
 }
 #priority_name {
-	font-size: 1.5em;
+	font-size: 16px;
+	height: 24px;
+	width: 330px;
+	margin-left: 0px !Important;
+	margin-right: 10px !Important;
 }
 #user_name {
 	font-size: 1.3em;
@@ -137,8 +169,8 @@ h4 {
 }
 .suggest_button {
 	outline:none;	
-	font-size: 1.1em;
-	padding: 5px 10px 5px 10px;
+	font-size: 14px;
+	padding: 5px 10px 6px 10px;
 	font-weight: bold;
 	letter-spacing: 0.5px;
 	text-align:center;
@@ -148,17 +180,14 @@ h4 {
 }
 
 #priority_column {
-	margin-top: 10px;
+	margin-top: 7px;
 }
 #right_column_priorities {
 	padding: 0px 0px 0px 10px;
 }
 #your_priorities_container {
-	font-size: 1.2em;
-}
-#contentwrap {
-	text-align: left;
-	padding: 0px 20px 0px 20px;
+	font-size: 11px;
+	line-height: 140%;
 }
 
 #notifications {
@@ -207,6 +236,7 @@ h4 {
 	background-color: #3b5998;
 	font-size: 1.2em;
 	padding: 5px;
+	margin-top: 15px;
 	text-align: center;
 	border-right: solid 1px #0e1f5b;
 	border-bottom: solid 1px #0e1f5b;	
@@ -236,7 +266,8 @@ h4 {
 }
 
 .pc_under {
-	font-size: 9px;
+	font-size: 10px;
+	padding-left: 3px;
 	margin-top: 2px;
 }
 
@@ -304,7 +335,7 @@ h4 {
 }
 
 #hp_intro {
-	font-size: 1.6em;
+	font-size: 16px;
 	font-weight: bold;
 	margin-bottom: 4px;
 	line-height: 22px;
@@ -375,6 +406,7 @@ del {
 #activities {
 	position: relative;
 	right: 6px;
+	min-height: 20px;
 }
 .episode {
 	margin-top: 5px;
@@ -391,12 +423,16 @@ del {
 /* footer stuff */
 #backgroundwrap {
 	padding-bottom: 15px;
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
 }
 #footer {
 	font-size: 1.1em;
 	text-align: left;
 	padding: 5px 30px 10px 30px;
 	line-height: 1.4em;
+	clear: both;
 }
 #footer_container {
 	margin-top: 10px;
@@ -484,9 +520,11 @@ del {
 	margin-right: 5px;
 }
 .heading {
-	font-size: 0.8em;
-	text-transform:uppercase;
-	margin-bottom: 0px;
+	font-size: 12px;
+/*	text-transform:uppercase;*/
+	color: #333 !important;
+	margin-bottom:3px;
+	font-weight: bold !Important;
 }
 .happening_heading {
 	font-weight: bold;
@@ -500,10 +538,10 @@ del {
 }
 .priority_listing {
 	margin-bottom: 4px;
-	padding-top: 9px;
+	padding-top: 5px;
 }
 .priority_name, .priority_name_add {
-  	font-size: 1.4em;
+  	font-size: 12px;
 	font-weight: bold;
 	margin-bottom: 2px;	
 	line-height: 1em;
@@ -516,9 +554,10 @@ del {
 .priority_add  {
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 0.7em;
+	font-size: 10px;
 	padding: 0px 1px 0px 2px;
 	margin-right: 3px;
+	margin-top: 3px;
 }
 .partner_logo {
 	padding: 10px;
@@ -685,7 +724,7 @@ del {
 	border-left: solid 1px #d9dfea;
 }
 .facebook_button a {
-	color: #FFF;
+	color: #FFF !important;
 	letter-spacing: 0.5px;
 }
 
@@ -700,8 +739,9 @@ del {
 }
 
 .priority_position {
-	font-size: 1.8em;
-	padding-top: 9px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 13px;
 }
 .priority_added {
 	padding-top: 10px;
@@ -752,12 +792,12 @@ del {
 	top: 11px;	
 }
 .position_new {
-	font-size: 0.8em;	
+	font-size: 11px;;	
 	font-weight: bold;
 	text-align: center;
 	position: relative;
 	top: 9px;	
-	padding-top: 3px;	
+	padding-top: 4px;	
 }
 .priority_rank_detail {
 	margin-bottom: 5px;
@@ -1030,7 +1070,7 @@ del {
 	padding: 0px 0px 3px 0px;
 }
 #nav {
-	padding: 5px 5px 2px 5px;
+/*	padding: 5px 5px 2px 5px;*/
 	font-size: 1.3em;
 	z-index: -1;
 }
@@ -1147,7 +1187,7 @@ ul#menu li.tab7 div.tab_body {
 #nav_sub {
 	z-index: -1;	
 	font-size: 1.2em;	
-	padding: 0px 0px 2px 10px;
+	padding: 0px 0px 2px 0px;
 	margin: 1px 0px 0px 0px;
 }
 ul#menu_sub { 
@@ -1171,6 +1211,7 @@ ul#menu_sub li.mega .tab_header a {
 /* second nav */
 
 /* third nav */
+/*
 #nav_third {
 	z-index: -1;	
 	padding: 0px 0px 2px 10px;
@@ -1195,6 +1236,8 @@ ul#menu_third li.mega .tab_header a {
 	text-decoration: none;	
 	background: transparent url('/images/mega_down_arrow.gif') center right no-repeat;	
 }
+*/
+
 /* third nav */
 
 /* priority nav */
@@ -1223,15 +1266,15 @@ ul#priority_menu li.hovering div.tab_body {
 }
 
 ul#priority_menu li.tab5 div.tab_body {
-	width:90px;
+	width:150px;
 }
 
 ul#priority_menu li.tab4 div.tab_body {
-	width:90px;
+	width:120px;
 }
 
 ul#priority_menu li.tab5 div.tab_body {
-	width:120px;
+	width:150px;
 }
 
 ul#priority_menu li.tab6 div.tab_body {
@@ -1315,3 +1358,12 @@ ul#priority_menu li.tab9 div.tab_body {
 	position: absolute;
 }
 /* end color picker */
+
+@import ("newstuff.css");
+@import ("points_layout.css");
+
+.brbox {
+	border: 1px solid #000000;
+}
+
+

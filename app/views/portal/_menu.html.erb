@@ -1,0 +1,25 @@
+<%# Copyright (C) 2009,2010 Róbert Viðar Bjarnason %>
+<%# License: http://www.gnu.org/licenses/agpl-3.0.txt %>
+<table>
+    <tr>
+        <td>
+            <a href="#" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="portlets-menu"><span class="ui-icon ui-icon-triangle-1-s"></span><%=t('menu.portal.add_portlet')%></a>
+            <div id="portlets" class="hidden">
+                <ul>
+                    <% PortletTemplateCategory.by_weight.all.each do |template_category| %>
+                    <li>
+                        <a href="#"><%=t(template_category.name).titleize %></a>
+                        <ul>
+                            <% template_category.portlet_templates.each do |portlet_template| %>
+                            <li>
+                                <a href="#"><%=t(portlet_template.name).titleize %>-<%=portlet_template.id %></a>
+                            </li>
+                            <%end %>
+                        </ul>
+                    </li>
+                    <% end %>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>

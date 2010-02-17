@@ -1,4 +1,19 @@
 de:
+    issues:
+        name: "Tags"
+        list:
+            name: "List" 
+        cloud:
+            name: "Cloud" 
+    comments:
+        add: "Add"
+        new: "Add"
+        permalink: "Permalink"
+        full:
+            show: "Show"
+        full:
+            hide: "Hide"
+    more: "Mehr"
     unch: "-"
     nochange: "keine Veränderung"
     buried: "nicht gelisted"
@@ -752,13 +767,16 @@ de:
         unread: "ungelesen"
         previously_read: "vorher gelesen Nachrichten:"
     network:
+        name: "Network"
         influential: 
+            name: "The most influential people"
             title: "Triff die einflussreichsten Leute in {{government_name}}"
             intro: "Die Einflussrankings basieren auf der Zahl von {{currency_name}}<span class='pc'>{{currency_short_name}}</span> , die jemand verdient hat.
             <br/>Erfahre mehr über <span class='pc'>{{currency_short_name}}</span> unter <a href='/about/faq#pc'>FAQ</a>."
         talkative: 
             title: "Am gesprächigsten in {{government_name}}"
         ambassadors: 
+            name: "Ambassadors"
             title: "Botschafter in {{government_name}}"
             intro: "Botschafter sind Leute, die andere zu {{government_name}} einladen"
             loggedin: "Du kannst auch Botschafter sein und <span class='pc'>5{{currency_short_name}}</span> für jede Person bekommen, die du gewinnen kannst.  Beginne einfach, indem du Kontakte von <a href='{{import_url}}'>Google, Yahoo, Windows Live oder Facebook importierst</a>."
@@ -766,6 +784,7 @@ de:
             title: "Twitterers in {{government_name}}"
             intro: "Wenn du hinzugefügt werden möchtest, klicke diesen Button und folge dem Twitterbildschirm, um {{government_name}}/NationBuilder zu autorisieren."
         newest: 
+            name: "New members"
             title: "Neue Mitglieder in {{government_name}}"
         partners: 
             title: "Triff deine Partner"
@@ -783,20 +802,25 @@ de:
             one: "1 Person in deinem Netzwerk"
             other: "{{count}} Personen in deinem Netzwerk"
     news:
+        name: "News"
         discussions:
             name: "Aktive Diskussionen"
             title: "Worüber jeder in {{government_name}} diskutiert"
         comments:
             title: "Letzte Kommentare in {{government_name}}"
         points:
+            name: "Latest points"
             title: "Letzte Aktivitäten unter {{briefing_name}} in {{government_name}}"
         activities:
+            name: "Latest activity"
             title: "Alles was in {{government_name}} passiert"
         obama:
             title: "Was {{official_user_name}} in {{government_name}} macht"
         capital:
+            name: "Political capital activity"
             title: "{{currency_name}} in {{government_name}}"
         changes:
+            name: "Übernahmevorschläge"
             title: "Übernahmevorschläge"
             voting:
                 title: "Abstimmungsergebnisse für Übernahmevorschläge"

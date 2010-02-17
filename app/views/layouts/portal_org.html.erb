@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title>Portal</title>
+        <link type="text/css" href="/stylesheets/fg.menu.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+        <link type="text/css" href="/stylesheets/portal.css" rel="stylesheet"/>
+        <link type="text/css" href="/stylesheets/style.css" rel="stylesheet"/>
+        <style type="text/css"> 
+            .column {
+                width: 350px;
+                float: left;
+                padding-bottom: 200px;
+            }
+            
+            .portlet {
+                margin: 0 1em 1em 0;
+            }
+            
+            .portlet-header {
+                margin: 0.3em;
+                padding-bottom: 4px;
+                padding-left: 0.2em;
+            }
+            
+            .portlet-header .ui-icon {
+                float: right;
+            }
+            
+            .portlet-content {
+                padding: 0.4em;
+            }
+            
+            .ui-sortable-placeholder {
+                border: 1px dotted black;
+                visibility: visible !important;
+                height: 100px !important;
+            }
+            
+            .ui-sortable-placeholder * {
+                visibility: hidden;
+            }
+            
+            .demoHeaders {
+                margin-top: 2em;
+            }
+            
+            #dialog_link {
+                padding: .4em 1em .4em 20px;
+                text-decoration: none;
+                position: relative;
+            }
+            
+            #dialog_link span.ui-icon {
+                margin: 0 5px 0 0;
+                position: absolute;
+                left: .2em;
+                top: 50%;
+                margin-top: -8px;
+            }
+            
+            ul#icons {
+                margin: 0;
+                padding: 0;
+            }
+            
+            ul#icons li {
+                margin: 2px;
+                position: relative;
+                padding: 4px 0;
+                cursor: pointer;
+                float: left;
+                list-style: none;
+            }
+            
+            ul#icons span.ui-icon {
+                float: left;
+                margin: 0 4px;
+            }
+            
+            #menuLog {
+                font-size: 1.4em;
+                margin: 20px;
+            }
+            
+            .hidden {
+                position: absolute;
+                top: 0;
+                left: -9999px;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            
+            .fg-button {
+                background: #fff;
+                clear: left;
+                margin: 0px 2px 2px 0px;
+                padding: .4em 1em;
+                text-decoration: none !important;
+                cursor: pointer;
+                position: relative;
+                text-align: center;
+                zoom: 1;
+            }
+            
+            .fg-button .ui-icon {
+                position: absolute;
+                top: 50%;
+                margin-top: -8px;
+                left: 50%;
+                margin-left: -8px;
+            }
+            
+            a.fg-button {
+                float: left;
+            }
+            
+            .fg-searchportlet {
+                background: #ffffff;
+                text-background: #fff;
+                font-color: #000;
+                clear: left;
+                margin: 0px 2px 2px 0px;
+                padding: .4em 1em;
+                text-decoration: none !important;
+                cursor: pointer;
+                position: relative;
+                text-align: left;
+                zoom: 1;
+            }
+            
+            a.fg-searchportlet {
+                float: left;
+            }
+            
+            button.fg-searchportlet {
+                width: auto;
+                overflow: visible;
+            }
+            
+            /* removes extra button width in IE */
+            .fg-button-icon-left {
+                padding-left: 2.1em;
+            }
+            
+            .fg-button-icon-right {
+                padding-right: 2.1em;
+            }
+            
+            .fg-button-icon-left .ui-icon {
+                right: auto;
+                left: .2em;
+                margin-left: 0;
+            }
+            
+            .fg-button-icon-right .ui-icon {
+                left: auto;
+                right: .2em;
+                margin-left: 0;
+            }
+            
+            .fg-button-icon-solo {
+                display: block;
+                width: 8px;
+                text-indent: -9999px;
+            };
+            /* solo icon buttons must have block properties for the text-indent to
+             .fg-button.ui-state-loading .ui-icon { background: url(spinner_bar.gif) no-repeat 0 0; }
+             .ui-tabs-panel {height: 100%;}
+             
+             
+        </style>
+        <script type="text/javascript" src="/javascripts/jquery-1.3.2.min.js">
+        </script>
+        <script type="text/javascript" src="/javascripts/jquery-ui-1.7.2.custom.min.js">
+        </script>
+        <script type="text/javascript" src="/javascripts/fg.menu.js">
+        </script>
+        <%= javascript_include_tag "portal" %>
+        <style type="text/css">
+            label, input {
+                display: block;
+            }
+            
+            input.text {
+                margin-bottom: 12px;
+                width: 95%;
+                padding: .4em;
+            }
+            
+            fieldset {
+                padding: 0;
+                border: 0;
+                margin-top: 25px;
+            }
+            
+            h1 {
+                font-size: 1.2em;
+                margin: .6em 0;
+            }
+            
+            div#dialogu-contain {
+                width: 350px;
+                margin: 20px 0;
+            }
+            
+            div#dialogu-contain table {
+                margin: 1em 0;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            div#dialogu-contain table td, div#dialogu-contain table th {
+                border: 1px solid #eee;
+                padding: .6em 10px;
+                text-align: left;
+            }
+            
+            .ui-button {
+                outline: 0;
+                margin: 0;
+                padding: .4em 1em .5em;
+                text-decoration: none;
+                !important;
+                cursor: pointer;
+                position: relative;
+                text-align: center;
+            }
+            
+            .ui-dialog .ui-state-highlight, .ui-dialog .ui-state-error {
+                padding: .3em;
+            }
+        </style>
+        <script type="text/javascript">
+            	    $(function(){
+            			setup_portal_menu(<%=@portlet_container ? @portlet_container.id : -1%>);
+            			setup_portal_dialogues();
+            			setup_columns();
+            		});
+            	
+        </script>
+    </head>
+    <body>
+        <div id="main-dialogues-div">
+            <%= render(:partial=>'portal/dialogues') %>
+        </div>
+        <div id="portal-menu-div">
+            <%= render(:partial=>'portal/menu') %>
+        </div>
+        <%= yield %>
+    </body>
+</html>

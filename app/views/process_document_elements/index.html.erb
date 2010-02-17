@@ -1,0 +1,32 @@
+<h1>Listing process_document_elements</h1>
+
+<table>
+  <tr>
+    <th>Content type</th>
+    <th>Content</th>
+    <th>Content text only</th>
+    <th>Content number</th>
+    <th>Sequence number</th>
+    <th>ProcessDocument</th>
+    <th>Parent</th>
+  </tr>
+
+<% for process_document_element in @process_document_elements %>
+  <tr>
+    <td><%=h process_document_element.content_type %></td>
+    <td><%=h process_document_element.content %></td>
+    <td><%=h process_document_element.content_text_only %></td>
+    <td><%=h process_document_element.content_number %></td>
+    <td><%=h process_document_element.sequence_number %></td>
+    <td><%=h process_document_element.process_document_id %></td>
+    <td><%=h process_document_element.parent_id %></td>
+    <td><%= link_to 'Show', process_document_element %></td>
+    <td><%= link_to 'Edit', edit_process_document_element_path(process_document_element) %></td>
+    <td><%= link_to 'Destroy', process_document_element, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New process_document_element', new_process_document_element_path %>

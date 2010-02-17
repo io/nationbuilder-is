@@ -1,0 +1,19 @@
+<% cache(["portlets_network_newest",I18n.locale], :expires_in => 5.minutes) do %>
+<table border="0" cellspacing="0" cellpadding="0">
+	<% for user in User.active.at_least_one_endorsement.by_recently_created.item_limit(portlet.portlet_template.item_limit) %>
+		<tr>
+			<td valign="top" width="26" style="padding: 7px 5px 4px 0px;">
+				<%= render :partial => "users/pic", :locals => {:user => user}%>
+			</td><td style="padding: 7px 5px 4px 0px;" valign="top">
+				<%= link_to user.login, user %><span class="pc"><%= user.capitals_count%><%= current_government.currency_short_name %></span> <%= t('users.joined', :time_ago => time_ago(user.created_at)) %> &middot; <%= t('endorsements.name', :count => user.up_endorsements_count) %><% if user.down_endorsements_count > 0 %> &middot; <%= t('oppositions.name', :count => user.down_endorsements_count) %><% end %>
+				<% if user.has_top_priority? %>
+					<br/><%= t('endorsements.priority1') %>
+					<% if user.top_endorsement.is_down? %><span class="opposed"><%= t('oppose.ing')%></span><% end %>
+					<%= link_to user.top_endorsement.priority.name, user.top_endorsement.priority %>
+				<% end %>
+			</td>
+		</tr>
+	<% end %>					
+</table>
+<%= link_to "#{t('more')}...", "/network/newest" %>
+<% end %>

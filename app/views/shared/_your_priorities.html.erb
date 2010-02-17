@@ -4,7 +4,7 @@
 				<%= render :partial => "users/pic", :locals => {:user => current_user}%>
 				<div class="pc_under"><%= link_to current_user.capitals_count.to_s + current_government.currency_short_name, :controller => "news", :action => "your_capital" %></div>
 			</td><td valign="top" style="padding-left: 5px;">
-				<div class="user_name"><%= link_to t('priorities.yours.heading', :user_name => current_user.name.possessive), yours_priorities_url %></div>
+				<div class="user_name"><%= link_to t('priorities.yours.heading', :user_name => current_user.name), yours_priorities_url %></div>
 				<div id="search_priorities">
 					<% form_remote_for(Priority.new) do |f| %>
 					<% if @tag_names %>

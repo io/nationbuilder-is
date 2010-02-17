@@ -1,0 +1,40 @@
+<% @all_speech_videos = discussion.process_speech_videos.get_all_published %>
+<% if @all_speech_videos.length > 0 %>
+	<%= javascript_include_tag 'jquery.mousewheel' %>
+	<%= javascript_include_tag 'jquery.scrollable-1.0.1.min' %>
+	<% if @total_discussions>8 %>
+		<%= stylesheet_link_tag 'vertical_video_speeches_scroller_tiny' %>
+	<% else %>
+		<%= stylesheet_link_tag 'vertical_video_speeches_scroller_small' %>
+	<% end %>
+	<!-- navigator -->
+	<% if @all_speech_videos.length>5 %>
+		<div class="navi"></div>
+	<% end %>
+	<!-- root element -->
+	<a class="prev"></a>
+	<div class="scrollable_id_<%=@all_speech_videos[0].id%> scrollable_small">
+	    <div id="latest_videos_thumbs">
+			<% @all_speech_videos.each do |process_video| %>
+	        <div onclick="window.location = '/process_speech_videos/<%=process_video.id%>'">
+				<% if @total_discussions>8 %>
+		            <img width="45px" height="28px" src="<%=process_video.get_playlist_image_url("tiny")%>" />
+				<% else %>
+    		        <img width="80px" height="50px" src="<%=process_video.get_playlist_image_url("smaller")%>" />
+				<% end %>
+	        </div>
+	        <% end %>
+	    </div>
+	</div>
+	<a class="next<%=@all_speech_videos.length<5 ? "disabled" : ""%>"></a>
+	<script type="text/javascript">
+	    jQuery.noConflict();
+	    jQuery(function(){
+	        jQuery("div.scrollable_id_<%=@all_speech_videos[0].id%>").scrollable({
+	            size: <%=@total_discussions>8 ? 10 : 6 %>,
+	            items: '#latest_videos_thumbs',
+	            hoverClass: 'hover'
+	        });
+	    });
+	</script>
+<% end %>

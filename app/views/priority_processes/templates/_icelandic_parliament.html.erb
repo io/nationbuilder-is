@@ -1,0 +1,144 @@
+<% cache(["icelandic_parliment_priority_processes_main",I18n.locale,@priority_process.priority.id,@show_only_last_process ? "only_last_process" : "all_processes"], :expires_in => 1.hour) do %>
+<% @total_discussions = ProcessDiscussion.count(:include=>[:priority_process],:conditions=>["priority_id = ?",@priority.id]) %>
+<% current_process = @priority_process %>
+<% processes = [] %>
+<% while current_process %>
+    <% processes<<current_process %>
+	<% unless current_process.children.empty? %>
+		<% current_process = current_process.children.first %>
+	<% else %>
+	<% current_process = nil %>
+	<% end %>
+<% end %>
+<% if @show_only_last_process %>
+  <% processes = [processes.last] %>
+  <h2><%=t "processes.only_last_process"%></h2>
+  <%=link_to t("processes.show_all_processes"), :controller=>"priority_processes", :action=>"show_all_for_priority", :id=>@priority %>
+<% else %>
+<br>
+<table width="100%">
+    <tr align="left">
+        <td align="left" style="padding-left:70px">
+            <% form_tag("/process_speech_videos/search?priority_id=#{@priority.id}") do -%>
+            <b><%=label_tag t(:search_by_person) %></b>
+            <%=text_field_tag 'search_query' %>
+            <%= submit_tag t(:search) %>
+            <% end %>
+        </td>
+    </tr>
+</table>
+<% end %>
+<% processes.each_with_index do |current_process,i| %>
+<div class="althingi_process_container">
+	<% process_documents = current_process.process_documents %>
+	<% discussions = current_process.process_discussions %>
+	<h2><%="#{current_process.stage_sequence_number}. "+t(:stage_sequence_discussion) %></h2>
+	<% unless controller_name == "priority_processes" %>
+	<p>(Smelltu hér til að <span class="showorhide">sjá</span> <%= current_process.stage_sequence_number %>. umræðu)</p>
+	<% end %>
+	<% if i==0 %>
+	  <%=link_to 'Málið á Alþingi', current_process.priority.external_link, {:target => "_blank", :class => "extlink"}%>
+	<% end %>
+	<% unless process_documents.empty? %>
+	<div class="althingi_process_documents">
+		<h3><%=t :althingi_process_documents %></h3>
+		<table>
+			<thead>
+				<tr>
+					<th class="release_date">
+						<%=t :althingi_release_date %>
+					</th>
+					<th class="law_document">
+						<%=t :althingi_law_document %>
+					</th>
+					<th class="document_type">
+						<%=t :althingi_process_document_type %>
+					</th>
+					<th>
+						<%=t :althingi_presenter %>
+					</th>
+					<th>
+						<%=t :public_versions %>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% process_documents.each do |document| %>
+				<tr class="<%= cycle("even", "odd", :name => "zebra") -%>">
+					<td>
+						<%=document.external_date.strftime("%d.%m.%Y") %>
+					</td>
+					<td>
+						<%= link_to document.external_id, document.external_link,{:target=>"_blank"}%>
+					</td>
+					<td>
+						<%=document.external_type %>
+					</td>
+					<td>
+						<%=document.external_author %>
+					</td>
+					<td width="230px" align="center">
+						<%=document.get_process_document_link%>
+					</td>
+				</tr>
+			</tbody>
+		<% end %>
+		</table>
+		<% reset_cycle("zebra") %>
+	</div>
+	<% end %>
+	<% unless discussions.empty? %>
+		<div class="althingi_discussion">
+		<h3><%=t :althingi_discussion %></h3>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						<%=t :althingi_time_of_discussion %>
+					</th>
+					<th>
+						<%=t :althingi_date_of_discussion %>
+					</th>
+					<th>
+						<%=t :althingi_type_of_discussion %>
+					</th>
+					<th>
+						<%=t :althingi_meeting %>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% discussions.each do |discussion| %>
+			    <% cycle_class = cycle("even", "odd", :name => "zebra") -%>
+				<tr class="<%=cycle_class-%>">
+					<td>
+						<%=link_to "#{discussion.from_time.strftime('%H:%M')}-#{discussion.to_time.strftime('%H:%M')}", discussion.transcript_url,{:target => "_blank"}%> - 
+						<%=link_to t(:listen), "http://www.althingi.is"+discussion.listen_url, {:target => "_blank"} %>
+					</td>
+					<td>
+						<%=discussion.meeting_date.strftime("%d.%m.%Y") %>
+					</td>
+					<td>
+						<%=discussion.meeting_type %>
+					</td>
+					<td>
+						<%=link_to discussion.meeting_info, discussion.meeting_url,{:target => "_blank"}%>
+					</td>
+				</tr>
+				<% if discussion.process_speech_videos.has_any? %>
+				<tr class="<%=cycle_class-%>">
+					<td colspan=4>
+						<%= render :partial => "priority_processes/process_discussion_videos", :locals => {:discussion=> discussion} %>
+					</td>
+				</tr>
+				<% end #videos -%>
+			<% end #discussions -%>
+			</tbody>
+		</table>
+		<% reset_cycle("zebra") %>
+	</div>
+	<% end %>
+		
+</div>
+<% end %>
+<% end %>

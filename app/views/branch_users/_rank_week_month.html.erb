@@ -16,7 +16,7 @@
 <% else %>
 <td valign="top" style="padding-left: 2px;">
 	<% if user.branch_position_7days_change > 0 %>
-		<div class="position_up" title="<%= t('priorities.position.up.7days', :count => priority.position_7days_change.abs) %>"><%= user.branch_position_7days_change.abs %></div>
+		<div class="position_up" title="<%= t('priorities.position.up.7days', :count => user.position_7days_change.abs) %>"><%= user.branch_position_7days_change.abs %></div>
 	<% elsif user.branch_position_7days_change < 0 %>
 		<div class="position_down" title="<%= t('priorities.position.down.7days', :count => user.branch_position_7days_change.abs) %>"><%= user.branch_position_7days_change.abs %></div>
 	<% end %>

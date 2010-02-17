@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -22,8 +22,9 @@ Rails::Initializer.run do |config|
   config.gem 'hpricot', :version => '>= 0.6'
   config.gem 'liquid'
   config.gem 'dweinand-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com/'
-  config.gem 'facebooker', :version => '1.0.53'
+  config.gem 'facebooker', :version => '1.0.62'
   config.gem 'hoptoad_notifier'
+  config.gem "newrelic_rpm"
   #config.gem 'curb', :version => '0.1.4'
   
   # Settings in config/environments/* take precedence over those specified here.
@@ -64,7 +65,8 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
 
   config.i18n.load_path += Dir[File.join(RAILS_ROOT, 'config', 'locales', '**', '*.{rb,yml}')] 
-  config.i18n.default_locale = "en"
+  config.i18n.default_locale = :is
+  config.i18n.locale = :is
   
   NB_CONFIG = { 'api_exclude_fields' => [:ip_address, :user_agent, :referrer, :google_token, :google_crawled_at, :activation_code, :salt, :email, :first_name, :last_name, :crypted_password, :is_tagger, :partner_id, :ip_address, :user_agent, :remember_token, :remember_token_expires_at, :referrer, :zip, :birth_date, :city, :state, :is_comments_subscribed, :is_finished_subscribed, :is_followers_subscribed, :is_mergeable, :is_messages_subscribed, :is_newsletter_subscribed, :is_point_changes_subscribed, :is_votes_subscribed, :is_subscribed, :contacts_count, :contacts_invited_count, :contacts_members_count, :contacts_not_invited_count, :code, :rss_code, :address] }
 
@@ -87,37 +89,6 @@ AutoHtml.add_filter(:redcloth) do |text|
     RedCloth.new(text).to_html
   rescue
     text
-  end
-end
-
-class String
- def parameterize_full
-    str=self.to_s.gsub("Ð","D").gsub("Þ","Th").gsub("Æ","Ae").gsub("ð","d").gsub("þ","th").gsub("æ","ae")
-    accents = {
-      ['á','à','â','ä','ã'] => 'a',
-      ['Ã','Ä','Â','À','Á'] => 'A',
-      ['é','è','ê','ë'] => 'e',
-      ['Ë','É','È','Ê'] => 'E',
-      ['í','ì','î','ï'] => 'i',
-      ['Í','Î','Ì','Ï'] => 'I',
-      ['ó','ò','ô','ö','õ'] => 'o',
-      ['Õ','Ö','Ô','Ò','Ó'] => 'O',
-      ['ú','ù','û','ü'] => 'u',
-      ['Ú','Û','Ù','Ü'] => 'U',
-      ['Ý'] => 'Y',
-      ['ý'] => 'y',
-      ['ç'] => 'c', ['Ç'] => 'C',
-      ['ñ'] => 'n', ['Ñ'] => 'N'
-    }
-    accents.each do |ac,rep|
-      ac.each do |s|
-        str = str.gsub(s, rep)
-      end
-    end
-    str = str.gsub(/[^a-zA-Z0-9 ]/,"")
-    str = str.gsub(/[ ]+/," ")
-    str = str.gsub(/ /,"-")
-    str = str.downcase
   end
 end
 

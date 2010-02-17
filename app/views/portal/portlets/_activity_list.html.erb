@@ -1,0 +1,13 @@
+<% if not activities %>
+	<%= t('activities.empty')%>
+<% else %>
+<div id="activities">
+<% for activity in activities %>
+	<% if ['news.your.activity','news.your.capital','news.your.changes'].include?(portlet.portlet_template.name) %>
+		<%= render :partial => "activities/show", :locals => {:activity => activity, :suffix => "_nouser"} %>
+	<% else %>
+		<%= render :partial => "activities/show", :locals => {:activity => activity, :suffix => ""} %>
+	<% end %>
+<% end %>
+</div>
+<% end %>

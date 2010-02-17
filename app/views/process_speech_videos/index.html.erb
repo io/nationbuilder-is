@@ -1,0 +1,34 @@
+<h1>Listing process_speech_videos</h1>
+
+<table>
+  <tr>
+    <th>Process discussion</th>
+    <th>Title</th>
+    <th>To time</th>
+    <th>From time</th>
+    <th>Parent</th>
+    <th>In processing</th>
+    <th>Published</th>
+    <th>Process speech master video</th>
+  </tr>
+
+<% for process_speech_video in @process_speech_videos %>
+  <tr>
+    <td><%=h process_speech_video.process_discussion_id %></td>
+    <td><%=h process_speech_video.title %></td>
+    <td><%=h process_speech_video.to_time %></td>
+    <td><%=h process_speech_video.from_time %></td>
+    <td><%=h process_speech_video.parent_id %></td>
+    <td><%=h process_speech_video.in_processing %></td>
+    <td><%=h process_speech_video.published %></td>
+    <td><%=h process_speech_video.process_speech_master_video_id %></td>
+    <td><%= link_to 'Show', process_speech_video %></td>
+    <td><%= link_to 'Edit', edit_process_speech_video_path(process_speech_video) %></td>
+    <td><%= link_to 'Destroy', process_speech_video, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New process_speech_video', new_process_speech_video_path %>

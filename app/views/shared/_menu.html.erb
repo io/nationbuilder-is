@@ -23,7 +23,7 @@
 <div id="nav">
 <div id="nav<%= nav %>">	
 
-	<% if current_government.has_fav_icon? %>
+	<% if false and current_government.has_fav_icon? %>
 		<table border="0" cellspacing="0" cellpadding="0" width="100%">
 			<tr><td valign="middle" style="padding: 0px 0px 0px 10px;" align="left">
 				<a href="/"><%= image_tag current_government.fav_icon.url(:icon_16), :border => 0 %></a>
@@ -32,12 +32,15 @@
 
 	<ul id="menu">
 		<% if current_government.is_tags? %>
+		<li class="tab0">
+			<span class="tab_header"><%= link_to "Heim", :controller => "portal" %></span>
+		</li>
 		<li class="tab1">
 			<span class="tab_header"><%= link_to current_government.tags_name.pluralize.titleize, :controller => "issues" %></span>
 		</li>
 		<% end %>
 		<li class="tab2 mega">
-			<span class="tab_header"><%= link_to t('menu.priorities.name'), :controller => "priorities", :action => current_government.homepage %></span>
+			<span class="tab_header"><%= link_to t('menu.priorities.name'), :controller => "priorities", :action => current_government.homepage.index("/") ? "top" : current_government.homepage %></span>
 			<div class="tab_body">
 				<% if logged_in? %>
 					<div class="tab_subhead">
@@ -134,7 +137,7 @@
 				</div>
 			
 				<div class="tab_sublinks">
-						<%= t('menu.briefing.research.needed', :points_name => link_to(t('points.name'), :controller => "briefing", :action => "documents"), :documents_name => link_to(t('document.name'), :controller => "briefing", :action => "points")) %><br/>
+						<%= t('menu.briefing.research.needed', :points_name => link_to(t('menu.documents.name').downcase, :controller => "briefing", :action => "documents"), :documents_name => link_to(t('points.name'), :controller => "briefing", :action => "points")) %><br/>
 					<% if current_government.contributors_count > 0 %>
 						<%= link_to t('menu.briefing.research.contributors', :count => number_with_delimiter(current_government.contributors_count)), :controller => "briefing", :action => "contributors" %>
 					<% end %>						

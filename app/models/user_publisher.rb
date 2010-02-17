@@ -11,9 +11,9 @@ class UserPublisher < Facebooker::Rails::Publisher
   # facebook_templates table that is created when you create your first publisher
   
   def endorsement_template
-    one_line_story_template "{*actor*} endorsed <a href='{*priority_url*}'>{*priority_name*}</a> at priority {*position*} on <a href='{*government_url*}'>{*government_name*}</a>"
-    short_story_template "{*actor*} endorsed <a href='{*priority_url*}'>{*priority_name*}</a> at priority {*position*} on <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "priority")
-    action_links action_link("Learn more","{*priority_url*}")
+    one_line_story_template "{*actor*} studdi <a href='{*priority_url*}'>{*priority_name*}</a> í mikilvægisröð {*position*} á <a href='{*government_url*}'>{*government_name*}</a>"
+    short_story_template "{*actor*} studdi <a href='{*priority_url*}'>{*priority_name*}</a> í mikilvægisröð {*position*} á <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "priority")
+    action_links action_link("Skoða betur","{*priority_url*}")
   end
 
   # To send a registered template, you need to create a method to set the data
@@ -26,9 +26,9 @@ class UserPublisher < Facebooker::Rails::Publisher
   end
   
   def opposition_template
-    one_line_story_template "{*actor*} opposed <a href='{*priority_url*}'>{*priority_name*}</a> at priority {*position*} on <a href='{*government_url*}'>{*government_name*}</a>"
-    short_story_template "{*actor*} opposed <a href='{*priority_url*}'>{*priority_name*}</a> at priority {*position*} on <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "priority")
-    action_links action_link("Learn more","{*priority_url*}")
+    one_line_story_template "{*actor*} er á móti <a href='{*priority_url*}'>{*priority_name*}</a> í mikilvægisröð {*position*} á <a href='{*government_url*}'>{*government_name*}</a>"
+    short_story_template "{*actor*} er á móti <a href='{*priority_url*}'>{*priority_name*}</a> í mikilvægisröð {*position*} á <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "priority")
+    action_links action_link("Skoða betur","{*priority_url*}")
   end
 
   # To send a registered template, you need to create a method to set the data
@@ -41,10 +41,10 @@ class UserPublisher < Facebooker::Rails::Publisher
   end  
   
   def comment_template
-    one_line_story_template "{*actor*} <a href='{*comment_url*}'>commented</a> on <a href='{*object_url*}'>{*object_name*}</a> at <a href='{*government_url*}'>{*government_name*}</a>"
-    short_story_template "{*actor*} <a href='{*comment_url*}'>commented</a> on <a href='{*object_url*}'>{*object_name*}</a> at <a href='{*government_url*}'>{*government_name*}</a>", "{*short_comment_body*}"
-    full_story_template "{*actor*} <a href='{*comment_url*}'>commented</a> on <a href='{*object_url*}'>{*object_name*}</a> at <a href='{*government_url*}'>{*government_name*}</a>", "{*comment_body*}"  
-    action_links action_link("Reply","{*comment_url*}")      
+    one_line_story_template "{*actor*} <a href='{*comment_url*}'>skrifaði athugasemd</a> við <a href='{*object_url*}'>{*object_name*}</a> á <a href='{*government_url*}'>{*government_name*}</a>"
+    short_story_template "{*actor*} <a href='{*comment_url*}'>skrifaði athugasemd</a> við <a href='{*object_url*}'>{*object_name*}</a> á <a href='{*government_url*}'>{*government_name*}</a>", "{*short_comment_body*}"
+    full_story_template "{*actor*} <a href='{*comment_url*}'>skrifaði athugasemd</a> við <a href='{*object_url*}'>{*object_name*}</a> á <a href='{*government_url*}'>{*government_name*}</a>", "{*comment_body*}"  
+    action_links action_link("Svara","{*comment_url*}")      
   end
   
   def comment(facebook_session, comment, activity)
@@ -71,9 +71,9 @@ class UserPublisher < Facebooker::Rails::Publisher
   end
 
   def point_template
-    one_line_story_template "{*actor*} added a <a href='{*point_url*}'>talking point</a> to <a href='{*priority_url*}'>{*priority_name*}</a> at <a href='{*government_url*}'>{*government_name*}</a>"
-    short_story_template "{*actor*} added a <a href='{*point_url*}'>talking point</a> to <a href='{*priority_url*}'>{*priority_name*}</a> at <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "title_and_body")
-    action_links action_link("Learn more","{*point_url*}")      
+    one_line_story_template "{*actor*} bætti við <a href='{*point_url*}'>rökum</a> við <a href='{*priority_url*}'>{*priority_name*}</a> á <a href='{*government_url*}'>{*government_name*}</a>"
+    short_story_template "{*actor*} bætti við <a href='{*point_url*}'>rökum</a> við <a href='{*priority_url*}'>{*priority_name*}</a> á <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "title_and_body")
+    action_links action_link("Skoða betur","{*point_url*}")      
   end 
   
   def point(facebook_session, point, priority)
@@ -84,9 +84,9 @@ class UserPublisher < Facebooker::Rails::Publisher
   end
   
   def document_template
-    one_line_story_template "{*actor*} added a <a href='{*document_url*}'>document</a> to <a href='{*priority_url*}'>{*priority_name*}</a> at <a href='{*government_url*}'>{*government_name*}</a>"
-    short_story_template "{*actor*} added a <a href='{*document_url*}'>document</a> to <a href='{*priority_url*}'>{*priority_name*}</a> at <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "title_and_body")
-    action_links action_link("Learn more","{*document_url*}")  
+    one_line_story_template "{*actor*} bætti við <a href='{*document_url*}'>skjali</a> to <a href='{*priority_url*}'>{*priority_name*}</a> á <a href='{*government_url*}'>{*government_name*}</a>"
+    short_story_template "{*actor*} bætti við <a href='{*document_url*}'>skjali</a> to <a href='{*priority_url*}'>{*priority_name*}</a> á <a href='{*government_url*}'>{*government_name*}</a>", render(:partial => "title_and_body")
+    action_links action_link("Skoða betur","{*document_url*}")  
   end
   
   def document(facebook_session, document, priority)

@@ -1,4 +1,19 @@
 en:
+    issues:
+        name: "Tags"
+        list:
+            name: "Tag list" 
+        cloud:
+            name: "Tag cloud" 
+    more: "More"
+    comments:
+        add: "Add"
+        new: "Add"
+        permalink: "Permalink"
+        full:
+            show: "Show"
+        full:
+            hide: "Hide"
     unch: "UNCH"
     nochange: "no change"
     buried: "delisted"
@@ -763,13 +778,16 @@ en:
         unread: "unread"
         previously_read: "Messages previously read:"
     network:
-        influential: 
+        name: "Network"
+        influential:
+            name: "The most influential people"
             title: "Meet the most influential people at {{government_name}}"
             intro: "The most influential rankings are based on the amount of {{currency_name}}<span class='pc'>{{currency_short_name}}</span> someone has earned.
             <br/>Learn more about<span class='pc'>{{currency_short_name}}</span> in the <a href='/about/faq#pc'>FAQ</a>."
         talkative: 
             title: "Most talkative at {{government_name}}"
         ambassadors: 
+            name: "Ambassadors"
             title: "Ambassadors at {{government_name}}"
             intro: "Ambassadors are people who recruit others to join {{government_name}}"
             loggedin: "You can be an ambassador too and earn<span class='pc'>5{{currency_short_name}}</span> for each person you recruit.  Get started by simply <a href='{{import_url}}'>importing your Google, Yahoo, Windows Live, or Facebook contacts</a>."
@@ -777,6 +795,7 @@ en:
             title: "Twitterers at {{government_name}}"
             intro: "If you'd like to be added, click this button and follow the Twitter screen to authorize {{government_name}}/NationBuilder."
         newest: 
+            name: "New members"
             title: "New members at {{government_name}}"
         partners: 
             title: "Meet our partners"
@@ -794,21 +813,26 @@ en:
             one: "1 person in your network"
             other: "{{count}} people in your network"
     news:
+        name: "News"
         discussions:
             name: "Active discussions"
             title: "What everyone is discussing at {{government_name}}"
         comments:
             title: "Latest comments at {{government_name}}"
         points:
+            name: "Latest points"
             title: "Latest activity in the {{briefing_name}} at {{government_name}}"
         activities:
+            name: "Latest activity"
             title: "Everything happening at {{government_name}}"
         obama:
             title: "What {{official_user_name}} is doing at {{government_name}}"
         capital:
+            name: "Latest political capital activity"
             title: "{{currency_name}} at {{government_name}}"
         changes:
             title: "Acquisition proposals"
+            name: "Acquisition proposals"
             voting:
                 title: "Voting results on acquisition proposals"
             activity:
@@ -1004,7 +1028,7 @@ en:
             website:
                 label: "Include a website source link"
             position:
-                label: "Is this talking point {{support_radio}} in support {{neutral_radio}} neutral or {{oppose_radio}} in opposition to {{priority_name}}?"    
+                label: "Is this talking point {{support_radio}} in support or {{oppose_radio}} in opposition to {{priority_name}}?"    
             name:
                 label: "Summarize your talking point in <span class='small'>60 characters</span>"
             other_priority_name:
@@ -1030,6 +1054,19 @@ en:
                 title: "Revise {{point_name}}"
                 success: "Revised {{point_name}}"
             destroy: "Deleted revision of {{point_name}}"
+        top_points:
+            best_points_for_endorse: "Best points for endorse"
+            best_points_for_oppose: "Best points for oppose"
+            newest_points_for_endorse: "Newest points for endorse"
+            newest_points_for_oppose: "Newest points for oppose"
+            all_best_points_for_endorse: "All points for endorse"
+            all_best_points_for_oppose: "All points for oppose"
+            all_newest_points_for_endorse: "All points for endorse"
+            all_newest_points_for_oppose: "All points for oppose"
+            add_point_for_endorse: "Add your point for endorse"
+            add_point_for_oppose: "Add your point for oppose"
+            new_point_short: "New point"
+            all_best_points: "All best points"
     priorities:
         name: "priorities"
         deleted: "That priority was deleted"

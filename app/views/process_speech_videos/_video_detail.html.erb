@@ -1,0 +1,24 @@
+<table width="100%">
+	<td>
+		<table width="100%">
+			<tr>
+				<td align="left">
+		 	      <a href="http://www.facebook.com/share.php?u=http://<%=request.host.downcase%>/process_speech_videos/<%=process_speech_video.id%>" onclick="return fbs_click('http://<%=request.host.downcase%>/process_speech_videos/<%=process_speech_video.id%>')" target="_blank" class="fb_share_link"><%=t :share_on_facebook %></a>
+				</td>
+				<td align="right">
+			      <%= render :partial => "ratings/rate_smaller_comments", :locals => { :asset => process_speech_video } %>		
+				</td>
+			</tr>
+		</table>
+    </td>
+	</tr>
+	<tr>
+    <td align="center">
+    	<br>
+        <%=t :embed_code %>
+        <br>
+        <textarea id="textarea" style="height:30px;width:100%;color:#999999"><p><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="640" height="400"><param name="movie" value="http://<%=request.host.downcase%>/swf/flowplayer-3.0.3.swf" /><param name="allowfullscreen" value="true" /><param name="flashvars" value='config={"clip":{"url":"http://<%=request.host.downcase%><%=process_speech_video.video_share_url%>"},"canvas":{"backgroundColor":"#112233"}}}}' /><embed type="application/x-shockwave-flash" width="640" height="400" allowfullscreen="true" src="http://<%=request.host.downcase%>/swf/flowplayer-3.0.3.swf" flashvars='config={"clip":{"url":"http://<%=request.host.downcase%><%=process_speech_video.video_share_url%>"},"canvas":{"backgroundColor":"#112233"}}}}'/></object><br><a href="http://<%=request.host.downcase%>/process_speech_videos/<%=process_speech_video.id%>" target="_blank"><%=t :click_here_to_see_this_speech_in_context%></a></p></textarea>
+    </td>
+	<td></td>
+	</tr>
+</table>

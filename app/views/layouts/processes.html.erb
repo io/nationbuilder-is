@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+
+    </head>
+    <body>
+        <small>
+            <%=t :alpha_version %>
+        </small>
+        <br>
+        <% if session[:user_id] %>
+        <h1><%=t :main_header %><%=t :for_user %><%=User.find(session[:user_id]).login %></h1>
+        <%else %>
+        <h1><%=t :main_header %></h1>
+        <%end %>
+        <hr><%=t :choice %>: <%= link_to "#{t :processes}", :controller=>"processes" %> | <% if session[:user_id] %>
+        <a href="/users/logout"><%=t :logout %></a> | 
+        <% else %>
+        <a href="/users/login"><%=t :login %></a> | 
+        <a href="/users/eid_login"><%=t :eid_login %></a> | 
+        <% end %>
+        <a href="/users/about_us"><%=t :about_us %></a>        
+        <hr>
+        <p style="color: green">
+            <%= flash[:notice] %>
+        </p>
+        <% unless session[:has_welcomed] %>
+        <p style="color: green">
+            <b><%= t :login_welcome %></b>
+        </p>
+        <% session[:has_welcomed] = true %>
+        <% end %>
+        <%= yield %>
+        <p>
+            <br>
+            <br>
+            <small>
+                <%= t :git_info %>
+                <br>
+                <%= link_to "http://github.com/rbjarnason/open-direct-democracy/tree/master","http://github.com/rbjarnason/open-direct-democracy/tree/master", {:target=>"_blank"} %>
+            </small>
+            <br>
+            <br>
+            <small>
+                <%= t :bugs_info %>
+                <br>
+                <%= link_to "http://rbjarnason.lighthouseapp.com/projects/23240-open-direct-democracy/overview","http://rbjarnason.lighthouseapp.com/projects/23240-open-direct-democracy/overview", {:target=>"_blank"} %>
+            </small>
+        </p>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-7086040-1");
+                pageTracker._trackPageview();
+            } 
+            catch (err) {
+            }
+        </script>
+    </body>
+</html>

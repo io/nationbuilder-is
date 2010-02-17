@@ -22,9 +22,9 @@ class Ad < ActiveRecord::Base
       errors.add("cost","is more " + Government.current.currency_name.downcase + " than you have.")
     end    
     errors.on("cost")
-    if priority.position < 26
-      errors.add(:base, "You can not purchase ads for priorities in the top 25 already.")
-    end
+#    if priority.position < 26
+#      errors.add(:base, "You can not purchase ads for priorities in the top 25 already.")
+#    end
     if priority.is_buried?
       errors.add(:base, "You can not purchase ads for priorities that have been buried.")
     end    

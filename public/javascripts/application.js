@@ -5,10 +5,10 @@ jQuery.noConflict();
 jQuery(document).ready(function() {
 	var isChrome = /Chrome/.test(navigator.userAgent);
 	if(!isChrome & jQuery.support.opacity) {
-		jQuery(".tab_header a, div.tab_body").corners(); 
+		//jQuery(".tab_header a, div.tab_body").corners(); 
 	}
-	jQuery("#priority_column, #intro, #buzz_box, #content_text, #notification_show, .bulletin_form").corners();
-	jQuery("#top_right_column, #toolbar").corners("bottom");
+	//jQuery("#priority_column, #intro, #buzz_box, #content_text, #notification_show, .bulletin_form").corners();
+	//jQuery("#top_right_column, #toolbar").corners("bottom");
 	
 	jQuery("abbr[class*=timeago]").timeago();	
 	jQuery(":input[type=textarea]").textCounting({lengthExceededClass: 'count_over'});

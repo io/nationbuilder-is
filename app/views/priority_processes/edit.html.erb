@@ -1,0 +1,24 @@
+<h1>Editing process</h1>
+
+<% form_for(@process) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :external_link %><br />
+    <%= f.text_field :external_link %>
+  </p>
+  <p>
+    <%= f.label :external_name %><br />
+    <%= f.text_field :external_name %>
+  </p>
+  <p>
+    <%= f.label :process_type_id %><br />
+    <%= f.text_field :process_type_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @priority_process %> |
+<%= link_to 'Back', processes_path %>

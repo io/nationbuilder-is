@@ -1,0 +1,195 @@
+a.participateLink:link { color: #348017; }
+a.participateLink:visited { color: #348017; }
+a.participateLink:hover { color: #348017; }
+
+#participateLinkCursor {
+	cursor: pointer; cursor: hand;
+}
+
+.about_secret_vote_text {
+  font-size: 9px;  
+  color: #999999;
+}
+
+.disabled_secret_vote {
+  color: #999999;
+}
+
+.participateLink {
+	text-decoration: underline;
+	color: #348017;
+}
+
+.participateLink table {
+	padding: 50px;
+}
+
+a.participateLinkLarger:link { color: #348017; }
+a.participateLinkLarger:visited { color: #348017; }
+a.participateLinkLarger:hover { color: #348017; }
+
+
+.participateLinkLarger {
+	text-decoration: underline;
+	color: #348017;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.participateLinkLarger table {
+	padding: 50px;
+}
+
+.ratingsTinyText {
+	text-decoration: underline;
+	color: #348017;
+	font-size: 9px;
+}
+
+/* styles for the star rater */
+.star-rating{
+list-style:none;
+margin: 0;
+padding:0;
+width: 150px;
+height: 30px;
+position: relative;
+background: url(/images/star_rating_2.gif) top left repeat-x;
+}
+.star-rating li{
+padding:0;
+margin:0;
+float: left;
+}
+        
+.star-rating li a{
+display:block;
+width:30px;
+height: 30px;
+text-decoration: none;
+text-indent: -9000px;
+z-index: 20;
+position: absolute;
+padding: 0px;
+}
+.star-rating li a:hover{
+background: url(/images/star_rating_2.gif) left center;
+z-index: 2;
+left: 0px;
+border:none;
+}
+.star-rating a.one-star{
+left: 0px;
+}
+.star-rating a.one-star:hover{
+width:30px;
+}
+.star-rating a.two-stars{
+left:30px;
+}
+.star-rating a.two-stars:hover{
+width: 60px;
+}
+.star-rating a.three-stars{
+left: 60px;
+}
+.star-rating a.three-stars:hover{
+width: 90px;
+}
+.star-rating a.four-stars{
+left: 90px;
+}
+.star-rating a.four-stars:hover{
+width: 120px;
+}
+.star-rating a.five-stars{
+left: 120px;
+}
+.star-rating a.five-stars:hover{
+width: 150px;
+}
+.star-rating li.current-rating{
+background: url(/images/star_rating_2.gif) left bottom;
+position: absolute;
+height: 30px;
+display: block;
+text-indent: -9000px;
+z-index: 1;
+}
+
+
+/* styles for the star rater */
+.star-rating_smaller{
+list-style:none;
+margin: 0;
+padding:0;
+width: 75px;
+height: 15px;
+position: relative;
+background: url(/images/star_rating_2_smaller.gif) top left repeat-x;
+}
+.star-rating_smaller li{
+padding:0;
+margin:0;
+float: left;
+}
+.star-rating_smaller li a{
+display:block;
+width:15px;
+height: 15px;
+text-decoration: none;
+text-indent: -9000px;
+z-index: 20;
+position: absolute;
+padding: 0px;
+}
+.star-rating_smaller li a:hover{
+background: url(/images/star_rating_2_smaller.gif) left center;
+z-index: 2;
+left: 0px;
+border:none;
+}
+.star-rating_smaller a.one-star{
+left: 0px;
+}
+.star-rating_smaller a.one-star:hover{
+width:15px;
+}
+.star-rating_smaller a.two-stars{
+left:15px;
+}
+.star-rating_smaller a.two-stars:hover{
+width: 30px;
+}
+.star-rating_smaller a.three-stars{
+left: 30px;
+}
+.star-rating_smaller a.three-stars:hover{
+width: 45px;
+}
+.star-rating_smaller a.four-stars{
+left: 45px;
+}
+.star-rating_smaller a.four-stars:hover{
+width: 60px;
+}
+.star-rating_smaller a.five-stars{
+left: 60px;
+}
+.star-rating_smaller a.five-stars:hover{
+width: 75px;
+}
+.star-rating_smaller li.current-rating{
+background: url(/images/star_rating_2_smaller.gif) left bottom;
+position: absolute;
+height: 15px;
+display: block;
+text-indent: -9000px;
+z-index: 1;
+}
+
+html .fb_share_link {
+    padding: 2px 0 0 20px;
+    height: 16px;
+    background: url(/images/facebook_share_icon.gif?8:26981) no-repeat top left;
+}

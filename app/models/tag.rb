@@ -12,6 +12,8 @@ class Tag < ActiveRecord::Base
   named_scope :most_webpages, :conditions => "tags.webpages_count > 0", :order => "tags.webpages_count desc"  
   named_scope :most_feeds, :conditions => "tags.feeds_count > 0", :order => "tags.feeds_count desc"   
 
+  named_scope :item_limit, lambda{|limit| {:limit=>limit}}
+
   has_many :activities, :dependent => :destroy
   has_many :taggings
   has_many :priorities, :through => :taggings, :source => :priority, :conditions => "taggings.taggable_type = 'Priority'"
@@ -46,8 +48,8 @@ class Tag < ActiveRecord::Base
   
   def update_slug
     self.slug = self.to_url
-    self.title = self.name.titleize unless self.attribute_present?("title")
-  end  
+    self.title = self.name unless self.attribute_present?("title")
+  end
   
   def to_url
     "#{name.parameterize_full[0..60]}"

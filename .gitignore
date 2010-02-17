@@ -10,3 +10,14 @@ config/facebooker.yml
 config/s3.yml
 solr/index
 solr/*.pid
+.tmp*
+*.sql
+public/production/*
+public/development/*
+public/development
+public/production
+workers/video/config/worker.yml
+private/*
+*.log
+*.output
+*.pid

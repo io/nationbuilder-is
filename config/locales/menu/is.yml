@@ -2,8 +2,8 @@ is:
     menu:
         logout: "Útskráning"
         about:
-            name: "Hugmyndaráðuneytið"
-            site: "Um Hugmyndaráðuneytið"
+            name: "Skuggaþing"
+            site: "Um Skuggaþing"
             faq: "Spurt & Svarað"
             rules: "Reglur fyrir vefinn"
             privacy: "Reglur um friðhelgi"
@@ -28,13 +28,13 @@ is:
         briefing:
             name: "Upplýsingastöð"
             yours: "Þitt"
-            your_priorities: "Þín forgangsmál"
+            your_priorities: "Þín mál"
             all: "Allt"
             revised: "Yfirfarið"
             helpful_to: "Gagnlegt til að:"
             add_point: 
                 name: "Bæta við rökum"
-                title: "Geturðu lagt fram sannfærandi rök með eða á móti þessu forgangsmáli í færri en 500 stöfum"
+                title: "Geturðu lagt fram sannfærandi rök með eða á móti þessu máli í færri en 500 stöfum"
             add_document: 
                 name: "Bæta við skjali"
                 title: "Skjöl gera þér kleift að útvíkka hugmyndirnar þínar og vinna með öðrum á svipaðan máta og wiki síður bjóða"
@@ -43,10 +43,10 @@ is:
             all_documents: "Öll skjöl"
             all_activity: "Öll virkni"
             research:
-                name: "Leggja til við rannsókn"
-                needed: "Forgangsatriði vantar {{points_name}} eða {{documents_name}}"
-                points_needed: "Forgangsatriði verða að innihalda rök"
-                documents_needed: "Forgangsatriði verða að innihalda skjöl"
+                name: "Órökstudd mál"
+                needed: "Mál vantar {{points_name}} eða {{documents_name}}"
+                points_needed: "Mál verða að innihalda rök"
+                documents_needed: "Mál verða að innihalda skjöl"
                 contributors:
                     name: "Meðhöfundar"
                     one: "Hitta meðhöfund"
@@ -69,9 +69,9 @@ is:
                 one: "1 skrá"
                 other: "{{count}} skrár"
             priorities:
-                name: "Forgangsatriði"
-                one: "1 forgangsatriði"
-                other: "{{count}} forgangsatriði"
+                name: "Mál"
+                one: "1 mál"
+                other: "{{count}} mál"
             points:
                 name: "Rök"
                 one: "1 rök"
@@ -157,51 +157,51 @@ is:
             email: "Tölvupóstlisti"
             logo: "Merki"
         priorities:
-            name: "Forgangsatriði"
-            consider: "Forgangsatriði til athugunar"
-            quiz: "Forgangskönnun"
+            name: "Mál"
+            consider: "Mál til athugunar"
+            quiz: "Könnun á máli"
             action: "Aðgerð"
             add_ad: 
-                name: "Kaupa auglýsingu fyrir þetta forgangsatriði"
-                title: "Verja hluta af {{currency_name}} til að koma þessu forgangsatriði fremst í röðina til íhugunar fyrir alla."
+                name: "Kaupa auglýsingu fyrir þetta mál"
+                title: "Verja hluta af {{currency_name}} til að koma þessu máli fremst í röðina til íhugunar fyrir alla."
             add_proposal:
                 name: "Leggja til yfirtöku"
-                title: "Er annað forgangsmál sem ætti að sameina þessu"
+                title: "Er annað mál sem ætti að sameina þessu"
             edit:
-                name: "Breyta þessu forgangsatriði"
-                title: "Breyta þessu forgangsatriði"
+                name: "Breyta þessu máli"
+                title: "Breyta þessu máli"
             bury:
                 name: "Fjarlægja úr uppröðun"
-                title: "Fjarlægja þetta forgangsatriði úr þessari uppröðun"
-                confirm: "Þú ert við það að aflista þetta forgangsatriði úr uppröðunarlistanum: {{priority_name}}. Einungis gera það fyrir atriði sem eru óheiðarleg, misbjóðandi eða fáránleg"
+                title: "Fjarlægja þetta mál úr þessari uppröðun"
+                confirm: "Þú ert við það að aflista þetta mál úr uppröðunarlistanum: {{priority_name}}. Einungis gera það fyrir atriði sem eru óheiðarleg, misbjóðandi eða fáránleg"
             delete:
-                name: "Eyða þessu forgangsatriði"
-                title: "Eða þessu forgangsatriði varanlega"
+                name: "Eyða þessu máli"
+                title: "Eyða þessu máli varanlega"
                 confirm: "Ertu viss að þú viljir eyða {{priority_name}} varanlega?"
             successful:
                 name: "Merkja þetta árangursríkt"
-                title: "Merkja þetta forgangsatriði klárað og árangursríkt"
-                confirm: "Þú ert að merkja eftirfarandi forgangsatriði klárað og árangursríkt: {{priority_name}}.  Vinsamlegast sýndu biðlund, það getur tekið smá stund að afgreiða þessa beiðni ef forgangsatriðið hefur fjölda meðmæla"
+                title: "Merkja þetta mál klárað og árangursríkt"
+                confirm: "Þú ert að merkja eftirfarandi mál klárað og árangursríkt: {{priority_name}}.  Vinsamlegast sýndu biðlund, það getur tekið smá stund að afgreiða þessa beiðni ef málið hefur fjölda meðmæla"
             compromised:
                 name: "Merkja að þessu sé ógnað"
                 title: "Merkja þetta klárað en ógnað"
-                confirm: "Þú ert að merkja eftirfarandi forgangsatriði klárað en ógnað: {{priority_name}}.  Vinsamlegast sýndu biðlund, það getur tekið smá stund að afgreiða þessa beiðni ef forgangsatriðið hefur fjölda meðmæla"
+                confirm: "Þú ert að merkja eftirfarandi mál klárað en ógnað: {{priority_name}}.  Vinsamlegast sýndu biðlund, það getur tekið smá stund að afgreiða þessa beiðni ef málið hefur fjölda meðmæla"
             intheworks:
                 name: "Merkja í vinnslu"
-                title: "Merkja að þetta forgangsatriði sé í vinnslu"
-                confirm: "Þú ert að merkja við þetta forgangsatriði að það sé í vinnslu: {{priority_name}}."
+                title: "Merkja að þetta mál sé í vinnslu"
+                confirm: "Þú ert að merkja við þetta mál að það sé í vinnslu: {{priority_name}}."
             failed:
                 name: "Merkja sem mistök"
-                title: "Merkja þetta forgangatriði sem lokið og misheppnað"
-                confirm: "Merkja þetta forgangatriði sem lokið og misheppnað: {{priority_name}}. Vinsamlegast sýnið biðlund, vinnslan gæti tekið eina eða tvær mínútur ef þetta forgangsatriði hefur marga meðmælendur"
+                title: "Merkja þetta mál sem lokið og misheppnað"
+                confirm: "Merkja þetta mál sem lokið og misheppnað: {{priority_name}}. Vinsamlegast sýnið biðlund, vinnslan gæti tekið eina eða tvær mínútur ef þetta mál hefur marga meðmælendur"
             flag:
                 name: "Merkja til endurskoðunar"
-                title: "Er ástæða til að umsjónarmaður síðunnar myndi líta á þetta forgangsatriði? Einnig skal setja á fréttaveitu ef það er ekki ljóst hvað vandamálið er"
-                confirm: "Þú ert um það bil að merkja þetta forgangsatriði til endurskoðunar hjá umsjónarmanni síðunnar. Ef það er ekki ljóst afhverju þú ert að merkja það, vinsamlegast setjið á fréttaveituna til að það sé hægt að gera viðeigandi ráðstafanir."
+                title: "Er ástæða til að umsjónarmaður síðunnar myndi líta á þetta mál? Einnig skal setja á fréttaveitu ef það er ekki ljóst hvað vandamálið er"
+                confirm: "Þú ert um það bil að merkja þetta mál til endurskoðunar hjá umsjónarmanni síðunnar. Ef það er ekki ljóst afhverju þú ert að merkja það, vinsamlegast setjið á fréttaveituna til að það sé hægt að gera viðeigandi ráðstafanir."
             endorsers:
                 name: "Meðmælendur"
-                one: "1 meðmælandi"
-                other: "{{count}} meðmælendur"
+                one: "1 með"
+                other: "{{count}} með"
             opposers:
                 name: "Á móti"
                 one: "1 á móti"
@@ -211,7 +211,7 @@ is:
                 one: "1 óyfirlýst"
                 other: "{{count}} óyfirlýst"
             everyone:
-                name: "Forgangsatriði allra"
+                name: "Mál allra"
                 short: "Allir"
                 overview: "Yfirsýn"
                 top: "Efst"
@@ -223,26 +223,39 @@ is:
                 random: "Tilviljanakennt"
                 finished: "Lokið"
             network:
-                name: "Forgangsmál samskiptanetsins þíns"
+                name: "Mál samskiptanetsins þíns"
                 short: "Samskiptanetið þitt"
             yours: 
-                name: "Þín forgangsatriði"
+                name: "Þín mál"
                 short: "Þín"
                 active: "Virk"
-                top: "Hæst í einkunnagjöf"
-                lowest: "Lægst í einkunnagjöf"
-                ads: "Auglýsingar sem þú hefur keypt"
+                top: "Hæst einkun"
+                lowest: "Lægst einkun"
+                ads: "Auglýsingar sem þú keyptir"
                 finished: "Lokið"
-                created: "Forgangsatriði sem þú hefur búið til"
+                created: "Mál sem þú bjóst til"
             official:
-                name: "{{official_user_name}} forgangsatriði"
+                name: "{{official_user_name}} mál"
                 agenda_endorsed: "Mælt með"
                 agenda_not: "Ekki á dagskrá"
                 agenda_opposed: "Á móti"
             branch:
-                name: "{{branch_name}} forgangsatriði"
+                name: "{{branch_name}} mál"
+        processes:
+                name: "Þingferill"
+        process_documents:
+                name: "Þingskjöl"
+        process_discussions:
+                name: "Þingumræður"
         points:
             name: "Rök"
+        portal:
+            all: "Allt"
+            add_portlet: "Bæta við boxi á þessa síðu"
+            choose: "Veldu"
+            delete_portlet: "Eyða boxi"
+            delete_are_you_sure: "Ertu viss um að þú viljir eyða þessu boxi, þú getur alltaf bætt því við aftur?"
+            cancel: "Hætta við"
         settings:
             name: "Stillingar"
             account: "Þinn aðgangur"
@@ -284,22 +297,23 @@ is:
             reset_password:
                 name: "Endurstilla lykilorð"
         next_steps:
-            intro: "Það eru margir möguleikar í {{government_name}}. Svona byrjarðu:"
-            outro: "Þú getur tekið þátt hvenær sem er og hversu oft sem þú vilt. Við höfum opið allan sólarhringinn."
-            legislators: "Tengdu þín forgangsmál þinginu"
+            intro: "{{government_name}} býður upp á ýmsa möguleika:"
+            outro: ""
+            legislators: "Tengdu þín mál þinginu"
+            legislators: "Tengdu þín mál þinginu"
             branches: "Hvaða hópi áttu mest sameiginlegt með:"
-            people_you_know: "Finndu fólk sem þú þekkir"
-            facebook_friends: "Bjóddu Facebook vinum þínum"
-            invite: "Bjóddu fólki að gerast meðlimir"
-            picture: "Bættu inn mynd af þér"
-            bio: "Bættu við upplýsingum um þig"
-            points: "Skrifaðu rök fyrir forgangsmálin þín"
-            comments: "Tengdust umræðum um þín forgangsmál"
+            people_you_know: "Finndu vini þína"
+            facebook_friends: "Bjóddu Facebook vinum"
+            invite: "Bjóddu vinum að vera með"
+            picture: "Settu inn mynd af þér"
+            bio: "Settu inn upplýsingar um þig"
+            points: "Rökstyddu málin þín"
+            comments: "Skoðaðu umræður um þín mál"
         widgets:
             name: "Smáforrit fyrir síðuna þína"
             priorities: 
-                short: "Forgangsmál"
-                name: "Smáforrit fyrir forgangsmál"
+                short: "Mál"
+                name: "Smáforrit fyrir mál"
             points: 
                 short: "Rök"
                 name: "Smáforrit fyrir rök"

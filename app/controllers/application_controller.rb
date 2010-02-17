@@ -32,11 +32,13 @@ class ApplicationController < ActionController::Base
   before_filter :check_suspension, :unless => [:is_robot?]
   before_filter :update_loggedin_at, :unless => [:is_robot?]
 
+  filter_parameter_logging :password, :password_confirmation
+
   layout :get_layout
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
-  protect_from_forgery #:secret => 'd0451bc51967070c0872c2865d2651e1'
+  #protect_from_forgery #:secret => 'd0451bc51967070c0872c2865d2651e1'
 
   protected
   

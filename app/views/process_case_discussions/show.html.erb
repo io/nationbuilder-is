@@ -1,0 +1,58 @@
+<p>
+  <b>Sequence number:</b>
+  <%=h @process_discussions.sequence_number %>
+</p>
+
+<p>
+  <b>Stage sequence number:</b>
+  <%=h @process_discussions.stage_sequence_number %>
+</p>
+
+<p>
+  <b>Meeting date:</b>
+  <%=h @process_discussions.meeting_date %>
+</p>
+
+<p>
+  <b>External:</b>
+  <%=h @process_discussions.external_id %>
+</p>
+
+<p>
+  <b>External url:</b>
+  <%=h @process_discussions.external_url %>
+</p>
+
+<p>
+  <b>To time:</b>
+  <%=h @process_discussions.to_time %>
+</p>
+
+<p>
+  <b>From time:</b>
+  <%=h @process_discussions.from_time %>
+</p>
+
+<p>
+  <b>Transcript url:</b>
+  <%=h @process_discussions.transcript_url %>
+</p>
+
+<p>
+  <b>Listen url:</b>
+  <%=h @process_discussions.listen_url %>
+</p>
+
+<p>
+  <b>Meeting info:</b>
+  <%=h @process_discussions.meeting_info %>
+</p>
+
+<p>
+  <b>Meeting url:</b>
+  <%=h @process_discussions.meeting_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_process_discussions_path(@process_discussions) %> |
+<%= link_to 'Back', process_discussionss_path %>

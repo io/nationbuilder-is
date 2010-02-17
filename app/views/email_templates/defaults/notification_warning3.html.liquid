@@ -1,14 +1,15 @@
-Hello {{ recipient.first_name | capitalize }},
+Hæ {{ recipient.first_name | capitalize }},
 
-This is your third warning for violating the site rules.  You've lost 30% (or 3{{ government.currency_short_name }}, whichever is greater) of your {{ government.currency_name | downcase }}, and are on probation for a week.  Which means you cannot post anything on the site.
+Þetta er þriðja viðvörun til þín fyrir að brjóta reglur Skuggaþings. Þú hefur misst 30% (eða 3{{ government.currency_short_name }}, hvort sem er meira) af þínum {{ government.currency_name | downcase }}, og ert á skilorði í viku. Sem þýðir að þú getur ekkert sett inn á vefinn. 
 
-Here are more details on the rules: {{ recipient.root_url }}about/rules
+Skoðaðu reglurnar: {{ recipient.root_url }}about/rules
 
-One more time, and you will be banned from the site.
+Ef þú brýtur reglurnar einu sinni enn þá verður þú bannaður af vefnum.
 
-Here is the offending comment.   If you have any questions, you can contact {{ government.admin_name }} at {{ government.admin_email }}.
+Hér er athugasemdin sem orsakaði þetta bréf. Ef þú hefur einhverjar spurningar þá geturðu haft samband við {{ government.admin_name }} á netfangið {{ government.admin_email }}.
+
 
 "{{ notifiable.content }}"
 
 ---
-This is an automated notification from {{ government.name }} sent to {{ recipient.email }}.
+Þetta er sjálfvirk tilkynning {{ government.name }} send á {{ recipient.email }}.  

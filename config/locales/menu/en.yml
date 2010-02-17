@@ -241,8 +241,21 @@ en:
                 agenda_opposed: "Opposed"
             branch:
                 name: "{{branch_name}} priorities"
+        processes:
+                name: "Processes"
+        process_documents:
+                name: "Process Documents"
+        process_discussions:
+                name: "Process Discussions"
         points:
             name: "Talking points"
+        portal:
+            all: "All"
+            add_portlet: "Add portlet"
+            choose: "Choose an option"
+            delete_portlet: "Delete portlet"
+            delete_are_you_sure: "Are you sure you want to delete this Portlet?"
+            cancel: "Cancel"
         settings:
             name: "Settings"
             account: "Your account"

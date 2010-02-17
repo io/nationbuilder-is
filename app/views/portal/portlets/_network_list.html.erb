@@ -1,0 +1,31 @@
+<% cache(["portlets_network_influencial",I18n.locale], :expires_in => 5.minutes) do %>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td></td>
+		<td><span class="table_header"><%= t('rank') %></span></td>
+		<td style="padding-left: 3px;"><span class="table_header"><%= t('time.wk') %></span></td>
+		<td style="padding-left: 3px;"><span class="table_header"><%= t('time.mo') %></span></td>
+	</tr>
+<% if current_government.users_count < 100 %>
+  <% users = User.active.at_least_one_endorsement.by_capital.item_limit(portlet.portlet_template.item_limit) %>
+<% else %>
+  <% users = User.active.at_least_one_endorsement.by_ranking.item_limit(portlet.portlet_template.item_limit) %>
+<% end %>
+<% for user in users %>
+	<tr><td valign="top"></td>
+ 		<%= render :partial => "priorities/rank_week_month", :locals => {:priority => user } %>
+		<td valign="top" width="26" style="padding: 10px 5px 4px 7px;">
+			<%= render :partial => "users/pic", :locals => {:user => user}%>
+		</td><td style="padding: 7px 5px 4px 0px;" valign="top">
+			<%= link_to user.login, user %><span class="pc"><%= user.capitals_count%><%= current_government.currency_short_name %></span><% if user.followers_count > 0 %> <%= t('users.followers.name', :count => user.followers_count)%><% end %>
+			<% if user.has_top_priority? and user.top_endorsement.priority %>
+				<br/><%= t('endorsements.priority1') %>
+				<% if user.top_endorsement.is_down? %><span class="opposed"><%= t('oppose.ing')%></span><% end %>
+				<%= link_to user.top_endorsement.priority.name, user.top_endorsement.priority %>
+			<% end %>
+		</td>
+	</tr>
+<% end %>
+</table>				
+<%= link_to "#{t('more')}...", "/network/" %>
+<% end %>

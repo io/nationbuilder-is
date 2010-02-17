@@ -1,12 +1,14 @@
-Hello {{ recipient.first_name | capitalize }},
+Hæ {{ recipient.first_name | capitalize }},
 
-{{ sender.name }} commented on {{ notifiable.activity.name }}:
+{{ sender.name }} kom með athugasemd um {{ notifiable.activity.name }}:
 
 {{ notifiable.content }}
 
-Reply here: {{ notifiable.show_url }}
+Hér er svarað: {{ notifiable.show_url }}
 
-You can also stop following this discussion at that link.
+Þú getur líka hætt að fylgjast með þessari umræðu á {{ notifiable.show_url }}
+
 
 ---
-This is an automated notification from {{ government.name }} sent to {{ recipient.email }}.  If you do not wish to be notified of new comments on your activities, you can change your email settings here: {{ recipient.unsubscribe_url }}
+Þetta er sjálfvirk tilkynning {{ government.name }} send á {{ recipient.email }}.  
+Ef þú vilt ekki fá svona bréf, breyttu þá póststillingunum þínum hér: {{ recipient.unsubscribe_url }}

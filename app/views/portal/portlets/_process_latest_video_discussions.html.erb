@@ -1,0 +1,56 @@
+<% cache(["portlets_process_latest_video_discussions",I18n.locale], :expires_in => 15.minutes) do %>
+<% @latest_speech_discussions = ProcessSpeechMasterVideo.get_latest_twenty %>
+<% if @latest_speech_discussions.length > 0 %>
+<%= javascript_include_tag 'jquery.mousewheel' %>
+<%= javascript_include_tag 'jquery.scrollable-1.0.1.min' %>
+<%= stylesheet_link_tag 'vertical_video_speeches_scroller_large' %>
+<!-- navigator -->
+<div class="navi"></div>
+<!-- root element -->
+<a class="prev"></a>
+<div class="scrollable_videos_large vertical">
+    <div id="latest_video_discussion_thumbs">
+		<% @latest_speech_discussions.each do |process_discussion| %>
+        <div onclick="window.location = '/process_speech_videos/<%=process_discussion.process_speech_videos.get_first_published.id%>'">
+            <img src="<%=process_discussion.process_speech_videos.get_random_published.get_playlist_image_url("small")%>" />
+			<h3><%=latest_video_speech_title(process_discussion.process_speech_videos.get_random_published) %></h3>
+            <p>
+                <span><em><%=process_discussion.meeting_date.strftime("%d.%m.%Y") %>-<span><%=process_discussion.process_speech_videos.count %>
+                    <% if process_discussion.process_speech_videos.count==1 %>
+                    <%=t :speech %>
+                    <% else %>
+                    <%=t :speeches %>
+                    <% end %>
+                    </em>
+                </span>
+            </p>
+        </div>
+        <% end %>
+    </div>
+</div>
+<p>
+</p>
+<a class="next"></a>
+<script type="text/javascript">
+    jQuery.noConflict();
+    jQuery(function(){
+        jQuery("div.scrollable_videos_large").scrollable({
+            size: 2,
+			vertical: true,
+            items: '#latest_video_discussion_thumbs',
+            hoverClass: 'hover'
+        });
+    });
+</script>
+<table width="100%">
+    <tr align="left">
+        <td align="left" style="padding-left:45px;padding-top:7px;">
+            <% form_tag('/process_speech_videos/search') do -%>
+            <b><%=label_tag t(:search_by_person) %></b>
+            <%=text_field_tag 'search_query' %><%= submit_tag t(:search) -%>
+            <% end %>
+        </td>
+    </tr>
+</table>
+<% end %>
+<% end %>

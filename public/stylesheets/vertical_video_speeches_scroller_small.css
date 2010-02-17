@@ -1,0 +1,135 @@
+/* single item */ 
+
+/* root element for the whole scrollable setup */
+div.scrollable_small {  
+	position:relative;
+	overflow:hidden;
+	width: 487px; 
+	height:62px;
+}
+
+#latest_videos_thumbs h3 {
+	color: #999;
+}
+
+/* 
+	root element for scrollable items. It is 
+	absolutely positioned with large width. 
+*/
+#latest_videos_thumbs {	
+	position:absolute;
+	width:20000em;	
+	clear:both;
+}
+
+/* custom positioning for navigational links */
+a.prev, a.next {
+	margin-top:30px;	
+}
+
+
+#latest_videos_thumbs div { 
+    float:left; 
+    width:80px; 
+    height:50px; 
+    background:#333 url(/images/h140.png) repeat-x 0 100px; 
+    color:#fff; 
+    border-left:1px solid #333; 
+    cursor:pointer;
+	font-size: 10px;
+} 
+
+#latest_videos_thumbs h3 { 
+	font-size: 10px;
+	font-weight: bold;
+} 
+
+#latest_videos_thumbs span {
+	text-align: center;
+	}
+
+#latest_videos_thumbs img { 
+} 
+
+#latest_videos_thumbs p { 
+	font-size: 10px;
+} 
+
+
+ 
+/* style when mouse is over the item */ 
+#latest_videos_thumbs div.hover { 
+    background-color:#444;     
+} 
+ 
+/* style when element is active (clicked) */ 
+#latest_videos_thumbs div.active { 
+    background-color:#066; 
+    cursor:default; 
+}
+
+/* this makes it possible to add next button beside scrollable */
+div.scrollable_small {
+	float:left;		
+}
+
+/* prev, next, prevPage and nextPage buttons */
+a.prev, a.next, a.prevPage, a.nextPage {
+	display:block;
+	width:18px;
+	height:18px;
+	background:url(/images/scroller/left.png) no-repeat;
+	float:left;
+	margin:5px 5px;
+	cursor:pointer;
+}
+
+/* mouseover state */
+a.prev:hover, a.next:hover, a.prevPage:hover, a.nextPage:hover {
+	background-position:0px -18px;		
+}
+
+/* disabled navigational button */
+a.disabled {
+	visibility:hidden !important;		
+}
+
+/* next button uses another background image */
+a.next, a.nextPage {
+	background-image:url(/images/scroller/right.png);
+	clear:right;	
+}
+
+
+
+/*********** navigator ***********/
+
+
+/* position and dimensions of the navigator */
+div.navi {
+	margin-left:30px;
+	width:420px;
+	height:20px;
+}
+
+
+/* items inside navigator */
+div.navi a {
+	width:8px;
+	height:8px;
+	float:left;
+	margin:3px;
+	background:url(/images/scroller/navigator.png) 0 0 no-repeat;
+	cursor:pointer;	
+}
+
+/* mouseover state */
+div.navi a:hover {
+	background-position:0 -8px;      
+}
+
+/* active state (current page state) */
+div.navi a.active {
+	background-position:0 -16px;     
+} 	
+

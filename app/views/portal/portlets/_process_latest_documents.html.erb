@@ -1,0 +1,40 @@
+<% cache(["portlets_process_latest_documents",I18n.locale], :expires_in => 3.minutes) do %>
+<% process_documents = ProcessDocument.by_latest.item_limit(portlet.portlet_template.item_limit) %>
+<div class="althingi_process_container_small">
+	<% unless process_documents.empty? %>
+	<div class="althingi_process_documents_small">
+		<h3><%=t :althingi_process_documents %></h3>
+		<table>
+			<thead>
+				<tr>
+					<th class="release_date">
+						<%=t :althingi_release_date %>
+					</th>
+					<th>
+						<%=t :althingi_presenter %>
+					</th>
+					<th>
+						<%=t :public_versions %>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% process_documents.each do |document| %>
+				<tr class="<%= cycle("even", "odd", :name => "zebra") -%>">
+					<td>
+						<%=document.external_date.strftime("%d.%m.%Y") %>
+					</td>
+					<td>
+						<%=document.external_author %>
+					</td>
+					<td width="230px" align="center">
+						<%=document.get_process_document_link%>
+					</td>
+				</tr>
+			</tbody>
+		<% end %>
+		</table>
+	</div>
+	<% end %>
+</div>
+<% end %>

@@ -1,0 +1,7 @@
+<meta name="title" content="<%=video_share_title(process_speech_video)%>" />
+<meta name="description" content="<%=video_share_description(process_speech_video)%>" />
+<link rel="image_src" href="http://<%=request.host.downcase%><%=process_speech_video.video_share_screenshot_image%>" />
+<link rel="video_src" href="<%=process_speech_video.video_share_swf_player_url(request.host.downcase)%>"/>
+<meta name="video_height" content="<%=process_speech_video.video_share_height%>" />
+<meta name="video_width" content="<%=process_speech_video.video_share_width%>" />
+<meta name="video_type" content="<%=process_speech_video.video_content_type%>" />

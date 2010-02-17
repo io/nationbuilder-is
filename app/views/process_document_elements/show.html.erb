@@ -1,0 +1,38 @@
+<p>
+  <b>Content type:</b>
+  <%=h @process_document_element.content_type %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @process_document_element.content %>
+</p>
+
+<p>
+  <b>Content text only:</b>
+  <%=h @process_document_element.content_text_only %>
+</p>
+
+<p>
+  <b>Content number:</b>
+  <%=h @process_document_element.content_number %>
+</p>
+
+<p>
+  <b>Sequence number:</b>
+  <%=h @process_document_element.sequence_number %>
+</p>
+
+<p>
+  <b>ProcessDocument:</b>
+  <%=h @process_document_element.process_document_id %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%=h @process_document_element.parent_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_process_document_element_path(@process_document_element) %> |
+<%= link_to 'Back', process_document_elements_path %>

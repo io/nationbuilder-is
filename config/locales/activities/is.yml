@@ -404,7 +404,7 @@ is:
                         noself: "Þetta er nýtt #1 forgangsmál í {{official_user_name}} {{tag_name}} málaflokki"
         user:
             new:
-                name: "{{user_name}} er skráður í {{government_name}}"
+                name: "{{user_name}} er skráð(ur) í {{government_name}}"
                 nouser: "Skráður í {{government_name}}"
             recruited:
                 name: "{{user_name}} fékk {{other_user_name}} með í {{government_name}}" 

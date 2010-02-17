@@ -1,0 +1,43 @@
+<%# Copyright (C) 2009,2010 Róbert Viðar Bjarnason %>
+<%# License: http://www.gnu.org/licenses/agpl-3.0.txt %>
+<link type="text/css" href="/stylesheets/fg.menu.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+<link type="text/css" href="/stylesheets/portal.css" rel="stylesheet"/>
+<link type="text/css" href="/stylesheets/jquery-ui-1.7.2.css" rel="stylesheet"/>
+<style type="text/css"> 
+    
+    /* solo icon buttons must have block properties for the text-indent to
+     .fg-button.ui-state-loading .ui-icon { background: url(spinner_bar.gif) no-repeat 0 0; }
+     .ui-tabs-panel {height: 100%;}
+     
+     
+</style>
+<!--        <script type="text/javascript" src="/javascripts/jquery-1.3.2.min.js">
+</script> -->
+<script type="text/javascript" src="/javascripts/jquery-ui-1.7.2.custom.min.js">
+</script>
+<script type="text/javascript" src="/javascripts/fg.menu.js">
+</script>
+<%= javascript_include_tag "portal" %>
+<script type="text/javascript">
+    	    jQuery(function(){
+    			setup_portal_menu(<%=@portlet_container ? @portlet_container.id : -1%>,'<%=t('menu.portal.choose')%>','<%=t('menu.portal.all')%>');
+    			setup_portal_dialogues('<%=t('menu.portal.delete_portlet')%>','<%=t('menu.portal.cancel')%>');
+    			setup_columns();
+    		});
+    	
+</script>
+
+<div id="main-dialogues-div">
+    <%= render(:partial=>'portal/dialogues') %>
+</div>
+<% params[:q]=true %>
+<%= render :partial => "priorities/form" %>
+<div id="portal-menu-div">
+    <%= render(:partial=>'portal/menu') %>
+</div>
+<div id="main-portal-div">
+	<%= render(:partial => "portal") %>
+</div>
+
+

@@ -1,0 +1,47 @@
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <%= stylesheet_link_tag 'priority_processes' %>
+        <%= javascript_include_tag :defaults %>
+        <%= javascript_include_tag "slider.js" %>
+        <%= javascript_include_tag :fckeditor %>
+        <% if controller_name == "process_speech_videos" and action_name == "show" %>
+          <%= render :partial => "process_speech_videos/share_metadata", :locals => {:process_speech_video=> @process_speech_video } %>
+        <% elsif controller_name == "processes" and action_name == "show" %>
+        <%= render :partial => "processes/share_metadata", :locals => {:my_process=> @my_process } %>
+        <% elsif controller_name == "process_documents" and action_name == "show" %>
+        <%= render :partial => "process_documents/share_metadata", :locals => {:document=> @document } %>
+        <% else %>
+        <title><%=t :main_header %></title>
+        <% end %>
+
+  <script type="text/javascript">
+        <!--
+        function toggleDiv(obj){
+          var el = document.getElementById(obj);
+          if (el.style.display != "none") {
+              el.style.display = 'none';
+            }
+          else {
+              el.style.display = '';
+            }
+          }
+          
+          function getSentimentWord(sentiment) {
+            if (sentiment==1) {
+                return "<%=t :very_in_support%>";            
+              } else if (sentiment==2) {
+                return "<%=t :in_support%>";            
+              } else if (sentiment==3) {
+                return "<%=t :not_sure%>";            
+              } else if (sentiment==4) {
+                return "<%=t :against%>";        
+              } else if (sentiment==5) {
+                return "<%=t :very_against%>";
+              }          
+            };
+            function fbs_click(u){
+              t = document.title;
+              window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
+              return false;
+            };
+            //-->
+    </script>

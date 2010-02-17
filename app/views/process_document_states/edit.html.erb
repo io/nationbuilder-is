@@ -1,0 +1,16 @@
+<h1>Editing process_document_state</h1>
+
+<% form_for(@process_document_state) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @process_document_state %> |
+<%= link_to 'Back', process_document_states_path %>

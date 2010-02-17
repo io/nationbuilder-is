@@ -1,0 +1,124 @@
+<% if @processes_changed_past_7_days %>
+<h1><%=t :listing_processes_changed_the_past_7_days %></h1>
+<table width="100%">
+    <tr>
+        <th>
+            <%=t :importance %>
+        </th>
+        <th>
+            <%=t :althingi_process_name %>
+        </th>
+        <th>
+            <%=t :althingi_process_presenter %>
+        </th>
+    </tr>
+    <% for current_process in @processes_changed_past_7_days %>
+    <tr>
+        <td width="100px" align="center">
+        	<%= render :partial => "ratings/rate_smaller", :locals => { :asset => current_process, :postfix=>"7_days" } %>
+        </td>
+        <td>
+            <%= link_to "#{current_process.external_info_1.capitalize} / #{current_process.external_info_2}", current_process %>
+        </td>
+        <td>
+            <%= current_process.external_presenter %>.
+        </td>
+        <% if @i_am_admin %>
+	        <td>
+	            - <%= link_to t(:show), current_process %>
+	        </td>
+	        <td>
+	            <%= link_to t(:edit), edit_process_path(current_process) %>
+	        </td>
+	        <td>
+	            <%= link_to t(:destroy), current_process, :confirm => t(:are_you_sure?), :method => :delete %>
+	        </td>
+        <% end %>
+    </tr>
+    <% end %>
+</table>
+<br/>
+<%end%>
+
+<%= render :partial => "process_speech_master_videos/latest_video_discussions" %>
+
+<table width="100%">
+	<tr>
+		<td width="50%">
+			<% if @last_comments %>
+			  <h1><%=t :latest_comments %></h1>
+			  <% for comment in @last_comments %>
+			    <b><%=comment.user.login%> <%=t :about_process%> <%=get_comment_process_document_process_link(comment) %> <%=t :says%>:</b> <%=truncate(comment.comment, :length => 142)%> <br>
+			    <br>
+			  <% end %>
+			<% end %>
+		</td>
+		<td width="50%">
+		<table width="100%">
+			<tr>
+				<td width="50%">
+					<% if @latest_votes %>
+					  <h1><%=t :latest_votes %></h1>
+					  <% for vote in @latest_votes %>
+					    <%=vote.document.votes.count%> <%=t :votes_for_this_document%> <%=get_vote_process_document_process_link(vote) %><br>
+					    <br>
+					  <% end %>
+					<% end %>			
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+<h1><%=t :listing_processes %></h1>
+<table width="100%">
+    <tr>
+        <th>
+            <%=t :importance %>
+        </th>
+        <th>
+            <%=t :althingi_process_name %>
+        </th>
+        <th>
+            <%=t :althingi_process_presenter %>
+        </th>
+    </tr>
+    <% for current_process in @most_important_processes %>
+    <tr>
+        <td width="100px" align="center">
+        	<%= render :partial => "ratings/rate_smaller", :locals => { :asset => current_process, :postfix=>"all" } %>
+        </td>
+        <td>
+            <%= link_to "#{current_process.external_info_1} / #{current_process.external_info_2}", current_process %>
+        </td>
+        <td>
+            <%= current_process.external_presenter %>.
+        </td>
+        <% if @i_am_admin %>
+	        <td>
+	            - <%= link_to t(:show), current_process %>
+	        </td>
+	        <td>
+	            <%= link_to t(:edit), edit_process_path(current_process) %>
+	        </td>
+	        <td>
+	            <%= link_to t(:destroy), current_process, :confirm => t(:are_you_sure?), :method => :delete %>
+	        </td>
+        <% end %>
+    </tr>
+    <% end %>
+	<tr>
+		<td colspan=3>
+			<% if @all_archived %>
+  			  <a href="/processes"><%=t :show_only_current_processes %></a>
+			<% else %>
+  			  <a href="/processes?all_archived=1"><%=t :show_all_archived_processes %></a>
+			<% end %>  
+		</td>
+	</tr>
+</table>
+<br/>
+<% if @i_am_admin %>
+	<%= link_to 'New process', new_process_path %>
+<% end %>

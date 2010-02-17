@@ -1,0 +1,8 @@
+<% if document.stage_sequence_number > 0 %>
+  <meta name="title" content="<%=t :process_document_in_process%>: <%=document.priority_process.priority.external_info_1%> - <%=document.priority_process.stage_sequence_number%>. <%=t(:stage_sequence_discussion)%>" />
+  <meta name="description" content="<%=t :process_document_in_process%>: <%=document.priority_process.priority.external_info_1%> <%=document.priority_process.priority.external_info_2%> / <%=document.priority_process.priority.external_info_3%> - <%=document.priority_process.stage_sequence_number%>. <%=t(:stage_sequence_discussion)%>" />
+<% else %>
+  <meta name="title" content="<%=t :process_document_in_process%>: <%=document.priority_process.priority.external_info_1%>" />
+  <meta name="description" content="<%=t :process_document_in_process%>: <%=document.priority_process.priority.external_info_1%> <%=document.priority_process.priority.external_info_2%> / <%=document.priority_process.priority.external_info_3%>" />
+<% end %>
+<link rel="image_src" href="http://<%=request.host.downcase%>/images/skuggathing_fb_small.png" />
