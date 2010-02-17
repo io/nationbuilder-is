@@ -28,11 +28,11 @@ class AdsController < ApplicationController
 
   # GET /priorities/1/ads/new
   def new
-    if @priority.position < 26
-      flash[:error] = t('ads.new.top25error')
-      redirect_to @priority
-      return
-    end
+#    if @priority.position < 26
+#      flash[:error] = t('ads.new.top25error')
+#      redirect_to @priority
+#      return
+#    end
     @page_title = t('ads.new.title', :priority_name => @priority.name)  
     @ad = @priority.ads.new
     @ad.user = current_user

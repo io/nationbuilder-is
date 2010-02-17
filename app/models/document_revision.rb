@@ -85,7 +85,7 @@ class DocumentRevision < ActiveRecord::Base
     document.name = self.name
     document.value = self.value
     document.author_sentence = document.user.login
-    document.author_sentence += ", edited by " + document.editors.collect{|a| a[0].login}.to_sentence if document.editors.size > 0
+    document.author_sentence += ", breytingar " + document.editors.collect{|a| a[0].login}.to_sentence if document.editors.size > 0
     document.published_at = Time.now
     document.save_with_validation(false)
     user.increment!(:document_revisions_count)

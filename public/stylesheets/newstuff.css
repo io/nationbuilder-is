@@ -3,16 +3,24 @@ html, body {
 }
 
 a {
-	color: #000;
+	color: #333;
 }
-a:hover { text-decoration: none; }
+a:hover 
+{ 
+	text-decoration: under-line;
+}
 
-#footer a, #contentwrap a { text-decoration: underline; }
+#footer a, #contentwrap a 
+{ 
+color: #333;
+
+}
+
 #footer a:hover, #contentwrap a:hover { color: #333; }
 #toolbar a, #priority_menu a { border-bottom: none; }
 
-h1 { font-size: 1.7em; line-height: 2em; }
-h2 { font-size: 1.5em; font-weight: bold; }
+h1 { font-size: 14px; line-height: 2em; !important}
+h2 { font-size: 12px; font-weight: bold; !important}
 h3 { font-weight: bold; }
 
 table tr th { font-weight: bold; padding-right: 0.5em; }
@@ -323,7 +331,7 @@ ul#priority_menu li.hovering div.tab_body {
 }
 
 ul#priority_menu li.tab5 div.tab_body {
-	width:90px;
+	width:150px;
 }
 
 ul#priority_menu li.tab4 div.tab_body {
@@ -331,7 +339,7 @@ ul#priority_menu li.tab4 div.tab_body {
 }
 
 ul#priority_menu li.tab5 div.tab_body {
-	width:120px;
+	width:150px;
 }
 
 ul#priority_menu li.tab6 div.tab_body {
@@ -367,17 +375,13 @@ div.meta { width: 120px !important; }
 /*.point_byline { font-size: 1em !important; }*/
 #point_1_quality{font-size: 11px !important;}
 .tag_button { font-size: 1em !important; }
-.container_12, .container_13 { position: relative; padding-bottom: 1em; border-bottom: 3px solid #ccc; }
-.container_12 td { width: 340px; vertical-align: top; }
+.container_12, .container_13 { position: relative; padding-bottom: 1em;}
+.container_12 td { width: 350px; vertical-align: top; }
 .container_13 td { width: 300px; vertical-align; top; }
 .container_12 td.against, .container_13 td.against { padding-left: 1em; }
 .container_12.newpoints { margin-top: 1em; }
 .point_item h3 { margin: 1em 0px 0px 0px !important; }
 
-/* Stjörnugjöf */
-.star-rating_smaller li.current-rating, .star-rating_smaller li a:hover, .star-rating_smaller{ background-image: url(/images/star_rating_smaller.png) !important; background-color: #333 !important; }
-
-#process_speech_detail .star-rating_smaller li.current-rating, #process_speech_detail .star-rating_smaller li a:hover, #process_speech_detail .star-rating_smaller { background-image: url(/images/star_rating_smaller_w.png) !important; background-color: #fff !important; }
 
 /* Menjú */
 .tab_body { text-align: left; padding: 0.5em; padding-bottom: 0em; }
@@ -385,7 +389,7 @@ div.meta { width: 120px !important; }
 
 /* cell width in rok plus oppose/endorse */
 .container_13 .grid_41 {
-width:260px !important;
+width:255px !important;
 }
 
  /* Below line for Rok */
@@ -615,4 +619,98 @@ padding-left:18px;
 font-size:11px;
 line-height:1.4em;
 padding:7px 5px 3px 8px;
+}
+
+#right_column_priorities a, #notification_box a, #next_steps_box a, #notification_box ol a, #next_steps_box  ol a, #not_activated a 
+{
+color: #533;
+border-bottom: 1px dotted #977;
+}
+
+
+#point_right {
+margin-left:12px;
+min-height: 260px;
+}
+
+td {
+vertical-align: top !important;	
+}
+
+
+#latest_video_discussion_thumbs h3 {
+color:#ddd !important;
+}
+
+
+.suggest_button, .yellow_button {
+background-color:#FFFF99;
+border:2px solid #FFCC00 !important;
+}
+
+
+.suggest_button:hover, .yellow_button:hover, .grey_button_wide:hover {
+border:2px solid #13499B !important;
+}
+
+
+#priority_name {
+font-size:14px;
+height:20px;
+margin-left:0 !important;
+margin-right:10px !important;
+width:330px;
+}
+
+
+.suggest_button {
+font-size:13px;
+font-weight:bold;
+letter-spacing:0.3px;
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:medium;
+padding: 4px 10px 4px;
+text-align:center;
+}
+
+.num_cols_5 {
+width:700px !important;
+}
+
+#top_points_table p {
+	padding-bottom: 2px;
+	padding-top: 4px;
+	line-height: 130%;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	color: #333333;
+}
+
+.tag_button_hack {
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px !important;
+	font-style: italic;
+	color: #333333;
+}
+
+.point_item h3 {
+color: #333333 !important;	
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif !important;
+font-size: 12px !important;
+font-weight: bold !important;
+}
+
+.point_item_hacky a {
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif !important;
+color:#333333 !important;
+font-size: 12px !important;
+font-weight: bold !important;
+}
+
+.for_and_against_hacky {
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif !important;
+color:#333333 !important;
+font-size: 10px !important;
+font-weight: normal !important;
 }

@@ -50,7 +50,7 @@ is:
             heading: "Fréttir frá öðrum miðlum"
     status:
         failed: "mistókst"
-        successful: "tókst"
+        successful: "afgreitt"
         intheworks: "í vinnslu"
         compromised: "milli tveggja elda"
         unknown: "óþekkt"
@@ -398,7 +398,7 @@ is:
             label: "fallandi/stígandi" 
         gainers_24hr: 
             title: "Mál þessara notenda hafa risið hraðast síðustu 24 tíma" 
-            intro: "Ímyndaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður. Imagine each person's priorities are a portfolio of stocks like a mutual fund.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál risu mest í stigagjöfinni á síðustu 24 tímum." 
+            intro: "Ímyndaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál risu mest í stigagjöfinni á síðustu 24 tímum." 
         gainers_7days: 
             title: "Mál þessara notenda hafa risið hraðast í þessari viku" 
             intro: "Ýmindaðu þér að mál fólks séu verðbréfasöfn svipað og sameignarsjóður.  Þessi síða er uppfærð á miðnæti og sýnir það fólk hvurs mál risu mest í stigagjöfinni í þessari viku." 
@@ -507,7 +507,7 @@ is:
             submit: "Senda athugasemd"
         flag:
             confirm: "Er þessi athugasemd frá {{user_name}} persónuleg árás eða brot á reglum síðunnar?"
-            title: "Flagga þessa athugasemd til endurskoðunar"
+            title: "Tilkynna óviðeigandi ummæli!"
             number:
                 one: "1 flagg"
                 other: "{{count}} flögg"
@@ -983,7 +983,7 @@ is:
         source: "Uppruni:"
         supporting: "Styð {{priority_name}}"
         priority:
-            intro: "Vinsamlegast segðu okkur afhverju við ættum að styðja eða vera á móti þessu máli með því að <a href='{{new_point_url}}'>bæta við rökum</a>. Þú getur líka lagt til annað forgangsmál í stað þessa."
+            intro: "Vinsamlegast segðu okkur afhverju við ættum að styðja eða vera á móti þessu máli með því að <a href='{{new_point_url}}' style='text-decoration: underline;'>bæta við rökum</a>. Þú getur líka lagt til annað forgangsmál í stað þessa."
         intro:
             endorsed:
                 first: "Rök sem styðja {{priority_name}}:"
@@ -1028,7 +1028,7 @@ is:
             position:
                 label: "Eru {{support_radio}} þessi rök til stuðnings eða {{oppose_radio}} á móti {{priority_name}}?"
             name:
-                label: "Taktu saman yfirlit yfir þín rök<span class='small'>60 characters</span>"
+                label: "Taktu saman yfirlit yfir þín rök <span class='small'>60 stafir</span>"
             other_priority_name:
                 label: "Tengdu þetta öðrum rökum <span class='small'>Byrjaðu bara að slá inn nafn</span>"
                 example: "Þú ræður hvort þú tengir við annað mál. Ef skoðun þín er andstæð, geturðu tengt við betra mál. EÐA, ef skoðun þín styður eða er hlutlaus, geturðu lagt áherslu á nákvæmara eða tengdara mál."
@@ -1292,9 +1292,9 @@ is:
             other: "{{count}} endurskoðun/anir"
         title: "Endurskoðanir"
         user: "{{user_name}} endurskoðun"
-        byline: "eftir {{author_sentence}}"
+        byline: "{{author_sentence}}"
         revised: "endurskoðað {{time_ago}}"
-        added: "bætt við {{time_ago}}"
+        added: "{{time_ago}}."
         activity:
             name: "Virkni tengd þessari endurskoðun"
         word_count:
@@ -1566,8 +1566,8 @@ is:
                 twitter: "Twitter"
                 facebook: "Facebook"
                 options: "eða <b>skráðu þig strax inn</b> með:"
-            intro: "<b><a href='{{signup_url}}'>Gerstu meðlimur</a></b> eða <a href='#' id='login_link'>skráðu þig inn með {{government_name}}</a>."
-            forgot: "Ég hef gleymt lykilorðinu mínu"
+            intro: "<b><a href='{{signup_url}}'>Nýskráning</a></b> eða <a href='#' id='login_link'>innskráning {{government_name}}</a>."
+            forgot: "Gleymt lykilorð"
             email:
                 label: "Netfang"
             password:
@@ -1621,7 +1621,7 @@ is:
         discussions:
             title: "Setja {{government_name}} umræður á vefsvæðið þitt"
         preview:
-            label: "Það mun lita svona út, nema með letri og litum vefsæðisins þíns:"    
+            label: "Það mun lita svona út, nema með letri og litum vefsvæðisins þíns:"    
         new:
             submit: "Uppfæra kóða"
             code:

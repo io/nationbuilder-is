@@ -215,6 +215,15 @@ namespace :portlets do
     p.item_limit = 5
     p.weight = 4
     p.save
+
+    p=PortletTemplate.new
+    p.name="processes.icesave_portlet"
+    p.portlet_template_category_id=pc5.id
+    p.locals_data_function="setup_priorities_process_icesave"
+    p.partial_name = "priority_list"
+    p.item_limit = 3
+    p.weight = 5
+    p.save    
   end
 
   desc "initialize2"

@@ -2,8 +2,16 @@
 <% if @tag_names %>
 	<%= hidden_field_tag :tag_names, @tag_names %>
 <% end %>
-	<%= f.text_field :name, :size => 40, :maxlength => 60, :autocomplete =>"off" %>	
-	<%= f.submit t('priorities.new.submit'), :class => "suggest_button" %>
+<table>
+	<tr>
+		<td>
+			<%= f.text_field :name, :size => 40, :maxlength => 60, :autocomplete =>"off" %>		
+		</td>
+		<td>
+			<%= f.submit t('priorities.new.submit'), :class => "suggest_button" %>	
+		</td>
+	</tr>	
+</table>
 <% end %>
 <% if params[:q] %>
 	<p><%= t('priorities.new.suggest') %></p>

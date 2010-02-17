@@ -32,8 +32,8 @@ class PriorityProcess < ActiveRecord::Base
   end
   
   def self.latest_updated_priorities(limit)
-    last_weeks_discussion = ProcessDiscussion.find(:all, :conditions=>["created_at >= ?",Time.now-1.weeks], :order=>"meeting_date DESC")
-    last_weeks_documents = ProcessDocument.find(:all, :conditions=>["created_at >= ?",Time.now-1.weeks], :order=>"external_date DESC")
+    last_weeks_discussion = ProcessDiscussion.find(:all, :limit=>limit, :order=>"meeting_date DESC")
+    last_weeks_documents = ProcessDocument.find(:all, :limit=>limit, :order=>"external_date DESC")
     @processes_changed_past_7_days = []
     if not last_weeks_discussion.empty? or not last_weeks_documents.empty?
       @processes_changed_past_7_days = last_weeks_discussion += last_weeks_documents

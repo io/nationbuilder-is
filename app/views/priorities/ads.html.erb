@@ -1,10 +1,10 @@
 <div id="hp_intro"><%= @page_title%></div>
 <p>
-	Ads at <%= current_government.name %> are bought with <%= current_government.currency_name.downcase %>, not money. That's what the<span class="pc"><%= current_government.currency_short_name %></span> next to people's names refers to.  You can earn<span class="pc"><%= current_government.currency_short_name %></span> in a variety of ways, <a href="/about/faq#pc">details are here</a>.
-	<p>These are the currently running ads, and the bars show how many members have <span style="background-color: #009933;">&nbsp; &nbsp; </span> &nbsp;endorsed, <span style="background-color: #bc0000;">&nbsp; &nbsp; </span> &nbsp;opposed, or <span style="background-color: #ffcc00;">&nbsp; &nbsp; </span> &nbsp;not responded yet.  To place an ad, click on one of your priorities, then click the "Action" menu and "Purchase an ad".
+	Auglýsingar <%= current_government.name %> eru keyptar með <%= current_government.currency_name.downcase %>, ekki hefðbundnum peningum. Merkingin <span class="pc"><%= current_government.currency_short_name %></span> hjá nöfnum fólks vísar í þetta. Þú getur unnið þér inn <span class="pc"><%= current_government.currency_short_name %></span> á <a href="/about/faq#pc">marga vegu</a>.
+	<p>Hér sérðu þær auglýsingar sem eru í gangi núna og sláin sýnir þér hversu margir félagar hafa <span style="background-color: #009933;">&nbsp; &nbsp; </span> &nbsp;stutt, <span style="background-color: #bc0000;">&nbsp; &nbsp; </span> &nbsp;verið á móti, eða <span style="background-color: #ffcc00;">&nbsp; &nbsp; </span> &nbsp;hafa ekki svarað.  Til að kaupa auglýsingu smellti þá á málið, veldu "Aðgerð" og veldu "Kaupa auglýsingu".
 
 <% if @ads.empty? %>
-	No ads yet.
+Engar auglýsingar inni núna. 
 <% else %>
 
 	<% shown_active = false %>
@@ -13,11 +13,11 @@
 		
 		<% if ad.status == 'active' and not shown_active %>
 		<% shown_active = true %>
-		<div class="heading">Currently running ads</div>
+		<div class="heading">Virkar auglýsingar</div>
 		<% elsif ad.status != 'active' and not shown_past %>
 		<p>
 		<% shown_past = true %>
-		<div class="heading">Past ads</div>
+		<div class="heading">Gamlar auglýsingar</div>
 		<% end %>
 		
 		<%= render :partial => "ads/show_inline", :locals => {:ad => ad}%>

@@ -43,13 +43,13 @@ class ProcessSpeechMasterVideo < ActiveRecord::Base
       @latest_speech_discussions << process_discussion unless (priority and (process_discussion.priority_process.priority.id != priority.id)) or 
                                     not process_discussion.process_speech_videos.all_done?
     end
-    @latest_speech_discussions    
+    @latest_speech_discussions[0..8]
   end
   
   def self.get_latest_twenty(priority=nil)
     #TODO: Find a more optimized mysql way of doing this per priority filtering
     @latest_speech_discussions = []
-    ProcessSpeechVideo.find(:all, :conditions=>"published = 1", :limit=>20, :select => 'DISTINCT(process_discussion_id)', 
+    ProcessSpeechVideo.find(:all, :conditions=>"published = 1", :limit=>10, :select => 'DISTINCT(process_discussion_id)', 
                          :include=>"process_discussion", :order=>"updated_at DESC").each do |process_discussion_include|
       process_discussion = process_discussion_include.process_discussion
       @latest_speech_discussions << process_discussion unless (priority and (process_discussion.priority_process.priority.id != priority.id)) or 

@@ -1,10 +1,10 @@
-Hello {{ recipient.name | capitalize }},
+Hæ {{ recipient.name | capitalize }},
 
-Thanks for the referral! {{ sender.name }} accepted your invitation to join {{ government.name }}.  You've earned 5{{ government.currency_short_name }}, and are now following {{ sender.name | possessive }} updates in your news section here:
+Þakka þér fyrir að bjóða á Skuggaþing! {{ sender.name }} samþykkti boð þitt um að taka þátt í Skuggaþingi {{ government.name }}.  Þú vannst þér inn 5{{ government.currency_short_name }} og fylgist núna með uppfærslum {{ sender.name | possessive }} á fréttasvæðinu þínu:
 
 {{ recipient.root_url }}news/your_network_activities
 
-You'll also be able to see their priorities here: 
+Þú getur líka skoðað síðu sendanda hér: 
 {{ sender.profile_url }}
 
 ---
