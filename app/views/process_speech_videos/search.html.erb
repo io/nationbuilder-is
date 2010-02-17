@@ -10,7 +10,7 @@
 <h1><%=t :search_results_for%>: <%=params[:search_query] %> <%= params[:priority_id] ? "- #{Priority.find(params[:priority_id]).name}" : ""%></h1>
 <% if  @process_speech_videos.length > 0%>
 	<% @process_speech_videos.group_by(&:get_process).sort {|a,b| a[0].process_discussions.find(:last).meeting_date <=> b[0].process_discussions.find(:last).meeting_date}.each do |my_process,videos| %>
-		<h2><%="#{link_to_unless_current h(my_process.priority.name), my_process.priority} | "+
+		<h2 style="padding-bottom: 10px;"><%="#{link_to_unless_current h(my_process.priority.name), my_process.priority}<br> "+
 			   "#{videos.first.process_discussion.meeting_type} | "+
 			   "#{videos.first.process_discussion.meeting_date.strftime("%d.%m.%Y")} - "+
 			   "#{videos.last.process_discussion.meeting_date.strftime("%d.%m.%Y")}"-%></h2>

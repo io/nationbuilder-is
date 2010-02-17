@@ -1,25 +1,23 @@
-<% points.each do |point| %>
+<% points.each_with_index do |point,i| %>
 	<% quality = nil %>
 	<% if @qualities %>
 		<% quality = @qualities.detect {|e| e.point_id == point.id } %>
 	<% end %>				
 	<div class="point_item">
-		<h3><%= link_to_unless_current h(point.name), point %></h3>
+		<h3 class="point_item_hacky"><%=numbering ? "#{i+1}. " : ""%><%= link_to_unless_current h(point.name), point %></h3>
 		<div class="point_byline">
-			<%= t('revisions.byline', :author_sentence => point.author_sentence) %>
-			<br />
-			<%= t('revisions.added', :time_ago => time_ago(point.created_at)) %>
+			<%= t('revisions.byline', :author_sentence => point.author_sentence) %> <%= t('revisions.added', :time_ago => time_ago(point.created_at)) %>
 			<span class="point_edit">
 				<% if point.discussions_count > 0 %>
 					<%= link_to t('comments.discussions.name', :count => point.discussions_count), discussions_point_url(point) %>
 				<% else %>
 					<%= link_to t('comments.discuss.name'), discussions_point_url(point) %>
 				<% end %>
-				or 
+				eða 
 				<%= link_to t('points.edit.name'), new_point_revision_url(point), :title => t('points.edit.title') %>
 			</span>
 		</div>
-		<p><%=truncate(point.content, :length => 165)%></p>
+		<p><%=point.content%></p>
 		<div class="point_qualities">
 			<%= render :partial => "points/button_small", :locals => {:point => point, :quality => quality} %>
 		</div>

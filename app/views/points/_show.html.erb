@@ -1,8 +1,11 @@
 <div class="point" id="<%= point.id %>">
 <div class="point_name">
 <% if point.is_down? %>
-	<span class="opposed"><%= t('oppose.ed')%></span>
+    <span class="for_and_against_hacky"><%=t :points_against%></span>
+<% else %>
+    <span class="for_and_against_hacky"><%=t :points_for%></span>
 <% end %>
+<br>
 <%= link_to_unless_current h(point.name), point %>
 </div>
 <% if point.has_other_priority? %>

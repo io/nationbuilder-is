@@ -180,7 +180,7 @@ class Government < ActiveRecord::Base
   end
   
   def is_searchable?
-    not ENV["WEBSOLR_URL"].nil?
+    RAILS_ENV=="development" or not ENV["WEBSOLR_URL"].nil?
   end
 
   def logo_large

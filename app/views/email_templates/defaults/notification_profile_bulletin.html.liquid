@@ -1,10 +1,11 @@
-Hello {{ recipient.first_name | capitalize }},
+Hæ {{ recipient.first_name | capitalize }},
 
-{{ sender.name }} just posted a bulletin to your profile.
+{{ sender.name }} sendi þér skilaboð á síðuna þína.
 
 {{ notifiable.first_comment.content }}
 
-Reply here: {{ notifiable.first_comment.show_url }}
+Þú getur svarað á {{ notifiable.first_comment.show_url }}
 
 ---
-This is an automated notification from {{ government.name }} sent to {{ recipient.email }}.  If you do not wish to be notified of new bulletins posted to your profile, you can change your email settings here: {{ recipient.unsubscribe_url }}
+Þetta er sjálfvirk tilkynning {{ government.name }} send á {{ recipient.email }}.  
+Ef þú vilt ekki fá svona bréf, breyttu þá póststillingunum þínum hér: {{ recipient.unsubscribe_url }}

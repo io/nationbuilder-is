@@ -1,0 +1,11 @@
+#contentwrap {
+	width: 760px;
+	float: left;
+}
+
+#backgroundwrap {
+	width: 1000px !important;
+	margin: 0px auto;
+}
+
+#footer { clear: both; width: 1000px; }

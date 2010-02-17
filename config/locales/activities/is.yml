@@ -405,7 +405,7 @@ is:
         user:
             new:
                 name: "{{user_name}} er skráð(ur) í {{government_name}}"
-                nouser: "Skráður í {{government_name}}"
+                nouser: "Skráð(ur) í {{government_name}}"
             recruited:
                 name: "{{user_name}} fékk {{other_user_name}} með í {{government_name}}" 
                 nouser: "{{user_name}} fékk {{other_user_name}} með í {{government_name}}" 

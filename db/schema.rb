@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100201164521) do
+ActiveRecord::Schema.define(:version => 20100217015727) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -700,29 +700,29 @@ ActiveRecord::Schema.define(:version => 20100201164521) do
     t.integer  "priority_id"
     t.integer  "other_priority_id"
     t.integer  "user_id"
-    t.integer  "value",                                  :default => 0
-    t.integer  "revisions_count",                        :default => 0
+    t.integer  "value",                                   :default => 0
+    t.integer  "revisions_count",                         :default => 0
     t.string   "status",                   :limit => 50
-    t.string   "name",                     :limit => 60
+    t.string   "name",                     :limit => 122
     t.text     "content"
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "website"
     t.string   "author_sentence"
-    t.integer  "helpful_count",                          :default => 0
-    t.integer  "unhelpful_count",                        :default => 0
-    t.integer  "discussions_count",                      :default => 0
-    t.integer  "endorser_helpful_count",                 :default => 0
-    t.integer  "opposer_helpful_count",                  :default => 0
-    t.integer  "endorser_unhelpful_count",               :default => 0
-    t.integer  "opposer_unhelpful_count",                :default => 0
-    t.integer  "neutral_helpful_count",                  :default => 0
-    t.integer  "neutral_unhelpful_count",                :default => 0
-    t.float    "score",                                  :default => 0.0
-    t.float    "endorser_score",                         :default => 0.0
-    t.float    "opposer_score",                          :default => 0.0
-    t.float    "neutral_score",                          :default => 0.0
+    t.integer  "helpful_count",                           :default => 0
+    t.integer  "unhelpful_count",                         :default => 0
+    t.integer  "discussions_count",                       :default => 0
+    t.integer  "endorser_helpful_count",                  :default => 0
+    t.integer  "opposer_helpful_count",                   :default => 0
+    t.integer  "endorser_unhelpful_count",                :default => 0
+    t.integer  "opposer_unhelpful_count",                 :default => 0
+    t.integer  "neutral_helpful_count",                   :default => 0
+    t.integer  "neutral_unhelpful_count",                 :default => 0
+    t.float    "score",                                   :default => 0.0
+    t.float    "endorser_score",                          :default => 0.0
+    t.float    "opposer_score",                           :default => 0.0
+    t.float    "neutral_score",                           :default => 0.0
     t.text     "content_html"
   end
 

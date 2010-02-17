@@ -489,10 +489,14 @@ class PrioritiesController < ApplicationController
   def top_points
     @page_title = t('priorities.top_points.title', :priority_name => @priority.name) 
     @point_value = 0 
-    @points_new_up = @priority.points.published.by_recently_created.up_value.five
-    @points_new_down = @priority.points.published.by_recently_created.down_value.five
     @points_top_up = @priority.points.published.by_helpfulness.up_value.five
     @points_top_down = @priority.points.published.by_helpfulness.down_value.five
+    @points_new_up = @priority.points.published.by_recently_created.up_value.five.reject {|p| @points_top_up.include?(p)}
+    @points_new_down = @priority.points.published.by_recently_created.down_value.five.reject {|p| @points_top_down.include?(p)}
+    @total_up_points = @priority.points.published.up_value.count
+    @total_down_points = @priority.points.published.down_value.count
+    @total_up_points_new = [0,@total_up_points-@points_top_up.length].max
+    @total_down_points_new = [0,@total_down_points-@points_top_down.length].max
     get_qualities([@points_new_up,@points_new_down,@points_top_up,@points_top_down])
     respond_to do |format|
       format.html { render :action => "top_points" }

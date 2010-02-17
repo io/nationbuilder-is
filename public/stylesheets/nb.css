@@ -149,7 +149,7 @@ h4 {
 	width: 125px;
 }
 #q_top {
-	width: 233px;
+	width: 175px;
 }
 #briefing_room_search {
 	width: 170px;
@@ -320,6 +320,11 @@ h4 {
 	letter-spacing: 0;
 	line-height: 1.4em;
 }
+
+#notification_show a {
+	text-decoration: underline;
+}
+
 .notification_show_message {
 	margin-top: 2px;
 }
@@ -406,6 +411,7 @@ del {
 #activities {
 	position: relative;
 	right: 6px;
+	min-height: 20px;
 }
 .episode {
 	margin-top: 5px;
@@ -670,6 +676,7 @@ del {
 .point_byline {
 	font-style: italic;
 	font-size: 0.8em;
+	line-height: 120%;
 }
 .point_content p, .point_content_detail p {
 	margin-top: 3px;
@@ -723,7 +730,7 @@ del {
 	border-left: solid 1px #d9dfea;
 }
 .facebook_button a {
-	color: #FFF;
+	color: #FFF !important;
 	letter-spacing: 0.5px;
 }
 
@@ -1265,26 +1272,39 @@ ul#priority_menu li.hovering div.tab_body {
 }
 
 ul#priority_menu li.tab5 div.tab_body {
-	width:90px;
+	width:150px;
 }
 
 ul#priority_menu li.tab4 div.tab_body {
-	width:90px;
-}
-
-ul#priority_menu li.tab5 div.tab_body {
 	width:120px;
 }
 
-ul#priority_menu li.tab6 div.tab_body {
-	width:110px;
-}
-ul#priority_menu li.tab7 div.tab_body {
+ul#priority_menu li.tab5 div.tab_body {
 	width:150px;
 }
 
+ul#priority_menu li.tab6 div.tab_body {
+	width:210px;
+}
+
+ul#priority_menu li.tab7 div.tab_body {
+	width:230px;
+}
+
 ul#priority_menu li.tab9 div.tab_body {
-	width:150px;
+	width:230px;
+}
+
+ul#priority_menu li.tab10 div.tab_body {
+	width:230px;
+}
+
+ul#priority_menu li.tab11 div.tab_body {
+	width:220px;
+}
+
+ul#priority_menu li.tab12 div.tab_body {
+	width:220px;
 }
 
 /* end priority nav */
@@ -1364,3 +1384,5 @@ ul#priority_menu li.tab9 div.tab_body {
 .brbox {
 	border: 1px solid #000000;
 }
+
+
