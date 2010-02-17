@@ -45,11 +45,11 @@ def new_element(content, parent_element, process_document, content_type)
 
   # Split text into sentences using IceNLP SrxSegmentizer
   if content_type == TYPE_MAIN_ARTICLE
-    output = %x[echo "#{e.content_text_only.gsub(/"/, '\\"')}" | java -classpath ./srx/IceNLPCore.jar:./srx/segment-1.3.3.jar:./srx/commons-io-1.4.jar:./srx/commons-logging-1.1.1.jar is.iclt.icenlp.core.tokenizer.SrxSegmentizer]
+    output = %x[echo "#{CGI::escape(e.content_text_only).gsub("+", " ").gsub(/"/, '\\"')}" | java -classpath srx/IceNLPCore.jar:srx/segment-1.3.3.jar:srx/commons-io-1.4.jar:srx/commons-logging-1.1.1.jar is.iclt.icenlp.core.tokenizer.SrxSegmentizer]
     output.split(/\n/).each do |sentence|
       s = Sentence.new
       s.process_document_element = e
-      s.body = sentence
+      s.body = CGI::unescape(sentence.gsub(" ", "+"))
       s.save(false)
     end
   end
