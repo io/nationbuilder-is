@@ -1,6 +1,10 @@
 <style>
-  .old-sentence {
+  .replaced-sentence {
     text-decoration: line-through;
+  }
+  .removed-sentence {
+    text-decoration: line-through;
+    background: #ffaaaa;
   }
   .new-sentence {
     background: #ffffaa;
@@ -10,13 +14,13 @@
 <h1><%= @priority.name %></h1>
 
 <% for action in @actions %>
-  <h2><%= action[:action] %></h2>
+  <!-- <h2><%= action[:action] %></h2>
   <div style="font-size:8pt;text-transform:uppercase;padding: 5px 0;">
     <%= "Grein: #{action[:gr].inspect} &bull;" if action[:gr] %>
     <%= "Málsgrein: #{action[:mgr].inspect} &bull;" if action[:mgr] %>
     <%= "Málsliður: #{action[:malsl].inspect} &bull;" if action[:malsl] %>
     <%= "Töluliður: #{action[:tolul].inspect} &bull;" if action[:tolul] %>
-  </div>
+  </div> -->
   <%
 
     def parse_action(action, law_element)
@@ -24,13 +28,15 @@
       new_text = ""
 
       case action[:action]
-      when :replace_all
-        old_text = "<span class=\"old-sentence\">#{law_element.clone}</span>"
+      when :add_new
         new_text = "<span class=\"new-sentence\">#{action[:new_text]}</span>"
-        # law_elements[action[element_type].last.to_i-1] += "<span class=\"new-sentence\">#{new_text}</span>"
+      when :remove
+        old_text = "<span class=\"removed-sentence\">#{law_element.clone}</span>"
+      when :replace_all
+        old_text = "<span class=\"replaced-sentence\">#{law_element.clone}</span>"
+        new_text = "<span class=\"new-sentence\">#{action[:new_text]}</span>"
       when :replace_inline
-        old_text = action[:inline_text]
-        # law_element.gsub!(action[:inline_text], "<span class=\"old-sentence\">#{old_text}</span><span class=\"new-sentence\">#{new_text}")
+        old_text = law_element.clone.gsub(action[:inline_text], "<span class=\"replaced-sentence\">#{action[:inline_text]}</span><span class=\"new-sentence\">#{action[:new_text]}</span>") if action[:inline_text]
       end
 
       { :old_text => old_text, :new_text => new_text }
@@ -39,101 +45,97 @@
 
     def parse_text(action, element_type, law_elements, article_id = 0, paragraph_id = 0, item_id = 0)
       results = []
+      sentences = []
       old_text = ""
-      sentences = action[element_type]
+      elements = action[element_type]
 
-      sentences.each { |sentence_id|
+      elements.each { |element_id|
         case element_type
+        when :gr
+          article_id = element_id.to_i
+          paragraph_id = law_elements[article_id].length-1 if paragraph_id == 0
         when :mgr
-          paragraph_id = sentence_id.to_i
+          paragraph_id = element_id.to_i
         when :tolul
-          item_id = sentence_id.to_i
+          item_id = element_id.to_i
         end
-        results = parse_action(action, law_elements[article_id][paragraph_id][item_id][:text])
-        law_elements[article_id][paragraph_id][item_id][:text] = results[:old_text]
-        old_text = "#{old_text}#{results[:old_text]}"
+
+        if law_elements[article_id]
+          if law_elements[article_id][paragraph_id]
+            if law_elements[article_id][paragraph_id][item_id]
+              law_element_sentences = law_elements[article_id][paragraph_id][item_id][:sentences]
+              sentences = action[:malsl] ? action[:malsl] : (law_element_sentences ? law_element_sentences.enum_with_index.map { |x,i| i+1 } : [])
+
+              sentences.each { |sentence_id|
+                results = parse_action(action, law_element_sentences[sentence_id.to_i-1])
+                law_element_sentences[sentence_id.to_i-1] = results[:old_text] if results and not results[:old_text].blank?
+                old_text = "#{old_text}#{results[:old_text]}"
+              }
+
+              law_element_sentences[sentences.last.to_i-1] += results[:new_text] if results and not results[:new_text].blank?
+            end
+          end
+        end
       }
-
-      case element_type
-      when :mgr
-        paragraph_id = action[element_type].last.to_i
-      when :tolul
-        item_id = action[element_type].last.to_i
-      end
-
-      law_elements[article_id][paragraph_id][item_id][:text] += results[:new_text] if results and not results[:new_text].blank?
 
       old_text
     end
 
-    def parse_sentences(action, element_type, law_elements)
-      results = []
-      old_text = ""
-      sentences = action[element_type]
-
-      sentences.each { |sentence_id|
-        results = parse_action(action, law_elements[sentence_id.to_i-1])
-        law_elements[sentence_id.to_i-1] = results[:old_text]
-        old_text = "#{old_text}#{results[:old_text]}"
-      }
-
-      law_elements[action[element_type].last.to_i-1] += results[:new_text] if results and not results[:new_text].blank?
-
-      old_text
-    end
+    # def parse_sentences(action, element_type, law_elements)
+    #   results = []
+    #   old_text = ""
+    #   sentences = action[element_type]
+    # 
+    #   sentences.each { |sentence_id|
+    #     results = parse_action(action, law_elements[sentence_id.to_i-1])
+    #     law_elements[sentence_id.to_i-1] = results[:old_text]
+    #     old_text = "#{old_text}#{results[:old_text]}"
+    #   }
+    # 
+    #   law_elements[action[element_type].last.to_i-1] += results[:new_text] if results and not results[:new_text].blank?
+    # 
+    #   old_text
+    # end
 
 
     old_text = ""
 
-    # Grein / Article
     if action[:gr]
+      # Articles (greinar)
       action[:gr].each { |article|
-        # Málsgrein / Paragraph
         if action[:mgr]
+          # Articles with paragraphs (málsgreinar)
           action[:mgr].each { |paragraph|
-            # Töluliður / List Item
             if action[:tolul]
+              # Paragraphs with list items (töluliðir)
               action[:tolul].each { |item|
-                # Málsliður / Sentence
-                if action[:malsl]
-                  old_text = parse_sentences(action, :malsl, @law_elements[article.to_i][paragraph.to_i][item.to_i][:sentences])
-                else
-                  # old_text = parse_text(action, @law_elements[article.to_i][paragraph.to_i][item.to_i])
-                  # old_text = "#{old_text}#{@law_elements[article.to_i][paragraph.to_i][item.to_i][:text]}" if @law_elements[article.to_i][paragraph.to_i][item.to_i]
-                end
+                old_text = parse_text(action, :tolul, @law_elements, article.to_i, paragraph.to_i)
               }
             else
-              # Málsliður / Sentence
-              if action[:malsl]
-                old_text = parse_sentences(action, :malsl, @law_elements[article.to_i][paragraph.to_i][0][:sentences])
-              else
-                old_text = "#{old_text}#{@law_elements[article.to_i][paragraph.to_i][0][:text]}" if @law_elements[article.to_i][paragraph.to_i][0]
-              end
+              # Paragraphs without list items (töluliðir)
+              old_text = parse_text(action, :mgr, @law_elements, article.to_i)
             end
           }
-          # Málsgreinar
-          old_text = parse_text(action, :mgr, @law_elements, article.to_i)
         else
-          # # text = "#{text}#{@law_elements[article.to_i][0][0][:text]}" if @law_elements[article.to_i][0][0]
+          # Articles without paragraphs (málsgreinar)
+          old_text = parse_text(action, :gr, @law_elements)
         end
       }
     end
   %>
-  <p><strong>GAMALT:</strong><br />
+  <!-- <p><strong>GAMALT:</strong><br />
   <%= old_text %></p>
   <br />
   <p><strong>GAMALT inline:</strong><br />
   <%= action[:inline_text] %></p>
   <br />
   <p><strong>NÝTT:</strong><br />
-  <%= action[:new_text] %></p>
+  <%= action[:new_text] %></p> -->
 <% end %>
-
-<hr />
 
 <% @law_elements.each_with_index do |element,index| %>
   <% if index > 0 %>
-    <p><strong><%= index %> gr.</strong></p><br />
+    <p><strong><%= index %>. gr.</strong></p><br />
     <% element.each_with_index do |paragraph,pindex| %>
       <% paragraph.each_with_index do |item,iindex| %>
         <p <%= "style='padding-left:20px'" if iindex > 0 %>>
@@ -146,7 +148,3 @@
     <% end if element %>
   <% end %>
 <% end %>
-
-<hr />
-
-<%= @law_elements.inspect %>

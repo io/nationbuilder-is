@@ -1,3 +1,5 @@
+require "enumerator"
+
 class UidiffController < ApplicationController
 
   def index
@@ -165,7 +167,7 @@ class UidiffController < ApplicationController
   def parse_element_replace_inline(match, element, parts)
     find_parts(:replace_inline, parts, match)
     find_text(match, element)
-    match.scan(/„(.*?)“/) { |m| @actions[@actions.length-1][:inline_text] = m }
+    match.scan(/„(.*?)“/) { |m| @actions[@actions.length-1][:inline_text] = m[0] }
     ""
   end
 
