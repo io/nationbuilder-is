@@ -8,5 +8,9 @@ config/contacts.yml
 config/database.yml*
 config/facebooker.yml
 config/s3.yml
+config/solr.*
 solr/index
 solr/*.pid
+solr
+workers
+vendor/plugins/acts_as_solr/solr/
