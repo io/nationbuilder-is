@@ -1,26 +1,7 @@
-def get_file_as_string(filename)
-  data = ''
-  f = File.open(filename, "r") 
-  f.each_line do |line|
-    data += line
-  end
-  return data
-end
-
-def split_line(line)
-  # Strip HTML
-  sline = line.gsub(/<\/?[^>]*>/,  "")
-  # Convert &nbsp; to regular space
-  sline.gsub!("&nbsp;", "")
-  # Remove leading and trailing spaces
-  sline.strip!
-  # Check if the first two characters represent a list item
-  # return (sline[1] and sline[1].chr == ".") ? sline[0..1] : false
-  return (sline[0] and sline[1] and sline[0].chr.to_i > 0 and sline[1].chr == ".") ? sline[0..1] : false
-end
-
 def line_is_a_new_element(line)
-  return split_line(line)
+  result = ""
+  line.scan(/<!-- Para Num \d \[\d\] -->(.*?)(<!-- Para Num End -->)/) { |match| result = match[0] }
+  result.empty? ? false : result
 end
 
 def break_apart(filename)
@@ -35,6 +16,7 @@ def break_apart(filename)
   f = File.open(filename, "r") 
 
   f.each_line do |line|
+    # line = split_line(line)
     if element_start = line_is_a_new_element(line)
       first_found = true
 
@@ -68,10 +50,6 @@ def break_apart(filename)
     else
       partial += line if first_found
     end
-
-    # Search for ordered list index
-    # line.gsub!(/(<!-- Para Num )(.*?)( \[)(.*?)(\] -->)(.*?)(<!-- Para Num End -->)/) { |match| puts(match.inspect) }
-    # split_line(line)
   end
 
   # Find the last element in the document
@@ -85,11 +63,14 @@ def break_apart(filename)
     text += "\n"
   end
 
-  # Remove <!-- --> comment tags
-  text.gsub!(/<!--\/?[^>]*>/,  "")
+  # Remove HTML tags
+  text.gsub!(/<\/?[^>]*>/,  "")
 
   # Replace &nbsp; with regular spaces
   text.gsub!(/\&nbsp;/,  " ")
+
+  # Trim
+  text.strip!
 
   puts text
 end
@@ -100,22 +81,4 @@ def parse(filename)
   puts html
 end
 
-# Replace athugar hvort current_text sé til, annars er öllu skipt út
-# action = add_before, add_after, replace, remove
-
-[
-  { :grein => 2, :action => :replace, :new_title => "Lagaleg staða.", :new_text => "Ekkert í lögum þessum felur í sér viðurkenningu..." },
-  { :grein => 2, :action => :add_after, :new_title => "Lagaleg staða.", :new_text => "Ekkert í lögum þessum felur í sér viðurkenningu..." },
-  { :grein => 3, :action => :replace, :current_text => "allt að 660.000 m.kr.", :new_text => "allt að 475.000 m.kr." },
-  { :grein => 4, :malsgrein => 1, :malslidur => [2,3], :action => :replace, :new_text => "Fáist síðar úr því skorið fyrir þar til bærum..." },
-  { :grein => 2, :lidur => "Fjármunahreyfingar", :action => :replace, :current_text => "-270.000 m.kr.", :new_text => "-220.000 m.kr." },
-  { :grein => 6, :lidur => ["6.1", "6.5", "6.6"], :action => :remove }
-]
-
-
-break_apart("breytingartillaga1.html")
-
-# split_line("<!-- Tab -->&nbsp;&nbsp;&nbsp;&nbsp;<!-- Para Num 1 [1] -->1.<!-- Para Num End -->")
-# split_line("<!-- WP Paired Style On: System_55 -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- Tab -->&nbsp;&nbsp;&nbsp;&nbsp;<!-- Para Num 3 [3.0.1] -->&nbsp;&nbsp;&nbsp;&nbsp;a.<!-- Para Num End -->")
-# split_line("     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.&nbsp;&nbsp;&nbsp;&nbsp;3. mgr. fellur brott.<br>")
-# split_line("<!-- Tab -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- Tab -->&nbsp;&nbsp;&nbsp;&nbsp;<!-- Tab -->&nbsp;&nbsp;&nbsp;&nbsp;Á eftir 8. gr. laganna kemur ný grein, svohljóðandi:<br>")
+break_apart("breytingartillaga3.html")
