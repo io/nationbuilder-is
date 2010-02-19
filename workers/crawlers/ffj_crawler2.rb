@@ -59,7 +59,7 @@ end
 #
 # Get the original law
 #
-doc, law_now, process_document = get_original_law(84)
+doc, law_now, process_document = get_original_law(142)
 
 #
 # Create new process document for the original law

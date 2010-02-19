@@ -8,8 +8,8 @@ class UidiffController < ApplicationController
   def preview
     # Get all objects
     @priority = Priority.find(45)
-    @law = ProcessDocument.find(161)
-    @proposal = ProcessDocument.find(84)
+    @law = ProcessDocument.find(261)
+    @proposal = ProcessDocument.find(142)
 
     combiner = Combiner.new
 

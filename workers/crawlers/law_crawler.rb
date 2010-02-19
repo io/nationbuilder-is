@@ -26,8 +26,8 @@ gem 'nokogiri', '=1.3.3'; require 'nokogiri'
 require 'open-uri'
 require 'timeout'
 
-RAILS_ENV='production'
-#RAILS_ENV='development'
+#RAILS_ENV='production'
+RAILS_ENV='development'
 
 require '../../config/boot'
 require "#{RAILS_ROOT}/config/environment"
@@ -35,6 +35,7 @@ require "#{RAILS_ROOT}/config/environment"
 require 'law_document_element'
 require 'law_original_document_element'
 require 'law_proposal_document_element'
+require 'law_change_document_element'
 require 'process_parser'
 require 'tags_parser'
 

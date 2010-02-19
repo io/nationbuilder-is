@@ -53,14 +53,16 @@ def break_apart(filename)
   end
 
   # Find the last element in the document
-  partial = partial[0..partial.index("<DL>")-1]
-  unless title == ""
-    text += "==========================================================================\n"
-    text += title + "\n"
-    text += "==========================================================================\n"
-    text += partial
-    text += "\n"
-    text += "\n"
+  unless partial.empty?
+    partial = partial[0..partial.index("<DL>")-1]
+    unless title == ""
+      text += "==========================================================================\n"
+      text += title + "\n"
+      text += "==========================================================================\n"
+      text += partial
+      text += "\n"
+      text += "\n"
+    end
   end
 
   # Remove HTML tags
@@ -82,3 +84,4 @@ def parse(filename)
 end
 
 break_apart("breytingartillaga3.html")
+

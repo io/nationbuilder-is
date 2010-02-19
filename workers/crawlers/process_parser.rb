@@ -86,6 +86,8 @@ class ProcessParser
               process_document.external_type.downcase.index("þingsályktun") or # þingsályktunartillaga, ie. http://www.althingi.is/dba-bin/ferill.pl?ltg=138&mnr=20
               process_document.external_type.downcase.index("stjórnartillaga") # stjórnartillaga, ie. http://www.althingi.is/dba-bin/ferill.pl?ltg=138&mnr=200
           document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
+        elsif process_document.external_type.downcase.index("breytingartillaga") # breytingartillaga
+          document = LawChangeDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
         else #TODO: Hack to get things saved
           document = LawProposalDocumentElement.create_elements(process_document, process_document.priority_process_id, process_document.id, process_document.external_link,process_type)
         end         
