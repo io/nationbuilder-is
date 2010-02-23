@@ -1,5 +1,6 @@
 .DS_Store
 .project
+db/schema.rb
 log/*
 tmp/**/*
 tmp/restart.txt

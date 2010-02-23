@@ -1,6 +1,8 @@
 class Partner < ActiveRecord::Base
 
   require 'paperclip'
+
+  cattr_accessor :current
   
   named_scope :active, :conditions => "status in ('pending','active')"
   
@@ -17,6 +19,7 @@ class Partner < ActiveRecord::Base
   has_many :signups
   has_many :users, :through => :signups
   has_many :activities
+  has_many :priorities
     
   # docs: http://www.vaporbase.com/postings/stateful_authentication
   acts_as_state_machine :initial => :passive, :column => :status
@@ -83,6 +86,15 @@ class Partner < ActiveRecord::Base
 
   ReservedShortnames = %w[admin blog dev ftp mail pop pop3 imap smtp stage stats status www jim jgilliam gilliam feedback facebook]
   validates_exclusion_of :short_name, :in => ReservedShortnames, :message => 'is already taken'  
+
+  # def self.current  
+  #   Thread.current[:partner]  
+  # end  
+  # 
+  # def self.current=(partner)  
+  #   raise(ArgumentError,"Invalid partner. Expected an object of class 'Partner', got #{partner.inspect}") unless partner.is_a?(Partner)
+  #   Thread.current[:partner] = partner
+  # end
 
   def clean_urls
     privacy_url = 'http://' + privacy_url if not privacy_url.nil? and privacy_url[0..3] != 'http' 

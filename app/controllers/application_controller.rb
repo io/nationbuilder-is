@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   rescue_from Facebooker::Session::SessionExpired, :with => :fb_session_expired 
 
   helper :all # include all helpers, all the time
-  
+
   # Make these methods visible to views as well
   helper_method :facebook_session, :government_cache, :current_partner, :current_user_endorsements, :current_priority_ids, :current_following_ids, :current_ignoring_ids, :current_following_facebook_uids, :current_government, :current_tags, :current_branches, :facebook_session, :is_robot?, :js_help
   
@@ -66,6 +66,8 @@ class ApplicationController < ActionController::Base
   def current_partner
     return nil if request.subdomains.size == 0 or request.host == current_government.base_url or request.subdomains.first == 'dev'
     @current_partner ||= Partner.find_by_short_name(request.subdomains.first)
+    Partner.current = @current_partner
+    return @current_partner
   end
   
   def current_user_endorsements

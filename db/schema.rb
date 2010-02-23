@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091014144207) do
+ActiveRecord::Schema.define(:version => 20100222120440) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "partner_id"
   end
 
   add_index "blurbs", ["name"], :name => "index_blurbs_on_name"
@@ -774,6 +775,7 @@ ActiveRecord::Schema.define(:version => 20091014144207) do
     t.boolean  "is_controversial",                       :default => false
     t.integer  "trending_score",                         :default => 0
     t.integer  "controversial_score",                    :default => 0
+    t.integer  "partner_id"
   end
 
   add_index "priorities", ["obama_status"], :name => "index_priorities_on_obama_status"

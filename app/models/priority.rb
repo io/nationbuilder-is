@@ -2,6 +2,10 @@ class Priority < ActiveRecord::Base
   
   extend ActiveSupport::Memoizable
 
+  # if Partner.current
+    default_scope :conditions => {:partner_id => Partner.find_by_short_name('2020')} # Partner.current.id
+  # end
+
   if Government.current and Government.current.is_suppress_empty_priorities?
     named_scope :published, :conditions => "priorities.status = 'published' and priorities.position > 0 and endorsements_count > 0"
   else
@@ -39,6 +43,7 @@ class Priority < ActiveRecord::Base
   named_scope :by_most_recent_status_change, :order => "priorities.status_changed_at desc"
   
   belongs_to :user
+  belongs_to :partner
   
   has_many :relationships, :dependent => :destroy
   has_many :incoming_relationships, :foreign_key => :other_priority_id, :class_name => "Relationship", :dependent => :destroy
