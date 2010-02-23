@@ -267,7 +267,7 @@ class LawChangeDocumentElement < ProcessDocumentElement
 
     begin
       Timeout::timeout(120){
-        html_source_doc = open(url)
+        html_source_doc = Nokogiri::HTML(open(url))
         # if process_type == PROCESS_TYPE_THINGSALYKTUNARTILLAGA
           # html_source_doc = Nokogiri::HTML(open(url))
 
@@ -327,7 +327,7 @@ class LawChangeDocumentElement < ProcessDocumentElement
     partial = ""
 
     # html_source_doc.string.split(/\n/).each do |line|
-    html_source_doc.each_line do |line|
+    html_source_doc.to_s.split(/\n/).each do |line|
       if element_start = line_is_a_new_element(line)
         first_found = true
 
@@ -385,8 +385,8 @@ class LawChangeDocumentElement < ProcessDocumentElement
     end
 
     # Find the last element in the document
-    unless partial.empty?
-      partial = partial[0..partial.index("<DL>")-1]
+    unless partial.blank?
+      partial = partial[0..partial.index("<DL>")-1] if partial.index("<DL>")
       unless title == ""
         new_parent_header_element = LawChangeDocumentElement.new
         new_parent_header_element.content = title

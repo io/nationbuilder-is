@@ -72,11 +72,11 @@ class Combiner
         line.gsub!(/(.*?)(bætist)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_element(:add_new, match, element, parts) }
 
         # 1. gr. laganna orðast svo:
-        line.gsub!(/(.)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_element(:replace_all, match, element, parts) }
+        line.gsub!(/(.)(.*?)(orðist svo|orðast svo)(.*?)(:)/) { |match| parse_element(:replace_all, match, element, parts) }
 
         # 3. og 4 gr. laganna falla brott
-        line.gsub!(/(.)(.*?)(fellur brott)(.*?)/) { |match| parse_element(:remove, match, element, parts) }
-        line.gsub!(/(.)(.*?)(falla brott)(.*?)/) { |match| parse_element(:remove, match, element, parts) }
+        line.gsub!(/(.)(.*?)(fellur brott|falla brott|falli brott)(.*?)/) { |match| parse_element(:remove, match, element, parts) }
+        # line.gsub!(/(.)(.*?)(falla brott)(.*?)/) { |match| parse_element(:remove, match, element, parts) }
 
         # Eftirfarandi breytingar verða á 6. gr. laganna:
         line.gsub!(/(.*?)(breytingar)(.*?)(gr\.)(.*?)(:)/) { |match| parse_element(:change, match, element, parts) }
@@ -124,6 +124,18 @@ class Combiner
       parts[replace_weird_characters(match[3]).gsub!(".","").to_sym] = values
     }
 
+    # Search for parts:
+    #   ([A-Z]) = 1 uppercase letter (A)
+    #   dash
+    #   (liður)
+    text.scan(/([A-Z])-(liður)/) { |match|
+      values = []
+      # values << match
+      values << match[0]
+      # match[1].scan(/([A-Z])-/) { |smatch| values << smatch[0] }
+      parts[replace_weird_characters(match[1]).to_sym] = values
+    }
+
     # Add the results to the main actions array
     @@actions << parts.clone
   end
@@ -138,16 +150,16 @@ class Combiner
       text = @@last_element[@@last_character_index..@@last_element.length] if ((text and text.strip.empty?) or !text) and @@last_element
       @@last_character_index = @@next_character_index
     else
-      text = @@last_element[@@last_character_index..@@last_element.length]
+      text = @@last_element[@@last_character_index..@@last_element.length] if @@last_element
       action_index = 1
     end
 
     # Remove unwanted stuff from the text
-    text = text.gsub(" ", " ") # FIXME: DO NOT EDIT THIS LINE, find a better way to replace that strange character (ascii 194 = Â)
-    text = text.gsub(/(\W)([a-z]\.)(.*)/m, "")
+    text = text.gsub(" ", " ") if text # FIXME: DO NOT EDIT THIS LINE, find a better way to replace that strange character (ascii 194 = Â)
+    text = text.gsub(/(\W)([a-z]\.)(.*)/m, "") if text
 
     # Update the actions array
-    @@actions[@@actions.length-action_index][:new_text] = text unless [:change, :remove].include?(@@actions[@@actions.length-action_index][:action])
+    @@actions[@@actions.length-action_index][:new_text] = text unless @@actions.blank? or [:change, :remove].include?(@@actions[@@actions.length-action_index][:action])
     @@last_element = element
   end
 
