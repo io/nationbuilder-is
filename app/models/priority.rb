@@ -1,11 +1,13 @@
 class Priority < ActiveRecord::Base
+
+  # FIXME: Hack to add partner_id to all finds
+  # See initializers/partner_hack.rb
+  class << self
+    alias_method_chain :find, :condition_cleansing
+  end
   
   extend ActiveSupport::Memoizable
-
-  # if Partner.current
-    default_scope :conditions => {:partner_id => Partner.find_by_short_name('2020')} # Partner.current.id
-  # end
-
+  
   if Government.current and Government.current.is_suppress_empty_priorities?
     named_scope :published, :conditions => "priorities.status = 'published' and priorities.position > 0 and endorsements_count > 0"
   else
@@ -115,6 +117,8 @@ class Priority < ActiveRecord::Base
   event :deactivate do
     transitions :from => [:draft, :published, :buried], :to => :inactive
   end
+  
+  before_create :set_partner
   
   cattr_reader :per_page
   @@per_page = 25
@@ -563,5 +567,9 @@ class Priority < ActiveRecord::Base
     # should probably send an email notification to the person who submitted it
     # but not doing anything for now.
   end
-  
+
+  def set_partner
+    self.partner_id = Partner.current.id if Partner.current
+  end
+
 end

@@ -1,4 +1,4 @@
-class AddPartnerToBlurb < ActiveRecord::Migration
+class AddPartnerToBlurbs < ActiveRecord::Migration
   def self.up
     add_column :blurbs, :partner_id, :integer
   end

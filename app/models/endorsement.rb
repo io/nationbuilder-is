@@ -1,5 +1,11 @@
 class Endorsement < ActiveRecord::Base
 
+  # FIXME: Hack to add partner_id to all finds
+  # See initializers/partner_hack.rb
+  class << self
+    alias_method_chain :find, :condition_cleansing
+  end
+
   extend ActiveSupport::Memoizable
   
   named_scope :active, :conditions => "endorsements.status = 'active'"

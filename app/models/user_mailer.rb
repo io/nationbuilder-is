@@ -19,7 +19,7 @@ class UserMailer < ActionMailer::Base
     headers        "Reply-to" => Government.current.admin_email
     @sent_on     = Time.now
     @content_type = "text/plain"      
-    @subject = EmailTemplate.fetch_subject_liquid("welcome").render({'government' => Government.current, 'user' => user}, :filters => [LiquidFilters])
+    @subject = EmailTemplate.fetch_subject_liquid("welcome").render({'government' => Government.current, 'user' => user, 'partner' => Partner.current}, :filters => [LiquidFilters])
     @body = EmailTemplate.fetch_liquid("welcome").render({'government' => Government.current, 'user' => user}, :filters => [LiquidFilters])
   end
   

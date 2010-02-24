@@ -2,8 +2,14 @@ class EmailTemplate < ActiveRecord::Base
 
   NAMES = ["welcome","invitation","new_password","notification_comment","notification_comment_flagged","notification_contact_joined","notification_invitation_accepted","notification_document_revision","notification_follower","notification_message","notification_point_revision","notification_priority_finished","notification_priority_flagged","notification_profile_bulletin","notification_warning1","notification_warning2","notification_warning3"]
 
+  # if Partner.current
+    default_scope :conditions => {:partner_id => Partner.find_by_short_name('2020')} # Partner.current.id
+  # else
+    # default_scope :conditions => {:partner_id => nil} # Partner.current.id
+  # end
+
   validates_presence_of :name
-  validates_uniqueness_of :name
+  validates_uniqueness_of :name, :scope => [:partner_id]
 
   after_save :clear_cache
   

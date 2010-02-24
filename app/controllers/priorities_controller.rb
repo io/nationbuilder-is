@@ -298,6 +298,7 @@ class PrioritiesController < ApplicationController
     @page_title = t('priorities.newest.title', :target => current_government.target)
     @rss_url = newest_priorities_url(:format => 'rss')     
     @priorities = Priority.published.newest.paginate :page => params[:page], :per_page => params[:per_page]
+    # @priorities = Priority.all(:conditions => "user_id = 94").paginate :page => params[:page], :per_page => params[:per_page] # FFJ test
     get_endorsements
     respond_to do |format|
       format.html
@@ -564,6 +565,7 @@ class PrioritiesController < ApplicationController
   # GET /priorities/new
   # GET /priorities/new.xml
   def new
+    # debugger
     if not params[:q].blank? and not @priorities and current_government.is_searchable?
       @priority_results = Priority.find_by_solr "(" + params[:q] + ") AND is_published:true", :limit => 25
       @priorities = @priority_results.docs      
@@ -596,6 +598,7 @@ class PrioritiesController < ApplicationController
   # POST /priorities
   # POST /priorities.xml
   def create
+    # debugger
     @tag_names = params[:tag_names]
     @priority = Priority.new
     @priority.name = params[:q] if params[:q]

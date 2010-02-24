@@ -1,4 +1,4 @@
-class AddPartnerToPriority < ActiveRecord::Migration
+class AddPartnerToPriorities < ActiveRecord::Migration
   def self.up
     add_column :priorities, :partner_id, :integer
   end
