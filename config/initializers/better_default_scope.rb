@@ -12,6 +12,8 @@
 # end
 
 # # Based on http://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/1812-default_scope-cant-take-procs
+# SEE ALSO http://gist.github.com/160809
+# SEE ALSO http://gist.github.com/81187
 # ActiveRecord::Base.class_eval do
 # 
 #   class << self
