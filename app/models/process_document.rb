@@ -58,7 +58,13 @@ class ProcessDocument < ActiveRecord::Base
     end
   end
 
-  def title
-    process_document_elements.first(:conditions => "content_type = 1").content
+  def title(show_text_only = false)
+    element = process_document_elements.first(:conditions => "content_type = 1")
+    show_text_only ? element.content_text_only : element.content
   end
+
+  def find_changes_grouped_by_user
+    process_document_elements.all(:conditions => "not user_id is null", :group => "user_id")
+  end
+
 end

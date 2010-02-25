@@ -48,7 +48,15 @@ class Combiner
 
     proposal_document.process_document_elements.articles.each { |article|
       article.children.each { |element|
-        elements << element.content_text_only
+        elements << element.content_text_only.gsub(/^(.*?):(.*?):(.*?)$/) { |match| # Hugsanlega dugar ^(.*?):$
+          # Replace all ":" but first, in each line, with $$colon$$, which will then be replaced back to ":" once parsing is done
+          result = ""
+          match.scan(/^(.*?)(:)(.*?)(:)(.*?)$/) { |matches|
+            result = matches[0] + ":"
+            matches[2..matches.length-2].each { |m| result += (m == ":") ? "$$colon$$" : m }
+          }
+          result
+        }
       }
     }
 
@@ -66,28 +74,47 @@ class Combiner
     parts = {}
 
     for element in elements
-      lines = element.split("\n")
-      for line in lines
-        # Við 3. mgr. bætist nýr málsliður sem orðast svo:
-        line.gsub!(/(.*?)(bætist)(.*?)(orðast svo)(.*?)(:)/) { |match| parse_element(:add_new, match, element, parts) }
 
+      lines = element.split(/\n/)
+      for line in lines
+        found = false
+        # Við 3. mgr. bætist nýr málsliður sem orðast svo:
+        line.gsub!(/(.*?)(bætist)(.*?)(orðast svo|orðist svo|svohljóðandi)(.*?)(:)/) { |match| parse_element(:add_new, match, element, parts); found = true }
+        next if found
+        
         # 1. gr. laganna orðast svo:
-        line.gsub!(/(.)(.*?)(orðist svo|orðast svo)(.*?)(:)/) { |match| parse_element(:replace_all, match, element, parts) }
+        line.gsub!(/(.)(.*?)(orðast svo|orðist svo)(.*?)(:)/) { |match| parse_element(:replace_all, match, element, parts); found = true }
+        next if found
 
         # 3. og 4 gr. laganna falla brott
-        line.gsub!(/(.)(.*?)(fellur brott|falla brott|falli brott)(.*?)/) { |match| parse_element(:remove, match, element, parts) }
+        line.gsub!(/([^:\n]*)(fellur brott|falla brott|falli brott)(.*?)/) { |match| parse_element(:remove, match, element, parts); found = true }
+        next if found
+        # line.gsub!(/(.)(.*?)(fellur brott|falla brott|falli brott)(.*?)/) { |match| parse_element(:remove, match, element, parts) }
         # line.gsub!(/(.)(.*?)(falla brott)(.*?)/) { |match| parse_element(:remove, match, element, parts) }
-
+        
         # Eftirfarandi breytingar verða á 6. gr. laganna:
-        line.gsub!(/(.*?)(breytingar)(.*?)(gr\.)(.*?)(:)/) { |match| parse_element(:change, match, element, parts) }
+        line.gsub!(/(.*?)(breytingar)(.*?)(gr\.)(.*?)(:)/) { |match| parse_element(:change, match, element, parts); found = true }
+        next if found
 
+        # Við 6. gr. ...
+        line.gsub!(/(.*)(Við )(\d{1,3}). (gr\.)/) { |match| parse_element(:change, match, element, parts); found = true }
+        next if found
+        
         # Í stað hlutfallstölunnar „33%“ í 3. mgr. kemur: 15%.
-        line.gsub!(/Í stað(.*?)„(.*?)“(.*?)(:)/) { |match| parse_element_replace_inline(match, element, parts) }
+        line.gsub!(/Í stað(.*?)„(.*?)“(.*?)(:)/) { |match| parse_element_replace_inline(match, element, parts); found = true }
+        next if found
       end
     end
 
     # We need to process the last text element outside the loop
     find_text
+
+    # # Make sure there are no duplicate actions
+    # @@actions_copy = @@actions.clone.reverse.each { |action| action.delete("action"); action.delete("new_text") }
+    # 
+    # @@actions_copy.each_with_index { |action, index|
+    #   @@actions.delete_at(index) if @@actions_copy.include?(action)
+    # }
 
     # Return the actions
     @@actions
@@ -164,6 +191,8 @@ class Combiner
   end
 
   def parse_element(action, match, element, parts)
+    # puts "$$#{action}$$ #{match.inspect}"
+    # puts "\n\n"
     # MUNA AÐ LEITA EFTIR "ásamt fyrirsögn"
     find_parts(action, parts, match)
     find_text(match, element)
@@ -180,12 +209,12 @@ class Combiner
 
   #
   # ------------------------------------------------------
-  # Phase 2 - Render the final document
+  # Phase 2 - Render the final law document
   # ------------------------------------------------------
   # 
 
   # Use the generated actions to make changes to the document elements
-  def render(law_elements, actions)
+  def render_law(law_elements, actions)
     old_text = ""
 
     for action in actions

@@ -1,12 +1,69 @@
+<script>
+
+  function toggle_change_element(element_id) {
+    alert(element_id);
+    return false;
+  }
+
+  function toggle_change_user(user_id) {
+    alert(user_id);
+    return false;
+  }
+
+</script>
+
 <style>
+
+  .diff-radius {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+
+  /* Main */
 
   #differentiator {
     width: 700px;
   }
 
+  #differentiator-tabs {
+    height: 29px;
+    margin-bottom: 15px;
+    list-style-type: none;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  #differentiator-tabs li {
+    float: left;
+    margin-left: 5px;
+  }
+
+  #differentiator-tabs li a {
+    display: block;
+    padding: 5px 15px;
+    background: #f0f0f0;
+    border: 1px solid #dddddd;
+  }
+
+  #differentiator-tabs li a:hover {
+    text-decoration: none;
+  }
+
+  #differentiator-tabs li.open a {
+    background: #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  #differentiator-content {
+    clear: both;
+  }
+
+  /* Columns */
+
   #differentiator .diff-articles {
     float: left;
-    width: 60px;
+    width: 50px;
+    margin-right: 10px;
   }
 
   #differentiator .diff-content {
@@ -16,7 +73,15 @@
 
   #differentiator .diff-changes {
     float: left;
-    width: 100px;
+    width: 90px;
+    margin-left: 10px;
+  }
+
+  #differentiator .diff-column-title {
+    margin-bottom: 5px;
+    font-size: 8pt;
+    text-transform: uppercase;
+    border-bottom: 1px solid #dddddd;
   }
 
   /* Articles */
@@ -38,6 +103,7 @@
   }
 
   #diff-articles-list li a:hover {
+    text-decoration: none;
     background: #f0f0f0;
   }
 
@@ -56,11 +122,24 @@
   #diff-changes-list li a {
     display: block;
     padding: 5px;
-    font-size: 10pt;
+    font-size: 7pt;
+    line-height: 1.2em;
+    text-align: center;
+    background: #f0f0f0;
+    border: 1px solid #dddddd;
+  }
+
+  #diff-changes-list li a.selected {
+    background: red;
   }
 
   #diff-changes-list li a:hover {
-    background: #f0f0f0;
+    text-decoration: none;
+    background: #f0f0a0;
+  }
+
+  #diff-changes-list li a .author {
+    padding-top: 5px;
   }
 
   /* Editor */
@@ -72,10 +151,16 @@
 
   #diff-document-title {
     height: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 14pt;
     font-weight: bold;
     border-bottom: 1px solid #dddddd;
+  }
+
+  #diff-document-sub-title {
+    height: 50px;
+    font-size: 10pt;
+    font-weight: bold;
   }
 
   #diff-content-elements {
@@ -87,8 +172,6 @@
   #diff-content-elements li {
     margin-bottom: 10px;
   }
-
-
 
   #diff-content-container .indent {
     padding: 0 10px;
@@ -108,8 +191,9 @@
   }
 
   #diff-content-container p {
-    font-size: 11pt;
+    font-size: 10pt;
     line-height: 1.2em;
+    padding-top: 10px;
   }
 
   #diff-content-container label {
@@ -135,26 +219,32 @@
   #diff-content-container .changes a {
     display: block;
     clear: both;
-    padding: 2px;
-    border: 1px solid #f0f0f0;
-    background: #f0f0f0;
-  }
-
-  #diff-content-container .changes a label {
-    float: left;
-    display: block;
-    width: 20px;
-    font-weight: bold;
+    padding: 2px 2px 2px 26px;
+    border: 1px solid #dddddd;
+    background-color: #f0f0f0;
   }
 
   #diff-content-container .changes a.selected {
-    background: #f0f0a0;
-    border: 1px solid #f0f0a0;
+    background-color: red;
   }
 
   #diff-content-container .changes a:hover {
+    background-color: #f0f0a0;
     text-decoration: none;
-    background: #f0f0a0;
+  }
+
+  #diff-content-container .changes a,
+  #diff-content-container .changes a.selected,
+  #diff-content-container .changes a:hover {
+    background-image: url(/images/document_16.png);
+    background-repeat: no-repeat;
+    background-position: 4px center;
+  }
+
+  #diff-content-container .changes a label {
+    display: block;
+    font-weight: bold;
+    text-transform: none;
   }
 
   .clear {
@@ -164,71 +254,67 @@
 </style>
 
 <div id="differentiator">
-  <div id="diff-document-title">Lög um stjórn fiskveiða (lög nr. 116/2006)</div>
-  <div class="diff-articles">
-    <ul id="diff-articles-list">
-      <li><a href="#G1">1. gr.</a></li>
-      <li><a href="#G2">2. gr.</a></li>
-      <li><a href="#G3">3. gr.</a></li>
-      <li><a href="#G4">4. gr.</a></li>
-    </ul>
-  </div>
-  <div class="diff-content">
-    <div id="diff-content-container">
-      <ul id="diff-content-elements">
-        <li>
-          <a name="K1" class="header">I. kafli. Almenn ákvæði.</a>
-        </li>
-        <li>
-          <a name="G1" class="header">1. gr.</a>
-          <div class="indent">
-            <p>Nytjastofnar á Íslandsmiðum eru sameign íslensku þjóðarinnar. Markmið laga þessara er að stuðla að verndun og hagkvæmri nýtingu þeirra og tryggja með því trausta atvinnu og byggð í landinu. Úthlutun veiðiheimilda samkvæmt lögum þessum myndar ekki eignarrétt eða óafturkallanlegt forræði einstakra aðila yfir veiðiheimildum.</p>
-            <div class="changes">
-              <label>Breytingartillögur</label>
-              <ul>
-                <li><a href="#"><label>B1</label> 3. málsl. 2. tölul. 4. mgr. orðast svo: Um afla báta sem eingöngu stunda frístundaveiðar...</a></li>
-                <li><a href="#"><label>B2</label> 2. málsl. 6. mgr. orðast svo: Frístundaveiðiskip, sbr. 2. tölul. 4. mgr., sem jafnframt hafa leyfi...</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a name="G2" class="header">2. gr.</a>
-          <div class="indent">
-            <p>Til nytjastofna samkvæmt lögum þessum teljast sjávardýr, svo og sjávargróður, sem nytjuð eru og kunna að verða nytjuð í íslenskri fiskveiðilandhelgi og sérlög gilda ekki um.</p>
-            <p>Til fiskveiðilandhelgi Íslands telst hafsvæðið frá fjöruborði að ytri mörkum efnahagslögsögu Íslands eins og hún er skilgreind í lögum nr. 41 1. júní 1979, um landhelgi, efnahagslögsögu og landgrunn.</p>
-            <div class="changes">
-              <label>Breytingartillögur</label>
-              <ul>
-                <li><a href="#"><label>B1</label> 3. málsl. 2. tölul. 4. mgr. orðast svo: Um afla báta sem eingöngu stunda frístundaveiðar...</a></li>
-                <li><a href="#"><label>B2</label> 2. málsl. 6. mgr. orðast svo: Frístundaveiðiskip, sbr. 2. tölul. 4. mgr., sem jafnframt hafa leyfi...</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a name="G3" class="header">3. gr.</a>
-          <div class="indent">
-            <p>Sjávarútvegsráðherra skal, að fengnum tillögum Hafrannsóknastofnunarinnar, ákveða með reglugerð þann heildarafla sem veiða má á ákveðnu tímabili eða vertíð úr þeim einstökum nytjastofnum við Ísland sem nauðsynlegt er talið að takmarka veiðar á. Heimildir til veiða samkvæmt lögum þessum skulu miðast við það magn. Afli sem veiddur er í rannsóknarskyni á vegum Hafrannsóknastofnunarinnar reiknast ekki til heildarafla. [Sama á við um afla sem fæst við veiðar sem fara fram í fræðsluskyni, enda séu veiðarnar óverulegar og aflinn ekki fénýttur.]1) Þá er ráðherra heimilt að fenginni umsögn Hafrannsóknastofnunarinnar að ákveða að afli sem fenginn er við vísindalegar rannsóknir annarra aðila skuli ekki að hluta eða öllu leyti reiknast til heildarafla.</p>
-            <p>Leyfður heildarafli botnfisktegunda skal miðaður við veiðar á 12 mánaða tímabili, frá 1. september ár hvert til 31. ágúst á næsta ári, og nefnist það tímabil fiskveiðiár. Skal heildarafli fyrir komandi fiskveiðiár ákveðinn fyrir 1. ágúst ár hvert. Ráðherra er heimilt innan fiskveiðiársins að auka eða minnka leyfðan heildarafla einstakra botnfisktegunda. Heildarafli annarra tegunda sjávardýra skal ákveðinn með hæfilegum fyrirvara fyrir upphaf viðkomandi vertíðar eða veiðitímabils og er ráðherra heimilt að auka hann eða minnka á meðan vertíð eða veiðitímabil varir.</p>
-            <div class="changes">
-              <label>Breytingartillögur</label>
-              <ul>
-                <li><a href="#"><label>B1</label> 3. málsl. 2. tölul. 4. mgr. orðast svo: Um afla báta sem eingöngu stunda frístundaveiðar...</a></li>
-                <li><a href="#"><label>B2</label> 2. málsl. 6. mgr. orðast svo: Frístundaveiðiskip, sbr. 2. tölul. 4. mgr., sem jafnframt hafa leyfi...</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
+  <div id="diff-document-title"><%= @proposal.priority_process.priority.name %></div>
+  <div id="diff-document-sub-title"><%= @proposal.title(true) %></div>
+  <ul id="differentiator-tabs">
+    <li class="open"><a href="#">Edit</a></li>
+    <li><a href="#">Preview</a></li>
+  </ul>
+  <div id="differentiator-content">
+    <div class="diff-articles">
+      <div class="diff-column-title">Greinar</div>
+      <ul id="diff-articles-list">
+        <% for pe in @proposal.process_document_elements.articles %>
+        <li><a href="#G<%= pe.id %>"><%= pe.content_text_only %></a></li>
+        <% end %>
       </ul>
     </div>
+    <div class="diff-content">
+      <div class="diff-column-title">Frumvarp</div>
+      <div id="diff-content-container">
+        <ul id="diff-content-elements">
+          <% for pe in @proposal.process_document_elements.articles %>
+          <!-- <li>
+            <a name="K1" class="header">I. kafli. Almenn ákvæði.</a>
+          </li> -->
+          <li>
+            <a name="G<%= pe.id %>" class="header"><%= pe.content_text_only %></a>
+            <div class="indent">
+              <p><%= pe.children.first.content %></p>
+              <% unless pe.user_proposals.blank? %>
+              <div class="changes">
+                <label>Breytingartillögur</label>
+                <ul>
+                  <% for up in pe.user_proposals %>
+                  <li id="diff-content-change-<%= up.id %>" rel="user-<%= up.user.id %>"><a href="#" onclick="return toggle_change_element(<%= up.id %>);" class="diff-radius"><label><%= up.user.real_name %>:</label><%= up.content.clean_excerpt(:max_length => 100, :use_spaces => true) %></a></li>
+                  <% end %>
+                </ul>
+              </div>
+              <% end %>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="diff-changes">
+      <div class="diff-column-title">Br.tillögur</div>
+      <ul id="diff-changes-list">
+        <% for element in @proposal.find_changes_grouped_by_user %>
+        <li id="diff-changes-document-user-<%= element.user.id %>">
+          <a href="#" onclick="return toggle_change_user(<%= element.user.id %>);">
+            <%= image_tag("/images/document_32.png") %>
+            <div class="author"><%= element.user.real_name %></div>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="clear"></div>
   </div>
-  <div class="diff-changes">
-    <ul id="diff-changes-list">
-      <li id="diff-changes-document-1"><a href="#">B.tillaga 1</a></li>
-      <li id="diff-changes-document-2"><a href="#">B.tillaga 2</a></li>
-      <li id="diff-changes-document-3"><a href="#">B.tillaga 3</a></li>
-    </ul>
-  </div>
-  <div class="clear"></div>
 </div>
+
+<% form_for(@proposal, :html => { :id => "diffform" }, :url => { :action => "save" }) do |f| %>
+  <%= f.hidden_field :id %>
+<% end %>
+

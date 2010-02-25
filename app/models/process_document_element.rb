@@ -33,4 +33,8 @@ class ProcessDocumentElement < ActiveRecord::Base
     ProcessDocumentElement.all(:conditions => "parent_id = #{id}")
   end
 
+  def user_proposals
+    ProcessDocumentElement.all(:conditions => "parent_id = #{id} and not user_id is null")
+  end
+
 end

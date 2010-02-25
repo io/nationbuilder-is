@@ -6,20 +6,22 @@ RAILS_ENV='development'
 require '../../config/boot'
 require "#{RAILS_ROOT}/config/environment"
 
-
 # Get all objects
 # @priority = Priority.find(45)
-# @law = ProcessDocument.find(261)
+@law = ProcessDocument.find(264)
 @proposal = ProcessDocument.find(142)
 @change = ProcessDocument.find(144)
 
 combiner = Combiner.new
 
-# #@law_elements = combiner.put_law_document_elements_into_array(@law)
+@law_elements = combiner.put_law_document_elements_into_array(@law)
 #@proposal_elements = combiner.put_proposal_document_elements_into_array(@proposal)
 @change_elements = combiner.put_proposal_document_elements_into_array(@change)
 
-puts @change_elements.inspect
+
+puts @law_elements.inspect
+
+puts "\n\n"
 
 # @change_elements = [
 # "  Við 3. gr.
@@ -82,12 +84,12 @@ puts @change_elements.inspect
 # }
 
 
-# puts @change.process_document_elements.all.map { |e| e.content_type }.inspect
-
-@actions = combiner.generate_actions(@change_elements)
-# @old_text = combiner.render(@law_elements, @actions)
-
-@actions.each { |action|
-  puts action.inspect
-  puts "\n"
-}
+# # puts @change.process_document_elements.all.map { |e| e.content_type }.inspect
+# 
+# @actions = combiner.generate_actions(@change_elements)
+# # @old_text = combiner.render(@law_elements, @actions)
+# 
+# @actions.each { |action|
+#   puts action.inspect
+#   puts "\n"
+# }

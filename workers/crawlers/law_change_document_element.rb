@@ -375,12 +375,12 @@ class LawChangeDocumentElement < ProcessDocumentElement
         # parents = [] if title[0].chr.to_i == title[0].chr
 
         # Store the rest of the line
-        partial = line[line.index(element_start)+2..line.length]
+        partial = "#{line[line.index(element_start)+2..line.length]}\n"
 
         # Store the title
         last_title = title
       else
-        partial += line if first_found
+        partial += "#{line}\n" if first_found
       end
     end
 
