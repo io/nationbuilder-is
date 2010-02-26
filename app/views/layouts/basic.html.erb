@@ -9,9 +9,9 @@
 <%= render :partial => "shared/css" %>
 <%= render :partial => "color_schemes/css", :locals => {:id => current_government.color_scheme_id } %>
 <%= render :partial => "shared/priority_processes_head" if controller_name.index("process") %>
-<%= stylesheet_link_tag "newstuff" %>
-<%= stylesheet_link_tag "gnew" %>
+<%= stylesheet_link_tag "newstuff", "gnew", "differentiator", "jtip" %>
 <%= javascript_include_tag "skuggathing" unless controller_name=="priority_processes" %>
+<%= javascript_include_tag "differentiator", "jtip" %>
 <% if controller_name == "facebook" %>
 <%= stylesheet_link_tag "fb_invite_hack.css" %>
 <% end %>

@@ -1,0 +1,30 @@
+<style>
+  .replaced-sentence {
+    text-decoration: line-through;
+  }
+  .removed-sentence {
+    text-decoration: line-through;
+    background: #ffaaaa;
+  }
+  .new-sentence {
+    background: #ffffaa;
+  }
+</style>
+
+<h1><%= @priority.name %></h1>
+
+<% @law_elements.each_with_index do |element,index| %>
+  <% if index > 0 %>
+    <p><strong><%= index %>. gr.</strong></p><br />
+    <% element.each_with_index do |paragraph,pindex| %>
+      <% paragraph.each_with_index do |item,iindex| %>
+        <p <%= "style='padding-left:20px'" if iindex > 0 %>>
+          <% item[:sentences].each do |sentence| %>
+            <span class="sentence"><%= sentence %></span>
+          <% end %>
+        </p>
+        <br />
+      <% end if paragraph %>
+    <% end if element %>
+  <% end %>
+<% end %>

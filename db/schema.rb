@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100217015727) do
+ActiveRecord::Schema.define(:version => 20100226152408) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -439,8 +439,8 @@ ActiveRecord::Schema.define(:version => 20100217015727) do
   add_index "endorsements", ["value"], :name => "value"
 
   create_table "facebook_templates", :force => true do |t|
-    t.string "template_name", :null => false
-    t.string "content_hash",  :null => false
+    t.string "template_name", :default => "", :null => false
+    t.string "content_hash",  :default => "", :null => false
     t.string "bundle_id"
   end
 
@@ -473,6 +473,20 @@ ActiveRecord::Schema.define(:version => 20100217015727) do
 
   add_index "followings", ["other_user_id"], :name => "followings_other_user_id_index"
   add_index "followings", ["user_id"], :name => "followings_user_id_index"
+
+  create_table "generated_proposal_elements", :force => true do |t|
+    t.integer  "generated_proposal_id"
+    t.integer  "process_document_element_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "generated_proposals", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "process_document_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "governments", :force => true do |t|
     t.string   "status",                         :limit => 30
@@ -678,7 +692,7 @@ ActiveRecord::Schema.define(:version => 20100217015727) do
     t.integer  "height",       :limit => 8
     t.integer  "width",        :limit => 8
     t.string   "content_type", :limit => 100
-    t.binary   "data"
+    t.binary   "data",         :limit => 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -1069,6 +1083,13 @@ ActiveRecord::Schema.define(:version => 20100217015727) do
   add_index "revisions", ["point_id"], :name => "index_revisions_on_point_id"
   add_index "revisions", ["status"], :name => "index_revisions_on_status"
   add_index "revisions", ["user_id"], :name => "index_revisions_on_user_id"
+
+  create_table "sentences", :force => true do |t|
+    t.integer  "process_document_element_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "shown_ads", :force => true do |t|
     t.integer  "ad_id"

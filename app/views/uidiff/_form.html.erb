@@ -1,0 +1,67 @@
+<% form_for(@proposal, :html => { :id => "diffform" }, :url => { :action => "save" }) do |f| %>
+  <%= f.hidden_field :id %>
+  <%= hidden_field_tag :change_elements %>
+<% end %>
+
+<div id="diff-current-preview-id"><%= params[:id] %></div>
+
+<div id="differentiator">
+  <div id="diff-document-title"><%= @proposal.priority_process.priority.name %></div>
+  <div id="diff-document-sub-title"><%= @proposal.title(true) %></div>
+  <ul id="differentiator-tabs">
+    <li class="open"><a href="#" onclick="return false;">Edit</a></li>
+    <li><a href="#" onclick="return diff_save();">Preview</a></li>
+  </ul>
+  <div id="differentiator-content">
+    <div class="diff-articles">
+      <div class="diff-column-title">Greinar</div>
+      <ul id="diff-articles-list">
+        <% for pe in @proposal.process_document_elements.articles %>
+        <li><a href="#G<%= pe.id %>"><%= pe.content_text_only %></a></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="diff-content">
+      <div class="diff-column-title">Frumvarp</div>
+      <div id="diff-content-container">
+        <ul id="diff-content-elements">
+          <% for pe in @proposal.process_document_elements.articles %>
+          <!-- <li>
+            <a name="K1" class="header">I. kafli. Almenn ákvæði.</a>
+          </li> -->
+          <li>
+            <a name="G<%= pe.id %>" class="header"><%= pe.content_text_only %></a>
+            <div class="indent">
+              <p><%= pe.children.first.content %></p>
+              <% unless pe.user_proposals.blank? %>
+              <div class="changes">
+                <label>Breytingartillögur</label>
+                <ul>
+                  <% for up in pe.user_proposals %>
+                  <li id="diff-content-change-<%= up.id %>" rel="<%= up.user.id %>"><a id="diff-change-link-<%= up.id %>" name="<%= up.user.real_name %>" href="/uidiff/preview_process_document_element/<%= up.id %>" onclick="return toggle_change_element(<%= up.id %>);" class="jTip diff-radius"><label><%= up.user.real_name %>:</label><%= up.content.clean_excerpt(:max_length => 100, :use_spaces => true) %></a></li>
+                  <% end %>
+                </ul>
+              </div>
+              <% end %>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="diff-changes">
+      <div class="diff-column-title">Br.tillögur</div>
+      <ul id="diff-changes-list">
+        <% for element in @proposal.find_changes_grouped_by_user %>
+        <li id="diff-changes-document-user-<%= element.user.id %>">
+          <a href="#" onclick="return toggle_change_user(<%= element.user.id %>);">
+            <%= image_tag("/images/document_32.png") %>
+            <div class="author"><%= element.user.real_name %></div>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
