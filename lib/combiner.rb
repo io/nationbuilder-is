@@ -1,4 +1,5 @@
 require "enumerator"
+require "htmlentities"
 
 class Combiner
 
@@ -42,21 +43,42 @@ class Combiner
     elements
   end
 
-  # Put the proposal document elements into an array
-  def put_proposal_document_elements_into_array(proposal_document)
-    elements = []
+  # # Put the proposal document elements into an array
+  # def put_proposal_document_elements_into_array(proposal_document)
+  #   elements = []
+  # 
+  #   proposal_document.process_document_elements.articles.each { |article|
+  #     article.children.each { |element|
+  #       elements << element.content_text_only.gsub(/^(.*?):(.*?):(.*?)$/) { |match| # Hugsanlega dugar ^(.*?):$
+  #         # Replace all ":" but first, in each line, with $$colon$$, which will then be replaced back to ":" once parsing is done
+  #         result = ""
+  #         match.scan(/^(.*?)(:)(.*?)(:)(.*?)$/) { |matches|
+  #           result = matches[0] + ":"
+  #           matches[2..matches.length-2].each { |m| result += (m == ":") ? "$$colon$$" : m }
+  #         }
+  #         result
+  #       }
+  #     }
+  #   }
+  # 
+  #   elements
+  # end
 
-    proposal_document.process_document_elements.articles.each { |article|
-      article.children.each { |element|
-        elements << element.content_text_only.gsub(/^(.*?):(.*?):(.*?)$/) { |match| # Hugsanlega dugar ^(.*?):$
-          # Replace all ":" but first, in each line, with $$colon$$, which will then be replaced back to ":" once parsing is done
-          result = ""
-          match.scan(/^(.*?)(:)(.*?)(:)(.*?)$/) { |matches|
-            result = matches[0] + ":"
-            matches[2..matches.length-2].each { |m| result += (m == ":") ? "$$colon$$" : m }
-          }
-          result
+  # Put the generated (saved) proposal document elements into an array
+  def put_generated_proposal_document_elements_into_array(generated_proposal_document)
+    elements = []
+    coder = HTMLEntities.new
+
+    generated_proposal_document.generated_proposal_elements.each { |gpe|
+      content = gpe.process_document_element.content_text_only.blank? ? coder.decode(gpe.process_document_element.content.gsub("<br />", "\n")) : gpe.process_document_element.content_text_only
+      elements << content.gsub(/^(.*?):(.*?):(.*?)$/) { |match| # Hugsanlega dugar ^(.*?):$
+        # Replace all ":" but first, in each line, with $$colon$$, which will then be replaced back to ":" once parsing is done
+        result = ""
+        match.scan(/^(.*?)(:)(.*?)(:)(.*?)$/) { |matches|
+          result = matches[0] + ":"
+          matches[2..matches.length-2].each { |m| result += (m == ":") ? "$$colon$$" : m }
         }
+        result
       }
     }
 

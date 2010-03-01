@@ -22,6 +22,7 @@ class ProcessDocument < ActiveRecord::Base
   belongs_to :process_document_type
 
   has_many :process_document_elements
+  has_many :generated_proposals
 
   def to_param
     "#{id}-#{self.priority_process.priority.name.parameterize_full}-#{external_type.parameterize_full}"

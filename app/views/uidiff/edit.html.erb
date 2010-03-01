@@ -1,1 +1,9 @@
 <%= render :partial => "form", :locals => { :proposal => @proposal } %>
+<script>
+  jQuery(document).ready(function() {
+    <% for gpe in @generated_proposal.generated_proposal_elements %>
+      diffelements.push(<%= gpe.process_document_element_id %>+"");
+    <% end %>
+    render_element_classes();
+  });
+</script>

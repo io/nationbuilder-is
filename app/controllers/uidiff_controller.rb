@@ -7,7 +7,7 @@ class UidiffController < ApplicationController
   end
 
   def new
-    @proposal = ProcessDocument.find(142)
+    @proposal = ProcessDocument.find(params[:id])
   end
 
   def edit
@@ -16,51 +16,64 @@ class UidiffController < ApplicationController
   end
 
   def save
+    elements = []
     @proposal = ProcessDocument.find(params[:process_document][:id])
-    # @proposal_elements = []
-    # @change_elements = []
-
-    gp = GeneratedProposal.new({
-      :user => current_user,
-      :process_document => @proposal
-    })
 
     # Get the list of document elements from the proposal
     @proposal.process_document_elements.articles.each do |element|
       change_elements = params[:change_elements].blank? ? [] : ProcessDocumentElement.all(:conditions => "parent_id = #{element.id} and id in (#{params[:change_elements]})")
-      gp.generated_proposal_elements.build({
-        :process_document_element => change_elements.empty? ? element.children.first : change_elements.first
-      })
+      change_elements.empty? ? elements << element.children.first : elements << change_elements.first
     end
 
+    # Check if an identical merge has been saved before
+    for gp in @proposal.generated_proposals
+      found = gp.generated_proposal_elements.all(:conditions => "process_document_element_id in (#{elements.map{|e|e.id}.join(",")})")
+      redirect_to(:action => :preview, :id => gp) and return if found.size == elements.size
+    end
+
+    # Create new generated proposal
+    gp = GeneratedProposal.new({
+      :user => current_user,
+      :process_document => @proposal
+    })
+    
+    # Get the list of document elements from the proposal
+    for element in elements
+      gp.generated_proposal_elements.build({
+        :process_document_element => element
+      })
+    end
+    
     gp.save
-
-    # # Get the list of document elements from the proposal
-    # @proposal.process_document_elements.articles.each do |element|
-    #   @change_elements = params[:change_elements].blank? ? [] : ProcessDocumentElement.all(:conditions => "parent_id = #{element.id} and id in (#{params[:change_elements]})")
-    #   @proposal_elements[element.content_number.to_i] = @change_elements.empty? ? element.children.first.content : @change_elements.first.content
-    # end
-
-    redirect_to :action => :preview, :id => gp
+    
+    redirect_to(:action => :preview, :id => gp)
   end
 
   def preview
-    @proposal = GeneratedProposal.find(params[:id])
-  end
-
-  def preview_original
     # Get all objects
-    @priority = Priority.find(45)
-    @law = ProcessDocument.find(264)
-    @proposal = ProcessDocument.find(142)
+    @proposal = GeneratedProposal.find(params[:id])
+    @priority = @proposal.process_document.priority_process.priority
 
-    combiner = Combiner.new
+    # Find the original laws
+    @law = nil
+    @priority.priority_processes.each do |pp|
+      law = pp.process_documents.first(:conditions => "external_link like '%/lagas/%'")
+      @law = law unless law.blank?
+    end
 
-    @law_elements = combiner.put_law_document_elements_into_array(@law)
-    @proposal_elements = combiner.put_proposal_document_elements_into_array(@proposal)
+    # Load the combiner
+    @combiner = Combiner.new
 
-    @actions = combiner.generate_actions(@proposal_elements)
-    @old_text = combiner.render_law(@law_elements, @actions)
+    # Do not continue if this portion has been cached
+    unless read_fragment({:id => params[:id]})
+      # Generate arrays with the information required for the merge
+      @law_elements = @combiner.put_law_document_elements_into_array(@law)
+      @proposal_elements = @combiner.put_generated_proposal_document_elements_into_array(@proposal)
+
+      # Merge the proposals with the original laws
+      @actions = @combiner.generate_actions(@proposal_elements)
+      @old_text = @combiner.render_law(@law_elements, @actions)
+    end
   end
 
   # AJAX

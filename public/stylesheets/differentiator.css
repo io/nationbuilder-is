@@ -250,3 +250,16 @@
 .clear {
   clear: both;
 }
+
+/* Rendered view */
+
+.replaced-sentence {
+  text-decoration: line-through;
+}
+.removed-sentence {
+  text-decoration: line-through;
+  background: #ffaaaa;
+}
+.new-sentence {
+  background: #ffffaa;
+}

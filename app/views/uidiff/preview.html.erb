@@ -1,5 +1,5 @@
 <div id="differentiator">
-  <div id="diff-document-title"><%= @proposal.process_document.priority_process.priority.name %></div>
+  <div id="diff-document-title"><%= @priority.name %></div>
   <div id="diff-document-sub-title"><%= @proposal.process_document.title(true) %></div>
   <ul id="differentiator-tabs">
     <li><a href="/uidiff/edit/<%= @proposal.id %>">Edit</a></li>
@@ -8,12 +8,33 @@
   <div id="differentiator-content">
     <div class="diff-content-wide">
       <div id="diff-content-container">
+        <%# cache("uidiff_preview_#{params[:id]}") do %>
+        <% cache(:id => params[:id]) do %>
+          <% @law_elements.each_with_index do |element,index| %>
+            <% if index > 0 %>
+              <p><strong><%= index %>. gr.</strong></p><br />
+              <% element.each_with_index do |paragraph,pindex| %>
+                <% paragraph.each_with_index do |item,iindex| %>
+                  <p <%= "style='padding-left:20px'" if iindex > 0 %>>
+                    <% item[:sentences].each do |sentence| %>
+                      <span class="sentence"><%= sentence %></span>
+                    <% end %>
+                  </p>
+                  <br />
+                <% end if paragraph %>
+              <% end if element %>
+            <% end %>
+          <% end %>
+        <% end %>
+        
+        <!--
         <% @proposal.generated_proposal_elements.each_with_index do |element, index| %>
           <strong><%= index+1 %>. gr.</strong><br />
           <br />
           <%= element.process_document_element.content %>
           <br />
         <% end %>
+        -->
       </div>
     </div>
     <div class="clear"></div>
