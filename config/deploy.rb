@@ -6,6 +6,7 @@ set :use_sudo, false
 set :deploy_to, "/home/robert/sites/#{application}/#{selected_branch}"
 set :branch, "#{selected_branch}"
 set :user, "robert"
+set :deploy_via, :remote_cache
 
 set :scm, "git"
 

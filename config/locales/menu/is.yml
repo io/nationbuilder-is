@@ -44,7 +44,7 @@ is:
             all_activity: "Öll virkni"
             research:
                 name: "Órökstudd mál"
-                needed: "Mál vantar {{points_name}} eða {{documents_name}}"
+                needed: "Mál sem vantar {{points_name}} eða {{documents_name}}"
                 points_needed: "Mál verða að innihalda rök"
                 documents_needed: "Mál verða að innihalda skjöl"
                 contributors:
@@ -65,9 +65,9 @@ is:
                 one: "1 endurskoðun"
                 other: "{{count}} endurskoðanir"
             documents:
-                name: "Skrár"
-                one: "1 skrá"
-                other: "{{count}} skrár"
+                name: "Skjöl"
+                one: "1 skjal"
+                other: "{{count}} skjöl"
             priorities:
                 name: "Mál"
                 one: "1 mál"
@@ -242,11 +242,11 @@ is:
             branch:
                 name: "{{branch_name}} mál"
         processes:
-                name: "Þingferill"
+                name: "Ferill"
         process_documents:
-                name: "Þingskjöl"
+                name: "Skjöl"
         process_discussions:
-                name: "Þingumræður"
+                name: "Þingræður"
         points:
             name: "Rök"
         portal:

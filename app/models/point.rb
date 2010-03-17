@@ -130,7 +130,7 @@ class Point < ActiveRecord::Base
 
   def name_with_type
     return name unless is_down?
-    "[opposed] " + name
+    "[á móti] " + name
   end
 
   def text

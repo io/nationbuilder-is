@@ -131,8 +131,8 @@ class DocumentRevision < ActiveRecord::Base
 
   def text
     s = document.name
-    s += " [opposed]" if is_down?
-    s += " [neutral]" if is_neutral? and has_priority?
+    s += " [á móti]" if is_down?
+    s += " [hlutlaust]" if is_neutral? and has_priority?
     s += "\r\n" + content
     return s
   end  

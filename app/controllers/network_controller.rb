@@ -20,7 +20,7 @@ class NetworkController < ApplicationController
 
   def talkative
     @page_title = t('network.talkative.title', :government_name => current_government.name)
-    @users = User.active.by_talkative.paginate :conditions => ["users.id <> ?",current_government.official_user_id], :page => params[:page], :per_page => params[:per_page]
+    @users = User.active.by_talkative.paginate :page => params[:page], :per_page => params[:per_page]
     respond_to do |format|
       format.html
       format.xml { render :xml => @users.to_xml(:include => [:top_endorsement, :referral, :partner_referral], :except => NB_CONFIG['api_exclude_fields']) }

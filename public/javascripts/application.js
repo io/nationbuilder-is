@@ -24,10 +24,10 @@ jQuery(document).ready(function() {
 	  jQuery(this).removeClass("hovering"); 
 	}
 	var megaConfig = {
-	     interval: 200,
-	     sensitivity: 4,
+	     interval: 20,
+	     sensitivity: 1,
 	     over: addMega,
-	     timeout: 250,
+	     timeout: 20,
 	     out: removeMega
 	};
 	jQuery(".mega").hoverIntent(megaConfig);

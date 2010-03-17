@@ -550,7 +550,7 @@ class Priority < ActiveRecord::Base
   def latest_priority_process_at
     latest_priority_process_txt = Rails.cache.read("latest_priority_process_at_#{self.id}")
     unless latest_priority_process_txt      
-      priority_process = PriorityProcess.find_by_priority_id(self, :order=>"created_at DESC")
+      priority_process = PriorityProcess.find_by_priority_id(self, :order=>"created_at DESC, stage_sequence_number DESC")
       if priority_process
         time = priority_process.last_changed_at
       else
@@ -562,7 +562,7 @@ class Priority < ActiveRecord::Base
         stage_txt = "#{priority_process.stage_sequence_number}. #{I18n.t :parliment_stage_sequence_discussion}"
       end
       latest_priority_process_txt = "#{stage_txt}, #{distance_of_time_in_words_to_now(time)} #{I18n.t :since}"
-      Rails.cache.write("latest_priority_process_at_#{self.id}", latest_priority_process_txt, :expires_in => 1.hour)
+      Rails.cache.write("latest_priority_process_at_#{self.id}", latest_priority_process_txt, :expires_in => 30.minutes)
     end
     latest_priority_process_txt
   end

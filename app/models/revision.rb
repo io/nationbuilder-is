@@ -149,11 +149,11 @@ class Revision < ActiveRecord::Base
   
   def text
     s = point.name
-    s += " [opposed]" if is_down?
-    s += " [neutral]" if is_neutral?    
-    s += "\r\nIn support of " + point.other_priority.name if point.has_other_priority?
+    s += " [á móti]" if is_down?
+    s += " [hlutlaust]" if is_neutral?    
+    s += "\r\nTil stuðnings " + point.other_priority.name if point.has_other_priority?
     s += "\r\n" + content
-    s += "\r\nSource: " + website_link if has_website?
+    s += "\r\nUppruni: " + website_link if has_website?
     return s
   end  
   

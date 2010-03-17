@@ -714,3 +714,16 @@ color:#333333 !important;
 font-size: 10px !important;
 font-weight: normal !important;
 }
+
+.yes_and_no_points_link_hacky a {
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif !important;
+	color:#333333 !important;
+	font-size: 12px !important;
+	font-weight: normal !important;
+	text-decoration: underline;
+	margin-top: 500px;
+}
+
+.yes_and_no_points_link_hacky {
+	margin-top: 10px;
+}

@@ -487,7 +487,7 @@ class PrioritiesController < ApplicationController
   end
 
   def top_points
-    @page_title = t('priorities.top_points.title', :priority_name => @priority.name) 
+    @page_title = t('priorities.top_points.title_long', :priority_name => @priority.name) 
     @point_value = 0 
     @points_top_up = @priority.points.published.by_helpfulness.up_value.five
     @points_top_down = @priority.points.published.by_helpfulness.down_value.five
@@ -658,6 +658,7 @@ class PrioritiesController < ApplicationController
     @tag_names = params[:tag_names]
     @priority = Priority.new
     @priority.name = params[:q] if params[:q]
+    @priority.issue_list = "frá almenningi"
     if not logged_in?
       flash[:notice] = t('priorities.new.need_account', :target => current_government.target)
       session[:query] = params[:priority][:name] if params[:priority]
@@ -670,6 +671,7 @@ class PrioritiesController < ApplicationController
       @priority.name = params[:finalized].strip
       @priority.user = current_user
       @priority.ip_address = request.remote_ip
+      @priority.issue_list = "frá almenningi"
       @saved = @priority.save
     else
       # see if it already exists
@@ -688,6 +690,7 @@ class PrioritiesController < ApplicationController
         @priorities = @priority_results.docs
         if @priorities.any? # found some matches in search, let's show them and bale out of the rest of this
           @priority = Priority.new(params[:priority])
+          @priority.issue_list = "frá almenningi"
           get_endorsements
           respond_to do |format|
             format.html { render :action => "new"}
@@ -702,6 +705,7 @@ class PrioritiesController < ApplicationController
         @priority.name = params[:priority][:name].strip
         @priority.user = current_user
         @priority.ip_address = request.remote_ip
+        @priority.issue_list = "frá almenningi"
         @saved = @priority.save      
       end
     end
@@ -802,9 +806,9 @@ class PrioritiesController < ApplicationController
           page.visual_effect :highlight, 'your_priorities'
           if facebook_session
             if @value == 1
-              page << fb_user_action(UserPublisher.create_endorsement(facebook_session, @endorsement, @priority))
+              page << fb_connect_stream_publish(UserPublisher.create_endorsement(facebook_session, @endorsement, @priority))
             else
-              page << fb_user_action(UserPublisher.create_opposition(facebook_session, @endorsement, @priority))
+              page << fb_connect_stream_publish(UserPublisher.create_opposition(facebook_session, @endorsement, @priority))
             end
           end
         end

@@ -17,13 +17,13 @@
 
 	<div class="field">
 		<div class="field_label">
-			<table width="30%">
+			<table width="35%">
 				<tr>
 					<td align="left">
-						Til stuðnings <%= f.radio_button(:value, 1, :checked=>params[:support] ? "checked" : "nil") %>						
+						Já, til stuðnings <%= f.radio_button(:value, 1, :checked=>params[:support] ? "checked" : "nil") %>						
 					</td>
 					<td align="left">
-						Á móti <%= f.radio_button(:value, -1, :checked=>params[:support] ?  "nil" : "checked") %>
+						Nei, á móti <%= f.radio_button(:value, -1, :checked=>params[:support] ?  "nil" : "checked") %>
 					</td>
 				</tr>
 			</table>

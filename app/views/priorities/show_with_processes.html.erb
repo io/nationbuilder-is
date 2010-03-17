@@ -32,10 +32,14 @@
 				<table id="" class="container_13">
 					<tr>
 						<td class="grid_41">
+							<center>
+								<span class="yes_and_no_points_link_hacky">
+									<%=link_to(t('points.top_points.add_point_for_endorse'), new_priority_point_path(@priority,:support=>true))%>
+								</span>
+							</center>
 							<div class="sub_header">
 								<h2><%=t('points.top_points.best_points_for_endorse')%></h2>
-								<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%> | 
-								<%=link_to(t('points.top_points.add_point_for_endorse'), new_priority_point_path(@priority,:support=>true))%></p>
+								<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%></p>
 							</div>
 							<div id="pro_top">
 								<%= render :partial => "points/long_list", :locals => {:id => "pro_top", :point=>@priority.points.published.by_helpfulness.up_value.first } %>
@@ -43,10 +47,14 @@
 						</td>
 				    
 						<td id="point_right" class="grid_41">
+							<center>
+								<span class="yes_and_no_points_link_hacky">
+									<%=link_to(t('points.top_points.add_point_for_oppose'), new_priority_point_path(@priority,:support=>false))%>
+								</span>
+							</center>
 							<div class="sub_header">
 								<h2><%=t('points.top_points.best_points_for_oppose')%></h2>
-								<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%> | 
-								<%=link_to(t('points.top_points.add_point_for_oppose'), new_priority_point_path(@priority,:support=>false))%></p>
+								<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%></p>
 							</div>
 							<div id="con_top">
 								<%= render :partial => "points/long_list", :locals => {:id => "con_top", :point => @priority.points.published.by_helpfulness.down_value.first
@@ -61,8 +69,7 @@
 					<td id="" class="grid_41">
 						<div class="sub_header">
 							<h2><%=t('points.top_points.newest_points_for_endorse')%></h2>
-							<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%> | 
-							<%=link_to(t('points.top_points.add_point_for_endorse'), new_priority_point_path(@priority,:support=>true))%></p>
+							<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%></p>
 						</div>
 						<div id="pro_new">
 							<%= render :partial => "points/long_list", :locals => {:id => "pro_new", :point => @priority.points.published.by_recently_created.up_value.first} %>
@@ -72,8 +79,7 @@
 					<td id="point_right" class="grid_41">
 						<div class="sub_header">
 							<h2><%=t('points.top_points.newest_points_for_oppose')%></h2>
-							<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%> | 
-							<%=link_to(t('points.top_points.add_point_for_oppose'), new_priority_point_path(@priority,:support=>false))%></p>
+							<p class="below_line"><%=link_to(t('points.top_points.all_best_points'), top_points_priority_url(@priority))%></p>
 						</div>
 						<div id="con_new">
 							<%= render :partial => "points/long_list", :locals => {:id => "con_new", :point => @priority.points.published.by_recently_created.down_value.first} %>

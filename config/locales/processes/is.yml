@@ -2,6 +2,7 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 is:
+  votes_counted: "atkvæði"
   points_against: "Rök á móti"
   points_for: "Rök með"
   no_points: "órökstutt"
@@ -126,7 +127,6 @@ is:
   rate_this_article: "Hversu góður finnst þér þessi hluti?"
   rate_this_a: "Gefðu þessu "
   out_of_5: " af 5 mögulegum"
-  votes: "atkvæði"
   process_document_elements: "Skjal í hlutum"
   toggle_comments: "Athugasemdir opna/loka"
   toggle_change_proposals: "Breytingatillögur opna/loka"

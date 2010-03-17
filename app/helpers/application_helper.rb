@@ -168,6 +168,6 @@ module ApplicationHelper
   end
 
   def get_short_star_rating(asset,br=false)
-    "#{sprintf("%.1f",asset.rating)}/5.0 #{br ? "<br>" : ""} <small>(#{asset.ratings.size} #{t(:votes)})</small>"
+    "#{sprintf("%.1f",asset.rating)}/5.0 #{br ? "<br>" : ""} <small>(#{asset.ratings.size} #{t(:votes_counted)})</small>"
   end
 end

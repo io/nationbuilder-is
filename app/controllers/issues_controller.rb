@@ -85,7 +85,7 @@ class IssuesController < ApplicationController
         :group => "endorsements.priority_id",       
         :order => "score desc").paginate :page => params[:page]
         if logged_in?
-          @endorsements = current_user.endorsements.active.find(:all, :conditions => ["priority_id in (?)", @network_endorsements.collect {|c| c.priority_id}])
+          @endorsements = current_user.endorsements.active.find(:all, :conditions => ["priority_id in (?)", @priorities.collect {|c| c.priority_id}])
         end
     end
     respond_to do |format|

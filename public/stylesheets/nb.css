@@ -817,6 +817,11 @@ del {
 	left: 3px;
 	font-size: 0.9em;
 }
+
+.priority_endorsement_count a {
+	border-bottom:1px dotted #aaa;
+}
+
 .table_header {
 	font-size: 0.8em;
 	text-transform:uppercase;

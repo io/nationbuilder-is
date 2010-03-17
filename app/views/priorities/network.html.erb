@@ -15,7 +15,7 @@
 			<td align="right" style="padding-right: 5px;"><span class="table_header"><%= t('rank') %></span></td>
 			<td style="padding-left: 3px;"><span class="table_header"><%= t('time.wk') %></span></td>
 			<td style="padding-left: 3px;"><span class="table_header"><%= t('time.mo') %></span></td>
-			<td style="padding-left: 7px; padding-bottom: 2px;"><%= will_paginate @network_endorsements %></td>	
+			<td style="padding-left: 7px; padding-bottom: 2px;"><%= will_paginate @priorities %></td>	
 		</tr>
 	<% for e in @priorities %>
 		<% if @endorsements %>
@@ -45,6 +45,6 @@
 
 	</table>
 	<p>
-	<%= will_paginate @network_endorsements %>
+	<%= will_paginate @priorities %>
 	
 <% end %>

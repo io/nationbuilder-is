@@ -40,9 +40,43 @@
 		</li>
 		<% end %>
 		<li class="tab2 mega">
-			<span class="tab_header"><%= link_to t('menu.priorities.name'), :controller => "priorities", :action => current_government.homepage.index("/") ? "top" : current_government.homepage %></span>
+			<span class="tab_header"><%= link_to t('menu.priorities.name'), "#" %></span>
 			<div class="tab_body">
+
+				<div class="tab_subhead">
+					<%= link_to "Lagafrumvörp", "/issues/lagafrumvorp" %>
+				</div>
+				<div class="tab_sublinks"></div>
+
+				<div class="tab_subhead">
+					<%= link_to "Þingsályktunartillögur", "/issues/thingsalyktunartillogur" %>
+				</div>
+				<div class="tab_sublinks"></div>
+
+				<div class="tab_subhead">
+					<%= link_to "Mál frá almenningi", "/issues/fra-almenningi" %>
+				</div>
+				<div class="tab_sublinks"></div>
+
+				<div class="tab_subhead">
+					<%= link_to t('menu.priorities.everyone.name'), top_priorities_url %> (<%= number_with_delimiter(current_government.priorities_count) %>)
+				</div>
+				<div class="tab_sublinks">
+				<%= link_to t('menu.priorities.everyone.top'), top_priorities_url %>
+				&middot; <%= link_to t('menu.priorities.everyone.ads'), ads_priorities_url %>
+				&middot; <%= link_to t('menu.priorities.everyone.controversial'), controversial_priorities_url %>
+				&middot; <%= link_to t('menu.priorities.everyone.rising'), rising_priorities_url %>
+				&middot; <%= link_to t('menu.priorities.everyone.falling'), falling_priorities_url %>
+				&middot; <%= link_to t('menu.priorities.everyone.random'), random_priorities_url %>
+				&middot; <%= link_to t('menu.priorities.everyone.new'), newest_priorities_url %>
+				&middot; <%= link_to t('menu.priorities.everyone.finished'), finished_priorities_url %>
+				</div>		
+				
 				<% if logged_in? %>
+					<div class="tab_subhead">
+						<%= link_to t('menu.priorities.network.name'), network_priorities_url %>
+					</div>
+					<div class="tab_sublinks"></div>
 					<div class="tab_subhead">
 					<% if logged_in? %>
 						<%= link_to t('menu.priorities.yours.name'), yours_priorities_url %> (<%= current_user.endorsements_count %>)
@@ -56,31 +90,9 @@
 					&middot; <%= link_to t('menu.priorities.yours.ads'), yours_ads_priorities_url %>					
 					&middot; <%= link_to t('menu.priorities.yours.lowest'), yours_lowest_priorities_url %>
 					&middot; <%= link_to t('menu.priorities.yours.finished'), yours_finished_priorities_url %>
-					<br/>
-					<%= link_to t('menu.priorities.yours.created'), yours_created_priorities_url %> &middot; <%= link_to t('menu.priorities.consider'), consider_priorities_url %> &middot; <%= link_to t('menu.priorities.quiz'), :controller => "prioritizer" %>
-					
+					&middot; <%= link_to t('menu.priorities.yours.created'), yours_created_priorities_url %> &middot; <%= link_to t('menu.priorities.consider'), consider_priorities_url %> &middot; <%= link_to t('menu.priorities.quiz'), :controller => "prioritizer" %>					
 					</div>
-					<div class="tab_subhead">
-						<%= link_to t('menu.priorities.network.name'), network_priorities_url %>
-					</div>
-					<div class="tab_sublinks"></div>
-
 				<% end %>
-				
-				<div class="tab_subhead">
-					<%= link_to t('menu.priorities.everyone.name'), priorities_url %> (<%= number_with_delimiter(current_government.priorities_count) %>)
-				</div>
-				<div class="tab_sublinks">
-				<%= link_to t('menu.priorities.everyone.top'), top_priorities_url %>
-				&middot; <%= link_to t('menu.priorities.everyone.ads'), ads_priorities_url %>
-				&middot; <%= link_to t('menu.priorities.everyone.controversial'), controversial_priorities_url %>
-				&middot; <%= link_to t('menu.priorities.everyone.rising'), rising_priorities_url %>
-				&middot; <%= link_to t('menu.priorities.everyone.falling'), falling_priorities_url %>
-				&middot; <%= link_to t('menu.priorities.everyone.random'), random_priorities_url %>
-				&middot; <%= link_to t('menu.priorities.everyone.new'), newest_priorities_url %>
-				&middot; <%= link_to t('menu.priorities.everyone.finished'), finished_priorities_url %>
-				</div>		
-				
 				
 				<% if current_government.is_branches? %>
 				
@@ -99,7 +111,6 @@
 						</div>
 				
 					<% end %>
-				
 				<% end %>
 				
 				<% if current_government.has_official? %>
@@ -112,15 +123,14 @@
 					&middot; <%= link_to t('menu.priorities.official.agenda_opposed'), obama_opposed_priorities_url %>					
 					</div>
 				<% end %>
-				
 			</div>
 		</li>
 		<% if logged_in? %>
 		<li class="tab3 mega">
-			<span class="tab_header"><% if logged_in? and current_user.endorsements_count > 0 %><%= link_to current_government.briefing_name, your_priorities_points_url %><% else %><%= link_to current_government.briefing_name, newest_points_url %><% end %></span>
+			<span class="tab_header"><%= link_to current_government.briefing_name, "#" %></span>
 			<div class="tab_body">
 
-				<div class="tab_subhead"><%= link_to t('menu.points.name'), your_priorities_points_url %> (<%= number_with_delimiter(current_government.points_count) %>)</div>
+				<div class="tab_subhead"><%= link_to t('menu.points.name'), newest_points_url %> (<%= number_with_delimiter(current_government.points_count) %>)</div>
 				<div class="tab_sublinks">
 					<%= link_to t('menu.briefing.yours'), points_url %>
 					&middot; <%= link_to t('menu.briefing.your_priorities'), your_priorities_points_url %>
@@ -128,7 +138,7 @@
 					&middot; <%= link_to t('menu.briefing.revised'), revised_points_url %>
 				</div>
 			
-				<div class="tab_subhead"><%= link_to t('menu.documents.name'), your_priorities_documents_url %> (<%= number_with_delimiter(current_government.documents_count) %>)</div>
+				<div class="tab_subhead"><%= link_to t('menu.documents.name'), newest_documents_url %> (<%= number_with_delimiter(current_government.documents_count) %>)</div>
 				<div class="tab_sublinks">
 					<%= link_to t('menu.briefing.yours'), documents_url %>
 					&middot; <%= link_to t('menu.briefing.your_priorities'), your_priorities_documents_url %>
@@ -156,7 +166,7 @@
 		<% end %>
 		<% if logged_in? %>
 		<li class="tab4 mega">
-			<span class="tab_header"><%= link_to t('menu.news.name'), :controller => "news", :action => "discussions" %></span>
+			<span class="tab_header"><%= link_to t('menu.news.name'), "#" %></span>
 			<div class="tab_body">
 				
 				<div class="tab_subhead"><%= link_to t('menu.news.discussions'), :controller => "news", :action => "discussions" %></div>
@@ -169,7 +179,7 @@
 					&middot; <%= link_to t('menu.news.followers'), :controller => "news", :action => "your_followers_discussions" %>						
 				</div>
 				
-				<div class="tab_subhead"><%= link_to current_government.briefing_name + " activity", :controller => "news", :action => "points" %></div>
+				<div class="tab_subhead"><%= link_to current_government.briefing_name + " virkni", :controller => "news", :action => "points" %></div>
 				<div class="tab_sublinks">
 					<%= link_to t('menu.news.all'), :controller => "news", :action => "points" %>
 					&middot; <%= link_to t('menu.news.yours'), :controller => "news", :action => "your_points" %>
@@ -235,18 +245,25 @@
 		</li>
 		<% end %>
 		<li class="tab5 mega">
-			<span class="tab_header"><%= link_to t('menu.network.name'), :controller => "network" %></span>
-			<div class="tab_body">
-				
+			<span class="tab_header"><%= link_to t('menu.network.name'), "#" %></span>
+			<div class="tab_body">				
+				<div class="tab_subhead"><%= link_to t('menu.network.meet'), :controller => "network" %> (<%= number_with_delimiter(current_government.users_count) %>)</div>
+				<div class="tab_sublinks">
+					<%= link_to t('menu.network.influential'), :controller => "network" %>
+					&middot; <%= link_to t('menu.network.talkative'), :controller => "network", :action => "talkative" %>
+					<% if current_government.has_twitter_enabled? %>
+						&middot; <%= link_to t('menu.network.twitterers'), :controller => "network", :action => "twitterers" %>
+					<% end %>
+					<br/>
+					<%= link_to t('menu.network.ambassadors'), :controller => "network", :action => "ambassadors" %>					
+					&middot; <%= link_to t('menu.network.new'), :controller => "network", :action => "newest" %>
+					&middot; <%= link_to t('menu.network.partners'), :controller => "network", :action => "partners" %>
+					<% if current_government.is_branches? %>
+						<br/>
+						<%= current_branches.collect{ |branch| link_to(branch.name, branch_users_url(branch))}.to_sentence(:words_connector => " &middot; ", :two_words_connector => " &middot; ", :last_word_connector => " &middot; ") %>
+					<% end %>
+				</div>
 				<% if logged_in? %>
-				
-					<div class="tab_subhead"><%= link_to t('menu.inbox.name'), :controller => "inbox" %></div>
-					<div class="tab_sublinks">
-					<%= link_to t('menu.inbox.incoming'), :controller => "inbox" %>
-					&middot; <%= link_to t('menu.inbox.notifications'), :controller => "inbox", :action => "notifications" %>
-					&middot; <%= link_to t('menu.inbox.sent'), :controller => "inbox", :action => "sent" %>					
-					</div>
-					
 					<% if current_user.followings_count > 0 %>
 						<div class="tab_subhead"><%= link_to t('menu.network.yours'), following_user_contacts_path(current_user) %><% if current_user.followings_count > 0 %> (<%= current_user.followings_count %>)<% end %></div>
 						<div class="tab_sublinks"></div>
@@ -274,24 +291,15 @@
 							&middot; <%= link_to t('menu.network.import.facebook'), :controller => "facebook", :action => "invite" %>
 						<% end %>
 					</div>
-				<% end %>
 				
-				<div class="tab_subhead"><%= link_to t('menu.network.meet'), :controller => "network" %> (<%= number_with_delimiter(current_government.users_count) %>)</div>
-				<div class="tab_sublinks">
-					<%= link_to t('menu.network.influential'), :controller => "network" %>
-					&middot; <%= link_to t('menu.network.talkative'), :controller => "network", :action => "talkative" %>
-					<% if current_government.has_twitter_enabled? %>
-						&middot; <%= link_to t('menu.network.twitterers'), :controller => "network", :action => "twitterers" %>
-					<% end %>
-					<br/>
-					<%= link_to t('menu.network.ambassadors'), :controller => "network", :action => "ambassadors" %>					
-					&middot; <%= link_to t('menu.network.new'), :controller => "network", :action => "newest" %>
-					&middot; <%= link_to t('menu.network.partners'), :controller => "network", :action => "partners" %>
-					<% if current_government.is_branches? %>
-						<br/>
-						<%= current_branches.collect{ |branch| link_to(branch.name, branch_users_url(branch))}.to_sentence(:words_connector => " &middot; ", :two_words_connector => " &middot; ", :last_word_connector => " &middot; ") %>
-					<% end %>
-				</div>
+					<div class="tab_subhead"><%= link_to t('menu.inbox.name'), :controller => "inbox" %></div>
+					<div class="tab_sublinks">
+					<%= link_to t('menu.inbox.incoming'), :controller => "inbox" %>
+					&middot; <%= link_to t('menu.inbox.notifications'), :controller => "inbox", :action => "notifications" %>
+					&middot; <%= link_to t('menu.inbox.sent'), :controller => "inbox", :action => "sent" %>					
+					</div>
+					
+				<% end %>
 				
 				<% if logged_in? and current_user.is_admin? %>
 					<div class="tab_subhead"><%= link_to t('menu.network.admin'), :controller => "network", :action => "unverified" %></div>
@@ -318,7 +326,7 @@
 		<% if logged_in? %>
 		<li class="tab6 mega">
 			<span class="tab_header">
-				<%= link_to t('menu.settings.name'), settings_url %>
+				<%= link_to t('menu.settings.name'), "#" %>
 			</span>
 			<div class="tab_body">
 				<div class="tab_subhead">
@@ -386,7 +394,7 @@
 		<% end %>
 		<li class="tab7 mega">
 			<span class="tab_header">
-				<%= link_to t('menu.about.name'), :controller => "about" %>
+				<%= link_to t('menu.about.name'), "#" %>
 			</span>
 			<div class="tab_body">
 				<div class="tab_subhead"><%= link_to t('menu.about.site'), :controller => "about" %></div>
