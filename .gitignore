@@ -21,3 +21,4 @@ private/*
 *.log
 *.output
 *.pid
+workers/crawlers/law_crawler.out
