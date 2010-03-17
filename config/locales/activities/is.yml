@@ -383,15 +383,15 @@ is:
                     name: "{{priority_name}} tókst en þó með breytingum"
                     noself: "Tókst með breytingum"
                 failed:
-                    name: "{{priority_name}} mistókst"
-                    noself: "Þetta forgangsmál mistókst"
+                    name: "{{priority_name}} fellt"
+                    noself: "Þetta mál var fellt"
                 intheworks:
                     name: "{{priority_name}} er í vinnslu"
                     noself: "Þetta forgangsmál er í vinnslu"
             tag:
                 first:
-                    name: "{{priority_name}} er nýtt forgangsmál #1 í {{tag_name}}"
-                    noself: "Þetta er nýtt forgangsmál #1 í {{tag_name}}"
+                    name: "{{priority_name}} er nýtt mál #1 í {{tag_name}}"
+                    noself: "Þetta er nýtt mál #1 í {{tag_name}}"
                 controversial:
                     name: "{{priority_name}} er umdeildasta forgangsmálið í {{tag_name}}"
                     noself: "Þetta er umdeildasta forgangsmálið í {{tag_name}}"                    
@@ -405,7 +405,7 @@ is:
         user:
             new:
                 name: "{{user_name}} er skráð(ur) í {{government_name}}"
-                nouser: "Skráður í {{government_name}}"
+                nouser: "Skráð(ur) í {{government_name}}"
             recruited:
                 name: "{{user_name}} fékk {{other_user_name}} með í {{government_name}}" 
                 nouser: "{{user_name}} fékk {{other_user_name}} með í {{government_name}}" 

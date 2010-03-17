@@ -2,6 +2,11 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  votes_counted: "atkvæði"
+  points_against: "Points against"
+  points_for: "Points for"
+  no_points: "no talking points"
+  new_points: "no new points"
   time_in: "in"
   time_ago: "ago"
   processes:

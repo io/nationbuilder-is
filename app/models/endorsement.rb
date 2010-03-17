@@ -211,8 +211,8 @@ class Endorsement < ActiveRecord::Base
   end
 
   def value_name
-    return 'endorsed' if is_up?
-    return 'opposed' if is_down?
+    return 'studdir' if is_up?
+    return 'varst á móti' if is_down?
   end
 
   def flip_up

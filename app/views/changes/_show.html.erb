@@ -4,36 +4,36 @@
 	<div class="pc_under"><%= t('pc.name', :capital => change.user.capitals_count, :currency_short_name => current_government.currency_short_name) %></div>
 </div>
 
-<%= link_to change.user.name, change.user %> proposed an acquisition <%= time_ago(change.created_at) %>:<br/>
+<%= link_to change.user.name, change.user %> lagði til yfirtöku fyrir <%= time_ago(change.created_at) %>:<br/>
 <div class="change_name_first"><%= link_to h(change.new_priority.name), change.new_priority %></div>
-with <%= render :partial => "priorities/endorsement_count", :locals => {:priority => change.new_priority }%>
-<br/>should <%= link_to "acquire", priority_change_url(change.priority,change) %> the 
+<%= render :partial => "priorities/endorsement_count", :locals => {:priority => change.new_priority }%>
+<br/>ætti að <%= link_to "yfirtaka", priority_change_url(change.priority,change) %> 
 	
 <% if change.is_active? %>
 	<% if change.is_endorsers? %>
-	<%= pluralize(change.priority.up_endorsements_count,"endorser") %>
+	  <%= pluralize(change.priority.up_endorsements_count,"stuðningsmann") %>
 	<% end %>
-	<% if change.is_endorsers? and change.is_opposers? %>and<% end %>
+	<% if change.is_endorsers? and change.is_opposers? %>og<% end %>
 	<% if change.is_opposers? %>
-	<%= pluralize(change.priority.down_endorsements_count,"opposers") %>
+	  <%= pluralize(change.new_priority.down_endorsements_count,"andstæðing") %>
 	<% end %>
 <% else %>
 	<% if change.is_endorsers? %>
-	endorsers
+	  með
 	<% end %>
-	<% if change.is_endorsers? and change.is_opposers? %>and<% end %>
+	<% if change.is_endorsers? and change.is_opposers? %>og<% end %>
 	<% if change.is_opposers? %>
-	opposers
+	  á móti
 	<% end %>
 <% end %>
-of <b><%= link_to h(change.priority.name), change.priority %></b>
+frá <b><%= link_to h(change.priority.name), change.priority %></b>
 <% if change.is_flip?%>
-	flipping the 
+	breyti 
 	<% if change.is_endorsers? %>
-	endorsers to opposers
+  	 með í á móti
 	<% end %>
-	<% if change.is_endorsers? and change.is_opposers? %>and the<% end %>
+	<% if change.is_endorsers? and change.is_opposers? %>og<% end %>
 	<% if change.is_opposers? %>
-	opposers to endorsers
+	 með í á móti
 	<% end %>
 <% end %>

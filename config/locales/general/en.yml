@@ -1,4 +1,6 @@
 en:
+    prev_t: "Previous"
+    next_t: "Next"
     issues:
         name: "Tags"
         list:

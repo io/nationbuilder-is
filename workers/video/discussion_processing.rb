@@ -18,7 +18,7 @@ class DiscussionProcessing
 
   def self.process_discussion_items(logger)
     @@logger = logger
-    process_discussion = ProcessDiscussion.find(:first, :conditions=>["in_video_processing = 0 AND video_processing_complete = 0 AND meeting_date > ?",DateTime.parse("10/01/2008")], :order=>"meeting_date ASC", :lock=>true)
+    process_discussion = ProcessDiscussion.find(:first, :conditions=>["in_video_processing = 0 AND video_processing_complete = 0 AND to_time < ?",Time.now-2.hours], :order=>"meeting_date ASC", :lock=>true)
     if process_discussion
       process_discussion.in_video_processing = true
       process_discussion.save

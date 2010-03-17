@@ -39,12 +39,23 @@ class LawProposalDocumentElement < ProcessDocumentElement
 
   def self.remove_not_needed_divs(html)
     new_html = ""
-    split_html = html.split("\n")
-    split_html.each_with_index do |line,i|
-      if (line.index("<div style") and line.index("text-align:center") and line.index("</div>") and split_html[i-3].index(". gr.</div>")) and not line.index(". gr.")
-        line=line.gsub("div","span")
+    if html.length<1560916
+      begin
+        split_html = html.split("\n")
+        split_html.each_with_index do |line,i|
+          if (line.index("<div style") and line.index("text-align:center") and line.index("</div>") and split_html[i-3].index(". gr.</div>")) and not line.index(". gr.")
+            line=line.gsub("div","span")
+          end
+          new_html+=line+"\n"
+        end
+      rescue Timeout::Error
+        new_html=html
+      rescue
+        new_html=html
       end
-      new_html+=line+"\n"
+    else
+      puts "Skipping to long html doc..."
+      new_html=html
     end
     new_html
   end

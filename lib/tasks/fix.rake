@@ -287,7 +287,7 @@ namespace :fix do
     end
   end
   
-  desc "run the auto_html processing on all objects.  used in case of changes to auto_html filtering rules"
+  desc "run the auto_html processing on all objects. used in case of changes to auto_html filtering rules"
   task :content_html => :environment do
     Government.current = Government.all.last    
     models = [Comment,Message,Point,Revision,Document,DocumentRevision]
@@ -367,4 +367,59 @@ namespace :fix do
     end
   end
   
+  desc "priority charts"
+  task :priority_charts => :environment do
+    [14,13,12,11,10,9,8,7,6,5,4,3,2,1].each do |daysminus|
+      date = (Time.now-daysminus.days)-4.hours-1.day
+      last_week_date = (Time.now-daysminus.days)-4.hours-8.day
+      puts "Processing: #{date}"
+      previous_date = date-1.day
+      start_date = date.year.to_s + "-" + date.month.to_s + "-" + date.day.to_s
+      start_date_last_week = last_week_date.year.to_s + "-" + last_week_date.month.to_s + "-" + last_week_date.day.to_s
+      end_date = (date+1.day).year.to_s + "-" + (date+1.day).month.to_s + "-" + (date+1.day).day.to_s
+      if true or PriorityChart.count(:conditions => ["date_year = ? and date_month = ? and date_day = ?", date.year, date.month, date.day]) == 0  # check to see if it's already been done for yesterday
+        puts "Doing chart"
+        priorities = Priority.published.find(:all)
+        for p in priorities
+          # find the ranking
+          puts "Priority id: #{p.id}"
+          r = p.rankings.find(:all, :conditions => ["rankings.created_at between ? and ?",start_date,end_date], :order => "created_at desc",:limit => 1)
+          unless r.any?
+            puts "Using last 8 days"
+            r = p.rankings.find(:all, :conditions => ["rankings.created_at between ? and ?",start_date_last_week,end_date], :order => "created_at desc",:limit => 1)
+          end
+          if r.any?
+            puts "#{date} - Processing chart position #{r[0].position}!"
+            c = p.charts.find_by_date_year_and_date_month_and_date_day(date.year,date.month,date.day)
+            if not c
+              c = PriorityChart.new(:priority => p, :date_year => date.year, :date_month => date.month, :date_day => date.day)
+              puts "Creating new chart"
+            end
+            c.position = r[0].position
+            c.up_count = p.endorsements.active.endorsing.count(:conditions => ["endorsements.created_at between ? and ?",start_date,end_date])
+            c.down_count = p.endorsements.active.opposing.count(:conditions => ["endorsements.created_at between ? and ?",start_date,end_date])
+            c.volume_count = c.up_count + c.down_count
+            previous = p.charts.find_by_date_year_and_date_month_and_date_day(previous_date.year,previous_date.month,previous_date.day) 
+            if previous
+              c.change = previous.position-c.position
+              c.change_percent = (c.change.to_f/previous.position.to_f)          
+            end
+            c.save
+            if p.created_at+2.days > Time.now # within last two days, check to see if we've given them their priroity debut activity
+              ActivityPriorityDebut.create(:user => p.user, :priority => p, :position => p.position) unless ActivityPriorityDebut.find_by_priority_id(p.id)
+            end        
+          end
+          Rails.cache.delete('views/priority_chart-' + p.id.to_s)      
+        end
+        Rails.cache.delete('views/total_volume_chart') # reset the daily volume chart
+#        for u in User.active.at_least_one_endorsement.all
+#          u.index_24hr_change = u.index_change_percent(2)
+#          u.index_7days_change = u.index_change_percent(7)
+#          u.index_30days_change = u.index_change_percent(30)
+#          u.save_with_validation(false)
+#          u.expire_charts
+#        end       
+      end
+    end
+  end
 end

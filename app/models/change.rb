@@ -30,21 +30,21 @@ class Change < ActiveRecord::Base
   
   def validate
     if user.capitals_count < calculate_cost
-      errors.add(:base, "You don't have enough " + Government.current.currency_name.downcase + " to propose this acquisition.")
+      errors.add(:base, "Þá átt ekki nógu marga " + Government.current.currency_name.downcase + " til að leggja til yfirtöku.")
     end
     if new_priority == priority
-      errors.add(:base, "The acquiring priority must be different than the priority being acquired.")
+      errors.add(:base, "Þú getur ekki lagt til yfirtöku á sama máli.")
     end
     if not is_endorsers and not is_opposers
-      errors.add(:base, "You must checkbox at least one of either endorsers or opposers for this acquisition")
+      errors.add(:base, "Þú verður að velja að minnsta kosti annað hvort stuðningsmenn eða anstæðinga fyrir þessa yfirtöku.")
     end
     if priority.has_change?
-      errors.add(:base, "This priority already has a pending acquisition, please wait for that one to finish first.")
+      errors.add(:base, "Þetta mál er þegar með yfirtöku í gangi, vinsamlegast bíddu eftir að kosning um hana klárist.")
     end
   end
   
   validates_presence_of :priority, :user
-  validates_presence_of :new_priority, :message => "could not be found.  Please make sure the wording is identical."
+  validates_presence_of :new_priority, :message => "fannst ekki.  Vertu viss um að þú hafir slegið rétt inn."
   validates_length_of :content, :maximum => 500, :allow_nil => true, :allow_blank => true  
   
   acts_as_list
@@ -161,11 +161,11 @@ class Change < ActiveRecord::Base
     hours = (minutes/60).round
     minutes_left = minutes - (hours*60)
     if hours < 1
-      return minutes_left.to_s + " mins"
+      return minutes_left.to_s + " mín."
     elsif hours == 1
-      return hours.to_s + " hour " + minutes_left.to_s + " mins"      
+      return hours.to_s + " klst " + minutes_left.to_s + " mín."      
     else
-      return hours.to_s + " hrs " + minutes_left.to_s + " mins"
+      return hours.to_s + " klst " + minutes_left.to_s + " mín."
     end
   end
   

@@ -1,0 +1,5317 @@
+commit a11fd1630cffab1bcbc07b83daa664de3632044d
+Author: gunnar <gunnar@kjosa.is>
+Date:   Fri Mar 12 14:13:32 2010 +0000
+
+    fixed float error in issues list
+
+commit 5743a468050890de2e82da3aeca1022529bbb5ce
+Author: gunnar <gunnar@kjosa.is>
+Date:   Fri Mar 12 12:06:15 2010 +0000
+
+    Min font size fix and translation mistokst to fellt (did not work for the desired area though)
+
+commit ca5bfff5697e45e6d55ceaa68135dd522d629610
+Author: gunnar <gunnar@kjosa.is>
+Date:   Fri Mar 12 11:19:58 2010 +0000
+
+    mergefuckup fixed, hopefully
+
+commit 3712767cae685214b9a707502066960fc60fc646
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Mar 11 16:13:56 2010 +0000
+
+    New logo
+
+commit fe965fbe6790d1dc3fc853c0d80c7a1da572ba6b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Mar 11 16:04:39 2010 +0000
+
+    New logo
+
+commit dfa9eae2c7f43919c29e4a5abbfc9c0243eec8cc
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Mar 11 15:49:34 2010 +0000
+
+    new logo
+
+commit 6c02e423ff1ba887c60986b4182c84f20f16e838
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Mar 11 00:25:58 2010 +0000
+
+    Hack for very long law document
+
+commit ce49c453b502e03ee63daf9facff7e332340742e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 10 23:32:02 2010 +0000
+
+    Hack to try to get around timeout error
+
+commit 90862388fa96df7b6c46234f8af27630b368ad3a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 10 23:18:22 2010 +0000
+
+    Fix for strange document parsing problem
+
+commit 98f3dfd6793c0f9168db4decf2a25ba42b62cf2e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 10 21:27:15 2010 +0000
+
+    Fix backup
+
+commit e6dfb86867890261a3e4df72f7a00bb415e88491
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 10 21:25:39 2010 +0000
+
+    m
+
+commit 79dda155c38b435ce58ba8abecb300e3c7783fd4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 10 21:09:56 2010 +0000
+
+    Different cache server for dev
+
+commit ca5a89e62a781d9ced030dca2f140536d2140a1c
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Mar 7 14:41:32 2010 +0000
+
+    Check if user agent exists (sometimes it doesn't makeing revisions not work)
+
+commit 5e01d7d210f5770a9852c7f9f067b5a0dc4db405
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Mar 6 03:35:54 2010 +0000
+
+    Localisation
+
+commit 0c892089b21bac3c3f889741273c5c4c922dbae7
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Mar 6 03:20:26 2010 +0000
+
+    Added arrows to will paginate localization
+
+commit 9035fc40360f5582782935ec0bdc29112bbcc54f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Mar 6 03:17:24 2010 +0000
+
+    Localization for will paginate
+
+commit 5d15529c3c6df5f81372a4f6a9060f968f2d4354
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Mar 6 02:45:45 2010 +0000
+
+    Added new icesave case and localization
+
+commit 6da5fd4f40eaf14e363180661c80fa229cbb22dd
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Mar 6 02:24:38 2010 +0000
+
+    Fix for missing process stages
+
+commit 0c53a7ddc518a783ad53b5ad57b96dd7f9991dcd
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Mar 6 02:05:50 2010 +0000
+
+    Fixed localisation
+
+commit a10a9dee967eba588fb6feba93bb4d130a632ad5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Mar 5 21:46:35 2010 +0000
+
+    Changed branch to master
+
+commit 2eb5298dddb96a63a956bdf8addab48f7b09459a
+Merge: 9b83f07... 08d8bec...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Mar 5 21:45:38 2010 +0000
+
+    Merge branch 'odd-merge'
+
+commit 08d8bec7e0d3c9157ec554d22f07c3c9eb990672
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Mar 5 21:40:27 2010 +0000
+
+    Use remote cache
+
+commit 0f7b91a640bd5ceb819c76dc0c3bd864215fc070
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Mar 5 14:17:00 2010 +0000
+
+    Fix charts
+
+commit 80cc4a478c738c6ff7b30a2389366cb54aea9237
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 22:57:44 2010 +0000
+
+    Links
+
+commit 2d2d98be52af6dcc6766d13282cf746692d96f49
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 22:51:00 2010 +0000
+
+    Fix underline
+
+commit af380db366db43a2d077e57737b516508b78d5e5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 22:44:46 2010 +0000
+
+    Localisation
+
+commit e608c10b8ecf4b625a83a615ecae500f28c2cdab
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 22:39:39 2010 +0000
+
+    Localisation
+
+commit 99c5fc8d8d62874a36458d53f57349898d7129d4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 22:26:34 2010 +0000
+
+    Laga íslensku
+
+commit 4595d3da30d4d45df94cdf8d9adcad7527111e78
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 22:19:43 2010 +0000
+
+    Facebook streamPublish
+
+commit 72cc039760cd57f376f0ded1edb3c16f5005a105
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 22:05:42 2010 +0000
+
+    More Facebook streampublish testing
+
+commit 95063b12c4a1b97d200539d79b01cabbc23978c6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 21:44:44 2010 +0000
+
+    Facebook streamPublish
+
+commit 0a24da98c34a9ec9b51a488ebc06a87a45028acd
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 21:33:38 2010 +0000
+
+    More Facebook streampublish testing
+
+commit c673119abc4a83d3e963ade02119e94b4234214a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 21:28:28 2010 +0000
+
+    More Facebook streampublish testing
+
+commit 5abd08da2435e663cd04e648282779ca7633108f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 21:23:10 2010 +0000
+
+    More Facebook streampublish testing
+
+commit 82f056dab050cb0a371e3d27cb1379ff7643bfa2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 21:06:26 2010 +0000
+
+    More facebook publish
+
+commit 7af76fdd88cf16d2f1f0f67b95c6e4ef6d3f4c69
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 19:42:08 2010 +0000
+
+    More Facebook streampublish testing
+
+commit b04db4f6a608b7cb764680f3f5638cd016a8fdcf
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 18:03:43 2010 +0000
+
+    Facebook publish test
+
+commit 719285e81266c7af10f733dd485102ae2af5c288
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Mar 3 14:38:07 2010 +0000
+
+    Added a task for rebuilding the charts backwards in time
+
+commit 3dc21aa6c4e0088b9f7af0a3f8977eed59028274
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 19 17:41:29 2010 +0000
+
+    Added a new icesave case
+
+commit 09becaa1668fbf68cf5c9fe59af8d4846bf4e971
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 19 02:24:25 2010 +0000
+
+    Priority in header
+
+commit a7cfa22cd44c8d0cfa171df617f4c1aacd1c59fe
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 19 02:18:35 2010 +0000
+
+    Removed duplicate add point
+
+commit 09492a4fa4f09d4b28edd1f3324ef17c41b858e0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 19 02:14:59 2010 +0000
+
+    Fix menu spacing
+
+commit 1e572bd12521f1a869d5eea01b3e5332a0185540
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 19 02:09:28 2010 +0000
+
+    Added a clearer link to add new points
+
+commit f0fbbebe3dd17005ca8e3968a1a81c64bf41f4db
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 21:39:01 2010 +0000
+
+    Fix for crashbug in issues/network
+
+commit a59d9aefceff3c44e34c743fcd5a908d79f84ab8
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 14:04:32 2010 +0000
+
+    Fix for date of last process
+
+commit 1b056cc9bfcb7f3ee162a846b38f41af0cd923df
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 12:43:54 2010 +0000
+
+    Fix for localization
+
+commit 67fa8f55a1c48c3bcb0f1f204fb3627ec269c930
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 12:38:09 2010 +0000
+
+    Reverse order of latest priority processes
+
+commit cb705fe290db9978a72e16d95fc98088fdc7b3df
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 11:37:52 2010 +0000
+
+    Fix for menus
+
+commit d1985c902c3b55583a95758210ee224cd4efb5aa
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 04:10:41 2010 +0000
+
+    Default to top in priority sub menu
+
+commit 0c3d71a59ccc7056048cade0ab441778ae9bf6b5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 04:09:05 2010 +0000
+
+    Default to newest points in sub menu
+
+commit 7c371224299296de4732303105394cfd03b62024
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 04:06:16 2010 +0000
+
+    Disable direct click on top level menus
+
+commit 5ca3e51f0880f6114beff26ebfdbac37b8670607
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 03:55:01 2010 +0000
+
+    localization
+
+commit 59882f083143330f765bdc0069268af54b40667a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 03:47:55 2010 +0000
+
+    Do not check for official user id
+
+commit fcf6f6001beb105e061fb99b9ded42b3cafc08a4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 03:40:05 2010 +0000
+
+    Fixed talkative
+
+commit d07f47cca7bdee7fbf982652286979ff84289493
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 03:26:35 2010 +0000
+
+    Rearranged top menu
+
+commit 476ef68a992fd52c3c02dd47c0e1875a45827483
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 02:56:26 2010 +0000
+
+    Fixed localization
+
+commit 2b2221cb90d8140fc5af6e7222d20153210c4dbe
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 02:06:28 2010 +0000
+
+    Fix for localizatoin
+
+commit 5cc58c018ec3272cb7bdd28d16c728de5f0874c5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 01:49:53 2010 +0000
+
+    Localization
+
+commit 97e9fdc715886ff91a1b20410a7e56bb927e422a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 01:44:07 2010 +0000
+
+    fix for localization
+
+commit 9e830f9eb8f3ec59c9bd206e638d01c7b6ee37de
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 01:30:46 2010 +0000
+
+    hack to try to fix activity crash after delete on case
+
+commit aa2fb32cb0ee7075e1d560b94f8ea9aa9591e569
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 01:11:20 2010 +0000
+
+    Default tag for priorities from the public
+
+commit f38e730ea1f9bd613dd7b5be75faa6ecfb04b05a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 18 00:39:12 2010 +0000
+
+    Localization
+
+commit 5d96883589231a85798174809f10e435a2b67a5a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 23:10:23 2010 +0000
+
+    More localization
+
+commit d191659967817561bf7feb51170869799cb67dfa
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 23:08:38 2010 +0000
+
+    More localization
+
+commit 81201c39c7b9ac75576c81ea4604824c3ea84bcc
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 23:06:52 2010 +0000
+
+    More localization
+
+commit 7f9feb312974c8232c14d3902b1c21d4f4c8b319
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 23:03:01 2010 +0000
+
+    More localization
+
+commit a8978bb8836fcdbb4c8e78b04fe768f56bd0f39a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 22:59:32 2010 +0000
+
+    More localization
+
+commit 157f9c4b39346349b702110792da76e930c99839
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 22:53:10 2010 +0000
+
+    More localization
+
+commit 5bd1b33b99c49a9d9efd8d5d9432c4a0ab38c048
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 22:34:34 2010 +0000
+
+    More localization
+
+commit 6c93c6f3fd14825f84400af0ec535cb5a77d154a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 22:31:33 2010 +0000
+
+    More localization
+
+commit 95212c3f69e870776dbca0efc8cc85bbbbd3962b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 22:04:25 2010 +0000
+
+    Fix for localizatoin
+
+commit 618281276387bff35eaa996868d85535b3bfabc7
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 21:56:59 2010 +0000
+
+    Localiztion
+
+commit 844136db849435ca788986e8b4d7b40a5d7d4893
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 20:22:54 2010 +0000
+
+    Changed default points menu
+
+commit ac9eba8bd44a7872a5cda357540f2ed4272ecffc
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 15:26:34 2010 +0000
+
+    Fix timing issues and sort for latest process priorities
+
+commit ef7891a9ed9e32658fa41990c9643072eb55676a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 17 02:03:15 2010 +0000
+
+    Fixed name field to support 60 icelandic characters
+
+commit bb1c7d7706f3abd633d6e3b48e90c9d800c4a850
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 16:25:50 2010 +0000
+
+    Wait for 2 hours until processing althingi speaches
+
+commit 5b021ae914bc7b7c909698d40209a4805624f5e6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 14:34:34 2010 +0000
+
+    Fix for top videos
+
+commit 9d2ceb6079338b0d6f73f963705f7fe73503d08a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 04:58:57 2010 +0000
+
+    Fix for video results
+
+commit dfe01cf624234fb4b2347a2f4e979b955c0a510e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 04:53:14 2010 +0000
+
+    Fix for video results
+
+commit 7c1df416660423b9472c8a211424b40ab9222e25
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 04:50:51 2010 +0000
+
+    Fix for video results
+
+commit 458d5c2023960e0e1324376df0cc0bfbe1df19b7
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 03:33:47 2010 +0000
+
+    Fix for middle nav
+
+commit 24f714165a6f98b5dde484228511180f9abdf693
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 02:59:57 2010 +0000
+
+    More point layouts
+
+commit ca9283868f27b741c0b5a479a76cb11c5789b33a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 02:35:30 2010 +0000
+
+    More point layouts
+
+commit 4e90dd2f61ec4ceea6d068ded1b5a217be2fd670
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 02:32:39 2010 +0000
+
+    More point layouts
+
+commit 519de8462fefc3bff63e2031d853b513e07f2a0b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 02:23:27 2010 +0000
+
+    Fixes for point layout
+
+commit 482bb97027b1deed62166d6f267a120c70baae69
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 02:14:02 2010 +0000
+
+    Fixes for point layout
+
+commit 64f329c073a147bdd4c92c55a9769f6a855c9eec
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 01:43:02 2010 +0000
+
+    Fixes for point button sizes
+
+commit dcc97395162fe72639e506ebb6cc8754faa10685
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 01:01:03 2010 +0000
+
+    Change text for flagging cases
+
+commit 24f05b0ae05580cfb87794adb7738d9f52b3fadc
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 00:59:24 2010 +0000
+
+    Change text for flagging cases
+
+commit 6e09661f6c97927bb527b81bf401a093fd9366de
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 00:58:01 2010 +0000
+
+    Change text for flagging cases
+
+commit 6255d6d0840afc849e3184a6bd86cc98b94b0a12
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 00:33:22 2010 +0000
+
+    Fix localization for text
+
+commit 8863e4d6ef61c450f57b0346bce6fd7ff0f3c6e9
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 00:18:44 2010 +0000
+
+    Hide text for delete box
+
+commit c35964a581d31e67b8e9ea677035620a1a6a4c96
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 16 00:13:03 2010 +0000
+
+    Fixes for point layouts
+
+commit 5cd1d9af77444c40b6d4e989c32db9265e94b683
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 22:44:07 2010 +0000
+
+    Size of search field for ie
+
+commit e9f355739232c0e28973c122ae216b697fd8ac16
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 22:40:21 2010 +0000
+
+    Size of search field for ie
+
+commit 0f2c89d0bec88d1b9b88fd35024f3dc1ee03f49b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 22:38:46 2010 +0000
+
+    Size of search field for ie
+
+commit cebd0de5a43d39d86e06d06ef70f71f5f2b801c0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 22:27:20 2010 +0000
+
+    Various fixeds for point layout
+
+commit 6eafcae10b4444cd95534b264dc59f094f40f933
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 22:23:05 2010 +0000
+
+    Various fixeds for point layout
+
+commit 75e0a82e35f5a3eaddcc9cea6e4ecfac89660140
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 22:12:50 2010 +0000
+
+    Various fixeds for point layout
+
+commit 9426f7bb20b5adc5ba590a89fc7ceb254c03159f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 21:58:58 2010 +0000
+
+    Fixed missing underline on ads link
+
+commit b17e207ca59b251b2804f3148c1fb1f539aee8fd
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 21:53:49 2010 +0000
+
+    Fix for width on single points
+
+commit bc845805f74373937732be67232ca5444d90fd5e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 18:11:02 2010 +0000
+
+    Reverted additional indexes
+
+commit a4038f8a514af3f9f8f876e185d0a14aa0a0c81d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 17:57:33 2010 +0000
+
+    Index more about althingi priority
+
+commit 9a91315b6b1e9dfee77ddd71db9e6c125771bda0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 17:53:41 2010 +0000
+
+    No true on search default text
+
+commit 2f8401af88fbca778f257898bf7580a6af8acfc7
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 17:42:22 2010 +0000
+
+    Fix for solr
+
+commit c4496f79e2ac85f338188df3203f88094f717e4b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 17:20:33 2010 +0000
+
+    Added link to solr java
+
+commit 0c7035b461e1f510e3ec4dcb667d434b551769ba
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 15 16:53:04 2010 +0000
+
+    Enabled solr
+
+commit 542cd48e6ff763da88af70b1a42d9c5cf960ea59
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 23:22:52 2010 +0000
+
+    Fix for bug http://rbjarnason.hoptoadapp.com/errors/1359594
+
+commit 926eb599e8eeef5c30ecf48631913fd3c6f53092
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 22:23:11 2010 +0000
+
+    Localization
+
+commit 817f82f5da6b5f3f15ba79ccc83582457679da7b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 20:47:47 2010 +0000
+
+    Revertg
+
+commit 2103cdcb5a63d03ba816be6189dea3e018d65de2
+Merge: d8b064d... 4f54262...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 20:40:53 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit 4f5426245185607ec48181d593e0d841b8a90468
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 14 20:39:28 2010 +0000
+
+    IE fix for inline-block prob
+
+commit d8b064defa75c7d9333ac06c8de4c761a65f35d2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 20:35:34 2010 +0000
+
+    Localization fix
+
+commit 0d45b8a8683cc5bede2a065d7f8f03ee79e748de
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 18:07:21 2010 +0000
+
+    Fixed localizatoin
+
+commit 3b2815206fa2d9d67ef5bc2a3bc9a40340775dd0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 15:48:32 2010 +0000
+
+    Facebook hack
+
+commit 5085063defbb9ea3ad8073aa67dba696ad25f08d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 15:38:23 2010 +0000
+
+    Facebook hack
+
+commit 617f0b61ef8983c833daec32686415fee7f01c28
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 15:21:37 2010 +0000
+
+    Fixed Facebook import
+
+commit f84611233b53a408f1d344ca6e30ae6ce9a476c1
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 15:18:49 2010 +0000
+
+    Fixed Facebook import
+
+commit 2508eb8f7a97a0541bde4adfa443aaa46c1069f0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 15:08:23 2010 +0000
+
+    Fixed bug in network ambassadors
+
+commit c4a62e87a64be718e6c8abecdf383900f651e811
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 10:43:31 2010 +0000
+
+    new logo
+
+commit ca62ef29729486e1fae5140dbb3152e1430809fe
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 00:57:22 2010 +0000
+
+    Fix for order
+
+commit b842a8e07316f5b45905c01baf9f6447b995e96c
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 00:20:46 2010 +0000
+
+    fix link underline
+
+commit e9a7b670678d250091c7e74383769c5807d5816d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 14 00:14:21 2010 +0000
+
+    Fix position of for and against radio buttons
+
+commit edef678162ab11c942e4a9e3551c9ca973ba8c96
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 23:51:55 2010 +0000
+
+    Localizatoin
+
+commit ea7147cc715bf6975a07f11f8545d3e62b5c23d5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 23:34:14 2010 +0000
+
+    colors for cluetip
+
+commit 83e5275ecf51e51284cb0b5d5a5ef6ec0a18d6b5
+Merge: 01fa3f8... 80246af...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 23:27:21 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 80246afcfb81d1d4c3806a3cf23869bba3ad2fa9
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 23:27:31 2010 +0000
+
+    Removed text byline
+
+commit 1518429503223b754d392e9989820d8e8dad9392
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 23:25:30 2010 +0000
+
+    New logo
+
+commit 01fa3f8ea2963730b50f573ae936923ee0ab67bf
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 23:25:23 2010 +0000
+
+    Translated ads.html.erb
+
+commit b841d1851b1014b5bf743506b80613a06f037ec0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 23:23:04 2010 +0000
+
+    Width of navs
+
+commit 2b67381b9dedede25624afc2492cb4fde4b806d4
+Merge: a4d1a5c... ea89f01...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 23:00:27 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit ea89f017140560bbbc96675fa81eacf89e71fdd8
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 22:58:41 2010 +0000
+
+    no comment
+
+commit 9b83f0719408658d0eea86440084b8c590876bf4
+Merge: 6e47f02... a4d1a5c...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 22:58:17 2010 +0000
+
+    Merged from odd-merge
+
+commit a4d1a5c29906239ca329f11b4ba2dbd8ef1d45d2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 22:51:01 2010 +0000
+
+    Removed logo from footer
+
+commit 396bae7c05ea2edf76b2a8f1d3eafcb8f3c7fef5
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 22:49:15 2010 +0000
+
+    h1 og h2 lagadir og finstilling a leitartakka
+
+commit 8e5a964af11ae31f0dffb0e49822953bfb554944
+Merge: a4b6043... 581a1aa...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 22:39:57 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit 581a1aa62b2412206ba6ea529614ed9829991f6f
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 22:38:50 2010 +0000
+
+    red background
+
+commit a4b604368928d0e386f7e5ae2afe36153f362690
+Merge: 93cbe6d... d6a6496...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 22:37:19 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit d6a6496f8d34358c10f89155f480af9bc30b2636
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 22:35:26 2010 +0000
+
+    Email translations finally finished, I hope
+
+commit 93cbe6dee5df8590d5848ddd55fcac56c3eab636
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 22:23:58 2010 +0000
+
+    Reverted stars
+
+commit 500699482e559ca6db287b68e6cd357c01044c9e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 22:17:17 2010 +0000
+
+    Form in table for ie
+
+commit 8999ad9a484adaf990548cd26848948a094946a7
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 22:14:44 2010 +0000
+
+    Ie7 fix in css, translations
+
+commit 4705fa47a51595bae5682ad894036c008cd3135a
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 20:48:09 2010 +0000
+
+    leturlitur a tenglum
+
+commit 90a13b4bae4a1ff1bf99f5629f9e8e7ef55f8bed
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 20:45:32 2010 +0000
+
+    leturlitur a tenglum
+
+commit 2ee3c3161447ca0d5884d46976a97930ad51e138
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 20:41:20 2010 +0000
+
+    nadad
+
+commit 7e9929efbb47cd0dd11a5649d011b417d9bf349f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 20:39:07 2010 +0000
+
+    Fixes for menu bodies
+
+commit a0565c03bb5518094eca40e7787e352fa06659cd
+Merge: 218dcf5... 5d00739...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 20:29:58 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 218dcf5ab0fa7cdaabe75008e99b1fd20c4990d9
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 20:29:33 2010 +0000
+
+    IE7 lagfaering a rok med moti toflusellu, facebook takki med hvitu letri
+
+commit 5d00739df20af0ea988ff57cdbfda68d1527509b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 20:17:04 2010 +0000
+
+    Less video speech previews
+
+commit af635815515a5af50f96514ff4ce52da9cf50a1f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 18:51:10 2010 +0000
+
+    Locaization
+
+commit f72852cc1c780562b1af859a2c6b666c9945ceab
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 18:38:42 2010 +0000
+
+    Icesave bug fixed
+
+commit 1e49999992277b94379d2eadd4e26755e4e6216a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 18:35:46 2010 +0000
+
+    Icesave localizatoin
+
+commit 51071e5fd9b9cac0758966f2649e065e6816556f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 18:31:59 2010 +0000
+
+    Allow sales of ads to all priorities, for now.  Icesave portlet
+
+commit f35f7937244ade01654fb7782814b3d6c75cde76
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 17:40:49 2010 +0000
+
+    Translation fixes
+
+commit 8537266c815db59ce62a148be30e9414a8e6f6ee
+Merge: 3eb2df8... 2ef6b1f...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 17:39:54 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 3eb2df87e2895f6f89ea264459c0aadc8838f1b1
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 17:01:58 2010 +0000
+
+    Translated email templates and fixed link markings in css
+
+commit 2ef6b1f6c9640a69465410ebddd5d88ca78124b7
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 15:39:09 2010 +0000
+
+    Reverted back to jquery 1.3
+
+commit 038f0c8390da943ab0af89c8fd491c82a3ba6d3f
+Merge: 8f5aade... 9a602b8...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 15:31:32 2010 +0000
+
+    Merge
+
+commit 8f5aade0c8c3b4fd644575096fe861880fb863cb
+Merge: 8644b50... 508bc40...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 15:21:42 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 8644b50f7b3d621b26f938e87151d0bb9d6230fd
+Merge: 55dae00... eb9c601...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 15:20:54 2010 +0000
+
+    Merge
+
+commit 508bc401c7c84a4bf394274b24b530e3f6a60e0e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 15:13:35 2010 +0000
+
+    New fb share logo
+
+commit a4e517dd7823b03f30299cc05a052477a8ec7dc7
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 14:58:08 2010 +0000
+
+    Trying to fix Facebook share bug
+
+commit 708cfa8fb4c27b8d2e1296ade3deaba840725433
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 14:49:02 2010 +0000
+
+    Fix for Facebook share video sizes
+
+commit e48ec40ed14221dff529a4f86ea70b00e9735f67
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 14:44:27 2010 +0000
+
+    Fix for Facebook share video sizes
+
+commit 55dae00b6005fe77735806cd9cc7c549a74c5502
+Merge: 5f129a7... f119ef6...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 14:39:01 2010 +0000
+
+    vera viss um ad allt mitt se inni
+
+commit eb9c60178a83bafc4e6d2cfdbce43f65ff00550e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 14:37:34 2010 +0000
+
+    Trying to fix Facebook share bug on videos
+
+commit 9a602b809146fb371877391107630124e7f09785
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 13:45:08 2010 +0000
+
+    Special edition badge
+
+commit 0cfa9235e2096b57d48734132de87d60ec6f796a
+Merge: f119ef6... 54bde7c...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 13:29:43 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+    
+    Conflicts:
+    	public/javascripts/skuggathing.js
+
+commit 54bde7c46f37b135824e50198cf67987ba0b78f6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 05:40:19 2010 +0000
+
+    Localization fix
+
+commit 232a4e3631f5e2c437fe8086599b9a471e6e4215
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 05:38:48 2010 +0000
+
+    Smaller size of video panel if more than 8 discussion segments
+
+commit 2c89b575385fd232bd600984611febe17f9b5dd3
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 04:23:13 2010 +0000
+
+    Changed order
+
+commit 214abda909d93772f570cc21ca8fafaf7742943e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 04:21:55 2010 +0000
+
+    Reverted
+
+commit 29359767629f2b8b0aee8f1a90004a3af470117e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 04:10:36 2010 +0000
+
+    Added caching
+
+commit f1c072e110a9bb4e791e9a53cb318b41701fa2cc
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 04:07:41 2010 +0000
+
+    Added caching
+
+commit a8c4053b4396dc37b6dce40c5864d7645b2867f0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 04:03:22 2010 +0000
+
+    Localization and longer cache
+
+commit 5a8a6361208ec1368413b58f6fcb9fce557a66d0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 03:45:58 2010 +0000
+
+    Removed accordion in priority processes view
+
+commit f119ef65ba664396489fe662da559685954dc05c
+Merge: 3b1fb6a... 046bdcf...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 03:37:23 2010 +0000
+
+    Merge remote branch 'gg/odd-merge' into odd-merge
+    
+    Conflicts:
+    	public/stylesheets/gnew.css
+    
+    Also fixed bloated javascript in skuggathing.js and updated jquery version from 1.3 to 1.4.1
+
+commit 09960ac2dbe06c17a1447db943831aa909d81f42
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 02:39:25 2010 +0000
+
+    Use external date for sorting process documents
+
+commit 7e3fe8dd75de141977fbc159eb1c8e143d1ee011
+Merge: 0294ca6... 046bdcf...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 02:38:12 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit 5f129a7254d942a4a90cde332798836576de799a
+Merge: db80d9e... 0294ca6...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 02:38:10 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit db80d9e550c655fc75472af93aed1fa8adf3c2a7
+Merge: 046bdcf... 3b1fb6a...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 02:34:09 2010 +0000
+
+    css right box
+
+commit 046bdcf721565bdd0b63680cd4ce0adeaa19e8c2
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 02:32:12 2010 +0000
+
+    css right box
+
+commit 3b1fb6adb40af27859b9daa6d4d094a243f51768
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 02:30:08 2010 +0000
+
+    Fixed merging
+
+commit 66d8993c152f4c456cde4fc59ca87df0e8cda8e9
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 02:20:33 2010 +0000
+
+    Styled #hp_intro like h1. It's a quick fix, easier than changing the markup.
+
+commit 0294ca6b31dfa5d8c2d4470af13166f6a4f62a75
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 01:59:01 2010 +0000
+
+    Added priority processes time ago
+
+commit 0a18a794f7d1e17c19cb59108310c25c6ba7ea2a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 01:56:52 2010 +0000
+
+    Added priority processes time ago
+
+commit b238807a766d846a2a226d63739504d1b3c87240
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 01:56:02 2010 +0000
+
+    Added priority processes time ago
+
+commit 2df0c6cc5ca38dedb6918f3d5269558d22124344
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 01:50:21 2010 +0000
+
+    Added priority processes time ago
+
+commit 1a53e74f60c4ab483e48e7d83db6676e5e49c7e3
+Merge: 2168f86... 2c766fa...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 01:31:30 2010 +0000
+
+    Merge remote branch 'gg/odd-merge' into odd-merge
+    
+    Conflicts:
+    	public/stylesheets/newstuff.css
+
+commit 2c766fa5dc3d497079b57a6de1a1b6f3b0e72363
+Merge: 4f5056d... dab1fbc...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 01:13:50 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 2168f8646af053163fded5b7015f349cbafb210c
+Merge: 1e367d0... dab1fbc...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 01:01:14 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 4f5056d5b61c14acb1c43cd480a5d4c2846e9a4c
+Merge: dac014a... 5fb3c68...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 00:48:07 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit dab1fbcb7f1cbe26f4f4160419e3bd3465d50cbe
+Merge: 5fb3c68... 68d21af...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 13 00:47:56 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit dac014aa92fbaf1635840769c979987cb8fee13b
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sat Feb 13 00:47:40 2010 +0000
+
+    translation fix - merge probs with rvb
+
+commit 1e367d012210900967a7bbd83636c5de76c87a92
+Merge: 0b3133d... 5fb3c68...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 13 00:34:21 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 5fb3c681fa7acb3895bac780824c4a90190fddf1
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 23:52:04 2010 +0000
+
+    Fixes for change proposal handling of logged in users
+
+commit 58e640b5bea965256e14758880778824930542f5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 20:28:04 2010 +0000
+
+    Added image size for tiny thumbs and localization for menu
+
+commit 68d21afe9542810e5d40cda4297ed031900cb0f2
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Fri Feb 12 20:21:07 2010 +0000
+
+    translation fix and addition of gnew.css
+
+commit ea5f9d0d436e45ac86249fef8e82d5f17fd961e6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 20:11:09 2010 +0000
+
+    Fix for non-ascii cache keys
+
+commit ffeea3f6e7132834768ac9cc019e35a1d226f6bf
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 20:07:19 2010 +0000
+
+    Fix for gender localization
+
+commit bd8a3c29140a37b767ee95d59cf1e60cdbb0f390
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 19:48:04 2010 +0000
+
+    Fix for gender localization
+
+commit 414d820fe7db5934e48b3bd17088cea27414cb16
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 19:11:03 2010 +0000
+
+    Localization for time
+
+commit 70cc223fe3c6d4294c315f7e462adf27d7b0a596
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 18:38:15 2010 +0000
+
+    Fixed localization for comments
+
+commit c2c67954ddc19e51d50772b56067cf191c361f9d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 15:47:52 2010 +0000
+
+    Longer cache for latest video speeches
+
+commit 0b3133dacd02dc7da8687f8d6df7615a50476824
+Merge: 8100d7f... 6fcd360...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 12 15:05:05 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+    
+    Conflicts:
+    	public/stylesheets/newstuff.css
+
+commit 8100d7fbcf1f912025311ab6bb75d3ca3eea399b
+Merge: 74014bc... a3188da...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 12 15:03:32 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+    
+    Conflicts:
+    	app/views/layouts/basic.html.erb
+    	public/stylesheets/newstuff.css
+
+commit 6fcd360233a2755392848ddfa6c229dc20c385da
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 14:53:02 2010 +0000
+
+    Localization for time working
+
+commit 849d79de88bfdf062b4cf39f4361ab59834d9248
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 06:53:49 2010 +0000
+
+    Added new relic support
+
+commit 6e29269460977edea2c5ff0db7f22d1750a076c9
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 06:41:58 2010 +0000
+
+    Added new relic support
+
+commit 3344fa1d71214ec0fc7c5fbeb33dfe8559a2c8d6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 06:39:07 2010 +0000
+
+    Added new relic support
+
+commit 6f5e5347fae7b1cf2e28ad6af433e051715364d8
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:48:07 2010 +0000
+
+    Get user id to ratings
+
+commit e5a59a1e3fdf222ff4c2bebbb19e4b1aecf6b5e9
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:43:54 2010 +0000
+
+    Get user id to ratings
+
+commit b686dc3f40e0e81da92ab6f0aba58ca7d06ad3b6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:40:22 2010 +0000
+
+    Get user id to ratings
+
+commit f851cf87fd18cff5388f5626e0fd2f4d4b9c7ad1
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:39:09 2010 +0000
+
+    Get user id to ratings
+
+commit 783e9af7404f3314a6c64a710618025772827dee
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:32:54 2010 +0000
+
+    Get user id to ratings
+
+commit 3f88bcf7577531bccb1943b13248f6b364f854af
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:28:17 2010 +0000
+
+    Fixed url path problem
+
+commit 4843115c41d52ec5115ce45421aa0bf1e8f1d0cf
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:25:21 2010 +0000
+
+    Fixed url path problem
+
+commit a1932445d552fddd99a69459ceae7bef8565e14d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:22:42 2010 +0000
+
+    Fix for rating
+
+commit f8eaea0d283a59a6061877943a6a6ff1939e97f5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 05:14:54 2010 +0000
+
+    Localization
+
+commit 9e42928a1b5f661722685f67468ebcf4d9395442
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 04:53:52 2010 +0000
+
+    Localization
+
+commit 7123405fb67f2a2b48cb4b73a54d5d665a3ceb5d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 04:39:13 2010 +0000
+
+    Localizations
+
+commit 411d2355ae993810c792a70bbbceb951bed352fc
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 04:39:06 2010 +0000
+
+    Fixed bug where points and documents where switched in the menu
+
+commit 8a6854d42f58754d28e2731c0781c3af645ffbd0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 04:23:02 2010 +0000
+
+    Fixed localization
+
+commit dc42fa425c39718246ff700105efd6093bfa4184
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 04:19:35 2010 +0000
+
+    Fixed localization
+
+commit e412aadc958199a4c2fde98b6ae550ad1dba5aa2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 04:15:02 2010 +0000
+
+    Fixed localization
+
+commit 97424ea19301a52e0e995635c55cd8ba5496da78
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:59:04 2010 +0000
+
+    do not use plural
+
+commit ea039218c179c19af4c87289e088ac8749661622
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:57:37 2010 +0000
+
+    do not use plural
+
+commit 100a1312f36633bb46b348956de90e29f339fc77
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:51:37 2010 +0000
+
+    Tweak
+
+commit 837444de5e0dd7ed660bdd1995af1a74592677c3
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:50:44 2010 +0000
+
+    Tweak
+
+commit 2636dfc4a4fc8b7278bc660540ae69802929ddbd
+Merge: f23bfaa... c6370fd...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:46:33 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit c6370fde11e15d6c61f08d3551768ccd92b380dc
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Fri Feb 12 03:45:38 2010 +0000
+
+    Removed purple border in IE7 and prob IE6
+
+commit f23bfaa99b4d8553bde9c0070cc422cec970615f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:32:21 2010 +0000
+
+    Changed readme
+
+commit 35e3b503bcc17b2266a81be69e0537eb5b5e9da6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:17:47 2010 +0000
+
+    Added hom
+
+commit fcd7f91723615265a88ff48f09764cc4e2eb3c98
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 03:13:07 2010 +0000
+
+    Text change
+
+commit 83271609c2bb61ee56ec9cb662b87270e6e0868e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 02:49:22 2010 +0000
+
+    Fix for text position for speeches
+
+commit db71eab8ef52dd8a3a14d0775a3b2f4cba945763
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Fri Feb 12 02:33:06 2010 +0000
+
+    Translation fixes
+
+commit cf57c1f8b9e4da3bdef55f764b9cb34b1e9e0275
+Merge: a3188da... e916202...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 02:31:22 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit e916202acec57a97b0f179b7b928e37628511269
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Fri Feb 12 02:03:13 2010 +0000
+
+    Comment css stuff, font sizes mostly
+
+commit a3188da2cc6a82047de4eb15b1605bfbd37c357f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 01:58:58 2010 +0000
+
+    Ads for all cases, locization
+
+commit e5c9e28968ecba66fd7b2db2797ab832f1f226eb
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Fri Feb 12 01:34:23 2010 +0000
+
+    Email translations
+
+commit 74014bcfddb3c31a6c73bd3eab4ee0679955d38f
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 12 01:26:07 2010 +0000
+
+    Fixed border issue with header image and working on menu layout problem
+
+commit f8c8f618464daf1cc98207b7597dd0fe141ac460
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 01:15:31 2010 +0000
+
+    Hardcode skuggathing.is in env production, for now
+
+commit 5b0d4225248fb7ec8184cc0900160fd3c1f08664
+Merge: dacf3ef... 27c787a...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 01:01:38 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit 27c787a371581dbc96b42363e68f283f2d48a8b2
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Fri Feb 12 00:58:30 2010 +0000
+
+    Facebook translations, fixed hugmo typos
+
+commit dacf3efde8a6f496d0b3c4b07d79494741726eb0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 00:56:39 2010 +0000
+
+    Added Icelandic localization
+
+commit 75ee27b2c0456990fdd0ce11926dcbe221cbf8a9
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 12 00:56:26 2010 +0000
+
+    Added domain env reading
+
+commit 0eb3f19c94e74b20702db7e543ed031c9cc12fac
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 23:40:03 2010 +0000
+
+    That wasn't a good idea
+
+commit 389f3192c08c86cf5b6797ce8ad5f1ed43666f9e
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Thu Feb 11 23:28:13 2010 +0000
+
+    More hover menus stuff, still need to fix when hovering over selected menu item in top nav
+
+commit 4c2693e460c37d55b8961958a97a7134e8c83087
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Thu Feb 11 23:17:41 2010 +0000
+
+    Fixed background-color in hover menus, more
+
+commit debf5db69ad9c84697651a987616296f3124c777
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Thu Feb 11 23:13:54 2010 +0000
+
+    Fixed background-color in hover menus and border around popup menus
+
+commit bf44d5e63e6481666bc3ed6d6c947a6b671aed0f
+Merge: 1d16f5d... f89d5e9...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 23:11:52 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit f8f5039fea1619b44f2abf9d07d13aa22bec9682
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 23:03:26 2010 +0000
+
+    Updated star graphics
+
+commit f89d5e9874deb4ddd2ec3a7af27843cc1a757aa2
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Thu Feb 11 22:55:14 2010 +0000
+
+    Fixed letter-spacing in menus which sucked royally in IE
+
+commit 71ce01cc01f1b5fdb6ad74ad84d8096e6d0a0d20
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 22:46:50 2010 +0000
+
+    Fixed star rating background color again.
+
+commit 1d16f5d3bc80353e678bb6d6b3dbae5d31f84836
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 22:41:37 2010 +0000
+
+    Removed hard coded smtp server
+
+commit 860231402592fc5b531fb76038afb3bce6125774
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 22:39:04 2010 +0000
+
+    star rating background made white
+
+commit a450b8fe0224887a7154008aa3fd31efaa816073
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 15:58:15 2010 +0000
+
+    Links now have an underline and a hover color.
+    Footer is now 960px wide
+
+commit ee526ef4362544ec31d0ac698a702f8c08bbfb62
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 14:25:38 2010 +0000
+
+    Fixed star rating
+
+commit 5871da06e8d3b482927d1c0f16b54c6f6013db01
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 13:23:08 2010 +0000
+
+    Remove adding FB to the end of user name even if a person with the same name is found.  Fix broken redirect for ratings
+
+commit 872d7604c4a614bb59bd1dc647273983b113bddf
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 05:58:42 2010 +0000
+
+    Missing localization
+
+commit ba5bc04e8f7ffb435eee557476deba17215a1cc6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 05:43:57 2010 +0000
+
+    Added hoptoad
+
+commit 60a8857405398a6f5d9a33e6d215a72fa8298c24
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 05:21:46 2010 +0000
+
+    Using Paperclip defaults
+
+commit dcf4e5d8b522a0f7c42e02fb1b561ad2497ad195
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 05:13:07 2010 +0000
+
+    Fixing image upload
+
+commit 7cbd6ad03e55ea5a083b8945e43253ce612eab45
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 05:02:45 2010 +0000
+
+    Fixing image upload
+
+commit 27cd762ae52adf395d2b865d022402a905077811
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 04:56:01 2010 +0000
+
+    Fixing image upload
+
+commit 07cf121812916d1f73f84d23ac20716efc30d616
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 04:49:46 2010 +0000
+
+    Fixing image upload
+
+commit 61b30e0222e7c791707a4f9013f6a7476da11d00
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 04:40:22 2010 +0000
+
+    Trying to set ifUserConnected option
+
+commit 878a549e8f84c1354eade654b8a4758ac5af5b4c
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 04:37:26 2010 +0000
+
+    Trying to set ifUserConnected option
+
+commit 0ba35d6bbced6bb9b929a91095bc411f6988ed1f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 04:24:48 2010 +0000
+
+    Fix for info text bug
+
+commit d92c9adeff9ac1e21f97a82e79bc6d2f3d2a9d72
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 04:15:25 2010 +0000
+
+    Changed text
+
+commit fd29a2f674e13b29fabadb8ef4c921e1c977432d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 04:08:37 2010 +0000
+
+    fixed typo
+
+commit 8abffc681abdb72fbe89cd882ed37efddc02d625
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 03:40:13 2010 +0000
+
+    Removed hottoad notifier as a plugin, fixed up deploy script
+
+commit fcd0cc5d6604f61d38386e9961d1a4177ffbee5c
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 11 02:07:14 2010 +0000
+
+    Fixes for law crawler, split up latest processes views so you can now request only the latest process
+
+commit f9c9524485dfcfe2c894d501b8256ce08454dbf8
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Thu Feb 11 00:59:52 2010 +0000
+
+    CSS tweaks, portal layout adjusted and misc
+
+commit 65ab56e2972d47324226a4a742e2b7383e3af378
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 00:21:39 2010 +0000
+
+    Fixed home link in basic.html.erb, changed background color for star rating
+
+commit 3e43ff6f340d06440cdb9ac1481311537c1aa422
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 11 00:20:39 2010 +0000
+
+    Buggy Javascript fixed
+
+commit cef01228b65d396fe0cf9c030c19fa1a552198a9
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 10 23:44:09 2010 +0000
+
+    The stars in the star rating have been updated and now they have a dark (#333) background.
+
+commit b164b4c39341684810a09fff18c8d1e8c6544268
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 22:59:34 2010 +0000
+
+    Help text for make priority
+
+commit 01ddccf1aea78c5b38ec6c54e1ceb4e1113d0dd6
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 10 22:59:34 2010 +0000
+
+    Added home link to basic.html.erb
+
+commit 0f1830a35526bd2eb10cd1f1d8e6d068f74ee0e8
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 22:52:24 2010 +0000
+
+    Added make priority to portal
+
+commit df013a5915b48d80a1759380e12fea9119e692ea
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 21:27:31 2010 +0000
+
+    Fixed size for large video overview
+
+commit 24ada99ad0da669473363316ce9815f02c7da449
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 21:19:08 2010 +0000
+
+    Fix for Icelandic search terms
+
+commit 3cdb1c811d751322accce0fd3740bce6cf230f4d
+Merge: cd92500... 940a1c0...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 19:50:32 2010 +0000
+
+    Merge commit 'gg/odd-merge' into odd-merge
+
+commit cd925004aca5d33957615806a47629bda55b8ec0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 19:46:35 2010 +0000
+
+    Correct Icelandic downcase for video search
+
+commit 3e1b02261c6cb1afbdcd328bdef3fbad50c82a47
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 19:42:02 2010 +0000
+
+    Newer facebook version
+
+commit c92b846a59208e670bfdcf66e00440cdd8ec5af8
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 19:40:20 2010 +0000
+
+    fixed cache issues and added images for tooltips
+
+commit fea9cdd0a018620ff9346dfc5bee87faccc13bf4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 17:38:15 2010 +0000
+
+    Fixing law proposal display and bug in video processing
+
+commit 940a1c075e31e585e8076ca90e924ad63cead2cd
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Wed Feb 10 17:24:52 2010 +0000
+
+    4 col in Rok working on CH/FF/IE7/8 - needs work
+
+commit 0392cc0ff932c867abb7b6b97e6e76129790f878
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Wed Feb 10 16:29:32 2010 +0000
+
+    Menu cool although not 100% consistent across browsers
+
+commit 88a2218cf8cc831d1220482d86383dfb0c54a569
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 10 15:58:35 2010 +0000
+
+    A small CSS fix for the sidebar
+
+commit dda77e74b42e709f078f6cf3e16e8c38239a1fd6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 15:26:36 2010 +0000
+
+    Fix for law proposal elements, filtering out garbage early elements coming from the screenscraping process
+
+commit 73f682e77f82ff1b7ea91632d753acc334018f19
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 10 15:16:49 2010 +0000
+
+    Fixed header and javascript for priority processes
+
+commit 4f25798d4d0401cd0e79cf5db22cb253f7e845b4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 15:07:03 2010 +0000
+
+    More info on video search and tooltip additions
+
+commit 59ea8cdba35518df40fce1d33c8af904e1004d40
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 14:39:13 2010 +0000
+
+    Tweaks for video thumb hover
+
+commit 83c453811bd4f43c6fa38b25d254ca9a6a9d05fd
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Wed Feb 10 12:15:35 2010 +0000
+
+    Rok fixes and various CSS fixes
+
+commit 4c5759ef432cbdb4eff35231f5e289f89a905e04
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 05:19:17 2010 +0000
+
+    Info line about video speech segments
+
+commit 7622f81ce741fdbdb7d5909dc10306f691b03afb
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 04:53:42 2010 +0000
+
+    Fix for new best speech
+
+commit f610f6940df1f0f204a63b642c6835e129c34e93
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 04:45:08 2010 +0000
+
+    Fixes for new best videos
+
+commit 5da61fcbee3126b7f3210fc8feacaa069c59d3d9
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 10 04:20:59 2010 +0000
+
+    Changed best videos portal to a more compact form
+
+commit 5e4681c613c1f7f8a42a4b51be472b6301a4d22b
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Wed Feb 10 00:10:46 2010 +0000
+
+    Logo added
+
+commit d2b0fed3da87d77a4b7b87b6e5d7b9c19d5e3774
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 9 23:20:17 2010 +0000
+
+    Points priorities css is back
+
+commit d07ed68b6c41c4fadf45f46bbd1b685dd5b99d15
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Tue Feb 9 22:38:47 2010 +0000
+
+    IE6 and 7 menu bug fixed
+
+commit a77a1b3d23e43d17484c8c29ff9ea4d70a2a8d12
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 9 13:40:33 2010 +0000
+
+    More detailed caching using priority as key where needed
+
+commit a3b05c3867623dc08768b88928261de265b547c4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 9 13:27:05 2010 +0000
+
+    Added fragment caching
+
+commit b78af93e1230f67862554bedff56fd83bcf19cc2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 9 13:22:44 2010 +0000
+
+    Fix for getting all latest video discussion per priority and caching for that
+
+commit 9b288e54ef432b14f33e7db8167933d2105098ad
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 9 01:28:24 2010 +0000
+
+    News portlet item limit to 3, fix for latest processes portal code
+
+commit e49f312ba266a3a8cc71a91504df25035a0b8b49
+Merge: 509f945... 4c313f0...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 9 00:00:52 2010 +0000
+
+    Merge commit 'stebbiv/odd-merge' into odd-merge
+
+commit 50b592409352a3ba34d3a278670f652d7ceceb5a
+Merge: 4c313f0... 509f945...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Mon Feb 8 23:52:25 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 4c313f0d6ee64ad2f34a108ccb8180a688ca565a
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Mon Feb 8 23:49:25 2010 +0000
+
+    Fixed representation of external link
+
+commit 858bf22c0f833bc230f44093976ba1ccc7a2194c
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Mon Feb 8 23:23:02 2010 +0000
+
+    Fixed wording in _icelandic_parliament.html.erb
+
+commit 509f94572d91078d9f14382fe3a2a0d41e206e1f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 22:50:53 2010 +0000
+
+    Fix for 0.0 rating
+
+commit 2c2096be5408795a960ab9f3c1d808cba36a8c77
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 22:34:09 2010 +0000
+
+    Adding to inflictions
+
+commit 960c04db1366320b3b258e53acdfa98fca96aa1c
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 21:39:13 2010 +0000
+
+    Fix for user id in saving portal for admin
+
+commit 5a5053bb7fec507ee2195b6848a6972efdc0843f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 21:24:16 2010 +0000
+
+    Added missing portlet file
+
+commit 16e49379d5bcb62e465d19f8937a48e10b49bb94
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 21:21:45 2010 +0000
+
+    Addin the two last portlets before launch, latest changed priority processes and latest process documents
+
+commit 83657ddad4b18d06593a9a252f535fade76c680c
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 18:10:19 2010 +0000
+
+    Width of pagination for small video thumbnails
+
+commit 47ffab70cc9ada6d731ddd2fa53024f6fc8db9de
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 18:07:01 2010 +0000
+
+    Adding paging for main video view
+
+commit 2186d3b49020d1a66aa3ea4ffcf9b9445e945544
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 17:40:04 2010 +0000
+
+    Break search video thumb row at 8
+
+commit d1088b513a7763119e744a6e86c0d0377b43081b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 17:37:53 2010 +0000
+
+    Enabled caching, changed icelandic presentation
+
+commit af1b03f6bba4311e2b965b2dec6e29d3caf1915d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 17:36:19 2010 +0000
+
+    Break search video thumb row at 8
+
+commit 7daa206be3352f565d5917a4d29696cd5c7b692b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 17:19:32 2010 +0000
+
+    Move snapshot view up
+
+commit 657fc4fbc661f8a7e5ccfd64a1a21d2d57f3daa5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 17:13:04 2010 +0000
+
+    Only show fully processed video discussions
+
+commit 788626fdd752549bf8ba87ec684e8ebc964c179d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 14:32:48 2010 +0000
+
+    Adding acopy and vcopy options
+
+commit 3a4b433e6a7418c51830c291344e7c4e1c73795f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 14:21:29 2010 +0000
+
+    Move to using ffmpeg instead of flvtool2 to split up the large video speech files
+
+commit c9a44089ed907a75d7233070abb8a028bf1b001e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 00:44:37 2010 +0000
+
+    Adding best video speaches
+
+commit 837cb3974aa5b7345208329fd2c7ea672e4b319d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 8 00:34:21 2010 +0000
+
+    Adding best video speaches
+
+commit 5512d3f7f2200bc816888911059cc672f78e1d58
+Merge: dfbdf63... 56ecac9...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sun Feb 7 20:25:37 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit c526e5683c3974166bdba3ac64ccbf34d1116168
+Merge: 56ecac9... dfbdf63...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 7 19:41:54 2010 +0000
+
+    Merge commit 'stebbiv/odd-merge' into odd-merge
+
+commit 56ecac9bc796ad5731dcb9bfe5ddc0322d0c568f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 7 19:37:28 2010 +0000
+
+    Same tr class for video thumnails
+
+commit dfbdf63c7fa88cc8972a188374a4010f84d3dc05
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sun Feb 7 19:27:48 2010 +0000
+
+    A little tweak for how the parliament process works
+
+commit 8972c67e46a00579cc22eca04246e19e6607dc3e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 7 18:15:19 2010 +0000
+
+    Log error to the right object - try two times
+
+commit 58f7cb5d5409e9fb8759daacf358c50e6fe5f1eb
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 7 18:14:38 2010 +0000
+
+    Log error to the right object
+
+commit 886422d093e1d9645ef9ea111a5312f5eca733d2
+Merge: 9d0b502... 829bbbb...
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 7 16:54:55 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 9d0b5024769b5d9b7bba048c007efadc6835ac74
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 7 16:53:45 2010 +0000
+
+    Forgangsmal changed to Mal
+
+commit 829bbbb687b5076c0b3e71ffc32fc55368164e87
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 7 16:52:25 2010 +0000
+
+    Fixing video sizes in different places to support less width
+
+commit 2127fbdc4613b4f1b0c4554a0a923942cbd79be1
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 7 16:13:40 2010 +0000
+
+    Translation strings and less rounded corners (that anyway don't work in MSIE)
+
+commit 0bb6965a65111f70c9114e0c5033f533a2c52d2a
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 7 15:21:13 2010 +0000
+
+    Skuggathing locale changes
+
+commit 0ca7191a816e6859bb4b0ab58a12ebddb27dc1fd
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 7 15:19:13 2010 +0000
+
+    Skuggathing locale changes
+
+commit 4582c0c6e1955bec8fa5bdbf5a7c3b2305ce9fcb
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 7 15:17:17 2010 +0000
+
+    Font changes, width test withdrawn
+
+commit ac8850d841c626c1159d9d1161809bb7e1d4d5d3
+Author: Gunnar Grimsson <gunnar@medizza.com>
+Date:   Sun Feb 7 14:39:08 2010 +0000
+
+    Font changes and content width to 960 - testing
+
+commit 7df45cad49d9cc1db26588b848fe7554d62c2ef7
+Merge: bbde69a... 42ee475...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 7 14:15:39 2010 +0000
+
+    Merge commit 'stebbiv/odd-merge' into odd-merge
+
+commit bbde69a22ebe77fe5769d6824759cabfa44ea9a4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Feb 7 13:58:53 2010 +0000
+
+    Removed test addition of multiple videos
+
+commit e9d0c7c3c31c050aa8353f671ef314a8cbd95ab6
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sun Feb 7 01:17:57 2010 +0000
+
+    Fixed table display in combo view
+
+commit e95afc32a9e979f071322942c56bbb828ebe0031
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 6 23:24:15 2010 +0000
+
+    Changed image thumb sizes on video speech search
+
+commit c10061107424484691e5669227c1bc85b80b5816
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 6 23:18:57 2010 +0000
+
+    Added video speeches portlet
+
+commit 42ee475249889ad3a4766889f6e790a9986ffdd4
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 6 21:18:46 2010 +0000
+
+    added hr
+
+commit 24553f136738eb5eaacd6a32c0e9b7ecd76e32e7
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 6 20:50:38 2010 +0000
+
+    Removed red border from points
+
+commit ccc57f1ae42e9463517b2457bdc5771db96c41cd
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 6 20:45:20 2010 +0000
+
+    Points are not rendered in the right way, sorta.
+
+commit ffbd5074fdf71e119a106574738067b9bdc83655
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 6 16:22:36 2010 +0000
+
+    The points should start to look like they should now.
+
+commit f105df242e7fc62b35b07c9de0ae57ea6d5485f2
+Merge: d78b6fb... 6a0d3cb...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 6 01:25:48 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+    
+    Conflicts:
+    	app/views/layouts/basic.html.erb
+    	public/stylesheets/nb.css
+
+commit 6a0d3cb33b2d4c466aa26581a1685ac75e39342c
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 6 00:11:11 2010 +0000
+
+    Fixed vertical scroller item size for smallest thumbnails
+
+commit 837c95b1201770671210f7b5631b67df0708df85
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Feb 6 00:10:43 2010 +0000
+
+    Added utility for deleting unused video folders
+
+commit d78b6fba2efed97955b386868f2c70aeb0f38ddd
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Sat Feb 6 00:09:53 2010 +0000
+
+    The layout is sorta starting to work out. I still need to reformat the sharing column.
+    I'm sorta starting to remember how much I dislike table layouts…
+
+commit f7c5bde41749469e89cef8d794d4777e5c36867a
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 23:40:17 2010 +0000
+
+    The jQuery curtain thing for Skuggathing is now available
+
+commit c478f51fc4dbc98ecc60971d0d188d2e721c4e96
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 23:35:47 2010 +0000
+
+    Small scrollable video thumbnail strips for each discussion, fixes for video speech search
+
+commit 99e4841351d40ced556d634299f1d1d61b81bfd9
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 22:46:06 2010 +0000
+
+    Heading margin fixed
+
+commit ae313aaffd844f7fe90f5a23bb6272bb859f2fc1
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 22:43:55 2010 +0000
+
+    Zebra tables fixed.
+
+commit ec9ff0b2b079cbfa150a0f4d3445c295fa36d269
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 22:20:42 2010 +0000
+
+    Fixed merge problems
+
+commit bcbd48e66c01fdd767b18ea3dc67ff1fa89947f3
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 22:19:36 2010 +0000
+
+    Revert
+
+commit d1e9f3f4c572e47fd374f49fd0b58036d9afbb61
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 22:18:31 2010 +0000
+
+    _icelandic_parliament.html.erb has the right classes for zebra tables
+    New imported stylesheet for Skuggathing
+
+commit 8d263430224cdd6006d0e3b7ba5c317eec1dccf0
+Merge: a72cae9... bb67d72...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 21:48:19 2010 +0000
+
+    Merge commit 'stebbiv/odd-merge' into odd-merge
+
+commit bb67d72947801bc3776a915a6f526d8da2aa1b1d
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 21:40:39 2010 +0000
+
+    More work in CSS
+
+commit a72cae95575039ce5820d0b02d599457a05de99e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 21:03:51 2010 +0000
+
+    Removed temp file
+
+commit 58bf88190776cc90a1a97d47fd9ebca8ff06cc0b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 21:03:37 2010 +0000
+
+    Reverted to nationbuilder code
+
+commit 1750e50593ccc64c6b0a3a85bd3e9038c422db09
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 21:03:17 2010 +0000
+
+    Working on video speech layout
+
+commit 8f0f9135f859db0672a857a11d8f56386ebe4790
+Merge: 4c27d43... 5e0f20c...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 20:57:13 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+    
+    Conflicts:
+    	public/stylesheets/points_layout.css
+
+commit 4c27d4387f9368f561fcb421a0c6a524c26d55af
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 19:07:50 2010 +0000
+
+    Staring to Re-edit CSS
+
+commit 5e0f20cba59be8dc1a55f49379e5d528b2c0209f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 17:52:18 2010 +0000
+
+    Show everything even if there are no points
+
+commit 1942f95d5f5b41e2d0544b7b8564d96eee5aa874
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 17:45:22 2010 +0000
+
+    Various video layout issues fixed
+
+commit b0434f3399284ecac5a7b5a2b1001ea3d1b47180
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 17:12:24 2010 +0000
+
+    Fix for erb end of line comment
+
+commit fb92c681efbdd3e19fa0df5a6a8d2009d36ec1e0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 03:22:54 2010 +0000
+
+    fixes for video layout, removed 960 top level definitions
+
+commit 9377c914b99ed540a209de9b5d58b912b15607c8
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Feb 5 01:42:57 2010 +0000
+
+    Working on layout for case speech videos
+
+commit f854fee1dc8d896d048d1cbb7e0c42b0a442fe21
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Fri Feb 5 00:19:58 2010 +0000
+
+    Rounded corners off
+
+commit 034f643422288bb4c45d0ca76454d6a4eaa277dd
+Merge: ca7def7... 247252b...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 4 02:02:33 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 247252bc8c147be0c4b04ac481412c51cdc28b6e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 4 01:51:54 2010 +0000
+
+    Deleted unused
+
+commit 8d4b0f15edac35fd703926fe7f0a8b0a39038406
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 4 01:51:42 2010 +0000
+
+    Changed timeout on cache to 1 minute for those fast acting ones
+
+commit 07b912bbf632be31aeb7da548fe2741a0edd4f9a
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 4 01:51:18 2010 +0000
+
+    Changed links to top points
+
+commit b9f2a0d1ebf95b3cf0dd6a7c9154fcd17ce79ae4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 4 01:32:04 2010 +0000
+
+    Showing videos from disussion on new priority show page
+
+commit cfff50e7eb844a17ad64f8cd3f19c72121e7f6c5
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 4 01:31:38 2010 +0000
+
+    New width for portal elements
+
+commit 5f0eb6598750e64e04268ca96cb917bb76efab2d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 4 01:02:14 2010 +0000
+
+    Fixing layout for new Priority Show
+
+commit e35719c823da9d257a3751ddad2ec1890751c701
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Feb 4 00:45:07 2010 +0000
+
+    New Priority Show screen started
+
+commit ca7def78fd24dd945a6ebcb3498fe1886debefaf
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 4 00:20:01 2010 +0000
+
+    app/views/priorities/list.html.erb notar núna h1 og app/views/priorities/show.html.erb er hætt að nota töflu-layout.
+
+commit ed0973f4bdaa1773298f8e1ee6fcf7f4ea8203e7
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Thu Feb 4 00:18:01 2010 +0000
+
+    „Slóða á upphaflegt skjal“ inniheldur núna slóð :)
+
+commit dbe6141499be2e41e7bd871f978de77550f2c23e
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 23:59:20 2010 +0000
+
+    Fix for Portal homepage function
+
+commit 8d113b47740427d75ed05568717c9cf1ddf1ca42
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 17:49:53 2010 +0000
+
+    Fixing dialogue box so it now closes poperly when you perform the action
+
+commit 14190f68bdab928433b685a781af2df3c878b0d2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 17:42:48 2010 +0000
+
+    Adding Portal as an option for default government homepage
+
+commit 5c3128c3af5a6d8d9e745a7c36c0e55230121528
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 16:52:40 2010 +0000
+
+    Various interactive flow changes connected to poitns
+
+commit a03c681021c4bea62b9577717ed64d24bed9c041
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 15:53:00 2010 +0000
+
+    New top points functionality
+
+commit 89a0c54e4d89f9d88315a662aeb77e6a8759f592
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 15:52:32 2010 +0000
+
+    Catch errors if thumbnails can't be rendered
+
+commit 38e053332dd0f3cea6878bc5c26556d8cc02f36d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 03:58:26 2010 +0000
+
+    More work on the new top points page
+
+commit 91afcff0907ab327f2bfb0df08d140a7eb9e3f17
+Merge: 7daaba8... 941c4a8...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 02:39:51 2010 +0000
+
+    Merge commit 'stebbiv/odd-merge' into odd-merge
+
+commit 7daaba8564ef805b183d6365d6ecd2d38f5ea23b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 02:39:05 2010 +0000
+
+    Working on points layout
+
+commit ce793d47ece5dd18de4f42f2739869a5e6b0c8ab
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 02:31:36 2010 +0000
+
+    Stillti xml:lang og lang í html-tagginu yfir á íslensku.
+
+commit 941c4a8a1c4814324b5dd36bbe1fdd67434d3877
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 02:29:01 2010 +0000
+
+    Nei, það virkar núna.
+
+commit 03d1b6317a4083320e7aa9c5339626f155c279b4
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 02:21:47 2010 +0000
+
+    Lagaði villu sem olli því að home-linkurinn í hausnum var að leiða fólk á villigötur.
+
+commit ad00327fc80f88d5c1e0c5430a2ad279a60dcc1d
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 02:15:09 2010 +0000
+
+    Núna linkar linkurinn heim
+
+commit 68be7bac279fb33f7ea143d4bd1c45c1bd94c50d
+Merge: 3000199... 467d68d...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 02:04:39 2010 +0000
+
+    Merge commit 'stebbiv/odd-merge' into odd-merge
+
+commit 3000199446d418e3b3139d03d8e760198d192136
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 02:04:15 2010 +0000
+
+    Fixing point layout
+
+commit 0cd09a4a70e5cd93e822a87523359f007a8d9b1e
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 02:03:56 2010 +0000
+
+    Smá vesen með hausinn lagað. –Auðvitað á að vera linkur í rótina.
+
+commit 9a35199e5a7bc2a7fb95c8a837c25d73d239fd80
+Merge: 467d68d... e191921...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 01:59:07 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 467d68d01c0cea4f8a134dd763170b61df8b6961
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 01:55:33 2010 +0000
+
+    Tveggja dálka CSS-layout! Úje!
+
+commit e191921843d04070ffa0c387205b9e83d3931304
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 01:45:51 2010 +0000
+
+    Fixing up points show layout
+
+commit 35ad63d04d023b3fdfe0374e77b97102d83e62df
+Merge: d2be6d0... 9738249...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 00:44:06 2010 +0000
+
+    Merge remote branch 'rvb/odd-merge' into odd-merge
+
+commit 97382499f3ad0e1e5c59dbb94bf41d5346ee9849
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 00:42:17 2010 +0000
+
+    Working on integration from referendum branch
+
+commit 1e1c513a3bc6a720a5793deea63e98437b2b70d4
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Feb 3 00:31:21 2010 +0000
+
+    Reverted another migration that is not being used right now
+
+commit d2be6d0a11a0978765f71d34f99ad84e061e1465
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Wed Feb 3 00:02:10 2010 +0000
+
+    HTML-tiltekt
+
+commit ffa4aa9a1c2535d80cfa2a5e45253aa0235dcc77
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 2 23:40:53 2010 +0000
+
+    Removed unused migration
+
+commit 31a87ec523cecded15342809f55585539ed0a36d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 2 22:36:47 2010 +0000
+
+    Merged points for and against functionality from the referendum branch
+
+commit 8ff584d64d09507546e4630eb298e80facf77935
+Merge: bb07f88... dcd3eb5...
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 2 22:34:55 2010 +0000
+
+    Merge branch 'odd-merge' of git://github.com/stebbiv/nationbuilder-is into odd-merge
+
+commit dcd3eb5f5f34bc18adab1d572a02fc62885fca1e
+Merge: 56330c5... 3922ac2...
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Tue Feb 2 22:30:02 2010 +0000
+
+    Merge branch 'odd-merge' of github.com:stebbiv/nationbuilder-is into odd-merge
+
+commit 56330c50696402761ce671e87e57121ccde57ab4
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Tue Feb 2 21:41:09 2010 +0000
+
+    Nei, þetta er tiltekt í html-kóða fyrir ferli mála.
+    Hitt var fjarlæging á töflu-layouti í basic.html.erb
+
+commit 3922ac26502c4dd3a7c9e00f02a0c76f9ea5b2c2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Feb 2 07:40:24 2010 +0800
+
+    Moved to rails 2.3.5
+
+commit 41b6cd0198ae0772618a5e9ae4f9223e1ef6b7f7
+Author: Stefan Vignir <stebbiv@gmail.com>
+Date:   Tue Feb 2 21:25:32 2010 +0000
+
+    Tekið til í html-kóða fyrir ferli mála.
+
+commit bb07f889423d9b03754dc3cf1392f11284e7327d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 23:40:24 2010 +0000
+
+    Moved to rails 2.3.5
+
+commit 920f1cd7e846196212b2a648692819a85e09e3f6
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 22:20:11 2010 +0000
+
+    Localization for Portal jQuery elements
+
+commit 519afef09cb7ace107a838a52ca2547bf9ebbbba
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 18:00:01 2010 +0000
+
+    Adding Process Speech Videos to nav menu
+
+commit 42e1e6de47355f6ce5bf2a3cad1f6f642a25ed85
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 17:28:05 2010 +0000
+
+    Localization fixes
+
+commit dc997ee2aa08ab1817a687c33a711e01d7753524
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 17:15:55 2010 +0000
+
+    Change wmode of player in order not to hide dropdown menus@
+    @
+
+commit f741c79ac80ba513b71b38cd34cbc2e763fd5d2b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 16:53:59 2010 +0000
+
+    Adding some indexes
+
+commit da139c1b3108e1e48748d5bc7bd46a9ddf2ab6a8
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 16:41:09 2010 +0000
+
+    Fixed localization conflict
+
+commit cac18146f527719ffbea3d074f021b7abd146155
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 14:47:07 2010 +0000
+
+    Filter out password in logfiles
+
+commit 2487deca913ce8df20f84151c112076f89ef189d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 14:44:17 2010 +0000
+
+    Fixes for portal and non admin users
+
+commit 882ee5d75468fd1f05561b966899829f372f2fed
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 03:39:06 2010 +0000
+
+    Enabled masters again
+
+commit 80575f9cef10e336d7648b3e97e5adbfd863c042
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Feb 1 02:46:57 2010 +0000
+
+    Merged a custom multicut version of flvtool2 and fixed some bugs in video processing code
+
+commit 1e6d43cfc4d461d52e9f999f1d250b7ab0e4c5c2
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Jan 31 20:48:49 2010 +0000
+
+    Refactoring flash speech video processing
+
+commit 3ed6c696420ed126b48fb254b8a1f9a0ff8c33da
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Jan 30 01:47:38 2010 +0000
+
+    Ignore video worker config
+
+commit 784cfc74130dbacfcef34c86a2407cb2995431df
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Jan 30 01:19:04 2010 +0000
+
+    More fixes to law crawler
+
+commit 0b57506a0ea7da27b172dd9c25d7b2bb8cb97600
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Jan 30 00:37:27 2010 +0000
+
+    Fixes for newly refactored law crawler
+
+commit 273a7145c6df9f30e65e85d2324bb46d7e7d6111
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Jan 30 00:37:12 2010 +0000
+
+    Fixes for newly refactored law crawler
+
+commit 3aa09b77d57d3d2597a09b9d9997c2a6c32c3d92
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Jan 29 20:18:36 2010 +0000
+
+    Refactoring Law Crawler
+
+commit c5528e2121051ffbdc309db9ea82e590dd109555
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Jan 29 20:18:14 2010 +0000
+
+    Adding .sql to gitignore
+
+commit db2c4077ce87f2a245b5977cb3d4bfd9668073c1
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Fri Jan 29 02:22:11 2010 +0000
+
+    Adding portlets for various nationbuilder features
+
+commit 6e47f02ff2ecf2fdc049f2db01d280113f5c3abd
+Author: jgilliam <jim@gilliam.com>
+Date:   Mon Jan 25 00:37:42 2010 +0800
+
+    truncating user agent at 150 chars for point & document revisions
+
+commit 39be92a1146f788be43bd7415d5e56b5bd224e99
+Author: jgilliam <jim@gilliam.com>
+Date:   Mon Jan 25 00:22:37 2010 +0800
+
+    removing postgresql problem in pictures definition for schema.rb because rake db:schema:load is choking
+
+commit c6b7a05f914a6d1ea15327d1733985edeb27c4ab
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Jan 26 23:35:09 2010 +0000
+
+    Fix crash bug in branches/1/users - priority. instead of user. sent to I18n
+
+commit 0139598114246698e3bd43a0bc4cc2dc1fb7467f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Jan 26 14:05:58 2010 +0000
+
+    Added portal items
+
+commit 02ba813f64afa44087046f2c25777d66f5342474
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sun Jan 24 01:50:48 2010 +0000
+
+    Merging Open Direct Democracy Portal functionality
+
+commit 2d42b2a23220b89b243ec83e3ac55300b5159fcc
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Sat Jan 23 02:16:34 2010 +0000
+
+    Merging Flash Video Speech Support
+
+commit bfc2964f3e4cf98d09f49ae5f01ca9e303ca64ee
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 22:26:25 2010 +0000
+
+    Adding Process Documents feature into nav menu
+
+commit f63b099a196eefce3c3d700d845c4d3a9928bbf1
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 22:00:59 2010 +0000
+
+    Adding Process Documents feature into nav menu
+
+commit 3ffead7d40d938060243abd91d699f80078dcf69
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 05:32:23 2010 +0000
+
+    Merging Process Functionality into menus
+
+commit fbca752446cba8e0f28c5e38b50f96103e97fd14
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 05:31:55 2010 +0000
+
+    Added .tmp files from RadRails
+
+commit 42377ae297d21f7e6b902a7475731bcbd3f5ec5d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 04:29:39 2010 +0000
+
+    Delete accidentally checked in .tmp files
+
+commit eb66fecde9d1bc548a00e78099238cacb315ba2b
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 04:22:55 2010 +0000
+
+    Fixing various odd merge issues
+
+commit 60cd1d01762371bb8fa45ab09013cccb1829ba1d
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 02:54:38 2010 +0000
+
+    Don't titleize tags
+
+commit 3c2ced85d9520836e00ad337a5d96c97c51b14ab
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Thu Jan 21 02:53:52 2010 +0000
+
+    More merge from odd
+
+commit c48775e39c5b68e365bedc1b15996c3baf918cdc
+Author: simmix1 <simmix1@yahoo.com>
+Date:   Thu Jan 21 04:54:55 2010 +0800
+
+    translated priority, user
+
+commit e0982dd6d9b86d17e40bb9495a8ff53c89191e43
+Author: simmix1 <simmix1@yahoo.com>
+Date:   Thu Jan 21 03:24:41 2010 +0800
+
+    translated: priority to opposed.
+
+commit e1a65db9de4b9a9f2601c021ca238c8772cd07e1
+Author: simmix1 <simmix1@yahoo.com>
+Date:   Thu Jan 21 01:15:40 2010 +0800
+
+commit 5febcde8164c49cd2dffc3cc49de6b418fa2ea1d
+Author: jgilliam <jim@gilliam.com>
+Date:   Thu Jan 21 04:38:23 2010 +0800
+
+    upgrading hoptoad notifier to gem version 2.1
+
+commit deb264f9e597b660d4d821005e807a23bda7167f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Wed Jan 20 21:51:42 2010 +0000
+
+    Initial merge of the first part of Open Direct Democracy into Nationbuilder
+
+commit 5c88d5a959c109758197b6a2cf3bd8b0ed446325
+Author: simmix1 <simmix1@yahoo.com>
+Date:   Wed Jan 20 23:22:14 2010 +0800
+
+    Þýðing á comment, discussion, endorsment.
+
+commit 71e567e69a56e3c42bdd2df4dba48ec120e0cee5
+Author: simmix1 <simmix1@yahoo.com>
+Date:   Wed Jan 20 22:49:47 2010 +0800
+
+    þingmanni breytt í kosinn fulltrúi
+
+commit 8cc9b5bc68d49e5f05ff1c645a5014f6782a49f7
+Author: simmix1 <simmix1@yahoo.com>
+Date:   Wed Jan 20 20:11:53 2010 +0800
+
+    þýðingar á recruited og legislators
+
+commit dfe9ab74a9e15410421e827f2119efac66679722
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Tue Jan 19 01:20:46 2010 +0000
+
+    Migration pre table renaming
+
+commit 4ea778d3d007fc13b5332d868ba86db1eb1e0df0
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Jan 18 21:34:25 2010 +0000
+
+    Added .project from RadRails to git ignore list
+
+commit 1b856add85103793a86368cf8d0cc86ffa4f9655
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Jan 18 21:31:24 2010 +0000
+
+    Parameterization that supports accents and other special characters
+
+commit d5b9e9245fe862196e0b638d7a1ce7a061876f71
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Jan 18 21:28:58 2010 +0000
+
+    Fixed missing check for s3
+
+commit f322ea2cfd43464257253a54de1b60280c0bd30f
+Author: rbjarnason <robert@decyphermedia.com>
+Date:   Mon Jan 18 20:51:33 2010 +0000
+
+    First pass at Icelandic localization
+
+commit 46eeb602b44c15a3de38e698f864ee9896e38ced
+Author: Robert Bjarnason <robert@robo-is.(none)>
+Date:   Tue Jan 12 14:47:13 2010 +0000
+
+    Do not use S3 if s3.yml config file is missing
+
+commit 2f9b8b819e4138ee5b77a61886eeb52828bff7ae
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Dec 6 15:28:05 2009 -0800
+
+    pgsql bug in priority ranker
+
+commit 9e68bb6d41b46c4162f5128336877b1e5870b086
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Dec 6 11:49:44 2009 -0800
+
+    monkey patched acts_as_solr to add the s3_bucket name to the model index so we can run multiple nationbuilder instances off the same solr server
+
+commit eb9b9b804792e17a5a98a931eeef8eef9f811d62
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Dec 6 10:51:55 2009 -0800
+
+    removed all the yaml export stuff that didn't work because yaml doesn't understand utf8
+
+commit e34384199df583cf8aa66bff6b4bfcd97851cb8c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Dec 6 10:46:54 2009 -0800
+
+    rake search:reindex does it in  batches of 100, and canonical meta tag ignores www
+
+commit 2c33b5c5d9c042936494ad6e8c8147942bc5b8a8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 16:45:17 2009 -0800
+
+    rake search:reindex
+
+commit 02cea79dd93283e8634c7add8160f22191114d70
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 16:24:01 2009 -0800
+
+    fixed government-level user count
+
+commit 1e8f1f1fcee142c20cb131d2c6adae7645a7f29d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 16:15:56 2009 -0800
+
+    dealing with redirects when root domain is www not nil
+
+commit 96213bcb515d6d9348a8cbe34dbf97f70d7a8b53
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 12:43:04 2009 -0800
+
+    rake db:data:dump_csv_s3
+
+commit 90ded71fb3157fb0826f056a2be12024b9196a47
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 12:42:42 2009 -0800
+
+     ditching all the unused fixtures
+
+commit ef52bc051e03fafee7e62376f77bb4248f2987b1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 12:36:07 2009 -0800
+
+    new maintenance message
+
+commit 1e0675e165f0cbe3fa76d158f3a568a1453dcdcd
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 10:34:44 2009 -0800
+
+    changed yaml_db to use ya2yaml, for utf8 support (hopefully)
+
+commit 30ea716e3fa3e8a9b84cd02aaef7e308d8cad6c1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 09:55:47 2009 -0800
+
+    rake db:data:dump_s3 and rake db:data:load_s3
+
+commit 1aa7842c10fe5921928c364f8c8fa2cf15a99c39
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Dec 5 08:52:47 2009 -0800
+
+    yaml_db plugin to load individual tables
+
+commit 20c956f5f9a82ba2182fe72a177b16f56eb2596b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 15:24:53 2009 -0800
+
+    partner.is_optin = true not is_optin = 1
+
+commit 04661a25822cdca4459598821e215a91da30cb69
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 14:58:24 2009 -0800
+
+    rake pictures:clear to clear out paperclip before re-importing
+
+commit da1994ffa6f037d338245aa56d9631846f7b491a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 14:27:34 2009 -0800
+
+    Revert "ignoring the government config variable for suppressing empty priorities, automatically suppressing all."
+    
+    This reverts commit b01f96e20ad29d79d32091608a78c0668b473bd6.
+
+commit b01f96e20ad29d79d32091608a78c0668b473bd6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 14:23:13 2009 -0800
+
+    ignoring the government config variable for suppressing empty priorities, automatically suppressing all.
+
+commit 77474f4c0d98e805e57b1e233849ab44ddaf6803
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 14:20:40 2009 -0800
+
+    Revert "require 'model/government' see if that helps"
+    
+    This reverts commit 48b6ec8a26d0ab86890d80f69a4ce48bb0faf812.
+
+commit 48b6ec8a26d0ab86890d80f69a4ce48bb0faf812
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 14:19:43 2009 -0800
+
+    require 'model/government' see if that helps
+
+commit e71504e386c36041c33992f2a67c67bf4387e033
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 13:31:39 2009 -0800
+
+    Revert "more tweaks to S3_CONFIG in production"
+    
+    This reverts commit 406bee0f22c4ab4b1aa4ec641ccb7a4443035f11.
+
+commit 406bee0f22c4ab4b1aa4ec641ccb7a4443035f11
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 13:29:32 2009 -0800
+
+    more tweaks to S3_CONFIG in production
+
+commit 9cf2d219a843258d86c63ae66a953e17081df221
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 12:25:40 2009 -0800
+
+    removing right_aws, upgrading to latest paperclip, removing s3 bucket declaration in the models
+
+commit 49fd36cd31a1d329ab65f7c79ef75b4ac5a9d198
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 12:15:20 2009 -0800
+
+    S3_CONFIG["bucket"] in colorscheme model
+
+commit ae10c0b1b1c159341fcb2279134267d6fa180d86
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 12:12:51 2009 -0800
+
+    now pulls S3_BUCKET config from the environment, or the s3.yml file
+
+commit 82bc4d5343ec63e9cc2c8d4c4d3bf75b785bec92
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 11:58:36 2009 -0800
+
+    only load s3 access key from the environment if it exists, otherwise it will use config/s3.yml
+
+commit a3476f5d153afcbd5133124709ab6b2f9b64fd89
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 11:46:49 2009 -0800
+
+    removing websolr initializer, not used anymore
+
+commit f2f330f88ecc001f0905ff640505325c9355d6e5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 11:04:51 2009 -0800
+
+    removed old README, using README.textile now
+
+commit 9d6a434ef0a0bd8fd4231cd0e9a5f185efcfe95d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 10:01:58 2009 -0800
+
+    removed chartbeat code
+
+commit eadb065c84a448d9af929d93176bea1a2a27d247
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 09:54:48 2009 -0800
+
+    removed websolr/tasks include
+
+commit 06ba4faaedb91ab39a28679209345c065053c549
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 09:50:04 2009 -0800
+
+    bug in user display if they the priority top endorsement is deleted
+
+commit 889b50904a9181e87522efa082cdad540109a26a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 08:07:40 2009 -0800
+
+    whoops, errant solr .gitignore was messing up the plugin
+
+commit cef2447b35557b7663137465986f1129626e99d6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 07:58:52 2009 -0800
+
+    moved acts_as_solr into plugin because the gem is loading the entire solr executable which balloons the heroku slug
+
+commit 646518475f02fe7293d017d8bc62b6a7b0931b98
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Dec 4 07:35:25 2009 -0800
+
+    sendgrid email settings
+
+commit ba3f7d870be5aa779c854981a5a274eb89a0a81f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Nov 11 14:19:59 2009 -0800
+
+    upgraded hoptoad
+
+commit 9c4fff1facc452006465dff12d2f3b09fb9b764e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Nov 1 08:00:44 2009 -0800
+
+    updated readme with example sites and feedback nation
+
+commit a85837eb0c9ffb7235b1bc7fd4c9a70b7a74c582
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 21 16:37:50 2009 -0700
+
+    configuration for heroku memcached
+
+commit f0bca7a64df9954163cedd7af6604c7c0d1080e7
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 21 16:24:15 2009 -0700
+
+    added acts_as_solr to gem manifest
+
+commit bff59d9fc052dfa49801972e4e4fd46267813654
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 21 16:21:26 2009 -0700
+
+    trying new websolr-rails plugin, see if it works on heroku
+
+commit ea4a4faa4cb007ef236efe189faf2f083a4bd2eb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 21 09:39:28 2009 -0700
+
+    added custom domain details in the README install instructions
+
+commit a59caffeb7e1a9fe7ec57a90be2ebdf3e99cd3c4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 17:30:26 2009 -0700
+
+    updated install instructions for how to enable Solr search
+
+commit 4f0c65b1e0bec3af60b87144112695220dca8049
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 16:20:23 2009 -0700
+
+    more tweaks when no facebook key
+
+commit c7a447f8f0ce52dedc9f091745f7c075ea9af60d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 16:17:20 2009 -0700
+
+    fails gracefully if no facebook api key
+
+commit f7b136bf83f88c0e87d655fec0213cb6c2fdd99a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 16:09:31 2009 -0700
+
+    redirect bug fix in install
+
+commit b6030bcc65a7b868cf3881953bdc6efb582d2d37
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 15:57:54 2009 -0700
+
+    bug fix in install
+
+commit b1e3a6340824994c1f2dc3de7fd7e38c053ad86b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 15:52:06 2009 -0700
+
+    updates to README
+
+commit 1bf4f104f69f37d9e1e429d1123dcc8425b74100
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 15:47:14 2009 -0700
+
+    readme textile formatting
+
+commit ea98b6fd2df516546e46bd43c2321be9bd78ff7a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 15:44:37 2009 -0700
+
+    new installation instructions for heroku
+
+commit adca65d63428fc262e2f54029dafea269a3a2bcf
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 12:11:38 2009 -0700
+
+    more bugs in first time install
+
+commit d442ff4c1839259f6dccadc5914b233e115bdee4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 12:04:37 2009 -0700
+
+    better install hook for new nations
+
+commit f08e1ed7d012d80e5069159959e914a699e773f6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 11:58:06 2009 -0700
+
+    trying a fix for if there's no hoptoad key
+
+commit 853cbf4ce06c105e82beb00d6aa726173d98b024
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 20 10:57:25 2009 -0700
+
+    updated the db/schema.rb, hopefully this will fix the bug the first time running rake db:migrate after a rake db:schema:load
+
+commit 56d2e2afcb1e30cbe1a3ed14a4785de58300d70b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 14:09:29 2009 -0700
+
+    no environment config for websolr
+
+commit acecf0e5ee9e83230ffa33fa4b06db11139ad4c4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 14:07:47 2009 -0700
+
+    more work to get solr working on heroku
+
+commit a18570ce108e757905dce0c074adffb42f0d318e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 13:56:39 2009 -0700
+
+    removed one more cloud from environment config
+
+commit 4f51676bb2d9ab9f888e1cf96e9a69d260d344ab
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 13:54:18 2009 -0700
+
+    using the gem version of onemorecloud-websolr-rails because that seems to actually work on heroku, unfortunately it eats up 20 megs of slug
+
+commit 1985682cc2fdf8f465e5903f974ee6dd277b15c0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 13:45:13 2009 -0700
+
+    more (hopefully) fixes to make solr work on heroku
+
+commit 078cbc9b72daf159e161f9ea461357ed0903562d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 13:02:01 2009 -0700
+
+    ditched websolr initializer
+
+commit 15cfc3fdb7bfdd5967cafb2992e4884a40699286
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:49:49 2009 -0700
+
+    replaced websolr-rails plugin with gem
+
+commit 3e3f55a0cedfa8968914da477862865b9e94be4c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:46:32 2009 -0700
+
+    swapping out onemorecloud acts_as_solr fork with mattmatt
+
+commit e616970a732b5e4199709a6dc24c6dba8da7f86e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:41:43 2009 -0700
+
+    ditched gem version of websolr in favor of plugin because it's smaller
+
+commit e53f54fee726a97366ffcfac1dffba9ce4c197d6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:37:11 2009 -0700
+
+    added one more cloud gem in
+
+commit 64fc0c2fcd43c6b48425b536b50d18a8235b1e68
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:06:14 2009 -0700
+
+    Revert "acts_as_solr plugin"
+    
+    This reverts commit 5b2f593d75ea5ed824044281528425b64652ffd0.
+
+commit 3a7c60f744b4c29eb203441d391fd7bfa3a987b8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:06:06 2009 -0700
+
+    Revert "don't include onemorecloud in gems manifest"
+    
+    This reverts commit 699328327b76bb0fe01f9c5e82c4e16fd8da5bad.
+
+commit 9e19c5775da3c4558d86cd8066665116e88453ea
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:05:57 2009 -0700
+
+    Revert "removed acts_as_solr plugin, heroku already has it"
+    
+    This reverts commit 727920a86bea6ed192f62b1cdba71b34f5c19b1e.
+
+commit 40e68b700fbb4116459a83c717b44ce9103e6fc2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:05:41 2009 -0700
+
+    Revert "added websolr-rails plugin"
+    
+    This reverts commit 59e6311a9e44c8dbe97a690499b17f8eefc66402.
+
+commit 7f8442e92401d81a916e7a7a63ef145dad8e2ffd
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 12:05:30 2009 -0700
+
+    Revert "adding acts_as_solr plugin back in"
+    
+    This reverts commit 20bb75f71e7f3ec2a17a4ee253b9a5e189a1bf76.
+
+commit 20bb75f71e7f3ec2a17a4ee253b9a5e189a1bf76
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 11:58:15 2009 -0700
+
+    adding acts_as_solr plugin back in
+
+commit 59e6311a9e44c8dbe97a690499b17f8eefc66402
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 11:53:56 2009 -0700
+
+    added websolr-rails plugin
+
+commit 727920a86bea6ed192f62b1cdba71b34f5c19b1e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 11:33:06 2009 -0700
+
+    removed acts_as_solr plugin, heroku already has it
+
+commit 699328327b76bb0fe01f9c5e82c4e16fd8da5bad
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 11:23:51 2009 -0700
+
+    don't include onemorecloud in gems manifest
+
+commit 5b2f593d75ea5ed824044281528425b64652ffd0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 17 11:20:12 2009 -0700
+
+    acts_as_solr plugin
+
+commit 1474083a26facd8511f9246f29d867c711c87fa5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 14 09:20:05 2009 -0700
+
+    redirects to top priorities if a spider crawls the hidden random priority issue page
+
+commit 078ab822220ea6f457700ed95a221a898968e68a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 14 09:12:29 2009 -0700
+
+    hide the link to random priorities for an issue because it doesn't work in pgsql.. related to a bug in acts_as_taggable_on
+
+commit d010579378fbc368855c23234c49a0bee57164e3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 14 08:03:27 2009 -0700
+
+    new way of handling rising/falling/controversial that works with pgsql
+
+commit 38f28fe6629f8a9a433cc8b239164aa624e3b740
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 14 07:08:35 2009 -0700
+
+    bug in controversial branch priorities
+
+commit 2e8acd3f438303c73b3514b26c74659c3ef25702
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 14 07:04:05 2009 -0700
+
+    uses RANDOM() instead of rand() if you're using postgresql
+
+commit d539f2dff41a2b57a9e9bf9c2dd33bdff632f017
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 21:59:56 2009 -0700
+
+    checks to see if yahoo & windows api keys are added before showing links to import contacts
+
+commit bc941dc6ff2c863212bada4c1c2c408f0fbbe266
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 21:50:45 2009 -0700
+
+    fail silently if no ENV['WEBSOLR_URL'] is defined
+
+commit c3db5106e648cc7c8bc00b7ce46ebea701bdcb23
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 21:30:58 2009 -0700
+
+    adding/deleting endorsements doesn't hit solr
+
+commit 76c7774cbdae4cb9b0a2caa9344a0eb8af4f1e75
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 20:15:22 2009 -0700
+
+    rake pictures:import won't process if it's already done.
+
+commit 3c3b4d4da0da45603d5c6dd6bc68e47fc70bf3b1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 11:45:24 2009 -0700
+
+    bug if no ENV['DOMAIN'] specified yet
+
+commit e3b422888f935a11612ef3b82c2adc5d67f2b4ba
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 10:22:37 2009 -0700
+
+    updated comment so it doesn't trigger solr just to increment the counts on point/document/priority
+
+commit 8eb6593b45cd72359551d61421580094464bf2cd
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 09:13:25 2009 -0700
+
+    replaced grackle with httparty & twitter auth
+
+commit f1592b582980685c2679553ade1f9000c06292eb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 08:01:51 2009 -0700
+
+    moved charting stuff out of rake task and into delayed job rankers
+
+commit 33bd1b8217c5145551d7782bf412717196689473
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Oct 13 07:30:50 2009 -0700
+
+    redid the relationship builder to work with pgsql
+
+commit 034c33e98ffc1505a960b1f7b09cd4c301569a38
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 13:43:26 2009 -0700
+
+    ditched all the current_government scoping of memcache.  not needed for heroku
+
+commit 71ed87789a99c48ccd35e331f54934385e4ecfd1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 13:34:31 2009 -0700
+
+    ditched user.issues - wasn't even in the UI, and it needs a lot of rejiggering for pgsql
+
+commit 0b1f2746c40cc1f42acd9a3eb1c3b3dfa1aca49b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 13:29:10 2009 -0700
+
+    another pgsql fix for user.recommend
+
+commit b1dc41242bf54280858e2d609129d96ae4358a8a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 13:27:33 2009 -0700
+
+    fixed up user.recommend so it works in pgsql (hopefully)
+
+commit 4e634d3f5233703790ec7b27110ee14bf8f441d3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 13:21:09 2009 -0700
+
+    removed potential allies, doesn't work with pgsql and it's hardly used at all anyway.
+
+commit 231e4b12bb5fdd977166b7fe7f43d8dff320e46d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 12:48:43 2009 -0700
+
+    priority chart volume fixes for pgsql
+
+commit e0ec7b914a273580b695e1763579575b67d52f9a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 12:48:25 2009 -0700
+
+    ditched User.signup_growth.  not used, and doesn't work in pgsql
+
+commit de2f7183c2c3b3628f825c09ae07a921619523cb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 12:48:03 2009 -0700
+
+    rolled back attempt to fix pgsql problem with priority endorsers_endorsedd
+
+commit 526eeff55669733a735982bcfbb54ad7b7d33c10
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 11:22:01 2009 -0700
+
+    pgsql group by fixes for related priorities
+
+commit c6822efb6c99d1a2025cd9f90fd61d960b49040e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 11:02:22 2009 -0700
+
+    pgsql fixes for priority relationship sql
+
+commit 6a274c772dc743462f8d45e4106be93f3a108717
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 10:45:35 2009 -0700
+
+    pgsql can't handle division by zero
+
+commit 6033875f284634fa4cc261121e1764c4dae21215
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 10:40:10 2009 -0700
+
+    attempting to fix a bug in priority ranker when run on heroku
+
+commit 259c579cd3a489907a81fd9917df47b9d0a2dcf2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 10:19:24 2009 -0700
+
+    don't need FixHelpfulCounts background task anymore, moved it back to rake fix:helpful_counts
+
+commit d74d5075882129c11333df6a0591c0938faf682a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 09:54:18 2009 -0700
+
+    fixed the priority ranker delayed job for pgsql
+
+commit ec52e16cacc6c1840a6a74d2cd07f7baa56909d9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 09:54:08 2009 -0700
+
+    replaced date_add mysql queries with pgsql friendly version
+
+commit 03f3d83af7f9c4c58380e3ad4d333e2c0937896d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 08:27:16 2009 -0700
+
+    changed priority ranker sql queries to work with pgsql
+
+commit 47f27c802a82564590867c6c3d30f5291458610a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 12 08:11:47 2009 -0700
+
+    calculates the point score changes and awards political capital in real time instead of the rake task
+
+commit 38c58a2b667ccc4f624d29c43b0892e68ebf80df
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 22:27:57 2009 -0700
+
+    rake fix:user_counts fix
+
+commit b5a8641161212a37914094209188787850586241
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 22:23:18 2009 -0700
+
+    sourced hayesdavis-grackle from github
+
+commit 31696dd05ae74ebef33b4bf6f21db092abf0ca10
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 19:44:26 2009 -0700
+
+    moved daily/weekly maintenance tasks into rake cron, which heroku will run assuming the daily cron addon is enabled
+
+commit 4b72116b5dc17522e007ec1b49ceb60265fd28b3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 19:03:46 2009 -0700
+
+    refactored user and priority ranker into delayed_job
+
+commit 49af2c43d3b487917c50416e92ffd095b72f6152
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 18:40:11 2009 -0700
+
+    refactored rake fix:top_endorsements to delayed_job
+
+commit 757670968b33ae5dd87c63a4e863552cccddcc1a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 18:35:09 2009 -0700
+
+    moved rake process:merge_proposals into delayed job
+
+commit 14deefff56e29e4f9f0a5d09d2fa7a8844f1508e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 18:26:54 2009 -0700
+
+    refactored loading the twitter followers of new twitter folks into delayed job
+
+commit 195ee6538631a02b6851a20917d3cf8e7155f94f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 17:57:15 2009 -0700
+
+    ditching rake process:notifications, now sending out notifications and invitations with delayed_job
+
+commit 201a61bec16298e89569c5b9814cf71b9a7fe6ea
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 11 14:15:11 2009 -0700
+
+    replaced thinking sphinx search with websolr
+
+commit 2292d8ab8b67a1c2c7df4e2d3104b7293b2aabe0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 10 12:06:37 2009 -0700
+
+    windows contact importer doesn't need a contacts.yml file
+
+commit 74c933a2ea71bda1e042527a04bf19ac74bc341e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 10 11:49:23 2009 -0700
+
+    load government config in windows & yahoo contact background job
+
+commit a63f4cf0c669382bc77d403ed4dfa2493a2a21bd
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 10 11:20:43 2009 -0700
+
+    removing yahoo authorization file
+
+commit 7da0ef93fcb5f2fcf05e52c49d1577ab653d1482
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Oct 10 11:19:36 2009 -0700
+
+    for yahoo uathorization
+
+commit ecc41981f73bb7a09e169da2ae3eb70faa5cea36
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Oct 8 13:48:04 2009 -0700
+
+    ditched spawn for delayed_job.  rejiggered contact importers for delayed_job and to not rely on memcached
+
+commit 153504ff8760e94b1190694e2254c64290ee58ae
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 7 17:25:13 2009 -0700
+
+    added /delayed_jobs view
+
+commit be8c8b42dc64d0e741eb50545d9dd4490938d096
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 7 17:21:06 2009 -0700
+
+    added delayed_job plugin
+
+commit 43b2780f267778e8cbcd76c96427d69015dd35ef
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 7 16:32:22 2009 -0700
+
+    changed a variety of boolean fields to be called with true/false instead of 0/1 (for postgresql support)
+
+commit d66ab0eae859b7f03009cded4b4ba66544d57328
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 7 14:09:02 2009 -0700
+
+    locking paperclip gem at 2.3.0 because 2.3.1 switched away from right_aws gem to something else
+
+commit f8e1502765691d5a5b01142c88b148fe23785b5e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 7 14:01:26 2009 -0700
+
+    replaced my funky cache_page Picture model set up with nice elegant paperclip+s3.   need to run "rake db:migrate pictures:import" to convert all the old pics and upload to s3
+
+commit f62c1b6b24234b6e3c4d67acf1d5553fe6fddf13
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Oct 7 09:00:28 2009 -0700
+
+    removed psds from images folder to cut down on the heroku slug size
+
+commit f177f1a559af8c483d34ae9ff6da7d539d27668c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 15:47:23 2009 -0700
+
+    ditched more oauth provider stuff
+
+commit b5b6867d159d98355c46765408978145d15a0b01
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 15:43:32 2009 -0700
+
+    ripping out oauth provider stuff, not used
+
+commit b2c7b30e6b079c6dba2e6da8d51871d82c1fbb44
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 14:37:07 2009 -0700
+
+    fixed infinite redirect in current_partner
+
+commit f463508cd4b9f560bddf52318a0c43387a42fd3e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 14:28:43 2009 -0700
+
+    in current_partner too
+
+commit 4cda2bd30204fa63dee7c12020e82382ed76e7da
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 14:24:18 2009 -0700
+
+    removed some straggling multiple government mode stuff in application controller
+
+commit 6594abcc91c2a03c98c3f21c05d3a6780f493da3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 14:01:48 2009 -0700
+
+    ignore all database.yml.*
+
+commit 3671c3282851a6a241553fbbfca430b4965bda22
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 13:55:20 2009 -0700
+
+    replaced thinking sphinx and spawn submodules with plugin versions.  this will be removed when i replace spawn with delayed_job and thinking sphinx with solr in prep for moving to heroku
+
+commit c3120f4095d945e4c13a0a70e6854db6605a6fbe
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 13:04:15 2009 -0700
+
+    removing spawn & thinking sphinx submodules
+
+commit e216f146031613521bdbcea75520d153303dd7c7
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 12:15:23 2009 -0700
+
+    replaced i18n_action_mailer submodule with plugin version
+
+commit 9831aa3edf7c47f4cc67368a8201913caa5b2c35
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 12:14:28 2009 -0700
+
+    removing i18n_action_mailer submodule
+
+commit 02fcc5f8f3e60ef0481f695b84be96fcde96a49e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 12:07:58 2009 -0700
+
+    replaced oauth_plugin submodule with exact same version as regular plugin
+
+commit 493626e01d8f0f5f7a27f38607a974b891ccb999
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 12:04:33 2009 -0700
+
+    removing oauth_plugin submodule
+
+commit 5ce601cd81369cbb3c58d1b4c6b86b7090b86f6b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 12:01:36 2009 -0700
+
+    replaced facebox_render submodule with plugin
+
+commit 650b47b6583df631a43d47b6cdd75d74ec77abfe
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 12:00:21 2009 -0700
+
+    ditching facebox_render submodule
+
+commit 343a00c88b4d666faf1fb5c6f5c2a4cd88338c95
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:47:29 2009 -0700
+
+    replaced facebooker submodule with latest gem version
+
+commit 3f5119f199f1db4f0f1d5b82588802a93a64471b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:33:48 2009 -0700
+
+    replaced hoptoad_notifier submodule with plugin
+
+commit 9b96521d911c545c61d95e877513dd3b55056ead
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:33:17 2009 -0700
+
+    removing hoptoad_notifier plugin
+
+commit 73724a3646eb5dcc4060f7ceb1ac9dfb182d48e0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:31:03 2009 -0700
+
+    added acts_as_list plugin to replace the submodule
+
+commit fffc08ef4d521c2f1b678800c1d0ca53da5a8ab2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:30:48 2009 -0700
+
+    removing acts_as_list submodule
+
+commit 165dc2569035ed79da031a16a0db46d463f02e1a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:25:18 2009 -0700
+
+    added latest auto_html plugin, this is an upgraded one over the previous submodule, but it should be fine
+
+commit acf4bbfaf6b00d30685a2dc73cc68daa79895526
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:24:42 2009 -0700
+
+    removed auto_html submodule, in prep for adding plugin directly
+
+commit 4240c86b8f2d614508172c32e280ea755b4eeaec
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:19:55 2009 -0700
+
+    re-adding my own fork of acts_as_state_machine as a plugin
+
+commit 47f3d967fd6532a4cd682b618209e2a01e5145a1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:19:20 2009 -0700
+
+    removing acts_as_state_machine git submodule
+
+commit a46a0da03000015e0d442c2f55d3f3b96041abdc
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:11:48 2009 -0700
+
+    removed multisite plugin, not really used
+
+commit cec8ed0764431219e072c209bf60ddd7e49c5b7d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:07:22 2009 -0700
+
+    removing paperclip plugin cause it's old and not used.  will be using it soon however.
+
+commit 0fcff302427025aab76c8742d7fcd2e0c47adb57
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 11:05:49 2009 -0700
+
+    removing use_db plugin, not used anymore
+
+commit 484144aa489f31220c9d9aec445c3cebb8013db3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:58:33 2009 -0700
+
+    replaced will_paginate plugin with gem version, the fork from dweinand that supports active resource
+
+commit 6e2b3d080afe79fab5a93fbb61b1afe08a13b959
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:53:15 2009 -0700
+
+    removed new relic, will use the heroku addon instead
+
+commit d5347d096da5e21cfead28635d087102d1cffcef
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:47:59 2009 -0700
+
+    fixed up application_controller for non multiple government mode
+
+commit ca230a9f304f199990ac96fcc496d7fac513cd6b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:41:31 2009 -0700
+
+    ditched middle ware stuff, moved various config stuff into dev, which should become config vars on heroku
+
+commit 49c09cd847086cc6ce20eaaa072a2486cea6a5b5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:12:43 2009 -0700
+
+    added gems manifest for heroku
+
+commit 19f15986bc1d420aed46ca26c889d5859e517706
+Merge: a1dd135... d340f0b...
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:08:46 2009 -0700
+
+    Merge commit 'origin'; branch 'master' into 1.1
+
+commit a1dd135f7b873946d5dfc33ecc8c72fbcfa158c3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:08:35 2009 -0700
+
+    fixing conflicted merge?
+
+commit 85756b86cc3e7878aa0496918e7bea6846e64f3d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 10:05:14 2009 -0700
+
+    fixing merge conflict
+
+commit c820ba3fe3db0f47a60fc864a4d7f5aa80a0584a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 09:43:33 2009 -0700
+
+    moved nb.yml into environment.rb
+
+commit d340f0b3e38132c067b9cbc2d3eb55953ac735be
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Oct 5 08:20:11 2009 -0700
+
+    removed remit, and took the user performance chart off the user profile page because it was so expensive
+
+commit 97a59bc15e469806f1ff9a80227241dc9bb86a26
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Oct 4 16:16:42 2009 -0700
+
+    basic ripping out of multi government mode
+
+commit ca3ecc1f1c7a6a74e2fc13372271b6c583591f35
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Sep 29 07:03:06 2009 -0700
+
+    removed remit from environment.rb
+
+commit 7788c24618eafe446fc6e09d3e3187496fbf5ff9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Sep 29 07:00:15 2009 -0700
+
+    ditched remit
+
+commit c1f3e4f2c190757ca3d30904c89a7d1ca7cbdbc2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 27 13:39:09 2009 -0700
+
+    hopefully fixed bug in twitter login for multiple govt mode
+
+commit ca2909b895c1f2f29f942ca4431bcf7512d78b37
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jul 24 15:54:46 2009 -0700
+
+    more bugs on charts for new nations
+
+commit 95dafa27ee44f4e917fc62939689b7ab74d48cc9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jul 24 15:51:21 2009 -0700
+
+    bug in total volume chart when a nation is first starting
+
+commit 686265ebffcad1af6af2789bcca2e7053a23324c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 23 11:28:17 2009 -0700
+
+    fixed bug in password/password confirmation for updating account info
+
+commit 35444ef61bae699938b178521cb0cc30629970c7
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 20 12:25:25 2009 -0700
+
+    bug in issue list
+
+commit ffae29641b82f126c315102019c9a3f912bba70f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 16 09:19:32 2009 -0700
+
+    use favicon in menu bar instead of smaller version of logo
+
+commit 0283c3486af4397b83c04e7a11732ccd27607bf6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 13 08:45:54 2009 -0700
+
+    using simple regexp for subdomain validation of governments instead of subdomain_validations file
+
+commit 267ddafef00a4a550e7746116e8396a211728785
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 12 20:15:29 2009 -0700
+
+    used new facebook signin button on sign in page
+
+commit f93d1e0b6d23bbc4d7d43e615a5aff43e6a22e90
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 12 20:12:16 2009 -0700
+
+    rake multiple:new_nations processes new nation signups in multi-government mode.  it will send out a welcome email user_mailer/new_nation to the person who created the nation with their nation details, etc.
+
+commit 1054d1fb5b9014da2c1a01b8458e87edb8dda58a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 12 20:11:13 2009 -0700
+
+    added temporary admin password to government
+
+commit 6727d768c36437eb9c1299a9622bf4f1b77f5dab
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 12 20:10:49 2009 -0700
+
+    validates_subdomain for governments
+
+commit 73fbdad1b63a73ffd39d73882777765dccfae4d9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 12 19:52:14 2009 -0700
+
+    rails/en.yml and rails/de.yml translation files
+
+commit b46a86975d1bfe3e6c4db810b13d761bff93ccec
+Author: Jim Gilliam <jim@jim-gilliams-macbook-air.local>
+Date:   Sun Jul 12 12:43:07 2009 -0700
+
+    updates and bug fixes to new nation install for single nation mode
+
+commit 0fdf0b983ce5aa3c6940e9c2f65acf22d59e436a
+Author: Jim Gilliam <jim@jim-gilliams-macbook-air.local>
+Date:   Sat Jul 11 20:24:10 2009 -0600
+
+    updated readme with modified install instructions.  rake single:start is no longer needed, it is handled the first time you load up site.
+
+commit a000df4d520c724a2ea6b72f8f71b9fc8a060c97
+Author: Jim Gilliam <jim@jim-gilliams-macbook-air.local>
+Date:   Sat Jul 11 20:20:29 2009 -0600
+
+    new install process for single government installations
+
+commit 317747cdb715c4dbf84ea0ac86ab3c2ffa5f2942
+Author: Jim Gilliam <jim@jim-gilliams-macbook-air.local>
+Date:   Fri Jul 10 22:51:34 2009 -0600
+
+    fixed bug in rake single:start
+
+commit aa8ec01c0fb5ba38206b831c08f5116c232f37e6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jul 10 09:17:13 2009 -0700
+
+    moved talking point summary up to top of form
+
+commit 01077505248b2f6da86fd10fb262337c2f8ec09f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 9 15:58:01 2009 -0700
+
+    bug in notifications of new comments if you were who the activity was for
+
+commit 17a6354e9cbf5417983f2edb13779c3829419c0a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 9 10:44:18 2009 -0700
+
+    border = 0 on the twitter/facebook sign in graphics
+
+commit 0382c0ba230123e4b5cb4ba6b66c84b25358f2c5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 9 10:12:11 2009 -0700
+
+    different icons for signing in with facebook/twitter
+
+commit 407aef5d39a57877a5b66d26e382c00c5ca437be
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jul 7 16:44:37 2009 -0700
+
+    bug in user_ranking.rb  the has_many relationship no longer exists with activity, so ditching the reference
+
+commit 50df47f83280349d825cdceb9c44e9d145a6bf0a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jul 7 16:16:26 2009 -0700
+
+    hoptoad notifications.  add your "hoptoad_key" to your database.yml to turn it on
+
+commit 0fe37cdfdb0d458112617a46efc004f08cb8c576
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jul 7 16:00:54 2009 -0700
+
+    removed exception_notifiable plugin... will replace it with hoptoad
+
+commit 4417cfaff7cdc06c2f06f9d94ea79498cf352d53
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jul 7 15:40:23 2009 -0700
+
+    creating a new account uses ajax & facebox, so hopefully we'll have less spam accounts
+
+commit 9c4357424e764e84e556c96043c1cd2b20f31bee
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jul 7 08:56:10 2009 -0700
+
+    facebox_render
+
+commit c91b790b5ad90ee497564baf3c2fc43d31321213
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jul 7 07:51:29 2009 -0700
+
+    footer goes down to the bottom of the page now
+
+commit 42b50194d995b5b744c0935989ed7157357ac14e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 6 16:59:40 2009 -0700
+
+    added login with twitter account to access denied login page
+
+commit bbf0bc896175b1cacd4d49a51d4beadfc5a7cbe6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 6 16:21:51 2009 -0700
+
+    bug in admin notification for a change proposal
+
+commit d4a8f4260c479bd1d03778024ca33d2cad6906aa
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 6 09:56:51 2009 -0700
+
+    bug in color scheme migration
+
+commit 05b11679aa92b7b924288168e2504be639bddc95
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 6 09:52:54 2009 -0700
+
+    button color scheme works a bit differently
+
+commit e5cb07dfb538cb623314962afa1f430cd785992a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 6 08:05:54 2009 -0700
+
+    added font to color scheme
+
+commit 0b00c36cca3e7ce21facfd02d6573e8818c81437
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jul 6 07:58:50 2009 -0700
+
+    joinn
+
+commit 0fc0540276aa50c337444c79f0f28aa598f22bfb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 5 19:30:56 2009 -0700
+
+    saving a color scheme just takes you to the advanced page with a status update
+
+commit 1c5e24a458e704012871e62c7a948292f7f7fab5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 5 18:27:32 2009 -0700
+
+    hopefully this fixes the weird branch cache/bleed problem between governments
+
+commit 7fdd7b786dbf855ec799dff57eb6ba6f2e44f9f2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jul 5 18:14:33 2009 -0700
+
+    bug in  branch_endorsement published named_scope
+
+commit edd1f00309453c41880be5ffe2995d97e0958647
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jul 3 13:02:46 2009 -0700
+
+    color scheme stuff
+
+commit 19b176dd0354de1d7f0ef970bd58c806203fe0fd
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jul 3 08:13:53 2009 -0700
+
+    language code on edit form
+
+commit e25647757d314bac57b561cc17cb0ac768a60343
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 2 19:13:44 2009 -0700
+
+    locale stuff
+
+commit 104c5939f44e821646d0d59a4aea65b5041b3674
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 2 18:48:08 2009 -0700
+
+    utf8 encoding for the german yml files
+
+commit 89fdcfc6a4a5be7641fd0b9a9b1f58389af1b6c1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jul 2 18:41:39 2009 -0700
+
+    german translation files from Markus Lang
+
+commit 22baa4e42bfc3c2de91e25d57fe9b3c69f538648
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 20:57:28 2009 -0700
+
+    rss feed titles point to html page, not the rss feed
+
+commit 5cd034f4b3aa94c5d614d414658c5b1cad916d58
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 20:45:48 2009 -0700
+
+    show the rss feed even if there isn't any pagination
+
+commit 451c6e29c99de9f9fe5724b86a37110cb693caf4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 15:54:12 2009 -0700
+
+    separate page for finished branch priorities, remove from the main listings
+
+commit 6a8fc63dbb97818c40547040abc92ce6671f89d5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 14:53:09 2009 -0700
+
+    but in rake chart:priorities
+
+commit 3cac155cc62cf6988b701a01d868daa68c3a9e32
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 14:41:56 2009 -0700
+
+    rank:user_votes -- updates the endorsement scores of a user if their user score changes
+
+commit fc4ec8287055ae72b685251716cecae3a882e1f1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 13:59:14 2009 -0700
+
+    dramatically sped up rake rank:user_votes by only checking for the last 2 hours
+
+commit 1aeb62237be1b7d24592728510f5649c1d8bbab6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 13:43:42 2009 -0700
+
+    small bug in rank:priorities
+
+commit ea1ffe6a9eb904d2651c2f44f84d8334ed76593e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 13:42:52 2009 -0700
+
+    updates the endorsement.score in real time.  woot!
+
+commit 20458baf1baa55fd100c419265b6bbe445418003
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 11:50:13 2009 -0700
+
+    bug in checking to see if they left the default text in the priority create "nation builder should..."
+
+commit 6b7f437fc04b5dafa234233ceef580f06612d6af
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 11:47:22 2009 -0700
+
+    bug in browse_nav if a new priority is being created
+
+commit 9e942fb01f99df999a94199fdbb6116c0c8233dc
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun Jun 14 11:24:59 2009 -0700
+
+    user.expire_charts
+
+commit 4ed76814e4bde0e17403d79d7725c5739411e5a5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Jun 13 15:17:14 2009 -0700
+
+    each branch gets equal weight in the rankings
+
+commit d148b1ad150f78c2a08ede9fd0faabaa9304fe78
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Jun 13 13:34:34 2009 -0700
+
+    took out the one-time-only fix for old branches
+
+commit 16ef544618c019e8d329c86c2f8b10f07b1b1229
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Jun 13 13:32:06 2009 -0700
+
+    puts all the users in the default branch if they haven't explicitly chosen a branch.  and if the admin changes the default branch, it will move those folks over.
+
+commit 02ddf6bb3c2afcfb5f8936865cca06fb1417e758
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Jun 13 10:55:11 2009 -0700
+
+    priority.talking_point_text not needed anymore with sphinx search
+
+commit ec2cfba72720ee4ba5b9440334bae7cb5e464ca1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Jun 13 09:35:22 2009 -0700
+
+    bug if the official user removed an endorsement
+
+commit 0d536a0349a3cd72e61e953080222a01416db8fe
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Jun 13 09:22:32 2009 -0700
+
+    if a priority is first added to a branch, it will put it at the bottom of the list now.
+
+commit 16283b32667f4217843c8c8ee350b1e04072d23c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat Jun 13 08:08:02 2009 -0700
+
+    bug in branch_endorsement rss feed
+
+commit 33dbb98fb35f1fc2a5096b8052af02f010c59ff3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 17:50:11 2009 -0700
+
+    missing newest template for branch priorities
+
+commit 00aadb17f947cead1f43c0cb2424627ee6569380
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 16:37:56 2009 -0700
+
+    expire cache in rake fix:branch_counts
+
+commit 150d84059bdb9d432b55637d9d9009c106b7a918
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 16:36:48 2009 -0700
+
+    rake fix:branch_counts
+
+commit 767581dee8b005c059f73912c991a45e1729e400
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 16:34:25 2009 -0700
+
+    you can login with facebook/twitter from the endorse & signup form.
+    
+    added branches to endorse/signup form.
+    
+    fixed broken facebook login link.
+    
+    new users of a branch will update the users_count and expire the current_branches cache.
+
+commit 57190c76b46200303bec2adcc595e0ff3b17735c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 13:28:12 2009 -0700
+
+    removed pluralizing and capitalizing of branches
+
+commit 93f997d0128590084b4b53960060846178a99586
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 13:20:04 2009 -0700
+
+    better capitalization/pluralizing of branches
+
+commit 6c5169bf1471a69b40329a8801a6091e2cb707b9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 13:11:01 2009 -0700
+
+    fixed rank:branch_endorsements.  it wasn't updating the endorsements_count for new people to the branch.
+
+commit 2865470860a1dd565f22888be5f6f587557d2bdb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 12:58:08 2009 -0700
+
+    prompts a person to select a branch if they haven't already
+
+commit 23c759bab02a953c60171994ea4dc8c0f8663339
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 12:45:29 2009 -0700
+
+    destroy activities when a tag is destroyed
+
+commit f991d0f2c82369b1a50d50e431bd328932a98311
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 10:42:23 2009 -0700
+
+    bug when deleting a branch
+
+commit 72ac9004afa1ad4f194a9ff8459761389f4479ae
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 10:26:48 2009 -0700
+
+    fixed overlapping in nav when it wraps onto a second line
+
+commit cc1a255ac244681dd4f95a734cf508fbfd6879a0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 10:08:39 2009 -0700
+
+    don't send admin notifications to an admin if they are the sender
+
+commit 401cfea676a38a55e29cebd75a0b500b928e32a6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 09:41:40 2009 -0700
+
+    notifications handle unsubscribe settings better.  added a new unsubscribe option for notifications to admins.  admins will now get notified when there's a new acquisition proposal they need to review.
+
+commit 7b7585c01fd1b97b112d6014d8d49c018cfa6bc6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri Jun 12 07:50:04 2009 -0700
+
+    bug in stratml exporters
+
+commit da92af4c5d60ee9cbb6a04ce51102859128f6151
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 20:36:28 2009 -0700
+
+    bug in activity.tag.slug
+
+commit 7a80b2cccdfb73264012c554e5edbaa5745e7a75
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 20:35:40 2009 -0700
+
+    gives a nice error for 404'ed tag pages
+
+commit 21ca70ec9d8576f625be1e6a62be62a4bdbb3bd4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 20:31:37 2009 -0700
+
+    stopped caching the tag cloud page.  it's causing too much confusion
+
+commit 8b258459aa05bb45c10ed7c363994c25181bdadf
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 20:19:37 2009 -0700
+
+    replaced tag.name.downcase with tag.slug, and tag.name.titleize with tag.title everywhere
+
+commit 244f189b069916ec3b5719500ca8df4742b8647b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 20:08:16 2009 -0700
+
+    expires tag cloud when tags are created/destroyed
+
+commit 64ab224cf4e19ed0026619a1a0110d6f21195ab1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 20:05:20 2009 -0700
+
+    note that separating multiple tags uses commas now on the priority edit page
+
+commit 6f9d414976bdd999c92cbe16947aa6e2ad34592f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 20:00:53 2009 -0700
+
+    downcases the tag cache lookup
+
+commit 9cea0d962b5c79ac350156023689554928030312
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 19:53:22 2009 -0700
+
+    tags use commas as delimiters, and you can now specify a 'prompt' for each tag when someone adds a priority
+
+commit 3900d3f408cd7625cc8cf5f38d701d5e9272b2a9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 13:50:21 2009 -0700
+
+    fixed bug with signup/endorse process
+
+commit 69f20d2f228759a4ae89109871783da5383f43b9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu Jun 11 13:48:38 2009 -0700
+
+    bug when destroying a user
+
+commit 7d4b00eec3571f5a8265a5e1311266b0c4530b5f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Jun 10 15:41:01 2009 -0700
+
+    replaced a few places where update_attribute is used to save priority attributes to skip callbacks and avoid the acts_as_taggable_on deleting/inserting of all the tags
+
+commit 8f0e4f32f48a48639dc8ed8f25c45d3e57c523b2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Jun 10 15:01:50 2009 -0700
+
+    increased the speed of the priority ranker 8X
+
+commit d730c8e269855c263be3e997a98ed85fd5d9601d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Jun 10 14:28:22 2009 -0700
+
+    Instead of hard coding 100 everywhere, Endorsement.max_position sets the maximum priority # to include in rankings
+
+commit b80c613472c48fd8fea913e13f09db0fe92a0f9c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Jun 10 10:47:16 2009 -0700
+
+    added comment noting the rake multiple:new_search_config requires sphinx daemon to be completely shut down.  also made the search buttons use the yellow_button css class
+
+commit b8450f88495f9ba9800d3e97edf1b3c04a61dccb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed Jun 10 08:34:05 2009 -0700
+
+    hacky little workaround for javascript character counter not including carriage returns
+
+commit 5d5c684d317042b3f22f7f196a29ea4737586762
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jun 9 20:27:33 2009 -0700
+
+    bug in twitter login for *.nationbuilder.com sites
+
+commit c0cf15e3f574b456ee4cd965fd3d18c5167dac3a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jun 9 18:49:42 2009 -0700
+
+    rake process:new_twitterers to automatically crawl twitter followers of the new twitter folks
+
+commit c3ed90051e9746c2858d1bbfe40b4f92b9e7d101
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jun 9 18:36:14 2009 -0700
+
+    updated crontab.dist for new branches
+
+commit 1c5687634c519edfa520b337ae21c5aac5e11975
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue Jun 9 13:23:48 2009 -0700
+
+    rake capital:twitter_followers should run regularly, it will automatically follow any of the people a user is following on twitter, and any new people from twitter will get followed by their existing followers
+
+commit 36bc0b9a5fb3d23a54201ab23ea483b41946a2a8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 8 17:27:33 2009 -0700
+
+    added a "we'll never post to your facebook/twitter without your explicit permission" notice
+
+commit 59bdb302d14a979a04b1c88e3b1b273b3a4f1d40
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 8 17:18:12 2009 -0700
+
+    you can connect your existing account to twitter from the account settings page. you can activate your account via twitter.  and it encourages people on the twitter user listing page to connect their account.
+
+commit fe5bcde08b3d4a81e8434e8f4cc34b14053de011
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 8 11:33:41 2009 -0700
+
+    makes sure the twitter consumer key is set if it's a custom domain
+
+commit ac10161658392ee1f0212b32a74afd3c3279a252
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 8 10:12:08 2009 -0700
+
+    twitter login works for custom domains, need to supply your own twitter consumer key & secret.
+
+commit 0b1116b5f190f0cf2963ee599d46d52965aeef12
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 8 09:02:38 2009 -0700
+
+    basic logging in via twitter
+
+commit c3f09bdfd496bc6718685f11bd28e4df8683a3a1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 1 19:11:02 2009 -0700
+
+    now uses grackle, instead of twitter gem
+
+commit 47c1c3048f565845c5d3ed221d5c342d58c3d7af
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 1 17:17:14 2009 -0700
+
+    you can make a twitter suitable short url for priorities now.  uses http://is.gd
+
+commit 2d94f4b86ab5161469671caa8c423b534089d90c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 1 16:21:22 2009 -0700
+
+    bug in border highlighter was clobbering existing inputs in textarea fields
+
+commit d5ae0b8c7fb8858256c7ad0b73d16d91d067501b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 1 16:02:52 2009 -0700
+
+    duh, it's increment! not increment_value!
+
+commit f0951ac2bb5d777737beb8ab8fca84f96dfbf59f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 1 15:36:20 2009 -0700
+
+    admin can edit a user's branch from "account settings"
+
+commit 42f954d077404427ba9ce979dfc9759a917f2db0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon Jun 1 15:36:04 2009 -0700
+
+    textarea borders highlight when on focus, and
+
+commit bdbf21139f8a9c20114e151f4f27897093b5f1e7
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 30 22:53:08 2009 -0700
+
+    most of the guts for branches of government.  still some polishing to do.
+
+commit 78bee4444e92306cde42975fc2915083c92b5e35
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 16:02:44 2009 -0700
+
+    jquery form focus was clobbering submit buttons
+
+commit a466dc97cf96ccd8f06d3bcaa5798b33a07907f5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 16:02:15 2009 -0700
+
+    fixed bug in rake fix:helpful_counts
+
+commit 8eed953687b4c7b395e9a77bc2b10f42ecbb0cae
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 15:49:56 2009 -0700
+
+    doesn't publish the following discussion activity if you post a comment, it was redundant.
+
+commit 15668cdabba4979f442c667e9daad2d213462cd9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 14:41:11 2009 -0700
+
+    small speed improvements to rake rank:user_votes
+
+commit e5bc599e9ae6a52720e7d34a85ed014c38464fec
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 14:21:25 2009 -0700
+
+    basic setup for branches.  admins can create and users can join, but they don't do anything yet.  also, when someone goes to a page that requires login, it will take them to a login page first and not the new signup page.
+
+commit dfe6d25a3e3557b2a5c51406c044352b8502b60e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 13:08:38 2009 -0700
+
+    bug in priorities/yours_lowest & yours_top
+
+commit 7df62412ceb1adba2105e9d9266a4c45ad64a122
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 10:49:52 2009 -0700
+
+    bug in activity listing for new comment _noself
+
+commit 1916ae13a509a577c05d80f9d6ca1a81661a6216
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 28 10:06:54 2009 -0700
+
+    don't show endorse/oppose buttons on delisted priority listings
+
+commit 322b662b2974c39d39f7c96a2189239466d80a56
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 27 16:08:42 2009 -0700
+
+    typo in vote.rb
+
+commit ecff24764fc51818006536f66a47ed1b20c65f50
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 27 14:48:53 2009 -0700
+
+    will only publish a new #1 priority for someone if it's never published the activity before.  also includes rake fix:duplicate_priority1_activities to clean up all the duplication
+
+commit e6990e71762ce09479fa31d65d2c3a99ba55699d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 27 14:20:13 2009 -0700
+
+    made a before_filter for check_for_user
+
+commit 01da370f1ad74ba0d113c760bea9f39a0f6fb65b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 27 13:40:47 2009 -0700
+
+    simplified the briefing room nav for non logged in users
+
+commit 9a0a7d89a6f305719b3316109e60f409a894e49c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 27 13:25:30 2009 -0700
+
+    expanded the about drop down slightly so it doesn't wrap in safari
+
+commit be38a81451a16ba687d687aa1eb5742324021c91
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 27 13:22:13 2009 -0700
+
+    priority widget
+
+commit 5473d86567e5f1579c1838cb97b22b15f72c3fda
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 27 09:47:09 2009 -0700
+
+    bug for not logged in users accessing briefing controller
+
+commit 61ba268a4db3e79b5d9e3d70c948f027ea58aeba
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 26 15:38:10 2009 -0700
+
+    fixed a sorting bug when moving a priority further down the list
+
+commit c499e7671935b75f07dbbd292ae98d8aaf7c7523
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 26 13:27:22 2009 -0700
+
+    prompts with an error message if the person doesn't check the box on who to follow in the multiple follow page.
+
+commit f918abde652d287b3903d03580549e338cac639d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 26 10:42:10 2009 -0700
+
+    fixed the bug (and reduced the # of queries) when dragging/dropping priority list.
+
+commit 9914de2f6e6db9edff810a6763cc73e1cb215a13
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 26 09:55:32 2009 -0700
+
+    more widget only_path
+
+commit 119221e0f199c730665909957621872235cef273
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 26 09:50:41 2009 -0700
+
+    added only_path => false to widget links.  also identifies if it's a new priority
+
+commit ca10a89027437682b33765a26e85eb2e2f4021bc
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 26 09:31:45 2009 -0700
+
+    priority's name is linked on the quiz now
+
+commit fc4ff7bcc79bdb7242a7610545c5701e73fdd911
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 26 09:01:11 2009 -0700
+
+    typo in contributing document flash message
+
+commit 0c5e9a235f9174ae5d8d5b06c2b19a315e498bd8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 25 16:52:48 2009 -0700
+
+    simple user priority widget
+
+commit 232d872756d504f763ed7e033e98c9484bcf4417
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 25 16:19:34 2009 -0700
+
+    bigger border around input boxes
+
+commit 67f094b42db177d598b631db068adf52c1767cb4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 25 14:34:05 2009 -0700
+
+    added ?per_page= option to most pages
+
+commit 636e7fa6c69c70758a383427e2d099a0c67823ac
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 25 14:10:03 2009 -0700
+
+    basics for priority widget
+
+commit 2ad8f222568b598fc8ceeb1c4430aca9c3aad980
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 17:05:48 2009 -0700
+
+    bug in checking for the new top endorsement
+
+commit 3dec1187422b7af9b58106f0d49c2c47a2106a33
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 15:44:38 2009 -0700
+
+    only require the twitter gem in  rake capital:twitter_followers
+
+commit 92257b00228a221db1937bc65af858e000bb675d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 14:26:12 2009 -0700
+
+    let people know in the comment notification email that they can stop following the discussion
+
+commit a55c8f7dfe3847b7f3202b744cc5468cd2ea395b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 13:40:50 2009 -0700
+
+    uses big follow button on discussion page
+
+commit 08e5f8c7f43c1bae83474a7765de1c7538c9fd7f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 13:23:16 2009 -0700
+
+    removed research tasks.  this will eventually be replaced by a q&a system.
+
+commit d0f9c49bfa0531a9d6f1fd251eb5651a97d2c89a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 12:54:35 2009 -0700
+
+    don't add a discussion following activity if a person is commenting on their own activity
+
+commit a8e7a3b543ca4c2908b5c156bb1bb6bb297840ec
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 12:51:18 2009 -0700
+
+    updated schema.rb for following_discussions
+
+commit 66ba0027eede11c2fecf506c78a213e1be38f43b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 12:09:32 2009 -0700
+
+    follow/unfollow individual discussions.  your discussions, and notifications on those, are determined by whether you're following it, not whether you've participated in it.  this lets people stop following it even if they've participated in the past.
+
+commit 542a1522212d12f12ede8dfcaf42fb124dbecd54
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 24 09:23:09 2009 -0700
+
+    url was missing on email comment links
+
+commit 8cf88bfdaec699655973d6791e0860e94367a02f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 23 02:04:13 2009 -0700
+
+    removed has_many :activities from endorsement and picture models
+
+commit deb5cfa39e847ca1407b9a728cf75b99446afb21
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 22 20:24:21 2009 -0700
+
+    replaced rake fix:discussions_updated_at with rake fix:activities_updated_at
+
+commit daa56e94dc2305534cfe20e5e95c0cf06b5efa86
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 22 20:18:38 2009 -0700
+
+    rake fix:discussions_updated_at
+
+commit cd84c9109f41432054902c49b6c1c4578b1985c2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 22 17:45:36 2009 -0700
+
+    some database changes to activities.  added a position attribute, which let's me ditch the user_chart, priority_chart and endorsement fields.  also completely ditched the old obama_letters stuff.
+
+commit d9ba9cbc8340d098b39f9ed63f7531969e6830ac
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 22 12:24:28 2009 -0700
+
+    added a little detail on the short story facebook blurbs
+
+commit 6c506efd12796df7e76b07bae1ea706b15583fa3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 22 11:46:55 2009 -0700
+
+    completely revamped facebook integration.  posts news feed items for comments, talking points, documents, endorsements and oppositions
+
+commit 1cd08a23d9a2b024f42f1afd90d8f355c9fc33e9
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 21 22:12:29 2009 -0700
+
+    broken link in talking point intro blurb on priorities w/ no talking points
+
+commit a2e81f10325f00ce3c9560771373e7fe9ff3ac85
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 21 12:51:47 2009 -0700
+
+    added header blurb, for custom headers
+
+commit 1ea26ea08e93f1a365799dcbe82d3a1f125035a5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 19:22:25 2009 -0700
+
+    updated xd_receiver*
+
+commit 4f230920741bbf23c8246f337e3efe63b65b3525
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 19:20:13 2009 -0700
+
+    updated facebooker.js
+
+commit 7de8a9b85c629329320ab57a2e812e25bf14d11b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 17:17:02 2009 -0700
+
+    replaced the facebook connect javascript with the facebooker helper methods
+
+commit b26087cb659025f628ac3d65bd932f550514a6a3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 15:28:52 2009 -0700
+
+    upgraded to latest facebooker
+
+commit 2fc2e7c0ad40505de53e58987dbb754ca0e79771
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 15:20:21 2009 -0700
+
+    translation bug in activitypriorityobamastatussuccessful on user profile's page
+
+commit c6fd25702cf7c372facb6a6e63573afc04b22743
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 13:41:41 2009 -0700
+
+    bug in setting facebook environment for *.nationbuilder.com govs
+
+commit ce3b98f6559ea0a9429392fd6375ce56d42ce057
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 13:21:50 2009 -0700
+
+    when reactivating a priority, set the status to 'published' not 'active'
+
+commit 9bbce7127e3284f6d25adea89aaa9a962baa69db
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 12:19:30 2009 -0700
+
+    ripped out the old facebook connect feed prompts in prep for doing it facebook's new way
+
+commit e8b081bd635f99780da0fec8f7afdc61a7658a23
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 20 11:45:03 2009 -0700
+
+    looks like windows contacts, yahoo contacts, and facebook integration are working in multiple government mode.
+    
+    for single governments, i moved the facebook_api_key and facebook_secret_key into the database.yml file, no need for config/facebooker.yml any more.
+
+commit de40f90e7b2d6f8082af4a0e004f9aa9382b81a1
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 19 13:40:33 2009 -0700
+
+    removing contacts as submodule, to be replaced with the actual code in vendor/plugins/contacts
+
+commit 9408a8d9e5dcc5e84114a94d8b74bcd49f26bc96
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 19 08:25:24 2009 -0700
+
+    added paperclip module
+
+commit 19ed22fe792eee6cb91443647b270969b7164832
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 19:26:37 2009 -0700
+
+    moved the jquery default values into i18n
+
+commit 6d6ad7f48b22f42b7a3b3c3249e4fc2e868d7cf8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 19:01:45 2009 -0700
+
+    autoresizes the comment form after loading more comments
+
+commit 64bca3dfae36bc2294f497987f123ea03ade24b0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 17:12:11 2009 -0700
+
+    turns out, the tag count problem is a rails 2.3.2 bug, but there's a fix, which is now in initializes/count_fix.rb
+
+commit 09246181eedd22f7167598d0fdb02babe9f4a8a5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 17:04:38 2009 -0700
+
+    added config.gem for 'redcloth' in environment.rb, rails 2.3.2 needs it
+
+commit 8aab70140f9317f88717134df6d82d2cb968de9d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 16:59:01 2009 -0700
+
+    can't use h() in controllers anymore, apparently
+
+commit 48ef51ccdac60f629c819adf25784ad8711b73f6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 16:57:42 2009 -0700
+
+    temp workaround for weird rails 2.3.2 tag counting bug when there's a dash in the tag name
+
+commit 0a061cd254fc34b33742c0ed798a2d77ae1b324c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 16:11:01 2009 -0700
+
+    typo
+
+commit 7776519a5b1ec7575de308c4379dc9c6ed96cfad
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 16:10:13 2009 -0700
+
+    upgrading to rails 2.3.2 and using middleware for custom domain cookie setting
+
+commit af84036d5e36b8e7a75c59996134cfc0a33eff66
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 16:09:25 2009 -0700
+
+    priorites misspellings
+
+commit 1c1aa2d3bd6447d450d6b7b8ca429a3967c85f56
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 14:45:28 2009 -0700
+
+    missing translation for activitycapitalacquisitionproposal.name
+
+commit 6c0c9d43b4913f95d3fe420ac682812166890920
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 13:32:16 2009 -0700
+
+    when showing a priority on a doc/point listing, it now identifies priorities that are finished
+
+commit 91a42867286afa0c5733379caa9e2820b9389c2b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 13:18:07 2009 -0700
+
+    standardized all user provided text to support textile formatting.  comments, messages, points, and docs
+
+commit b11fa8c1e75533f6a4892323fbf92760ef043dbc
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 12:47:38 2009 -0700
+
+    missing i18n translation in activityprioritycommentnew
+
+commit 9fe010606208429b6f4bcb0db755dcd7d0bb322a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 11:47:03 2009 -0700
+
+    bug in tag ranker for governments with no tags
+
+commit dfc5ce060a756b7dce0e448c081a6654f386178a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 11:23:39 2009 -0700
+
+    priority ranker no longer removes priorities without any endorsements, unless the government that turned on
+
+commit 032393315135195feaea54ae67351c8bf7bac34e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 10:14:26 2009 -0700
+
+    moved some rake tasks around, rake:maint is now gone, and replaced with rake:fix and rake:process.  crontab needs to be updated
+
+commit 102d41d235a6b32af0b33f76d0769de7ebd2278a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Mon May 18 10:08:36 2009 -0700
+
+    better handling of discussions_count updating, includes updating on tags when comments are added/deleted to child priorities
+
+commit ad8c89abcd523264749f099d42eda704cb7f18e5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 17 16:42:00 2009 -0700
+
+    configurable tags index page, list or cloud
+
+commit 6f8d773b2c40d2e22c36c91de13bed10c756f307
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 17 16:24:07 2009 -0700
+
+    big tags/categories upgrade.  configurable index page (list or cloud, defaults to list), added title and description fields.  calculates the discussions/documents/points in a tag based on the priorities attached
+
+commit 28e924d250d266dad3cff0b6b6a184144107bcc7
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 17 12:29:27 2009 -0700
+
+    marks notifications of finished priorities read if the person views the yours_finished page
+
+commit 6e2fc3b830d823880273cf87f5a4a3270bf87c69
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 17 10:41:12 2009 -0700
+
+    changed default category intro text
+
+commit 433e9876b541cf3d678583c92d1202d671f88ae7
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sun May 17 10:34:39 2009 -0700
+
+    fixes to default blurbs, less u.s. centric, typos
+
+commit c5b08b5452c8e59655f0c8f77c90d77fd8f86749
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 21:54:27 2009 -0700
+
+    more tweaking with the cookie setting in multi-government mode
+
+commit eae6b9168d4a22a8a2bdba9ea33146a6b3828fc8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 21:54:14 2009 -0700
+
+    small changes to user signup form
+
+commit f6d4883ce545b7cb1d7064ca1dd902746b9e9d9d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 21:25:36 2009 -0700
+
+    only load chartbeat for wh2
+
+commit b862d5e2d386fc216fa30ff26391dba0ed76d5e2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 20:31:46 2009 -0700
+
+    only one save button on settings page
+
+commit 8537c199463112c0b660066112b28b334e87b418
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 20:26:26 2009 -0700
+
+    changed language from "our members" to "all members"
+
+commit b641e77e19863d2561bba060011553a3d0b8f541
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 20:24:54 2009 -0700
+
+    doesn't redirect from an official user's profile page to obama_priorities_url anymore
+
+commit 94b2d6ed40c63e52739b49e8c60e7875c1e4475e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 20:23:18 2009 -0700
+
+    first user wasn't being created as an admin
+
+commit ad5a591e4d5f8abfc9aac05019b6f066403d58d8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 18:22:32 2009 -0700
+
+    rake maint:obama only runs for governments with official users
+
+commit d2e6b6ad0e77ce86359dab5d25b6555ab67111b2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 18:21:50 2009 -0700
+
+    rake maint:obama only runs if the government has an official user
+
+commit ba16cdbcf4a70ac1de2049d6d24f13aeb7c9eff4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 18:19:42 2009 -0700
+
+    added the checkbox for hiding empty priorities to the government settings page
+
+commit 692af83637e75bbbebcd5cd68289268ef4718c21
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 18:11:29 2009 -0700
+
+    bug in production
+
+commit 1c382bc6e7ea31843b50b611bbe150f7238d49fa
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 18:07:46 2009 -0700
+
+    hiding priorities with 0 endorsements is now an optional setting for each government.  defaults to off.
+
+commit e0810bc6b19c2883a430760469e47a53cfabce04
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 18:03:58 2009 -0700
+
+    updates the official user status for a priority if the official user removes it from their list
+
+commit 82496fd0fbef47af2fb6b4703e1442881b9abedd
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 16:19:37 2009 -0700
+
+    changed up the way the database is loaded in multi government mode
+
+commit ab9845f3007a2a639c06e29f220e1cddb2edfaf3
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 15:07:49 2009 -0700
+
+    customizable default buddy & fav icons
+
+commit 7e0d7e68ffce6e096cf6760af739a00cfa5d0705
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 12:33:50 2009 -0700
+
+    a few places weren't respecting the current government when asking for pics
+
+commit 0a8baf7f44dc527d998d07d0d6236ca038ec24b6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 12:28:46 2009 -0700
+
+    displays most influential users by political capital instead of ranking when it's a small govt
+
+commit c3f916675ab28850d096166af722d31c9834cdb6
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 12:22:48 2009 -0700
+
+    rank the most influential by political capital instead of their ranking if it's got less than a hundred members
+
+commit d2a9d682b593babac9f3740bd359601458a96dbb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 12:12:54 2009 -0700
+
+    fixed bug where it wasn't updating the counts of governments run at *.nationbuilder.com
+
+commit 5a58c631d16bb125b9165ef79f01ea54f805004c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 11:52:01 2009 -0700
+
+    fixed translation bug in listing of contributors
+
+commit 4a1a2b8ddb29489588ce6a5f8385dca89da2b69a
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 11:29:59 2009 -0700
+
+    gives 5pc to the person who starts a new nation
+
+commit b89ec69896263adc08944697d5d3f8a404169222
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 10:58:31 2009 -0700
+
+    creates initial admin account when starting a nation, and sets the users/user_rankings/pictures tables as MyISAM
+
+commit 3a0a83c6d9e0635e2478856ea430b530c95487bb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 10:50:27 2009 -0700
+
+    fixed bug in rake maint:obama
+
+commit 808903179170d5776560b87d5938424d9d6d3554
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Sat May 16 10:04:10 2009 -0700
+
+    priority ranking fixes for brand new governments
+
+commit bf3d12e3b78d26acfd16ab6203cbe2512563aa2d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 15 21:18:00 2009 -0700
+
+    fixed some spacing on priorities list page when there aren't many priorities
+
+commit b1b6451adf1b83b6ed22816bd12c748aa984262b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 15 21:05:07 2009 -0700
+
+    /pictures respects the appropriate government
+
+commit 25ab3a7da727d5c38409bc1ed4ebae16b6c5d7fe
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 15 18:14:17 2009 -0700
+
+    searching mostly works now in multiple government mode
+
+commit 8ab9210a2dcf89985bd39dd08f7d6f24852df1a2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 15 16:05:30 2009 -0700
+
+    bug in activity display if the ad was deleted
+
+commit 751be08bda24d04a69922311617a1f7fda0f68c0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 15 12:56:13 2009 -0700
+
+    prompts people to enter a search term if they do a blank search
+
+commit 8340365942def0bf6c96c6cc9423ab044913d3ec
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Fri May 15 12:47:58 2009 -0700
+
+    consolidated priority/points/documents search all into one interface
+
+commit 940286042233752f404eca6f9ee2165191334b7c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 18:32:36 2009 -0700
+
+    oh duh!
+
+commit 2c1c516289fda62fe766ca2b5fddd35dce442638
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 18:24:48 2009 -0700
+
+    trying again with the multiple domain cookie handling.  this works in development (but so did the last try)
+
+commit 2b82cf8161e5e4780cfaa5bf4fc320988e8873cf
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 16:58:20 2009 -0700
+
+    Revert "figured out the multiple domain cookie setting bug.  needed to move the entire cookie declaration out of environment.rb and into the dispatcher extension in application.rb"
+    
+    This reverts commit f2cd2edb4617fd62ff2c906b3794376f3c0ebed8.
+
+commit f2cd2edb4617fd62ff2c906b3794376f3c0ebed8
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 16:54:20 2009 -0700
+
+    figured out the multiple domain cookie setting bug.  needed to move the entire cookie declaration out of environment.rb and into the dispatcher extension in application.rb
+
+commit 623ba52c088ab6f72056461932e1a4e2459027c4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 16:25:33 2009 -0700
+
+    more genericizing liquid blurbs
+
+commit 45f3a71153367fc5485cd0b7f85f9f214c475d9e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 16:17:47 2009 -0700
+
+    genericized some of the default blurbs & text
+
+commit 5dc8855eff8bfccadfc6634f3fa436a4239456da
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 15:59:19 2009 -0700
+
+    added nationbuilder.com link to default footer
+
+commit adb6aa894fb0ca92b0a132fb065b802c442715db
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 15:43:47 2009 -0700
+
+    doesn't show facebook connect button if the government hasn't turned it on
+
+commit 8381b9c6847bf132e845d63ebdbf5b166e5fb3ef
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 15:42:11 2009 -0700
+
+    loading database for a new nation in multi government mode works
+
+commit da690b780f4e3c30282e5314044d5bad61f510d0
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 11:00:35 2009 -0700
+
+    bug in priority quiz if a person hadn't endorsed anything yet
+
+commit b4ba8364321f2859ce830a1eac75206428e30ebe
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Thu May 14 09:52:07 2009 -0700
+
+    added domain to database.yml because the session cookies aren't being set properly from the action controller right now.
+
+commit c0265b0fa4f1deea32ff2d6ade20264c926f3be4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 16:00:31 2009 -0700
+
+    thinking-sphinx bug is fixed, now using the latest version
+
+commit 26b30c46fc83e55a05c1db2caf83a8d20117fe8f
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 15:29:34 2009 -0700
+
+    removing color_scheme migration, added new @government.nb_url
+
+commit 27abe487a52dfca810713e11af89fbc4b5abd368
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 14:59:49 2009 -0700
+
+    some tweaks to facebook logging out, hopefully it works better
+
+commit b0b6497e7c6891627d2d56077058f82c9d9dbc88
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 12:15:49 2009 -0700
+
+    fixed double render bug when someone is suspended
+
+commit 5d6a44ab27e9aa23d0fd4dd3711e7b6d614eb04b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 12:06:16 2009 -0700
+
+    changing acts_as_state_machine submodule to an older version that doesn't automatically make each state a named_scope
+
+commit ae65403dd4132b5de376840671d8b322d959b8f2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:57:02 2009 -0700
+
+    ignoring nb.yml
+
+commit 43b1d507880d374dc4401dd3759f209cd16307a2
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:56:26 2009 -0700
+
+    removing nb.yml
+
+commit 22121b6756384542fa76f46af25a46f9f2c9732d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:55:43 2009 -0700
+
+    nb.yml
+
+commit d5379155aad605878e9832c8ed9511b1f1541ce4
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:54:34 2009 -0700
+
+    moved nb_config loading
+
+commit 61116aac19258c3d2a866f271ac56281071cf5eb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:53:08 2009 -0700
+
+    ignore nb.yml
+
+commit 4d21d621425ab1f62a45343bc01b663e6eda872b
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:38:27 2009 -0700
+
+    trying to change to older thinking sphinx submodule
+
+commit c0fa054b4e6262fb3084a4b2fc4207f8cc39f185
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:27:59 2009 -0700
+
+    Revert "removing thinking-sphinx submodule, want to roll back to an older version"
+    
+    This reverts commit 55bf3032e15138189210c9dfc219129cc30f42cc.
+
+commit 55bf3032e15138189210c9dfc219129cc30f42cc
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 11:24:36 2009 -0700
+
+    removing thinking-sphinx submodule, want to roll back to an older version
+
+commit 049a983ac6ab8997780ec54274ee8ed6466a422d
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 10:57:06 2009 -0700
+
+    changed default single government target from "president" to "our nation"
+
+commit 8f736fc1f713e59d37d189c769fa5a95ccdf7c51
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 10:50:44 2009 -0700
+
+    updated readme
+
+commit b1d5f0afce5573f8b72ff8247c43d0632775671e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 10:48:53 2009 -0700
+
+    moved the session key stuff out of production/development config and into database.yml
+
+commit f743a74065e0940c6c682af5ac0617069299ecfc
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 10:13:29 2009 -0700
+
+    more multiple government mode stuff
+
+commit bd5688fd9b1e281364827a1da36a34b765260c45
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 09:33:24 2009 -0700
+
+    explain in the README how to get around the thinking sphinx bug to create and load the database.
+
+commit 76152dfcb069a4df7dfb8503f3821afcc786b186
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Wed May 13 09:01:30 2009 -0700
+
+    made nationbuilder.com domain configurable, and changed the wording on the success message for starting a vote
+
+commit b0a8bd8a75e01f51cadd97a4c5ded7a1cccab4c5
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 21:22:05 2009 -0700
+
+    don't need BASE_URL anymore in environment settings
+
+commit 53904bde0c4c2c288a2a9092af7755a58d556d63
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 21:17:47 2009 -0700
+
+    rename wh2.yml to nb.yml, WH2_CONFIG to NB_CONFIG, etc.
+
+commit 13506096cc6ddcd48ef7520e134b7d8e92234d61
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 20:34:28 2009 -0700
+
+    updating government counts works in single government mode
+
+commit 227026284b467a91b733f7c9a6cf73e3706ac64c
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 20:27:12 2009 -0700
+
+    single government mode basically works
+
+commit fa5f5c58b63a962256ab75c5f4e3f990c7cfd1ff
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 18:05:40 2009 -0700
+
+    removed translate plugin hook from routes.rb, and added my slightly customized version of acts-as-taggable-on in because it's not actually pulled as a submodule yet (i can't remember what i had to change to get it to work in the first place)
+
+commit 178e1dc2ed48f4ed372dde0151a81755bb4e7222
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 17:19:50 2009 -0700
+
+    added plugins as submodules
+
+commit c8298ea73d8253876ef4e0aca15e73e7bfdfb890
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 17:13:36 2009 -0700
+
+    cleaned out gitmodules
+
+commit 4b8af4f984ee82a6309f15c08fd68ac1eeeca6bb
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 17:10:39 2009 -0700
+
+    first commit of entire nationbuilder app
+
+commit c93154ef9f0560a3cd55a5f83c2c3ab621657f3e
+Author: Jim Gilliam <jim@gilliam.com>
+Date:   Tue May 12 16:48:20 2009 -0700
+
+    first commit

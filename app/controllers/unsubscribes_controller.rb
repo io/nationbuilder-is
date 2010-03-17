@@ -4,7 +4,7 @@ class UnsubscribesController < ApplicationController
   # GET /unsubscribes/new.xml
   def new
     redirect_to signups_settings_url and return if logged_in?
-    @page_title = "Manage email notifications"
+    @page_title = "Þínar tölvupósttilkynningar"
     @unsubscribe = Unsubscribe.new
     @unsubscribe.is_comments_subscribed = true
     @unsubscribe.is_votes_subscribed = true
@@ -23,7 +23,7 @@ class UnsubscribesController < ApplicationController
   # POST /unsubscribes.xml
   def create
     @unsubscribe = Unsubscribe.new(params[:unsubscribe])
-    @page_title = "Manage email notifications"    
+    @page_title = "Þínar tölvupósttilkynningar"    
     respond_to do |format|
       if @unsubscribe.save
         flash[:notice] = t('unsubscribe.success', :government_name => current_government.name)

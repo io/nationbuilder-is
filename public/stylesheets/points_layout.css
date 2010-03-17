@@ -40,12 +40,13 @@ p
 
 h2
 {
-font-size: 1.3em;
+font-size: 12px;
 border-bottom:1px solid #CCCCCC;
 font-weight:bold;
 padding-top: 15px;
 padding-bottom: 5px;
 margin-right: 23px;
+width: 260px;
 }
  
 h3

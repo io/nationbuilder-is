@@ -32,22 +32,35 @@ class PriorityProcess < ActiveRecord::Base
   end
   
   def self.latest_updated_priorities(limit)
-    last_weeks_discussion = ProcessDiscussion.find(:all, :conditions=>["created_at >= ?",Time.now-1.weeks], :order=>"meeting_date DESC")
-    last_weeks_documents = ProcessDocument.find(:all, :conditions=>["created_at >= ?",Time.now-1.weeks], :order=>"external_date DESC")
+    last_weeks_discussion = ProcessDiscussion.find(:all, :limit=>limit, :order=>"to_time DESC")
+    last_weeks_documents = ProcessDocument.find(:all, :limit=>limit, :order=>"external_date DESC")
     @processes_changed_past_7_days = []
     if not last_weeks_discussion.empty? or not last_weeks_documents.empty?
       @processes_changed_past_7_days = last_weeks_discussion += last_weeks_documents
+      @processes_changed_past_7_days = @processes_changed_past_7_days.sort do |a,b|
+        if a.class.to_s=="ProcessDiscussion"
+          compare_time_a = a.to_time
+        else
+          compare_time_a = a.external_date
+        end  
+        if b.class.to_s=="ProcessDiscussion"
+          compare_time_b = b.to_time
+        else
+          compare_time_b = b.external_date
+        end
+        compare_time_b<=>compare_time_a
+      end
       @processes_changed_past_7_days = @processes_changed_past_7_days.map {|p| p.priority_process.priority }.uniq[0..limit]
     end
     @processes_changed_past_7_days
   end
 
   def last_changed_at
-    discussion = ProcessDiscussion.find(:first, :conditions=>["priority_process_id = ?",self.id], :order=>"meeting_date DESC")
+    discussion = ProcessDiscussion.find(:first, :conditions=>["priority_process_id = ?",self.id], :order=>"to_time DESC")
     document = ProcessDocument.find(:first, :conditions=>["priority_process_id = ?",self.id], :order=>"external_date DESC")
     last=Time.now-5.years  
-    last=discussion.meeting_date if discussion and discussion.meeting_date > last
     last=document.external_date if document and document.external_date > last
+    last=discussion.to_time if discussion and discussion.to_time > last
     last
   end
 end

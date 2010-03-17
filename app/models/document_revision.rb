@@ -39,8 +39,9 @@ class DocumentRevision < ActiveRecord::Base
   before_save :update_word_count
   
   before_save :truncate_user_agent
+  
   def truncate_user_agent
-    self.user_agent = self.user_agent[0..149] # some user agents are longer than 150 chars!
+    self.user_agent = self.user_agent[0..149] if self.user_agent # some user agents are longer than 150 chars!
   end  
   
   def do_publish
@@ -90,7 +91,7 @@ class DocumentRevision < ActiveRecord::Base
     document.name = self.name
     document.value = self.value
     document.author_sentence = document.user.login
-    document.author_sentence += ", edited by " + document.editors.collect{|a| a[0].login}.to_sentence if document.editors.size > 0
+    document.author_sentence += ", breytingar " + document.editors.collect{|a| a[0].login}.to_sentence if document.editors.size > 0
     document.published_at = Time.now
     document.save_with_validation(false)
     user.increment!(:document_revisions_count)
@@ -131,8 +132,8 @@ class DocumentRevision < ActiveRecord::Base
 
   def text
     s = document.name
-    s += " [opposed]" if is_down?
-    s += " [neutral]" if is_neutral? and has_priority?
+    s += " [á móti]" if is_down?
+    s += " [hlutlaust]" if is_neutral? and has_priority?
     s += "\r\n" + content
     return s
   end  

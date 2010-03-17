@@ -1,18 +1,32 @@
 <%= render :partial => "priorities/header" %>
 <%= render :partial => "priorities/nav" %>
 <p>
+<br>
 <%= blurb('point_new')%>
-		
+<br>
 <% form_for :point, :url => priority_points_path(@priority)  do |f| %>
-
   <%= f.error_messages :header_message => t('points.new.errors.header_message'), :message => t('points.new.errors.message') %>
-
 	<div class="field">
  		<div class="field_label">
-			<span class="red">*</span> <%= t('points.new.name.label')%>
+			<span class="red">* </span> <%=t('points.new.name.label') %> 
 		</div>
 		<div class="field_box">
  			<%= f.text_field :name, :size => 50, :maxlength => 60 %>
+		</div>
+	</div>
+
+	<div class="field">
+		<div class="field_label">
+			<table width="35%">
+				<tr>
+					<td align="left">
+						Já, til stuðnings <%= f.radio_button(:value, 1, :checked=>params[:support] ? "checked" : "nil") %>						
+					</td>
+					<td align="left">
+						Nei, á móti <%= f.radio_button(:value, -1, :checked=>params[:support] ?  "nil" : "checked") %>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 
@@ -22,16 +36,11 @@
 	    <%= f.text_area :content, :id => 'pointContent', :button => 'submit', :rows => 5, :cols => 60, :maxLength => 500 %>
 		</div>
 	</div>				
-
+	
 	<div class="field">
 		<div class="field_label"><%= t('points.new.website.label') %></div>
 		<div class="field_box">
 			<%= f.text_field :website, :size => 50 %>	
-		</div>
-	</div>
-	<div class="field">
-		<div class="field_label">
-			<%= t('points.new.position.label', :priority_name => link_to(@priority.name, @priority), :support_radio => f.radio_button(:value, 1, :checked=>params[:support] ? "checked" : "nil"), :oppose_radio => f.radio_button(:value, -1, :checked=>(params[:support] ?  "nil" : "checked")))%>
 		</div>
 	</div>
 	

@@ -1,15 +1,22 @@
-priority_submit
-{
-position: absolute;
-left: 350px;
-top: 10px;
-background: red !important;
-
-}
 
 #hp_intro {
-	font-size: 1.7em;
+	font-size: 1em;
 	line-height: 2em;
 }
 
 #branding p { position: absolute; left: 52px; top: 30px; font-size: 11px; color: #666; }
+
+
+
+.priority_add {
+padding: 1px !important;
+}
+
+.priority_add_link
+{
+}
+	
+div .priority_listing
+{
+/*float: left;*/
+}	

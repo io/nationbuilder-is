@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
   def authorized?
     @user = User.find(params[:user_id])
     @page_title = t('profiles.new.title', :government_name => current_government.name)
-    current_user.is_admin? or @user.id == current_user.id
+    current_user and (current_user.is_admin? or @user.id == current_user.id)
   end  
   
   # GET /users/1/profile/1

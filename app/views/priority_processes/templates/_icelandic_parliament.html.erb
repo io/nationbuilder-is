@@ -1,15 +1,6 @@
 <% cache(["icelandic_parliment_priority_processes_main",I18n.locale,@priority_process.priority.id,@show_only_last_process ? "only_last_process" : "all_processes"], :expires_in => 1.hour) do %>
 <% @total_discussions = ProcessDiscussion.count(:include=>[:priority_process],:conditions=>["priority_id = ?",@priority.id]) %>
-<% current_process = @priority_process %>
-<% processes = [] %>
-<% while current_process %>
-    <% processes<<current_process %>
-	<% unless current_process.children.empty? %>
-		<% current_process = current_process.children.first %>
-	<% else %>
-	<% current_process = nil %>
-	<% end %>
-<% end %>
+<% processes = PriorityProcess.find_all_by_priority_id(@priority.id,:order=>"stage_sequence_number") %>
 <% if @show_only_last_process %>
   <% processes = [processes.last] %>
   <h2><%=t "processes.only_last_process"%></h2>
@@ -33,9 +24,6 @@
 	<% process_documents = current_process.process_documents %>
 	<% discussions = current_process.process_discussions %>
 	<h2><%="#{current_process.stage_sequence_number}. "+t(:stage_sequence_discussion) %></h2>
-	<% unless controller_name == "priority_processes" %>
-	<p>(Smelltu hér til að <span class="showorhide">sjá</span> <%= current_process.stage_sequence_number %>. umræðu)</p>
-	<% end %>
 	<% if i==0 %>
 	  <%=link_to 'Málið á Alþingi', current_process.priority.external_link, {:target => "_blank", :class => "extlink"}%>
 	<% end %>

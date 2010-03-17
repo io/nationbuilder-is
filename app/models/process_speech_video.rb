@@ -28,8 +28,8 @@ class ProcessSpeechVideo < ActiveRecord::Base
     class_id = " class=\"#{class_id}\"" if class_id
     title_txt = "title=\"#{pos ? pos.to_s+'. ' : ""}#{self.title} - #{self.modified_duration_long}|#{self.process_discussion.meeting_date.strftime("%d/%m/%y")}<br><br>\
                 #{self.process_discussion.priority_process.priority.name}<br><br>\
-                #{self.rating}/5.0 - #{self.ratings.size} #{I18n.translate :votes}\"" if title
-    "<a href=\"/process_speech_videos/show/#{self.id}\"#{class_id}#{title_txt}><img src=\"#{tiny_filename}\" border=0 style=\"padding-#{padding_direction}:#{ancenstor_number*7}px\"></a>"
+                #{self.rating}/5.0 - #{self.ratings.size} #{I18n.translate :votes_counted}\"" if title
+    "<a href=\"/process_speech_videos/show/#{self.id}\"#{class_id}#{title_txt}><img src=\"#{tiny_filename}\" height=\"50\" width=\"80\" border=0 style=\"padding-#{padding_direction}:#{ancenstor_number*7}px\"></a>"
   end
 
   def get_video_link_tag
@@ -117,7 +117,7 @@ class ProcessSpeechVideo < ActiveRecord::Base
   end
   
   def self.top(limit)
-    self.find_by_sql("select process_speech_videos.id, process_speech_videos.title, avg(rating) AS avg_rating, count(rating) AS count_rating from process_speech_videos LEFT JOIN ratings ON ratings.rateable_id = process_speech_videos.id GROUP BY rateable_id ORDER BY avg_rating DESC, count_rating DESC limit #{limit}")
+    self.find_by_sql("select process_speech_videos.id, process_speech_videos.title, avg(rating) AS avg_rating, count(rating) AS count_rating from process_speech_videos LEFT JOIN ratings ON ratings.rateable_id = process_speech_videos.id WHERE ratings.rateable_type = \"ProcessSpeechVideo\" GROUP BY rateable_id ORDER BY avg_rating DESC, count_rating DESC limit #{limit}")
   end
   
   private

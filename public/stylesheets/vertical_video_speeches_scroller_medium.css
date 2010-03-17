@@ -70,7 +70,6 @@ a.prev, a.next {
 
 /* this makes it possible to add next button beside scrollable */
 div.scrollable_medium {
-	float:left;		
 }
 
 /* prev, next, prevPage and nextPage buttons */
@@ -98,6 +97,9 @@ a.disabled {
 a.next, a.nextPage {
 	background-image:url(/images/scroller/right.png);
 	clear:right;	
+	left:510px;
+position:relative;
+top:-120px;
 }
 
 

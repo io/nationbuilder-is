@@ -1,13 +1,12 @@
 Hæ {{ recipient.first_name | capitalize }},
 
-Þetta eru stutt skilaboð um að  "{{ notifiable.priority.name }}," mál sem þú {{ notifiable.value_name }}, {{ notifiable.priority.value_name }}.
+Þetta eru stutt skilaboð um að "{{ notifiable.priority.name }}", mál sem þú {{ notifiable.value_name }}, {{ notifiable.priority.value_name }}.
 
 Lestu meira og taktu þátt í þessari umræðu á {{ notifiable.priority.show_url }}/discussions
 
-Þetta mál hefur verið fjarlægt úr þínum lista og merkt sem Lokið mál. Nú er góður tími til að uppfæra listann þinn:
-This priority has been removed from your list and put into the finished bucket.  Now is a good time to update your list (you may need to login): 
+Þetta mál hefur verið fjarlægt úr þínum lista og merkt sem lokið. Nú er góður tími til að uppfæra listann þinn: 
 {{ recipient.root_url }}
 
 ---
-Þetta er sjálfvirk tilkynning {{ government.name }} send á {{ recipient.email }}.  
+Þetta er sjálfvirk tilkynning frá Skuggaþingi sent á {{ recipient.email }}.  
 Ef þú vilt ekki fá svona bréf, breyttu þá póststillingunum þínum hér: {{ recipient.unsubscribe_url }}

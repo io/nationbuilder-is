@@ -1,5 +1,6 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  include WillPaginate::ViewHelpers 
 
   def time_ago(time, options = {})
     if true or request.xhr?
@@ -168,6 +169,12 @@ module ApplicationHelper
   end
 
   def get_short_star_rating(asset,br=false)
-    "#{sprintf("%.1f",asset.rating)}/5.0 #{br ? "<br>" : ""} <small>(#{asset.ratings.size} #{t(:votes)})</small>"
+    "#{sprintf("%.1f",asset.rating)}/5.0 #{br ? "<br>" : ""} <small>(#{asset.ratings.size} #{t(:votes_counted)})</small>"
   end
+  
+  def will_paginate_with_i18n(collection, options = {}) 
+    will_paginate_without_i18n(collection, options.merge(:previous_label => I18n.t(:prev_t), :next_label => I18n.t(:next_t))) 
+  end 
+
+  alias_method_chain :will_paginate, :i18n  
 end

@@ -12,6 +12,9 @@
 <%= stylesheet_link_tag "newstuff" %>
 <%= stylesheet_link_tag "gnew" %>
 <%= javascript_include_tag "skuggathing" unless controller_name=="priority_processes" %>
+<% if controller_name == "facebook" %>
+<%= stylesheet_link_tag "fb_invite_hack.css" %>
+<% end %>
 </head>
 <body>
 
@@ -21,7 +24,6 @@
 	<div id="header">
 		<div id="branding">
 		<%= link_to image_tag("skuggathing_logo.png"), :controller=>"portal" %>
-		<p>Pólitískur rökræðuvettvangur</p>
 	</div>
 		<%= flash_div :warning, :notice, :error %>
 

@@ -25,8 +25,8 @@ require 'nokogiri'
 require 'open-uri'
 require 'timeout'
 
-#RAILS_ENV='production'
-RAILS_ENV='development'
+RAILS_ENV='production'
+#RAILS_ENV='development'
 
 require '../../config/boot'
 require "#{RAILS_ROOT}/config/environment"
@@ -99,7 +99,7 @@ if @current_government
 end
 
 acrawler = AlthingiCrawler.new
-acrawler.update_icesave
+#acrawler.update_icesave
 acrawler.update_all_processes(PROCESS_TYPE_LOG)
 acrawler.update_all_processes(PROCESS_TYPE_THINGSALYKTUNARTILLAGA)
 

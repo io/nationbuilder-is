@@ -665,10 +665,6 @@ vertical-align: top !important;
 color:#ddd !important;
 }
 
-/* Overriding width:20000em located somewhere */
-#latest_video_discussion_thumbs {
-float: left !important;
-}
 
 .suggest_button, .yellow_button {
 background-color:#FFFF99;
@@ -755,44 +751,3 @@ font-weight: normal !important;
 	margin-top: 10px;
 }
 
-ul#priority_menu li {
-padding:2px 0 !important;
-margin-right: 4px !Important;
-	background-color: #f0f0f0 !important;
-}
-
-.icon {
-float:left;
-padding-bottom:0px !important;
-}
-
-.point_name {
-font-size:14px !important;
-}
-
-.profile_name {
-font-size:16px !important;
-}
-
-#addthis a{
-font-size: 13px !important;
-}
-
-.priority_name, .priority_name_add {
-/*float:left;*/
-margin-right:7px;
-/*margin-top:3px;*/
-}
-
-
-#footer a {
-  border-bottom-color:#997777;
-  border-bottom-style:dotted;
-  border-bottom-width:1px;
-  color:#553333;
-}
-
-
-.pagination {
-	margin-top: 3px;
-}

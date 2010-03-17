@@ -1,50 +1,55 @@
 <%= render :partial => "header" %>
 <%= render :partial => "nav" %>
 
-<table id="" class="container_12">
+<table id="top_points_table" class="container_12">
 		<tr>
 			<td>
-				<h2><%=t('points.top_points.best_points_for_endorse')%></h2>
-				<p class="below_line"><%=link_to(t('points.top_points.all_best_points_for_endorse'), endorsed_top_points_priority_url(@priority))%> | 
-				<%=link_to(t('points.top_points.add_point_for_endorse'), new_priority_point_path(@priority,:support=>true))%></p>
-				</div>
+				<center>
+					<div class="yes_and_no_points_link_hacky">
+						<%=link_to(t('points.top_points.add_point_for_endorse'), new_priority_point_path(@priority,:support=>true))%>
+					</div>
+				</center>	
+				<h2><%=t('points.top_points.best_points_for_endorse')%> <%=get_points_number_text(@points_top_up.length,@total_up_points)%></h2>
+				<p class="below_line"><%=link_to(t('points.top_points.all_best_points_for_endorse'), endorsed_top_points_priority_url(@priority))%></p>
 				<div id="pro_top">
-					<%= render :partial => "points/short_list", :locals => {:id => "pro_top", :points => @points_top_up} %>
+					<%= render :partial => "points/short_list", :locals => {:id => "pro_top", :points => @points_top_up, :numbering=>true} %>
 				</div>
 			</td>
 			<td id="point_right" class="grid_6 against">
+				<center>
+					<div class="yes_and_no_points_link_hacky">
+						<%=link_to(t('points.top_points.add_point_for_oppose'), new_priority_point_path(@priority,:support=>false))%>
+					</div>
+				</center>	
 				<div class="sub_header pro">
-					<h2><%=t('points.top_points.best_points_for_oppose')%></h2>
-					<p class="below_line"><%=link_to(t('points.top_points.all_best_points_for_oppose'), opposed_top_points_priority_url(@priority))%> | 
-					<%=link_to(t('points.top_points.add_point_for_oppose'), new_priority_point_path(@priority,:support=>false))%></p>
+					<h2><%=t('points.top_points.best_points_for_oppose')%>  <%=get_points_number_text(@points_top_down.length,@total_down_points)%></h2>
+					<p class="below_line"><%=link_to(t('points.top_points.all_best_points_for_oppose'), opposed_top_points_priority_url(@priority))%></p>
 				</div>
 				<div id="con_top">
-					<%= render :partial => "points/short_list", :locals => {:id => "con_top", :points => @points_top_down} %>
+					<%= render :partial => "points/short_list", :locals => {:id => "con_top", :points => @points_top_down, :numbering=>true} %>
 				</div>
 			</td>
 		</tr>
 </table>
   
-<table id="" class="container_12 newpoints">
+<table id="top_points_table" class="container_12 newpoints">
 	<tr>
 		<td id="" class="grid_6">
 			<div class="sub_header">
-				<h2><%=t('points.top_points.newest_points_for_endorse')%></h2>
-				<p class="below_line"><%=link_to(t('points.top_points.all_newest_points_for_endorse'), endorsed_top_points_priority_url(@priority,:by_newest=>true))%> | 
-				<%=link_to(t('points.top_points.add_point_for_endorse'), new_priority_point_path(@priority,:support=>true))%></p>
+				<h2><%=t('points.top_points.newest_points_for_endorse')%> <%=get_points_number_text(@points_new_up.length,@total_up_points_new,true)%></h2>
+				<p class="below_line"><%=link_to(t('points.top_points.all_newest_points_for_endorse'), endorsed_top_points_priority_url(@priority,:by_newest=>true))%></p>
 			</div>
 			<div id="pro_new">
-				<%= render :partial => "points/short_list", :locals => {:id => "pro_new", :points => @points_new_up} %>
+				<%= render :partial => "points/short_list", :locals => {:id => "pro_new", :points => @points_new_up, :numbering=>false} %>
 			</div>
 		</td>
 		<td id="point_right" class="grid_6 against">
 			<div class="sub_header">
-				<h2><%=t('points.top_points.newest_points_for_oppose')%></h2>
-				<p class="below_line"><%=link_to(t('points.top_points.all_newest_points_for_oppose'), opposed_top_points_priority_url(@priority,:by_newest=>true))%> | 
-				<%=link_to(t('points.top_points.add_point_for_oppose'), new_priority_point_path(@priority,:support=>false))%></p>
+				<h2><%=t('points.top_points.newest_points_for_oppose')%> <%=get_points_number_text(@points_new_down.length,@total_down_points_new,true)%></h2>
+				<p class="below_line"><%=link_to(t('points.top_points.all_newest_points_for_oppose'), opposed_top_points_priority_url(@priority,:by_newest=>true))%></p>
 			</div>
 			<div id="con_new">
-				<%= render :partial => "points/short_list", :locals => {:id => "con_new", :points => @points_new_down} %>
+				<%= render :partial => "points/short_list", :locals => {:id => "con_new", :points => @points_new_down, :numbering=>false} %>
 			</div>
 		</td>
 	</tr>
